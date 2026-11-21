@@ -1,0 +1,19 @@
+{
+  "areas": [
+    "Cardiology", "Oncology", "Psychiatry", "Neurology", "Endocrinology", "Gastroenterology",
+    "Infectious disease", "Pulmonology", "Immunology", "Hematology", "Urology", "Pain",
+    "Dermatology", "Ophthalmology", "Nephrology", "Women's health", "Rare disease"
+  ],
+  "routes": [
+    "oral", "sublingual", "intravenous", "subcutaneous", "intramuscular", "inhaled", "nasal",
+    "topical", "transdermal", "ophthalmic", "rectal", "intrathecal", "intravitreal"
+  ],
+  "forms": [
+    "tablet", "capsule", "solution", "suspension", "powder", "injection", "inhalation",
+    "cream", "ointment", "gel", "patch", "drops", "spray", "suppository", "lozenge", "implant"
+  ],
+  "pillShapes": [
+    "round", "oval", "oblong", "capsule", "diamond", "triangle", "square", "rectangle",
+    "pentagon", "hexagon", "octagon", "vial", "pen", "inhaler", "syringe", "patch", "dropper"
+  ]
+}

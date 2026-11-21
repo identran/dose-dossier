@@ -55,7 +55,15 @@ The site never reads `data/` directly, and it fetches only the index and the cur
 }
 ```
 
-A clue never names the drug, its brands or its salt.
+Conventions:
+
+- A clue never names the drug, its brands, its aliases or its salt.
+- `sponsor` is the originator, the company players associate with the drug, even where the application has since changed hands.
+- `aliases` may include salt names and other brands of the same active ingredient.
+- `pk.unit` is a mass concentration. Where the label reports molar values they are converted with the molecular weight of the parent compound.
+- `structure` coordinates are PubChem's 2D layout of the parent compound: y points up, mean bond length 1.
+
+`data/schedule.json` is `{ "epoch": "YYYY-MM-DD", "days": [dossier ids, day 1 first] }`.
 
 ## Guessable
 
