@@ -9,7 +9,7 @@ export function h(tag, attrs, ...children) {
     if (value === false || value == null) continue;
     el.setAttribute(name, value === true ? '' : value);
   }
-  el.append(...children.flat().filter(child => child != null && child !== false));
+  el.append(...children.flat(Infinity).filter(child => child != null && child !== false));
   return el;
 }
 

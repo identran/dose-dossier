@@ -39,6 +39,9 @@ export function typeset(text) {
   return out.filter(part => part !== '');
 }
 
+// A term's explanation as its own muted line, or nothing.
+export const glossLine = text => (text ? h('p', { class: 'gloss' }, typeset(text)) : null);
+
 export function number(value) {
   if (!Number.isFinite(value)) return '';
   return value.toLocaleString('en-US', { maximumSignificantDigits: 3 });

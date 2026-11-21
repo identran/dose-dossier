@@ -62,7 +62,7 @@ export function renderMolecule(el, structure, { reveal = 4 } = {}) {
   st.level = level;
   // A step back is redrawn from nothing, so that what the lower level hides is gone at once.
   if (!st.L || !st.svg || st.svg.parentNode !== el || level < st.shown) build(st);
-  else reveal(st, true);
+  else show(st, true);
   return true;
 }
 
@@ -496,11 +496,11 @@ function build(st) {
   st.cur = null;
   svg.setAttribute('viewBox', `0 0 ${f2(w)} ${f2(h)}`);
   svg.replaceChildren(frag);
-  reveal(st, false);
+  show(st, false);
 }
 
 // Bring the drawing to st.level, creating only what that level shows.
-function reveal(st, animate) {
+function show(st, animate) {
   const { svg, level, L, root } = st;
   svg.setAttribute('data-reveal', level);
   svg.setAttribute('aria-label', level < 4 ? 'Chemical structure, partly revealed' : 'Chemical structure');

@@ -3,7 +3,7 @@
   color-scheme: light;
   --paper: #ECEAE5;
   --ink: #111111;
-  --mute: #6B6A66;
+  --mute: #5E5D59;
   --accent: var(--mute);
 
   /* --font-display, --font-text and --font-data come from assets/fonts/fonts.css, linked after this file. */

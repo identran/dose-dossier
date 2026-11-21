@@ -1,23 +1,13 @@
-// The dossier: clues as plain typeset entries under the five module names.
-// Modules with nothing revealed yet are listed in the muted tone.
+// The dossier, shown once the game is over: the written clues under the module names.
 
 import { h } from './dom.js';
-import { typeset } from './format.js';
+import { typeset, glossLine } from './format.js';
 
-// clues: [{ module, title, text }], shown: how many are revealed, modules: { 1: 'Administrative', … }
-export function renderDossier(root, clues, shown, modules, { fresh = false } = {}) {
-  const groups = [];
-  clues.forEach((clue, i) => {
-    let group = groups.find(g => g.module === clue.module);
-    if (!group) groups.push(group = { module: clue.module, entries: [] });
-    if (i < shown) group.entries.push({ clue, isNew: fresh && i === shown - 1 });
-  });
-  groups.sort((a, b) => a.module - b.module);
-
+// groups: [{ module, clues: [{ text }] }] in regulatory order (see game.filed).
+export function renderDossier(root, groups, { gloss = null } = {}) {
   root.replaceChildren(...groups.map(group =>
-    h('div', { class: group.entries.length ? 'module is-open' : 'module is-pending' },
-      h('h3', null, modules[group.module] || ''),
-      group.entries.map(({ clue, isNew }) =>
-        h('p', { class: isNew ? 'clue is-new' : 'clue' },
-          h('span', { class: 'clue-title' }, clue.title), typeset(clue.text))))));
+    h('div', { class: 'module' },
+      h('h3', null, group.module),
+      glossLine(gloss?.(group.module)),
+      group.clues.map(clue => [h('p', { class: 'clue' }, typeset(clue.text)), glossLine(gloss?.(clue.text))]))));
 }

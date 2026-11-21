@@ -14,10 +14,10 @@
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="css/app.css">
   <script>
-    // Apply a stored or requested theme before first paint.
+    // Apply a stored or requested theme before first paint. The key is the one in js/store.js.
     try {
       var t = new URLSearchParams(location.search).get('theme') ||
-        (JSON.parse(localStorage.getItem('dose-dossier.v1')) || {}).theme;
+        (JSON.parse(localStorage.getItem('dose-dossier')) || {}).theme;
       if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
     } catch (e) {}
   </script>
@@ -42,7 +42,9 @@
       <div id="dial" class="dial"></div>
       <figcaption class="caption">
         <p><span id="glyph" class="glyph"></span><span id="context"></span></p>
-        <p id="probe" class="probe" aria-live="off"></p>
+        <p><span id="profile"></span> <button type="button" class="text-button" data-sheet="table" hidden>Table</button></p>
+        <p id="probe" class="probe"></p>
+        <div id="caption-gloss"></div>
       </figcaption>
     </figure>
 
@@ -60,31 +62,37 @@
       <div id="result" class="result" hidden>
         <h2 id="answer" class="answer" tabindex="-1"></h2>
         <p id="answer-brand" class="answer-brand"></p>
+        <ul id="answer-facts" class="answer-facts"></ul>
+        <p id="tell" class="tell"></p>
         <p id="outcome" class="outcome"></p>
         <p class="actions">
           <button type="button" id="copy" class="button">Copy result</button>
           <a id="label" target="_blank" rel="noopener">FDA label</a>
         </p>
+        <p id="revision" class="revision" hidden></p>
       </div>
     </section>
 
-    <section class="guesses" aria-labelledby="guesses-title">
-      <h2 id="guesses-title" class="sr">Guesses</h2>
-      <ol id="guesses" reversed></ol>
-    </section>
-
-    <section class="dossier" aria-labelledby="dossier-title">
+    <section id="dossier-section" class="dossier" aria-labelledby="dossier-title" hidden>
       <h2 id="dossier-title" class="sr">Dossier</h2>
       <div id="dossier"></div>
     </section>
 
+    <section class="turns" aria-labelledby="turns-title">
+      <h2 id="turns-title" class="sr">Guesses</h2>
+      <ol id="turns" reversed></ol>
+    </section>
+
     <footer class="colophon">
       <p>From public FDA labels on DailyMed. Not medical advice.</p>
-      <button type="button" id="theme" class="text-button"></button>
+      <p class="colophon-controls">
+        <button type="button" id="explain" class="text-button">Explain terms</button>
+        <button type="button" id="theme" class="text-button"></button>
+      </p>
     </footer>
   </main>
 
-  <p id="live" class="sr" role="status" aria-live="polite"></p>
+  <p id="live" class="sr" role="status" aria-live="polite" aria-atomic="true"></p>
 
   <dialog id="help" class="sheet" aria-labelledby="help-title">
     <div class="sheet-body">
@@ -92,7 +100,7 @@
         <h2 id="help-title">How to play</h2>
         <form method="dialog"><button class="text-button">Close</button></form>
       </header>
-      <p>Each day one FDA-approved drug is the answer. The figure is its plasma concentration over time after the dose noted beneath it, and the drawing inside is its structure. You have eleven guesses. Each miss adds a sampling time to the figure, sharpens the structure and opens one entry of the dossier. Under a guess, bold marks what it shares with the answer, and an arrow shows whether the answer’s half-life is longer or shorter.</p>
+      <p>One FDA-approved drug a day. The ring is its plasma concentration after a dose: time runs clockwise, concentration outward. You have eight guesses. Each miss opens a clue and sharpens the structure. Under a guess, bold marks what it shares with the answer, and the arrow by the year points toward the answer’s.</p>
     </div>
   </dialog>
 
@@ -105,6 +113,17 @@
       <dl id="figures" class="figures"></dl>
       <h3>Guesses needed</h3>
       <ol id="distribution" class="distribution"></ol>
+    </div>
+  </dialog>
+
+  <dialog id="table" class="sheet" aria-labelledby="table-title">
+    <div class="sheet-body">
+      <header class="sheet-head">
+        <h2 id="table-title">Plasma concentration</h2>
+        <form method="dialog"><button class="text-button">Close</button></form>
+      </header>
+      <p id="profile-line"></p>
+      <table id="profile-table" class="profile-table"></table>
     </div>
   </dialog>
 

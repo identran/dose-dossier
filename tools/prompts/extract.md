@@ -29,7 +29,7 @@ active ingredient; or when the digest is plainly the wrong product. Do not skip 
 
 `approved` — the year in the digest header: "First approval of this active ingredient" when that line is present, otherwise "Original approval year".
 
-`sponsor` — the originator: the company that first brought the drug to approval, by its short common name, at most 20 characters ("Pfizer", "Merck", "Bristol Myers Squibb", "GSK", "Genentech", "Novo Nordisk"). The header's current manufacturer is often a later owner or a subsidiary; use your knowledge of who developed the drug. Use a name already in `vocab.json` `sponsors` when it is the same company.
+`sponsor` — the originator under its present-day name: the company that held the application when the drug was first approved, written as that company or its successor is known today, at most 20 characters. So a Warner-Lambert, Wyeth or Pharmacia drug is "Pfizer", a Schering-Plough drug is "Merck", an Abbott pharmaceutical is "AbbVie", a Celgene drug is "Bristol Myers Squibb", a Centocor or Janssen drug is "Johnson & Johnson", a Genentech drug stays "Genentech". The header's current manufacturer is often a later licensee or a generic firm; use your knowledge of who developed the drug. Use a name already in `vocab.json` `sponsors` when it is the same company.
 
 `area` — one therapeutic area from `vocab.json`, chosen by the first indication's organ system.
 
@@ -38,9 +38,9 @@ active ingredient; or when the digest is plainly the wrong product. Do not skip 
 `route`, `form` — from `vocab.json`, for the product the PK numbers describe. An injectable solution is form "injection".
 
 `pk` — one dosing situation from the label, with the numbers that belong to it:
-- `context`: exactly "{dose} {route}, {single dose | steady state}, {healthy adults | patients}", for example "20 mg oral, single dose, healthy adults" or "200 mg intravenous, steady state, patients". No sex, age, food state or disease.
+- `context`: exactly "{dose} {route}, {single dose | steady state}, {healthy adults | patients}", for example "20 mg oral, single dose, healthy adults" or "200 mg intravenous, steady state, patients". No sex, age, food state or disease. Use the dose the label ties its PK numbers to; when it ties them to none, use the usual recommended adult dose from the label, "single dose" and "healthy adults" unless the label says otherwise.
 - `model`: "absorption" for oral, subcutaneous, intramuscular, inhaled and other extravascular routes; "infusion" for an intravenous infusion; "bolus" for an intravenous push.
-- `tmaxH`: hours from dose to peak. A range is entered as its midpoint, minutes and days are converted. For an infusion it is the infusion duration (see the Administration section); for a bolus it is 0.
+- `tmaxH`: hours from dose to peak. A range is entered as its midpoint, minutes and days are converted. For an infusion it is the infusion duration, wherever the digest states it (usually the Administration section, sometimes Pharmacokinetics); for a bolus it is 0.
 - `halfLifeH`: the terminal (elimination) half-life in hours, of the parent drug, not of a metabolite and not an "effective" or distribution half-life when a terminal one is given. A range is entered as its midpoint.
 - `cmax` and `unit`: only when the digest states a peak concentration for the dose in `context`, as a mass concentration ("ng/mL", "µg/mL", "mg/L"). Convert molar values with the parent molecular weight in the digest header. Otherwise omit both.
 
@@ -62,6 +62,8 @@ active ingredient; or when the digest is plainly the wrong product. Do not skip 
 | `indication` | the approved indications, shortened | the class |
 | `mechanism` | target, action, selectivity | – |
 
+A clue states what the digest supports from its slot's list; it need not cover every item, and a slot with little to say can be one short sentence. "No boxed warning" needs no quote when the digest has no boxed warning section.
+
 No clue names the drug, a brand, a salt or alias, a metabolite named after the drug, or any word containing the first five letters of the generic name. No clue repeats what the figure already prints (Tmax, half-life, Cmax). Where the label uses the brand in capitals, write "it" or "the drug". Every number in a clue must appear in that clue's quotes.
 
 `tell` — one sentence, at most 140 characters, shown after the game: what in this dossier most sets the drug apart. It may name the drug and its class. State only what the digest supports.
@@ -77,7 +79,7 @@ node tools/assemble.mjs <ids…> --drafts tools/.cache/drafts --out tools/.cache
 node tools/verify.mjs <ids…> --dir tools/.cache/staging
 ```
 
-Fix every error the verifier prints by editing the draft and re-running both commands, until
+Skipped ids are reported as SKIP and need nothing more. Fix every error the verifier prints by editing the draft and re-running both commands, until
 each id reads PASS. Warnings about vocabulary membership of `class` or `sponsor` are expected.
 If a draft cannot be made to pass honestly (the fact is not in the digest), remove the claim
 rather than bending the quote; if the PK numbers themselves are not in the digest, skip the drug.

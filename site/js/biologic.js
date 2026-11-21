@@ -10,8 +10,8 @@ const NS = 'http://www.w3.org/2000/svg';
 
 const STROKE = 1.3;   // px, as molecule.js (override with --mol-stroke)
 const MARGIN = 0.05;  // of the inscribed radius
-const SCALE = 0.64;   // one figure unit / slot radius
-const RISE = 0.15;    // the figure sits this far above centre, the caption below it
+const SCALE = 0.7;    // one figure unit / slot radius
+const RISE = 0.17;    // the figure sits this far above centre, the caption below it
 const FONT = 0.115;   // caption size / slot radius
 const LINES = [0.67, 0.85]; // caption baselines / slot radius
 const MS = 320;
@@ -81,10 +81,10 @@ function clear(el) {
    and u runs 0 → 1 as level 2 arrives, so that a second chain opens out of the line it lay on.
    at(u) gives [x1, y1, x2, y2] for a line, [cx, cy, r] for a circle, path commands for a path. */
 
-const GAP = 0.11;                 // between two paired chains
+const GAP = 0.13;                 // between two paired chains
 const HALF = GAP / 2;
-const SIN = Math.sin((38 * Math.PI) / 180), COS = Math.cos((38 * Math.PI) / 180); // an arm, from the vertical
-const HINGE = -0.1, FOOT = 0.85, ARM = 0.9;
+const SIN = Math.sin((40 * Math.PI) / 180), COS = Math.cos((40 * Math.PI) / 180); // an arm, from the vertical
+const HINGE = -0.08, FOOT = 0.82, ARM = 0.95;
 
 // The Fc stem: one line that becomes two heavy chains joined at the hinge.
 function stem(fig) {
@@ -111,7 +111,7 @@ function arm(fig, side, kind) {
     fig.items.push({ level: 2, tag: 'path', at: u => [['M', ...at(len, 0, u)], ['A', (GAP * u) / 2, 0, side > 0 ? 1 : 0, ...at(len, GAP * u, u)], ['L', ...at(0.3 * len, GAP * u, u)]] });
     fig.dots.push(at(0.7 * len, 0, 1), at(0.7 * len, GAP, 1));
   } else {
-    const link = 0.3, r = 0.2;
+    const link = 0.32, r = 0.23;
     fig.items.push({ level: 1, tag: 'line', at: u => [...at(0, 0, u), ...at(link, 0, u)] });
     fig.items.push({ level: 1, tag: 'circle', at: u => [...at(link + r, 0, u), r] });
     fig.dots.push(at(link + r, 0, 1));
@@ -139,7 +139,7 @@ function antibody(left = 'fab', right = 'fab', payload = false) {
 
 function fragment() {
   const fig = { dots: [], items: [] };
-  const gap = GAP * 1.3, len = 1.5;
+  const gap = GAP * 1.2, len = 1.6;
   const at = (t, o) => [SIN * (t - 0.5) * len + COS * o, -COS * (t - 0.5) * len + SIN * o];
   fig.items.push({ level: 1, tag: 'line', at: u => [...at(0, (-gap / 2) * u), ...at(1, (-gap / 2) * u)] });
   fig.items.push({ level: 2, tag: 'line', at: u => [...at(0.07, (gap / 2) * u), ...at(1, (gap / 2) * u)] });
@@ -148,93 +148,94 @@ function fragment() {
   return fig;
 }
 
-// Beads on a line that folds once each way: two arcs of one circle's radius, a residue at every step.
+// An S of two equal arcs meeting in the middle: the first runs clockwise into the origin, the
+// second leaves it anticlockwise. point(arc, deg, off) is the place at `deg` along that arc's
+// circle, `off` to the right of the direction of travel.
+function sCurve(R, span, turn) {
+  const point = (arc, deg, off = 0) => {
+    const a = (deg * Math.PI) / 180, r = R + (arc ? off : -off);
+    const x = (arc ? R : -R) + r * Math.cos(a), y = -r * Math.sin(a);
+    return [x * Math.cos(turn) - y * Math.sin(turn), x * Math.sin(turn) + y * Math.cos(turn)];
+  };
+  // Degrees at fraction f of an arc, and the path of the stretch between two fractions.
+  const deg = (arc, f) => (arc ? 180 + span * f : span * (1 - f));
+  const path = (arc, f0, f1, eat = 0) => {
+    const e = arc ? eat : -eat;
+    return [['M', ...point(arc, deg(arc, f0) + e)], ['A', R, 0, arc ? 0 : 1, ...point(arc, deg(arc, f1) - e)]];
+  };
+  return { point, deg, path };
+}
+
+// Beads on a line that folds once each way, a residue at every step.
 function peptide() {
   const fig = { dots: [], items: [] };
-  const R = 0.4, bead = 0.055, steps = 8, span = 215, turn = (-24 * Math.PI) / 180;
-  const point = (arc, deg) => {
-    const a = (deg * Math.PI) / 180;
-    const x = (arc ? R : -R) + R * Math.cos(a), y = -R * Math.sin(a);
-    return [x * Math.cos(turn) - y * Math.sin(turn), x * Math.sin(turn) + y * Math.cos(turn)];
-  };
+  const R = 0.42, bead = 0.058, steps = 8, span = 215;
+  const s = sCurve(R, span, (-24 * Math.PI) / 180);
   const eat = (2 * Math.asin(bead / (2 * R)) * 180) / Math.PI; // the angle a bead's radius takes from a link
   for (const arc of [0, 1]) {
-    // The first arc runs clockwise into the middle, the second leaves it anticlockwise.
-    const deg = i => (arc ? 180 + (span / steps) * i : span - (span / steps) * i);
-    const sign = arc ? 1 : -1;
-    for (let i = 0; i < steps; i++) {
-      fig.items.push({ level: 1, tag: 'path', at: u => [['M', ...point(arc, deg(i) + sign * eat * u)], ['A', R, 0, arc ? 0 : 1, ...point(arc, deg(i + 1) - sign * eat * u)]] });
-    }
+    for (let i = 0; i < steps; i++) fig.items.push({ level: 1, tag: 'path', at: u => s.path(arc, i / steps, (i + 1) / steps, eat * u) });
     for (let i = arc; i <= steps; i++) {
-      fig.dots.push(point(arc, deg(i)));
-      fig.items.push({ level: 2, tag: 'circle', at: u => [...point(arc, deg(i)), bead * u] });
+      const p = s.point(arc, s.deg(arc, i / steps));
+      fig.dots.push(p);
+      fig.items.push({ level: 2, tag: 'circle', at: u => [...p, bead * u] });
     }
   }
   return fig;
 }
 
-// A smooth closed-form curve sampled into points, with its cumulative length.
-function trace(fn, n = 240) {
-  const pts = [], len = [0];
-  for (let i = 0; i <= n; i++) {
-    pts.push(fn(i / n));
-    if (i) len.push(len[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
-  }
-  const total = len[n];
-  const along = s => { // the point a length s along the curve, and the direction there
-    let i = 1;
-    while (i < n && len[i] < s) i++;
-    const f = (s - len[i - 1]) / (len[i] - len[i - 1] || 1);
-    const tx = pts[i][0] - pts[i - 1][0], ty = pts[i][1] - pts[i - 1][1], tl = Math.hypot(tx, ty) || 1;
-    return [pts[i - 1][0] + tx * f, pts[i - 1][1] + ty * f, tx / tl, ty / tl];
-  };
-  return { pts, total, along };
-}
-
-// One chain folded on itself: a turning radius that carries a faster, counter-turning one.
-function protein() {
-  const fig = { dots: [], items: [] };
-  const curve = trace(t => {
-    const a = 0.35 + 5.9 * t, b = -2.3 * a + 0.9;
-    const p = 0.52 - 0.1 * t, q = 0.2 + 0.14 * t;
-    return [p * Math.cos(a) + q * Math.cos(b), p * Math.sin(a) + q * Math.sin(b)];
-  });
-  fig.items.push({ level: 1, tag: 'path', at: () => curve.pts.map((p, i) => [i ? 'L' : 'M', p[0], p[1]]) });
-  const n = 26, res = [];
-  for (let i = 0; i < n; i++) res.push(curve.along((curve.total * i) / (n - 1)));
-  for (const p of res) fig.dots.push([p[0], p[1]]);
-  // Level 2: the two ends, and bridges between residues that the fold brings together.
-  const end = 0.05;
-  for (const [p, dir] of [[res[0], -1], [res[n - 1], 1]]) {
-    fig.items.push({ level: 2, tag: 'circle', at: u => [p[0] + dir * p[2] * end * u, p[1] + dir * p[3] * end * u, end * u] });
-  }
-  const pairs = [];
-  for (let i = 0; i < n; i++) for (let j = i + 6; j < n; j++) pairs.push([Math.hypot(res[i][0] - res[j][0], res[i][1] - res[j][1]), i, j]);
-  pairs.sort((p, q) => p[0] - q[0] || p[1] - q[1]);
-  const used = [];
-  for (const [d, i, j] of pairs) {
-    if (used.length === 3 || d > 0.3) break;
-    if (d < 0.1 || used.some(k => Math.abs(k - i) < 3 || Math.abs(k - j) < 3)) continue;
-    used.push(i, j);
-    fig.items.push({ level: 2, tag: 'line', at: u => [res[i][0], res[i][1], res[i][0] + (res[j][0] - res[i][0]) * u, res[i][1] + (res[j][1] - res[i][1]) * u] });
-  }
-  return fig;
-}
-
-// A single strand: a shallow arc of backbone with a base at every step, turned to the inside.
+// A single strand: a backbone with the slightest S in it and a base at every step, all to one side.
 function oligonucleotide() {
   const fig = { dots: [], items: [] };
-  const R = 1.7, half = 27, n = 18, base = 0.17, turn = (-22 * Math.PI) / 180;
-  const point = (deg, inward = 0) => {
-    const a = (deg * Math.PI) / 180;
-    const x = (R - inward) * Math.sin(a), y = R * 0.89 - (R - inward) * Math.cos(a) - 0.1;
-    return [x * Math.cos(turn) - y * Math.sin(turn), x * Math.sin(turn) + y * Math.cos(turn)];
-  };
-  fig.items.push({ level: 1, tag: 'path', at: () => [['M', ...point(-half)], ['A', R, 0, 1, ...point(half)]] });
-  for (let i = 0; i < n; i++) {
-    const deg = -half + ((2 * half) / n) * (i + 0.5);
-    fig.dots.push(point(deg));
-    fig.items.push({ level: 2, tag: 'line', at: u => [...point(deg), ...point(deg, base * u)] });
+  const R = 1.5, span = 31, per = 7, base = 0.2;
+  const s = sCurve(R, span, (62 * Math.PI) / 180);
+  for (const arc of [0, 1]) {
+    fig.items.push({ level: 1, tag: 'path', at: () => s.path(arc, 0, 1) });
+    for (let i = 0; i < per; i++) {
+      const d = s.deg(arc, (i + 0.5) / per);
+      fig.dots.push(s.point(arc, d));
+      fig.items.push({ level: 2, tag: 'line', at: u => [...s.point(arc, d), ...s.point(arc, d, base * u)] });
+    }
+  }
+  return fig;
+}
+
+// One chain folded on itself: straight passes joined by half-turns, their lengths fitted to a circle.
+function protein() {
+  const fig = { dots: [], items: [] };
+  const rows = [-0.6, -0.3, 0, 0.3, 0.6];        // the passes, and where each turns into the next
+  const turns = [0.42, -0.6, 0.64, -0.58], first = -0.36, last = 0.34;
+  const r = 0.15, cos = Math.cos(-0.5), sin = Math.sin(-0.5);
+  const rot = (x, y) => [x * cos - y * sin, x * sin + y * cos];
+  const cmds = [['M', ...rot(first, rows[0])]], pts = [];
+  let x = first;
+  rows.forEach((y, k) => {
+    const end = k < turns.length ? turns[k] : last, dir = end > x ? 1 : -1;
+    for (let i = 0; i <= 20; i++) pts.push(rot(x + ((end - x) * i) / 20, y));
+    cmds.push(['L', ...rot(end, y)]);
+    if (k < turns.length) {
+      for (let i = 1; i < 12; i++) pts.push(rot(end + dir * r * Math.sin((Math.PI * i) / 12), y + r - r * Math.cos((Math.PI * i) / 12)));
+      cmds.push(['A', r, 0, dir > 0 ? 1 : 0, ...rot(end, y + 2 * r)]);
+    }
+    x = end;
+  });
+  fig.items.push({ level: 1, tag: 'path', at: () => cmds });
+  // Residues at equal steps along the chain.
+  const len = [0];
+  for (let i = 1; i < pts.length; i++) len.push(len[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+  const n = 30;
+  for (let k = 0, i = 0; k < n; k++) {
+    const want = (len[len.length - 1] * k) / (n - 1);
+    while (i < pts.length - 1 && len[i + 1] < want) i++;
+    const f = (want - len[i]) / (len[i + 1] - len[i] || 1), q = pts[Math.min(i + 1, pts.length - 1)];
+    fig.dots.push([pts[i][0] + (q[0] - pts[i][0]) * f, pts[i][1] + (q[1] - pts[i][1]) * f]);
+  }
+  // Level 2: the two ends, and three bridges between neighbouring passes.
+  const end = 0.055;
+  for (const [ex, ey, dir] of [[first, rows[0], -1], [last, rows[4], 1]]) {
+    fig.items.push({ level: 2, tag: 'circle', at: u => [...rot(ex + dir * end * u, ey), end * u] });
+  }
+  for (const [k, bx] of [[0, 0.06], [2, -0.26], [3, 0.12]]) {
+    fig.items.push({ level: 2, tag: 'line', at: u => [...rot(bx, rows[k]), ...rot(bx, rows[k] + (rows[k + 1] - rows[k]) * u)] });
   }
   return fig;
 }
