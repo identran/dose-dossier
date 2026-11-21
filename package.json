@@ -15,6 +15,7 @@
     "resolve": "NODE_USE_ENV_PROXY=1 node tools/resolve.mjs",
     "digest": "node tools/digest.mjs",
     "structures": "NODE_USE_ENV_PROXY=1 node tools/structures.mjs",
-    "verify": "node tools/verify.mjs"
+    "verify": "node tools/verify.mjs",
+    "assemble": "node tools/assemble.mjs"
   }
 }

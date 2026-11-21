@@ -1,4 +1,4 @@
-// SVG fallback: the same ring, profile, fill and sampling dots, for browsers without WebGL2
+// SVG fallback: the same ring, profile, fill, half-life contours and sampling dots, for browsers without WebGL2
 // or after a context that stays lost. Same interface as the WebGL renderer.
 
 import { GEOM, STYLE, TAU, buildKnots, normalised } from './model.js';
@@ -56,6 +56,42 @@ export function createSVGRenderer() {
     return d;
   }
 
+  // Stretches of lap-time over which the profile stands above each contour level.
+  function contourSpans() {
+    const spans = [];
+    for (let k = 1; k <= scene.levels; k++) {
+      const level = 1 / 2 ** k;
+      let from = null;
+      for (let i = 0; i < knots.n; i++) {
+        const tau = knots.data[2 * i];
+        const c = knots.data[2 * i + 1];
+        const cross = () => {
+          const t0 = knots.data[2 * i - 2];
+          const c0 = knots.data[2 * i - 1];
+          return t0 + ((tau - t0) * (level - c0)) / (c - c0);
+        };
+        if (c > level && from === null) from = i ? cross() : tau;
+        else if (c <= level && from !== null) { spans.push([k, from, cross()]); from = null; }
+      }
+      if (from !== null) spans.push([k, from, knots.laps]);
+    }
+    return spans;
+  }
+
+  function contourPath(spans, upTo) {
+    let d = '';
+    for (const [k, from, to] of spans) {
+      const end = Math.min(to, upTo);
+      if (end - from < 1e-6) continue;
+      const radius = GEOM.R0 + GEOM.H / 2 ** k;
+      const pts = [];
+      const n = Math.max(1, Math.ceil((end - from) * 240));
+      for (let i = 0; i <= n; i++) pts.push(xy(from + ((end - from) * i) / n, radius));
+      d += `M${pts.join('L')}`;
+    }
+    return d;
+  }
+
   function build() {
     const { curve, colors, nodes } = scene;
     if (!knotsFor || knotsFor !== curve) {
@@ -71,6 +107,9 @@ export function createSVGRenderer() {
     const dot = () => make('circle', { fill: ink, stroke: 'none' });
 
     const fill = make('path', { fill: rgb(colors.accent), stroke: 'none' });
+    const spans = contourSpans();
+    const contours = make('path', { d: contourPath(spans, Infinity), ...line(STYLE.line) });
+    const contoursOnFill = make('path', { fill: 'none', stroke: rgb(colors.onFill), 'stroke-width': STYLE.line });
 
     let ticks = '';
     for (let i = 0; i < scene.tick.minor; i++) {
@@ -84,8 +123,8 @@ export function createSVGRenderer() {
     const dots = nodes.map(dot);
     const probe = { ring: make('circle', { r: STYLE.probe, ...line(STYLE.line) }), dot: make('circle', { r: STYLE.node, fill: ink, stroke: 'none' }) };
 
-    svg.append(fill, make('path', { d: ticks, ...line(STYLE.line) }), ring, fine, bold, ...dots, probe.ring, probe.dot);
-    parts = { fill, bold, dots, probe };
+    svg.append(fill, contours, contoursOnFill, make('path', { d: ticks, ...line(STYLE.line) }), ring, fine, bold, ...dots, probe.ring, probe.dot);
+    parts = { fill, bold, dots, probe, spans, contoursOnFill };
     stale = false;
   }
 
@@ -112,6 +151,7 @@ export function createSVGRenderer() {
       const { curve, nodes } = scene;
       const front = Math.min(frame.front / curve.period, knots.laps);
       parts.fill.setAttribute('d', fillPath(front));
+      parts.contoursOnFill.setAttribute('d', contourPath(parts.spans, front));
       parts.bold.setAttribute('d', front > 0 ? `M${along(0, front).join('L')}` : '');
       const px = (x, y) => [box.w / 2 + box.s * x, box.h / 2 - box.s * y];
       nodes.forEach((n, i) => {

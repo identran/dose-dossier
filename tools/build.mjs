@@ -2,6 +2,8 @@
 // Validates data/ and compiles it into site/data/ (see data/SCHEMA.md).
 //   node tools/build.mjs            validate, then write site/data/index.json and site/data/day/NNN.json
 //   node tools/build.mjs --check    validate only
+//   --strict                        class and sponsor must be listed in data/vocab.json (a warning otherwise)
+//   --data <dir> --out <dir>        build from another data directory into another output directory
 import { readFile, readdir, writeFile, mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,8 +11,9 @@ import { compileClues, accent } from './lib/compile.mjs';
 import { createContext, isDate, isStr, validateDossier, validateDictionary, validateVocab, checkVocab, guessable, stripReviewFields } from './lib/validate.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
-const OUT = path.join(ROOT, 'site', 'data');
+const argOf = n => { const i = process.argv.indexOf(n); return i >= 0 ? path.resolve(process.argv[i + 1]) : null; };
+const DATA = argOf('--data') || path.join(ROOT, 'data');      // --data <dir> and --out <dir> let a scratch copy be built
+const OUT = argOf('--out') || path.join(ROOT, 'site', 'data');
 const CHECK_ONLY = process.argv.includes('--check');
 const STRICT = process.argv.includes('--strict'); // class and sponsor must be in data/vocab.json
 

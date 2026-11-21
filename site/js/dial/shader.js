@@ -32,6 +32,8 @@ uniform vec3 uPaper;
 uniform vec3 uInk;
 uniform vec3 uAccent;
 uniform vec2 uTick;       // ticks per turn, every n-th is long
+uniform int uLevels;      // half-life contours drawn
+uniform vec3 uOnFill;     // their colour over the accent
 uniform vec3 uProbe;      // xy (fractions of uS), on
 
 out vec4 outColor;
@@ -105,6 +107,12 @@ void main() {
 
     float fill = 0.0, line = 0.0;
 
+    // The half-life contour nearest this radius: C = Cmax / 2^k.
+    float level = clamp(floor(0.5 - log2(max((r - R0) / H, 1e-4))), 1.0, float(max(uLevels, 1)));
+    float Rk = R0 + H * exp2(-level);
+    float arcInk = uLevels > 0 ? stroke(abs(r - Rk), ${f(STYLE.line)} * uPx) : 0.0;
+    float contour = 0.0, contourOnFill = 0.0;
+
     // The profile and the area under it, lap by lap. Lap -1 is the sliver just before
     // 12 o'clock, there only so the dose edge is antialiased from both sides.
     for (int l = -1; l < 3; l++) {
@@ -115,6 +123,10 @@ void main() {
       vec2 pr = profileRadius(tau, R0, H);
       float g = sqrt(1.0 + pr.y * pr.y / max(r * r, 1.0));
       fill = max(fill, edge((pr.x - r) / g) * behind);
+      // A contour exists only where the profile stands above it.
+      float under = arcInk * edge((pr.x - Rk) / g) * edge((uLaps - tau) * arc);
+      contour = max(contour, under);
+      contourOnFill = max(contourOnFill, under * behind);
       float w = mix(${f(STYLE.line)}, ${f(STYLE.bold)}, behind) * uPx;
       line = max(line, stroke(profileDistance(P, tau, R0, H), w));
     }
@@ -128,6 +140,8 @@ void main() {
     float ring = stroke(abs(r - R0), ${f(STYLE.line)} * uPx);
 
     col = mix(col, uAccent, fill);
+    col = mix(col, uInk, contour);
+    col = mix(col, uOnFill, contourOnFill);
     col = mix(col, uInk, max(max(tick, ring), line));
 
     // Sampling times reached so far: a dot on the profile for each.
@@ -150,5 +164,5 @@ void main() {
 
 export const UNIFORMS = [
   'uRes', 'uS', 'uPx', 'uGeom', 'uKnots', 'uKnotN', 'uM', 'uLaps', 'uFront',
-  'uNode', 'uNodeN', 'uPaper', 'uInk', 'uAccent', 'uTick', 'uProbe',
+  'uNode', 'uNodeN', 'uPaper', 'uInk', 'uAccent', 'uTick', 'uLevels', 'uOnFill', 'uProbe',
 ];

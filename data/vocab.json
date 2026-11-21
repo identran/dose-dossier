@@ -1,19 +1,41 @@
 {
   "areas": [
-    "Cardiology", "Oncology", "Psychiatry", "Neurology", "Endocrinology", "Gastroenterology",
-    "Infectious disease", "Pulmonology", "Immunology", "Hematology", "Urology", "Pain",
-    "Dermatology", "Ophthalmology", "Nephrology", "Women's health", "Rare disease"
+    "Cardiology", "Oncology", "Psychiatry", "Neurology",
+    "Endocrinology", "Gastroenterology", "Infectious disease", "Pulmonology",
+    "Immunology", "Hematology", "Urology", "Pain",
+    "Dermatology", "Ophthalmology", "Nephrology", "Women's health"
   ],
   "routes": [
-    "oral", "sublingual", "intravenous", "subcutaneous", "intramuscular", "inhaled", "nasal",
-    "topical", "transdermal", "ophthalmic", "rectal", "intrathecal", "intravitreal"
+    "oral", "sublingual", "intravenous", "subcutaneous", "intramuscular", "inhaled",
+    "nasal", "topical", "transdermal", "ophthalmic", "rectal", "intrathecal",
+    "intravitreal"
   ],
   "forms": [
     "tablet", "capsule", "solution", "suspension", "powder", "injection", "inhalation",
-    "cream", "ointment", "gel", "patch", "drops", "spray", "suppository", "lozenge", "implant"
+    "cream", "ointment", "gel", "patch", "drops", "spray", "suppository",
+    "lozenge", "implant"
   ],
   "pillShapes": [
-    "round", "oval", "oblong", "capsule", "diamond", "triangle", "square", "rectangle",
-    "pentagon", "hexagon", "octagon", "vial", "pen", "inhaler", "syringe", "patch", "dropper"
+    "round", "oval", "oblong", "capsule", "diamond", "triangle",
+    "square", "rectangle", "pentagon", "hexagon", "octagon", "vial",
+    "pen", "inhaler", "syringe", "patch", "dropper"
+  ],
+  "classes": [
+    "5-alpha reductase inhibitor", "5-HT3 antagonist", "ACE inhibitor", "Alpha-1 blocker",
+    "Angiotensin receptor blocker", "ARNI", "Atypical antipsychotic", "BCR-ABL kinase inhibitor",
+    "Beta-3 agonist", "Biguanide", "BTK inhibitor", "Calcium channel blocker",
+    "CDK4/6 inhibitor", "COX-2 inhibitor", "Dopamine partial agonist", "DPP-4 inhibitor",
+    "EGFR kinase inhibitor", "Factor Xa inhibitor", "Gabapentinoid", "H2 blocker",
+    "Immunomodulatory imide", "JAK inhibitor", "Leukotriene antagonist", "Macrolide antibiotic",
+    "Multikinase inhibitor", "NDRI", "NRI", "P2Y12 inhibitor",
+    "PDE5 inhibitor", "Proton pump inhibitor", "SGLT2 inhibitor", "SNRI",
+    "SSRI", "Statin", "Thiazolidinedione", "Thyroid hormone"
+  ],
+  "sponsors": [
+    "AbbVie", "Astellas", "AstraZeneca", "Bayer",
+    "Boehringer Ingelheim", "Bristol Myers Squibb", "Eisai", "Eli Lilly",
+    "Genentech", "GSK", "Incyte", "Janssen",
+    "Merck", "Novartis", "Otsuka", "Pfizer",
+    "Sanofi", "Takeda", "Vivus"
   ]
 }

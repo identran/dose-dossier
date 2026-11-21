@@ -68,12 +68,13 @@ function trimPk(text, cap) {
     const at = Math.floor(text.length * 0.2) + m.index + (m[0].match(/^[.)\]]\s/) ? 2 : 0);
     if (at > 800) { kept = text.slice(0, at).trim(); dropped = text.slice(at); }
   }
-  // Never lose the half-life: if only the dropped part mentions one, keep its first such sentence.
-  if (dropped && !HALF_LIFE.test(kept)) {
-    const s = sentences(dropped).find(x => HALF_LIFE.test(x));
-    if (s) kept += ` [...] ${s}`;
+  let out = trimAt(kept, cap);
+  // Never lose the half-life: if the kept part has none, add the first sentence of the full text that does.
+  if (!HALF_LIFE.test(out)) {
+    const hit = sentences(text).find(x => HALF_LIFE.test(x));
+    if (hit) out += ` [...] ${hit.length > 500 ? hit.slice(0, 500) : hit}`;
   }
-  return trimAt(kept, cap);
+  return out;
 }
 
 // ---- other sections
@@ -125,6 +126,7 @@ export function tableToText(html) {
   if (cap) lines.push(cleanLabelText(cap[1]));
   for (const row of String(html).split(/<\/tr>/i)) {
     const cells = [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(m => cleanLabelText(m[1])).filter(Boolean);
+    if (cells.length === 1 && cells[0].length > 90) continue; // footnote
     if (cells.length) lines.push(cells.join(' | '));
   }
   return lines.filter(Boolean);
@@ -142,7 +144,8 @@ function pkTables(label, cap) {
     const hits = (text.match(PK_WORDS) || []).length;
     if (!hits) return;
     const head = lines.slice(0, 2).join(' ').slice(0, 250);
-    scored.push({ lines, score: Math.min(hits, 8) - (OFF_TOPIC.test(head) ? 5 : 0) - i * 0.01 });
+    if (OFF_TOPIC.test(head)) return; // interaction and special-population tables are not for the figure
+    scored.push({ lines, score: Math.min(hits, 8) - i * 0.01 });
   });
   scored.sort((a, b) => b.score - a.score);
   const out = [];

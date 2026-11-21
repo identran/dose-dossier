@@ -7,18 +7,23 @@
 //   dial.setProgress(k, { animate })         1..times.length
 //   dial.setSolved(bool)
 //   dial.setTheme('light' | 'dark')
+//   dial.setLabel(text)                      aria-label of the figure (role="img")
+//   dial.setDetails(id)                      aria-details: id of the element that describes it
 //   dial.resize()
 //   dial.destroy()
 //
+//   onProbe(null | { t, c, frac, index })    t in hours, c in the curve's unit (null when the curve
+//                                            is relative), frac = C/Cmax, index = node or -1
+//
 // The figure is a ring (zero concentration, with time ticks inside it), the profile, the area
-// under it up to the current sampling time in the accent, and a dot for each sampling time
-// reached. Nothing here runs a permanent animation loop: a frame is drawn when something
+// under it up to the current sampling time in the accent, a dot for each sampling time reached,
+// and under the profile the half-life contours: arcs at Cmax/2, Cmax/4, Cmax/8 ... which first-
+// order elimination crosses at equal angles, one half-life apart. Nothing here runs a permanent animation loop: a frame is drawn when something
 // changed, and the only motion is the fill front sweeping to the next sampling time.
 
-import { formatHours } from '../pk.js';
 import {
   GEOM, STYLE, TAU, NODE_MAX,
-  buildNodes, tickSpec, peakTurn, radiusAt, polar, easeInOut,
+  buildNodes, tickSpec, contourCount, contourOnFill, peakTurn, riseTurn, radiusAt, polar, easeInOut,
 } from './model.js';
 import { createGLRenderer } from './gl.js';
 import { createSVGRenderer } from './svg.js';
@@ -81,7 +86,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   const root = document.createElement('div');
   root.className = 'dial-root';
   root.tabIndex = 0;
-  root.setAttribute('role', 'group');
+  root.setAttribute('role', 'img');
   root.setAttribute('aria-label', 'Concentration over time');
   const labels = document.createElement('div');
   labels.className = 'dial-labels';
@@ -139,11 +144,13 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     const explicit = document.documentElement.dataset.theme;
     const name = theme || (explicit === 'dark' || explicit === 'light' ? explicit : darkScheme.matches ? 'dark' : 'light');
     const base = FALLBACK[name];
-    return {
+    const set = {
       paper: readColor(`var(--paper, ${base.paper})`),
       ink: readColor(`var(--ink, ${base.ink})`),
       accent: readColor(challenge?.accent || `var(--accent, var(--mute, ${base.mute}))`),
     };
+    set.onFill = contourOnFill(set);
+    return set;
   }
 
   function recolor() {
@@ -161,13 +168,12 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     cmaxLabel = null;
     if (!challenge) return;
     const { period } = challenge.curve;
-    for (const h of tickSpec(period).labels) {
+    for (const { turn, text } of tickSpec(period).labels) {
       const el = document.createElement('span');
       el.className = 'dial-label';
-      // Day-scale dials stay in days throughout (formatHours switches unit at 72 h).
-      el.textContent = period > 24 && h < 72 ? `${+(h / 24).toFixed(1)} d` : formatHours(h);
+      el.textContent = text;
       labels.append(el);
-      tickLabels.push({ el, turn: h / period });
+      tickLabels.push({ el, turn });
     }
     cmaxLabel = document.createElement('span');
     cmaxLabel.className = 'dial-label';
@@ -188,11 +194,26 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       const extent = (Math.abs(Math.sin(a)) * el.offsetWidth + Math.abs(Math.cos(a)) * el.offsetHeight) / 2;
       put(el, turn, GEOM.R0 * box.s - STYLE.tickMajor - 4 - extent);
     }
-    // Cmax stands just outside the peak, clear of the probe ring.
-    const turn = peakTurn(challenge.curve);
-    const a = TAU * turn;
-    const extent = (Math.abs(Math.sin(a)) * cmaxLabel.offsetWidth + Math.abs(Math.cos(a)) * cmaxLabel.offsetHeight) / 2;
-    put(cmaxLabel, turn, (GEOM.R0 + GEOM.H) * box.s + STYLE.probe + 4 + extent);
+    // Cmax stands just outside the peak, clear of the probe ring. Where the figure's own box
+    // leaves no room for that (a peak near 12 o'clock), it stands beside the rise instead,
+    // level with the peak.
+    const { curve } = challenge;
+    const w = cmaxLabel.offsetWidth;
+    const h = cmaxLabel.offsetHeight;
+    const radial = t => (Math.abs(Math.sin(TAU * t)) * w + Math.abs(Math.cos(TAU * t)) * h) / 2;
+    const tangent = t => (Math.abs(Math.cos(TAU * t)) * w + Math.abs(Math.sin(TAU * t)) * h) / 2;
+    const top = (GEOM.R0 + GEOM.H) * box.s;
+    let turn = peakTurn(curve);
+    let radius = top + STYLE.probe + 4 + radial(turn);
+    const inside = Math.abs(radius * Math.sin(TAU * turn)) + w / 2 <= cx - 1
+      && Math.abs(radius * Math.cos(TAU * turn)) + h / 2 <= cy - 1;
+    if (!inside) {
+      const depth = 2 * radial(turn) + 4;
+      const rise = riseTurn(curve, clamp(1 - depth / (GEOM.H * box.s), 0.2, 1));
+      radius = top - radial(rise);
+      turn = rise - (tangent(rise) + STYLE.probe) / (TAU * radius);
+    }
+    put(cmaxLabel, turn, radius);
   }
 
   function layout() {
@@ -203,7 +224,10 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     const side = 2 * GEOM.CENTER * GEOM.R0 * box.s;
     center.style.width = center.style.height = `${side}px`;
     placeLabels();
-    if (scene) renderer.setScene(scene);
+    if (scene) {
+      scene.levels = contourCount(box.s);
+      renderer.setScene(scene);
+    }
     invalidate();
   }
 
@@ -282,8 +306,10 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     if (same) return;
     invalidate();
     if (!onProbe) return;
+    if (!next) return onProbe(null);
     const { curve } = challenge;
-    onProbe(next ? { t: next.t, c: curve.c(next.t), auc: curve.auc(next.t), index: next.index } : null);
+    const c = curve.c(next.t);
+    onProbe({ t: next.t, c: curve.relative ? null : c, frac: c / (curve.cmax || 1), index: next.index });
   }
 
   const atNode = i => ({ t: nodes[i].t, index: i, x: nodes[i].x, y: nodes[i].y });
@@ -383,6 +409,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
         curve: next.curve,
         nodes,
         tick: tickSpec(next.curve.period),
+        levels: contourCount(box.s),
         colors: colors(),
       };
       renderer.setScene(scene);
@@ -408,6 +435,14 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       recolor();
     },
 
+    setLabel(text) {
+      if (text) root.setAttribute('aria-label', text); else root.removeAttribute('aria-label');
+    },
+
+    setDetails(id) {
+      if (id) root.setAttribute('aria-details', id); else root.removeAttribute('aria-details');
+    },
+
     resize: layout,
 
     destroy() {
@@ -421,6 +456,6 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     },
 
     // Not part of the contract: state for the test page.
-    debug: () => ({ renderer: renderer.kind, front, progress, solved, box, busy: !!raf, simulateLoss: ms => renderer.simulateLoss?.(ms) }),
+    debug: () => ({ renderer: renderer.kind, front, progress, solved, box, levels: scene?.levels, busy: !!raf, simulateLoss: ms => renderer.simulateLoss?.(ms) }),
   };
 }

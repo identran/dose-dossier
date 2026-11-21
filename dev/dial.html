@@ -35,7 +35,7 @@ import { makeCurve, sampleTimes, formatHours } from '../site/js/pk.js';
 import { createDial } from '../site/js/dial/index.js';
 
 // Query string: profile, progress, solved=1, theme=light|dark, w=<px>, n=<nodes>, renderer=svg,
-// bare=1 (figure only), center=1 (outline the reserved square).
+// accent=<rrggbb>, bare=1 (figure only), center=1 (outline the reserved square).
 const PROFILES = {
   sildenafil: { label: 'Sildenafil, oral', accent: '#4F7CC4', pk: { tmaxH: 1, halfLifeH: 4, cmax: 450, unit: 'ng/mL' } },
   esomeprazole: { label: 'Esomeprazole, oral', accent: '#8C5A9E', pk: { tmaxH: 1.6, halfLifeH: 1.5, cmax: 4.7, unit: 'µmol/L' } },
@@ -43,6 +43,9 @@ const PROFILES = {
   antibody: { label: 'Monthly antibody, subcutaneous', accent: '#C9973A', pk: { tmaxH: 72, halfLifeH: 480, cmax: 12, unit: 'µg/mL' } },
   infusion: { label: 'Intravenous infusion', accent: '#B5533C', pk: { model: 'infusion', tmaxH: 1, halfLifeH: 500, cmax: 180, unit: 'µg/mL' } },
   bolus: { label: 'Intravenous bolus', accent: '#2F8189', pk: { model: 'bolus', tmaxH: 0, halfLifeH: 2, cmax: 60, unit: 'µg/mL' } },
+  relative: { label: 'No label Cmax, oral', accent: '#D2B48C', pk: { tmaxH: 3, halfLifeH: 11 } },
+  shortInfusion: { label: 'Short infusion, short half-life', accent: '#B8782B', pk: { model: 'infusion', tmaxH: 0.5, halfLifeH: 1.1, cmax: 90, unit: 'µg/mL' } },
+  twoLaps: { label: 'Two laps (forced period)', accent: '#2E8B57', pk: { tmaxH: 7, halfLifeH: 48, cmax: 30, unit: 'ng/mL', periodH: 168 } },
 };
 
 const q = new URLSearchParams(location.search);
@@ -61,9 +64,8 @@ const dial = createDial($('stage'), {
   renderer: q.get('renderer') || undefined,
   onProbe: p => {
     const { pk } = PROFILES[select.value];
-    $('probe').textContent = p
-      ? `${formatHours(p.t)} · ${+p.c.toPrecision(3)} ${pk.unit} · AUC ${+p.auc.toPrecision(3)} ${pk.unit}·h${p.index >= 0 ? ` · sample ${p.index + 1}` : ''}`
-      : '';
+    const amount = p && (p.c == null ? `${Math.round(p.frac * 100)}% of Cmax` : `${+p.c.toPrecision(3)} ${pk.unit}`);
+    $('probe').textContent = p ? `${formatHours(p.t)} · ${amount}${p.index >= 0 ? ` · sample ${p.index + 1}` : ''}` : '';
   },
 });
 
@@ -74,9 +76,12 @@ let times = [];
 function load() {
   const profile = PROFILES[select.value];
   const curve = makeCurve(profile.pk);
-  times = sampleTimes(curve, +q.get('n') || 11);
-  html.style.setProperty('--accent', profile.accent);
-  dial.setChallenge({ curve, times, accent: profile.accent, seed: 1 });
+  times = sampleTimes(curve, +q.get('n') || 8);
+  const accent = q.get('accent') ? `#${q.get('accent')}` : profile.accent;
+  html.style.setProperty('--accent', accent);
+  dial.setChallenge({ curve, times, accent, seed: 1 });
+  dial.setLabel(`Concentration over ${formatHours(curve.period)}, ${profile.label.toLowerCase()}`);
+  dial.setDetails('probe');
   progress = Math.min(progress, times.length);
   dial.setProgress(progress, { animate: false });
   dial.setSolved(solved);

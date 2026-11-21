@@ -46,7 +46,7 @@ export function createGLRenderer({ onLost, onRestored }) {
   let lost = false;
   let dead = false;
   let lostTimer = 0;
-  let scene = null;         // { curve, nodes, tick, colors }
+  let scene = null;         // { curve, nodes, tick, levels, colors }
   let knots = null;         // polyline currently in the texture
   let knotsFor = null;      // [curve, M] it was built for
   let size = { css: 0, px: 1 };
@@ -150,6 +150,8 @@ export function createGLRenderer({ onLost, onRestored }) {
       gl.uniform3fv(loc.uInk, toLinear(colors.ink));
       gl.uniform3fv(loc.uAccent, toLinear(colors.accent));
       gl.uniform2f(loc.uTick, scene.tick.minor, scene.tick.every);
+      gl.uniform1i(loc.uLevels, scene.levels);
+      gl.uniform3fv(loc.uOnFill, toLinear(colors.onFill));
       const p = frame.probe;
       gl.uniform3f(loc.uProbe, p ? p.x : 0, p ? p.y : 0, p ? 1 : 0);
       gl.drawArrays(gl.TRIANGLES, 0, 3);

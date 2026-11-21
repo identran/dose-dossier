@@ -62,10 +62,10 @@ function timesIn(quote) {
 }
 
 const MASS_NG = { pg: 1e-3, ng: 1, µg: 1e3, μg: 1e3, ug: 1e3, mcg: 1e3, mg: 1e6, g: 1e9 };
-const MOLE_NMOL = { pmol: 1e-3, nmol: 1, µmol: 1e3, μmol: 1e3, umol: 1e3, mmol: 1e6, nm: 1, µm: 1e3, μm: 1e3, um: 1e3 };
+const MOLE_NMOL = { micromol: 1e3, nanomol: 1, pmol: 1e-3, nmol: 1, µmol: 1e3, μmol: 1e3, umol: 1e3, mmol: 1e6, nm: 1, µm: 1e3, μm: 1e3, um: 1e3 };
 const PER_ML = { ml: 1, l: 1000, dl: 100 };
 const TARGET_NG_ML = { 'pg/mL': 1e-3, 'ng/mL': 1, 'µg/mL': 1e3, 'mg/L': 1e3, 'ng/L': 1e-3 };
-const CONC = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*(pg|ng|µg|μg|ug|mcg|mg|g|pmol|nmol|µmol|μmol|umol|mmol|nm|µm|μm|um)\s*(?:\/|per)\s*(ml|dl|l)(?![a-z])/g;
+const CONC = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*(pg|ng|µg|μg|ug|mcg|mg|g|pmol|nmol|micromol|nanomol|µmol|μmol|umol|mmol|nm|µm|μm|um)\s*(?:\/|per)\s*(ml|dl|l)(?![a-z])/g;
 
 // Concentrations in the quote as { ngPerMl (or null when a molecular weight is needed), molar: nmol/mL }
 function concentrationsIn(quote) {
@@ -166,8 +166,11 @@ async function verifyOne(label, file, vocab) {
       const found = concentrationsIn(joined);
       if (!found.length) {
         // table row: "C max (ng/mL) | 440 | 12": the unit sits in the label cell, the numbers follow
-        const u = /(pg|ng|µg|μg|ug|mcg|mg)\s*\/\s*(ml|l)(?![a-z])/.exec(normalize(joined));
-        if (u) for (const n of numbersIn(joined.replace(/\([^)]*\)/, ' '))) found.push({ text: `${n.raw} ${u[0]}`, ngMl: (Number(n.canon) * MASS_NG[u[1]]) / PER_ML[u[2]] });
+        const u = /(pg|ng|µg|μg|ug|mcg|mg|pmol|nmol|micromol|nanomol|µmol|μmol|umol|mmol)\s*\/\s*(ml|l)(?![a-z])/.exec(normalize(joined));
+        if (u) for (const n of numbersIn(joined.replace(/\([^)]*\)/g, ' '))) {
+          const v = Number(n.canon), den = PER_ML[u[2]];
+          found.push(MASS_NG[u[1]] !== undefined ? { text: `${n.raw} ${u[0]}`, ngMl: (v * MASS_NG[u[1]]) / den } : { text: `${n.raw} ${u[0]}`, nmolMl: (v * MOLE_NMOL[u[1]]) / den });
+        }
       }
       if (!found.length) { res.warnings.push(`pk.cmax: no concentration could be parsed from its quote, so it was not cross-checked`); continue; }
       const target = pk.cmax * (TARGET_NG_ML[pk.unit] ?? NaN);

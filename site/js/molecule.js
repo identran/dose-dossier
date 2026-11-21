@@ -3,8 +3,12 @@
 //
 // renderMolecule(el, structure, { reveal }) draws the schema's `structure` (heavy atoms
 // [x, y, element], y up, plus bonds [i, j, order]) inside `el`, fitted to el's inscribed circle.
-// An optional fourth atom entry is a formal charge ([x, y, "N", 1]); without any, the obvious
-// ones (nitro, N-oxide, quaternary N, sulfonium) are inferred from the valences.
+// A fourth atom entry is a formal charge ([x, y, "N", 1]): it is drawn as a superscript and decides
+// the hydrogen count. Where the data gives none, the charges a valence makes unavoidable (nitro,
+// N-oxide, quaternary N, sulfonium) are inferred.
+//
+// The drawing is the game's secret, so each level's elements are created when that level is
+// reached: below level 3 there is no label in the document and no bond is trimmed for one.
 
 const NS = 'http://www.w3.org/2000/svg';
 
@@ -17,14 +21,10 @@ const MARGIN = 0.05;     // of the inscribed radius
 const MS = 320;          // transition between levels
 
 const CSS = `
-.dd-mol{display:block;width:100%;height:100%;overflow:visible}
-.dd-mol-dots,.dd-mol-bonds,.dd-mol-sym,.dd-mol-h,.dd-mol-c3{transition:opacity ${MS}ms ease}
-@media (prefers-reduced-motion:reduce){.dd-mol-dots,.dd-mol-bonds,.dd-mol-sym,.dd-mol-h,.dd-mol-c3{transition:none}}
-.dd-mol[data-reveal="0"] .dd-mol-bonds,
-.dd-mol:not([data-reveal="0"]) .dd-mol-dots,
-.dd-mol[data-reveal="0"] .dd-mol-sym,.dd-mol[data-reveal="1"] .dd-mol-sym,.dd-mol[data-reveal="2"] .dd-mol-sym,
-.dd-mol:not([data-reveal="4"]) .dd-mol-h,
-.dd-mol[data-reveal="4"] .dd-mol-c3{opacity:0}
+.dd-mol-in{animation:dd-mol-in ${MS}ms ease both}
+.dd-mol-out{animation:dd-mol-in ${MS}ms ease both reverse}
+@keyframes dd-mol-in{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.dd-mol-in,.dd-mol-out{animation:none}}
 `;
 
 const states = new WeakMap();
@@ -55,13 +55,14 @@ export function renderMolecule(el, structure, { reveal = 4 } = {}) {
     if (key !== st.key) {
       st.key = key;
       st.model = analyse(structure);
-      st.lines = null;
+      st.L = null;
     }
     st.structure = structure;
   }
   st.level = level;
-  if (!st.lines || !st.svg || st.svg.parentNode !== el) build(st);
-  else setLevel(st, true);
+  // A step back is redrawn from nothing, so that what the lower level hides is gone at once.
+  if (!st.L || !st.svg || st.svg.parentNode !== el || level < st.shown) build(st);
+  else reveal(st, true);
   return true;
 }
 
@@ -126,7 +127,7 @@ function analyse(structure) {
   const unit = len.length ? len[len.length >> 1] : 1;
   for (const a of atoms) { a.x /= unit; a.y /= unit; }
 
-  if (!atoms.some(a => a.q)) inferCharges(atoms);
+  inferCharges(atoms);
   for (const a of atoms) {
     a.h = hydrogens(a.el, a.bos, a.q);
     a.label = a.el !== 'C' || a.q !== 0 || a.nb.length === 0;
@@ -135,9 +136,11 @@ function analyse(structure) {
   return { atoms, bonds };
 }
 
-// The schema carries no charges, so recover the ones the valences make unambiguous.
+// A charge given in the data stands. Where an atom has none and its valence is impossible without
+// one, recover it (older fixtures carry no charges).
 function inferCharges(atoms) {
   for (const a of atoms) {
+    if (a.q) continue;
     if (a.el === 'N' && a.bos === 4) {
       a.q = 1;
       const o = a.nb.find(n => n.bond.order === 1 && atoms[n.j].el === 'O' && atoms[n.j].nb.length === 1 && !atoms[n.j].q);
@@ -452,7 +455,7 @@ function layout(model, w, h, font, stroke) {
       const off = ln.m * L.s;
       const [a3, a4] = trims(L.byAtom[b.a], A.x + nx * off, A.y + ny * off, ux, uy);
       const [b3, b4] = trims(L.byAtom[b.b], B.x + nx * off, B.y + ny * off, -ux, -uy);
-      L.lines.push({ ax: A.x, ay: A.y, bx: B.x, by: B.y, ux, uy, nx, ny, off, sa: ln.ca * L.s, sb: ln.cb * L.s, a3, a4, b3, b4, max: 0.45 * len });
+      L.lines.push({ first: ln === b.lines[0], ax: A.x, ay: A.y, bx: B.x, by: B.y, ux, uy, nx, ny, off, sa: ln.ca * L.s, sb: ln.cb * L.s, a3, a4, b3, b4, max: 0.45 * len });
     }
   }
   return L;
@@ -478,65 +481,90 @@ function build(st) {
   st.w = w; st.h = h;
   if (fresh) {
     st.svg ||= node('svg', { class: 'dd-mol', role: 'img', fill: 'none', stroke: 'currentColor', 'stroke-linecap': 'round' });
-    st.svg.style.cssText = auto ? 'display:block;width:100%;height:auto;aspect-ratio:1' : 'display:block;width:100%;height:100%';
+    st.svg.style.cssText = auto ? 'display:block;width:100%;height:auto;aspect-ratio:1;overflow:visible' : 'display:block;width:100%;height:100%;overflow:visible';
     el.appendChild(st.svg);
   }
   const svg = st.svg;
-  const stroke = parseFloat(getComputedStyle(el).getPropertyValue('--mol-stroke')) || STROKE;
-  const L = layout(model, w, h, fontFor(el), stroke);
+  st.stroke = parseFloat(getComputedStyle(el).getPropertyValue('--mol-stroke')) || STROKE;
+  const L = st.L = layout(model, w, h, fontFor(el), st.stroke);
 
   const frag = document.createDocumentFragment();
   node('style', {}, frag).textContent = CSS;
-  const root = node('g', { transform: `translate(${f2(L.dx)} ${f2(L.dy)})` }, frag);
+  st.root = node('g', { transform: `translate(${f2(L.dx)} ${f2(L.dy)})`, 'aria-hidden': 'true' }, frag);
+  st.dots = st.bonds = st.labels = null;
+  st.shown = -1;
+  st.cur = null;
+  svg.setAttribute('viewBox', `0 0 ${f2(w)} ${f2(h)}`);
+  svg.replaceChildren(frag);
+  reveal(st, false);
+}
 
-  const dots = node('g', { class: 'dd-mol-dots', fill: 'currentColor', stroke: 'none' }, root);
-  const r = f2(Math.max(1.4, Math.min(3, 0.09 * L.k)));
-  for (const p of L.P) node('circle', { cx: f2(p.x), cy: f2(p.y), r }, dots);
-
-  const bonds = node('g', { class: 'dd-mol-bonds', 'stroke-width': stroke }, root);
-  for (const ln of L.lines) ln.el = node('line', { 'vector-effect': 'non-scaling-stroke' }, bonds);
-
-  const labels = node('g', {
-    class: 'dd-mol-labels', fill: 'currentColor', stroke: 'none', 'font-size': f2(L.F),
-    style: 'font-family:var(--font-data);font-weight:400;font-style:normal',
-  }, root);
-  const text = (parent, str, x, y, anchor, extra) => {
-    const t = node('text', { x: f2(x), y: f2(y), 'text-anchor': anchor, ...extra }, parent);
+// Bring the drawing to st.level, creating only what that level shows.
+function reveal(st, animate) {
+  const { svg, level, L, root } = st;
+  svg.setAttribute('data-reveal', level);
+  svg.setAttribute('aria-label', level < 4 ? 'Chemical structure, partly revealed' : 'Chemical structure');
+  const moving = animate && st.cur && !document.hidden && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const layer = (name, attrs, parent, fade = true) => node('g', { class: name + (moving && fade ? ' dd-mol-in' : ''), ...attrs }, parent);
+  const text = (parent, str, x, y, anchor, size) => {
+    const t = node('text', { x: f2(x), y: f2(y), 'text-anchor': anchor, ...(size && { 'font-size': f2(size) }) }, parent);
     t.textContent = str;
     return t;
   };
-  for (const lab of L.labels) {
-    const sym = node('g', { class: 'dd-mol-sym' }, labels);
-    text(sym, lab.sym, lab.x, lab.yb, 'middle');
-    const moves = lab.qt && lab.c4 !== lab.c3;
-    if (lab.qt) text(sym, lab.qt, lab.c3.x, lab.c3.y, 'start', { 'font-size': f2(L.Fs), ...(moves && { class: 'dd-mol-c3' }) });
-    if (!lab.H) continue;
-    const hyd = node('g', { class: 'dd-mol-h' }, labels);
-    const t = text(hyd, 'H', lab.H.x, lab.H.y, lab.H.anchor);
-    if (lab.h > 1) node('tspan', { dy: f2(0.2 * L.F), 'font-size': f2(L.Fs) }, t).textContent = String(lab.h);
-    if (moves) text(hyd, lab.qt, lab.c4.x, lab.c4.y, 'start', { 'font-size': f2(L.Fs) });
+
+  if (level === 0 && !st.dots) {
+    st.dots = layer('dd-mol-dots', { fill: 'currentColor', stroke: 'none' }, root);
+    const r = f2(Math.max(1.4, Math.min(3, 0.09 * L.k)));
+    for (const p of L.P) node('circle', { cx: f2(p.x), cy: f2(p.y), r }, st.dots);
   }
+  if (level >= 1 && st.dots) {
+    const gone = st.dots;
+    st.dots = null;
+    if (moving) { gone.setAttribute('class', 'dd-mol-out'); setTimeout(() => gone.remove(), MS); } else gone.remove();
+  }
+  if (level >= 1 && st.shown < 1) {
+    st.bonds = layer('dd-mol-bonds', { 'stroke-width': st.stroke }, root);
+    for (const ln of L.lines) if (ln.first) ln.el = node('line', { 'vector-effect': 'non-scaling-stroke' }, st.bonds);
+  }
+  if (level >= 2 && st.shown < 2) {
+    // The further lines of double and triple bonds start on the first one and open out of it.
+    for (const ln of L.lines) if (!ln.first) ln.el = node('line', { 'vector-effect': 'non-scaling-stroke' }, st.bonds);
+  }
+  if (level >= 3 && st.shown < 3) {
+    st.labels = node('g', {
+      class: 'dd-mol-labels', fill: 'currentColor', stroke: 'none', 'font-size': f2(L.F),
+      style: 'font-family:var(--font-data);font-weight:400;font-style:normal',
+    }, root);
+    const sym = layer('dd-mol-sym', {}, st.labels);
+    for (const lab of L.labels) {
+      text(sym, lab.sym, lab.x, lab.yb, 'middle');
+      if (lab.qt) lab.qel = text(sym, lab.qt, lab.c3.x, lab.c3.y, 'start', L.Fs);
+    }
+  }
+  if (level >= 4 && st.shown < 4) {
+    const hyd = layer('dd-mol-h', {}, st.labels);
+    for (const lab of L.labels) {
+      if (!lab.H) continue;
+      const t = text(hyd, 'H', lab.H.x, lab.H.y, lab.H.anchor);
+      if (lab.h > 1) node('tspan', { dy: f2(0.2 * L.F), 'font-size': f2(L.Fs) }, t).textContent = String(lab.h);
+      if (lab.qt && lab.c4 !== lab.c3) { // the charge steps aside for the hydrogens: NH3+
+        lab.qel.remove();
+        text(hyd, lab.qt, lab.c4.x, lab.c4.y, 'start', L.Fs);
+      }
+    }
+  }
+  st.shown = level;
 
-  svg.setAttribute('viewBox', `0 0 ${f2(w)} ${f2(h)}`);
-  svg.replaceChildren(frag);
-  st.lines = L.lines;
-  setLevel(st, false);
-}
-
-function setLevel(st, animate) {
-  const { svg, level } = st;
-  svg.setAttribute('data-reveal', level);
-  svg.setAttribute('aria-label', level < 4 ? 'Chemical structure, partly revealed' : 'Chemical structure');
   // u opens the bond orders, v pulls the bonds back from the labels, w from the hydrogens.
   const to = { u: level >= 2 ? 1 : 0, v: level >= 3 ? 1 : 0, w: level >= 4 ? 1 : 0 };
   cancelAnimationFrame(st.raf);
-  const still = !animate || !st.cur || document.hidden || matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (still) {
+  if (!moving) {
     st.cur = to;
     draw(st);
     return;
   }
   const from = { ...st.cur }, t0 = performance.now();
+  draw(st);
   const step = now => {
     const p = Math.min(1, (now - t0) / MS), e = p * p * (3 - 2 * p);
     st.cur = { u: from.u + (to.u - from.u) * e, v: from.v + (to.v - from.v) * e, w: from.w + (to.w - from.w) * e };
@@ -548,7 +576,8 @@ function setLevel(st, animate) {
 
 function draw(st) {
   const { u, v, w } = st.cur;
-  for (const ln of st.lines) {
+  for (const ln of st.L.lines) {
+    if (!ln.el) continue;
     const off = ln.off * u;
     const ta = Math.min(ln.max, Math.max(ln.sa * u, ln.a3 * v + (ln.a4 - ln.a3) * w));
     const tb = Math.min(ln.max, Math.max(ln.sb * u, ln.b3 * v + (ln.b4 - ln.b3) * w));

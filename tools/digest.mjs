@@ -15,7 +15,7 @@ const OUT = path.join(ROOT, 'tools', '.cache', 'digests');
 const args = process.argv.slice(2);
 const ci = args.indexOf('--candidates');
 const candFile = path.resolve(ci >= 0 ? args[ci + 1] : path.join(ROOT, 'data', 'candidates.json'));
-const ids = args.filter((a, i) => !a.startsWith('--') && i !== ci + 1);
+const ids = args.filter((a, i) => !a.startsWith("--") && (ci < 0 || i !== ci + 1));
 if (!ids.length && !args.includes('--all')) { console.error('usage: digest.mjs [ids...] [--all] [--candidates file]'); process.exit(2); }
 
 const cands = JSON.parse(await readFile(candFile, 'utf8'));

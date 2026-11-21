@@ -79,20 +79,66 @@ export function buildNodes(curve, times) {
   });
 }
 
-// Tick marks on the inside of the ring, and the few that carry a label.
+// Tick marks on the inside of the ring, and the three that carry a label. Labels stand at the
+// quarter turns in the unit the period reads in; a 7 or 14 day dial has no whole quarter, so
+// there they stand on whole days a third of the way round instead.
+const TICKS = {
+  6: [12, 3, 'h'], 12: [12, 3, 'h'], 24: [24, 6, 'h'], 48: [12, 3, 'h'],
+  96: [12, 3, 'd'], 168: [7, 2, 'd'], 336: [14, 4, 'd'], 672: [28, 7, 'd'],
+  1344: [8, 2, 'wk'], 2016: [12, 3, 'wk'], 4032: [24, 6, 'wk'],
+};
+const UNIT_H = { h: 1, d: 24, wk: 168 };
+
 export function tickSpec(period) {
-  if (period === 24) return { minor: 24, every: 6, labels: [6, 12, 18] };
-  if (period === 168) return { minor: 7, every: 2, labels: [48, 96, 144] };
-  if (period === 672) return { minor: 28, every: 7, labels: [168, 336, 504] };
-  if (period === 2016) return { minor: 12, every: 3, labels: [504, 1008, 1512] };
-  return { minor: 12, every: 3, labels: [period / 4, period / 2, (3 * period) / 4] };
+  const unit = period <= 48 ? 'h' : period < 1344 ? 'd' : 'wk';
+  const [minor, every, u] = TICKS[period] || [12, 3, unit];
+  const labels = [1, 2, 3].map(i => {
+    const turn = (i * every) / minor;
+    return { turn, text: `${+((turn * period) / UNIT_H[u]).toFixed(1)} ${u}` };
+  });
+  return { minor, every, labels };
 }
 
-// Where the peak sits on the dial, in turns: the one place the Cmax label can stand clear of
-// every lap of the profile.
+// Half-life contours: circles at C = Cmax/2, Cmax/4, Cmax/8 ... drawn only under the profile.
+// Their radii close in on the ring as a geometric series, and first-order elimination crosses
+// one every half-life, so equal ratios show as equal angles. Levels stop before the gap to the
+// next one (or to the ring) would fall under CONTOUR_GAP pixels.
+export const CONTOUR_MAX = 3;
+export const CONTOUR_GAP = 5;
+
+export function contourCount(sCss) {
+  let n = 0;
+  while (n < CONTOUR_MAX && (GEOM.H * sCss) / 2 ** (n + 1) >= CONTOUR_GAP) n++;
+  return n;
+}
+
+// Contours are ink. Over the accent fill they stay ink unless ink would all but vanish there
+// (a dark accent on light paper, a pale one on dark), in which case they are cut in paper.
+export function contourOnFill({ paper, ink, accent }) {
+  const lum = c => toLinear(c).reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
+  const ratio = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+  const la = lum(accent);
+  const withInk = ratio(lum(ink), la);
+  return withInk < 2.2 && ratio(lum(paper), la) > withInk ? paper : ink;
+}
+
+// Where the peak sits on the dial, in turns.
 export function peakTurn(curve) {
   const t = curve.model === 'bolus' ? 0 : curve.tmax;
   return (t / curve.period) % 1;
+}
+
+// The lap-time at which the rising limb first reaches the fraction c of Cmax.
+export function riseTurn(curve, c) {
+  if (curve.model === 'bolus' || !(curve.tmax > 0)) return 0;
+  const cn = normalised(curve);
+  let lo = 0;
+  let hi = curve.tmax;
+  for (let i = 0; i < 40; i++) {
+    const mid = (lo + hi) / 2;
+    if (cn(mid) < c) lo = mid; else hi = mid;
+  }
+  return hi / curve.period;
 }
 
 export const easeInOut = x => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);

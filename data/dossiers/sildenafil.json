@@ -15,11 +15,9 @@
   "route": "oral",
   "form": "tablet",
   "pk": {
-    "context": "100 mg single oral dose, fasted healthy male volunteers",
+    "context": "100 mg oral, single dose, healthy adults",
     "model": "absorption",
     "tmaxH": 1,
-    "cmax": 440,
-    "unit": "ng/mL",
     "halfLifeH": 4,
     "spanH": 24
   },
@@ -381,61 +379,50 @@
       ]
     ]
   },
-  "clues": [
-    {
-      "module": 1,
-      "title": "Approval and strengths",
-      "text": "Approved by FDA in March 1998 as film-coated tablets for oral use, in 25, 50 and 100 mg strengths."
-    },
-    {
-      "module": 1,
-      "title": "Sponsor",
-      "text": "The original application was filed by Pfizer. The label is now held by Viatris."
-    },
-    {
-      "module": 2,
-      "title": "Class and selectivity",
-      "text": "A selective inhibitor of phosphodiesterase type 5. It is only about 10-fold more potent on PDE5 than on PDE6, an enzyme of the retina."
-    },
-    {
-      "module": 2,
-      "title": "Pathway",
-      "text": "Blocks breakdown of cGMP downstream of nitric oxide, prolonging smooth muscle relaxation. At recommended doses it does nothing without that nitric oxide signal."
-    },
-    {
-      "module": 3,
-      "title": "Drug substance",
-      "text": "A citrate salt of molecular weight 666.7; the free base, C₂₂H₃₀N₆O₄S, is 474.6. White to off-white crystalline powder, 3.5 mg/mL soluble in water."
-    },
-    {
-      "module": 3,
-      "title": "Tablet",
-      "text": "Blue, rounded-diamond film-coated tablets, coloured with FD&C Blue No. 2 aluminum lake. Lactose and croscarmellose sodium are among the excipients."
-    },
-    {
-      "module": 4,
-      "title": "Absorption and food",
-      "text": "Absolute bioavailability is 41%. A high-fat meal delays Tmax by about 60 minutes and lowers Cmax by 29%."
-    },
-    {
-      "module": 4,
-      "title": "Metabolism and excretion",
-      "text": "Cleared mainly by CYP3A4 (CYP2C9 minor) to an N-desmethyl metabolite with half the parent’s potency. 96% is protein bound; about 80% of a dose is excreted in feces."
-    },
-    {
-      "module": 5,
-      "title": "Contraindications",
-      "text": "Contraindicated with nitrates in any form and with guanylate cyclase stimulators such as riociguat, because hypotension is potentiated."
-    },
-    {
-      "module": 5,
-      "title": "Indication",
-      "text": "Indicated for the treatment of erectile dysfunction. Common adverse reactions are headache, flushing and dyspepsia; sudden vision loss (NAION) is a warning."
-    }
-  ],
+  "clues": {
+    "kinetics": "Rapidly absorbed with a mean absolute bioavailability of 41%; a high-fat meal slows absorption. About 96% is bound to plasma proteins and clearance is mainly hepatic via CYP3A4.",
+    "substance": "Supplied as the citrate salt, molecular weight 666.7 against 474.6 for the free base. Its solubility in water is 3.5 mg/mL.",
+    "product": "Marketed under an NDA as film-coated tablets of 25, 50 and 100 mg.",
+    "safety": "No boxed warning. Contraindicated with nitrates and with guanylate cyclase stimulators; headache, flushing and dyspepsia are the leading adverse reactions.",
+    "indication": "Indicated for the treatment of erectile dysfunction.",
+    "mechanism": "Inhibits phosphodiesterase type 5, which degrades cGMP, so nitric oxide signalling relaxes smooth muscle for longer; its selectivity over the retinal enzyme PDE6 is only about 10-fold."
+  },
+  "tell": "A PDE5 inhibitor with 41% bioavailability and a nitrate contraindication; the blue diamond tablet is its signature.",
   "source": {
     "setId": "d905dc8d-917f-4ea3-a4ee-a1ecf6967d4e",
     "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d905dc8d-917f-4ea3-a4ee-a1ecf6967d4e",
     "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "reached within 30 to 120 minutes (median 60 minutes) of oral dosing",
+    "pk.halfLifeH": "terminal half lives of about 4 hours",
+    "clues.kinetics": [
+      "mean absolute bioavailability of 41%",
+      "When VIAGRA is taken with a high fat meal, the rate of absorption is reduced",
+      "approximately 96% bound to plasma proteins",
+      "eliminated predominantly by hepatic metabolism (mainly CYP3A4)"
+    ],
+    "clues.substance": [
+      "is the citrate salt of sildenafil",
+      "molecular weight of 666.7",
+      "molecular weight 474.6",
+      "solubility of 3.5 mg/mL in water"
+    ],
+    "clues.product": [
+      "film-coated tablets containing sildenafil citrate equivalent to 25 mg, 50 mg, or 100 mg of sildenafil"
+    ],
+    "clues.safety": [
+      "Administration of VIAGRA to patients using nitric oxide donors, such as organic nitrates",
+      "Administration with guanylate cyclase (GC) stimulators, such as riociguat",
+      "Most common adverse reactions (≥ 2%) include headache, flushing, dyspepsia"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of erectile dysfunction"
+    ],
+    "clues.mechanism": [
+      "inhibiting phosphodiesterase type 5 (PDE5), which is responsible for degradation of cGMP in the corpus cavernosum",
+      "more potent on PDE5 than on other known phosphodiesterases (10-fold for PDE6"
+    ],
+    "pill": "blue, rounded diamond shaped film-coated tablets"
   }
 }
