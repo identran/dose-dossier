@@ -19,7 +19,9 @@ export const STYLE = Object.freeze({
   bold: 1.7,        // profile behind the fill front
   fine: 0.8,        // profile ahead of it
   echo: 0.6,        // half-life echoes
-  cmax: 0.6,        // Cmax circle
+  cmax: 0.9,        // Cmax circle, dotted
+  cmaxDash: 1.2,
+  cmaxPitch: 5,
   tick: 0.8,
   tickMinor: 3.5,
   tickMajor: 7,

@@ -152,13 +152,13 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 
 .play { margin-top: var(--space-3); }
 
+/* The suggestion list hangs from the whole row, so it covers the full width of the column. */
 .guess-form {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   column-gap: var(--space-2);
 }
-
-.combo { position: relative; }
 
 .field {
   display: block;
@@ -180,8 +180,15 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
   left: 0;
   right: 0;
   padding: var(--space-1) 0 var(--space-2);
-  border-bottom: 1px solid var(--ink);
   background: var(--paper);
+}
+
+/* The list closes with a rule, and paper continues a little below it to clear the text underneath. */
+.suggestions::after {
+  content: '';
+  display: block;
+  margin-top: var(--space-2);
+  border-bottom: 1px solid var(--ink);
 }
 
 .suggestions li {

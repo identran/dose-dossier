@@ -140,7 +140,9 @@ void main() {
     // Cmax circle, broken where its label sits.
     float away = abs(fract(a - uGap.x + 0.5) - 0.5);
     float open = uGap.z > 0.5 ? edge((away - uGap.y) * arc) : 1.0;
-    hair = max(hair, stroke(abs(r - R0 - H), ${f(STYLE.cmax)} * uPx) * open);
+    float pitch = TAU * (R0 + H) / floor(TAU * (R0 + H) / (${f(STYLE.cmaxPitch)} * uPx) + 0.5);
+    float beat = abs(fract(a * TAU * (R0 + H) / pitch) - 0.5) * pitch;
+    hair = max(hair, stroke(abs(r - R0 - H), ${f(STYLE.cmax)} * uPx) * edge(0.5 * ${f(STYLE.cmaxDash)} * uPx - beat) * open);
 
     // Time ticks on the inside of the ring.
     float idx = floor(a * uTick.x + 0.5);
