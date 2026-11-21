@@ -2,6 +2,7 @@
 // Modules with nothing revealed yet are listed in the muted tone.
 
 import { h } from './dom.js';
+import { typeset } from './format.js';
 
 // clues: [{ module, title, text }], shown: how many are revealed, modules: { 1: 'Administrative', … }
 export function renderDossier(root, clues, shown, modules, { fresh = false } = {}) {
@@ -18,5 +19,5 @@ export function renderDossier(root, clues, shown, modules, { fresh = false } = {
       h('h3', null, modules[group.module] || ''),
       group.entries.map(({ clue, isNew }) =>
         h('p', { class: isNew ? 'clue is-new' : 'clue' },
-          h('span', { class: 'clue-title' }, clue.title), clue.text)))));
+          h('span', { class: 'clue-title' }, clue.title), typeset(clue.text))))));
 }

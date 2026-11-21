@@ -2,7 +2,7 @@
 // A match is set in ink, a miss in the muted tone; the half-life carries an arrow.
 
 import { h, sr } from './dom.js';
-import { halfLife } from './format.js';
+import { halfLife, THIN } from './format.js';
 
 const ARROW = { longer: '↑', shorter: '↓' };
 
@@ -12,7 +12,7 @@ function fact(f) {
   const verdict = f.match ? ', matches' : f.direction ? `, the answer’s is ${f.direction}` : ', differs';
   return h('li', { class: 'fact', 'data-match': String(f.match), title: f.label },
     sr(`${f.label}: `), text,
-    f.direction && [' ', h('span', { class: 'dir', 'aria-hidden': 'true' }, ARROW[f.direction])],
+    f.direction && [THIN, h('span', { class: 'dir', 'aria-hidden': 'true' }, ARROW[f.direction])],
     sr(verdict));
 }
 

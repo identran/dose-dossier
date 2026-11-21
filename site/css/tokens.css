@@ -6,10 +6,7 @@
   --mute: #6B6A66;
   --accent: var(--mute);
 
-  /* Typeface decision pending: drop the chosen families (and their @font-face rules) in here. */
-  --font-display: Georgia, 'Times New Roman', serif;
-  --font-text: Georgia, 'Times New Roman', serif;
-  --font-data: Georgia, 'Times New Roman', serif;
+  /* --font-display, --font-text and --font-data come from assets/fonts/fonts.css, linked after this file. */
 
   /* One size scale, ratio 1.25. */
   --size-s: 0.8rem;
