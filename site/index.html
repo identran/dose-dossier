@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dose Dossier</title>
+  <meta name="description" content="A daily guessing game for people in drug development. Name the drug from its pharmacokinetic profile and its dossier.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ECEAE5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    // Apply a stored or requested theme before first paint.
+    try {
+      var t = new URLSearchParams(location.search).get('theme') ||
+        (JSON.parse(localStorage.getItem('dose-dossier.v1')) || {}).theme;
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <h1>Dose Dossier</h1>
+      <nav class="masthead-nav" aria-label="About">
+        <button type="button" class="text-button" data-sheet="help">How to play</button>
+        <button type="button" class="text-button" data-sheet="stats">Statistics</button>
+      </nav>
+      <p class="day">
+        <span id="day"></span>
+        <a id="earlier" hidden>Earlier</a>
+        <a id="later" hidden>Later</a>
+      </p>
+    </header>
+
+    <figure class="figure">
+      <div id="dial" class="dial"></div>
+      <figcaption class="caption">
+        <span id="glyph" class="glyph"></span>
+        <span id="context"></span>
+        <output id="probe" class="probe" aria-hidden="true"></output>
+      </figcaption>
+    </figure>
+
+    <section class="play" aria-label="Your guess">
+      <form id="guess-form" class="guess-form" autocomplete="off" novalidate>
+        <div class="combo">
+          <input id="guess" class="field" type="text" role="combobox" aria-label="Drug name"
+            aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-describedby="status"
+            placeholder="Generic or brand name" autocapitalize="none" autocorrect="off" spellcheck="false"
+            enterkeyhint="go" disabled>
+          <ul id="suggestions" class="suggestions" role="listbox" aria-label="Drugs" hidden></ul>
+        </div>
+        <button type="submit" class="button" disabled>Guess</button>
+      </form>
+      <p id="status" class="status"></p>
+
+      <div id="result" class="result" hidden>
+        <h2 id="answer" class="answer" tabindex="-1"></h2>
+        <p id="answer-brand" class="answer-brand"></p>
+        <p id="outcome" class="outcome"></p>
+        <p class="actions">
+          <button type="button" id="copy" class="button">Copy result</button>
+          <a id="label" target="_blank" rel="noopener">FDA label</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="guesses" aria-labelledby="guesses-title">
+      <h2 id="guesses-title" class="sr">Guesses</h2>
+      <ol id="guesses" reversed></ol>
+    </section>
+
+    <section class="dossier" aria-labelledby="dossier-title">
+      <h2 id="dossier-title" class="sr">Dossier</h2>
+      <div id="dossier"></div>
+    </section>
+
+    <footer class="colophon">
+      <p>From public FDA labels on DailyMed. Not medical advice.</p>
+      <button type="button" id="theme" class="text-button"></button>
+    </footer>
+  </main>
+
+  <p id="live" class="sr" role="status" aria-live="polite"></p>
+
+  <dialog id="help" class="sheet" aria-labelledby="help-title">
+    <div class="sheet-body">
+      <header class="sheet-head">
+        <h2 id="help-title">How to play</h2>
+        <form method="dialog"><button class="text-button">Close</button></form>
+      </header>
+      <p>Each day one FDA-approved drug is the answer. The figure is its plasma concentration over time after the dose noted beneath it, and the drawing inside is its structure. You have eleven guesses. Each miss adds a sampling time to the figure, sharpens the structure and opens one entry of the dossier. Under a guess, bold marks what it shares with the answer, and an arrow shows whether the answer’s half-life is longer or shorter.</p>
+    </div>
+  </dialog>
+
+  <dialog id="stats" class="sheet" aria-labelledby="stats-title">
+    <div class="sheet-body">
+      <header class="sheet-head">
+        <h2 id="stats-title">Statistics</h2>
+        <form method="dialog"><button class="text-button">Close</button></form>
+      </header>
+      <dl id="figures" class="figures"></dl>
+      <h3>Guesses needed</h3>
+      <ol id="distribution" class="distribution"></ol>
+    </div>
+  </dialog>
+
+  <noscript><p class="page">Dose Dossier needs JavaScript.</p></noscript>
+</body>
+</html>

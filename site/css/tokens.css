@@ -1,0 +1,43 @@
+/* The whole palette is these four tokens. --accent is set per day from the drug product. */
+:root {
+  color-scheme: light;
+  --paper: #ECEAE5;
+  --ink: #111111;
+  --mute: #6B6A66;
+  --accent: var(--mute);
+
+  /* Typeface decision pending: drop the chosen families (and their @font-face rules) in here. */
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-text: Georgia, 'Times New Roman', serif;
+  --font-data: Georgia, 'Times New Roman', serif;
+
+  /* One size scale, ratio 1.25. */
+  --size-s: 0.8rem;
+  --size-m: 1rem;
+  --size-l: 1.25rem;
+  --size-xl: 1.5625rem;
+  --size-2xl: 1.953rem;
+
+  /* One spacing scale, in half lines of text. */
+  --space-1: 0.375rem;
+  --space-2: 0.75rem;
+  --space-3: 1.5rem;
+  --space-4: 3rem;
+  --space-5: 4.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #0D0D0D;
+    --ink: #DEDCD6;
+    --mute: #8F8E8A;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #0D0D0D;
+  --ink: #DEDCD6;
+  --mute: #8F8E8A;
+}
