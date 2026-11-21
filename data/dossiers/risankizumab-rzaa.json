@@ -23,7 +23,7 @@
   "pill": {
     "shape": "pen",
     "color": "#F5EBB0",
-    "desc": "clear, colourless to yellow solution in a single-dose prefilled pen"
+    "desc": "clear, colorless to yellow solution in a single-dose prefilled pen"
   },
   "biologic": {
     "format": "antibody",

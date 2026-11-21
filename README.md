@@ -25,10 +25,19 @@ npm run build
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/site/`. Add `?day=3` to play a particular day.
+Then open `http://localhost:8000/site/`. Add `?day=3` to play an earlier day; a day later than
+today shows today.
+
+The schedule starts on the `epoch` in `data/schedule.json`, 1 December 2026, and the day turns
+at the player's local midnight. Before the epoch the site shows day 1 as a preview: it can be
+played, but the game is not saved and never counts toward the statistics. After the last
+scheduled day the dossiers come round again under new day numbers.
 
 Pushing to `main` deploys `site/` to GitHub Pages through `.github/workflows/pages.yml`. Pages
-has to be enabled once in the repository settings, with GitHub Actions as the source.
+has to be enabled once in the repository settings, with GitHub Actions as the source. Every
+address inside the site is relative, so it runs from any path. Link previews are the exception:
+the canonical address and the two Open Graph addresses in `site/index.html` are absolute and
+have to be changed if the site moves from `identran.github.io/dose-dossier`.
 
 ## Layout
 
@@ -41,7 +50,7 @@ has to be enabled once in the repository settings, with GitHub Actions as the so
 | `data/dossiers/` | One file per drug, the source of truth, with the label quotes behind each fact |
 | `data/schedule.json` | Which drug is the answer on which day |
 | `tools/` | Scripts that fetch labels, check dossiers and compile `site/data/` |
-| `dev/` | Test pages for the figure and the structure drawings |
+| `dev/` | Test pages for the figure and the structure drawings, and `share.html`, the page `site/assets/share.png` is a 1200 × 630 screenshot of |
 
 `data/SCHEMA.md` describes every field.
 
@@ -53,7 +62,8 @@ from Drugs@FDA, and two-dimensional structures from [PubChem](https://pubchem.nc
 
 Labels state a time to peak, a half-life and sometimes a peak concentration, not a
 concentration–time table. Each profile is therefore reconstructed from those numbers with a
-one-compartment model, and is a faithful sketch, not a digitised study curve.
+one-compartment model, and is a faithful sketch, not a digitised study curve. Where a label
+gives no peak concentration the profile is drawn relative to its peak.
 
 Each dossier keeps, under `evidence`, the verbatim label text behind its numbers and clues.
 `npm run verify -- --all` checks every quote against the label digest and every number against

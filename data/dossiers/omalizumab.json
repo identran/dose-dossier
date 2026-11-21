@@ -19,7 +19,7 @@
   "pill": {
     "shape": "syringe",
     "color": "#EBD9A6",
-    "desc": "clear, colourless to pale brownish-yellow solution in a single-dose prefilled syringe"
+    "desc": "clear, colorless to pale brownish-yellow solution in a single-dose prefilled syringe"
   },
   "biologic": {
     "format": "antibody",

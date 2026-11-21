@@ -20,7 +20,7 @@
   },
   "pill": {
     "shape": "syringe",
-    "desc": "clear, colourless solution in a single-dose prefilled syringe"
+    "desc": "clear, colorless solution in a single-dose prefilled syringe"
   },
   "biologic": {
     "format": "fc-fusion",
@@ -35,7 +35,7 @@
     "indication": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis and plaque psoriasis in adults, plus polyarticular juvenile idiopathic arthritis and juvenile psoriatic arthritis in children.",
     "mechanism": "A dimeric soluble p75 TNF receptor that binds TNF and lymphotoxin, rendering TNF biologically inactive."
   },
-  "tell": "A receptor-Fc fusion, not an antibody, it neutralises both TNF-alpha and lymphotoxin-alpha and does not lyse TNF-expressing cells.",
+  "tell": "A receptor-Fc fusion, not an antibody, it neutralizes both TNF-alpha and lymphotoxin-alpha and does not lyse TNF-expressing cells.",
   "source": {
     "setId": "a002b40c-097d-47a5-957f-7a7b1807af7f",
     "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a002b40c-097d-47a5-957f-7a7b1807af7f",

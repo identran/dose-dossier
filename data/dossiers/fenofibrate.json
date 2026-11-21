@@ -290,7 +290,7 @@
     "indication": "Adjunct to diet in adults with primary hypercholesterolemia or mixed dyslipidemia, and for severe hypertriglyceridemia.",
     "mechanism": "Activates PPAR alpha, raising lipolysis and clearance of triglyceride-rich particles by activating lipoprotein lipase and reducing apoprotein C-III production."
   },
-  "tell": "This ester pro-drug is hydrolysed to fenofibric acid, the active moiety whose exposure the label reports.",
+  "tell": "This ester pro-drug is hydrolyzed to fenofibric acid, the active moiety whose exposure the label reports.",
   "source": {
     "setId": "70275d9c-a321-4561-adbf-60b555718ce2",
     "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70275d9c-a321-4561-adbf-60b555718ce2",

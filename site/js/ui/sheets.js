@@ -1,6 +1,7 @@
 // The sheets: how to play, statistics and the profile as a table, each a native <dialog>.
 
 import { $, h, sr } from './dom.js';
+import { statements } from './format.js';
 
 export function initSheets(onOpen = {}) {
   for (const button of document.querySelectorAll('[data-sheet]')) {
@@ -36,7 +37,7 @@ export function renderStatistics(dialog, stats) {
 // line: the profile in words; rows: [{ time, concentration, ofPeak }] (see format.profileRows);
 // unit is null when the label gives no Cmax, and the concentration column is then left out.
 export function renderProfile(dialog, { line, unit, rows }) {
-  $('#profile-line', dialog).textContent = line;
+  $('#profile-line', dialog).replaceChildren(...statements(line));
   // Under the sheet's title the unit is head enough for the eye; a screen reader gets the word.
   const heads = () => ['Time', unit && [sr('Concentration, '), unit], '% of peak'].filter(Boolean);
   const fill = table => table?.replaceChildren(

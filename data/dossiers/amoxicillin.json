@@ -19,7 +19,7 @@
     "unit": "µg/mL"
   },
   "pill": {
-    "shape": "vial",
+    "shape": "dropper",
     "desc": "reconstituted bubble-gum-flavored oral suspension"
   },
   "structure": {

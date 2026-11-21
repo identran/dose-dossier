@@ -30,7 +30,7 @@
   "clues": {
     "kinetics": "In vitro, about 96.6% is bound to plasma proteins. It is broken down by endo- and exonucleases rather than CYP450 enzymes, with 14.6% of the dose recovered unchanged in urine.",
     "substance": "A double-stranded nucleic acid carrying a triantennary N-acetylgalactosamine ligand. It is freely soluble in water, with a molecular weight of 17,193 daltons.",
-    "product": "Approved under NDA 219019 as 20 mg/0.2 mL vials and 50 mg/0.5 mL prefilled pens, dosed once a month or once every two months.",
+    "product": "Approved under an NDA as 20 mg/0.2 mL vials and 50 mg/0.5 mL prefilled pens, dosed once a month or once every two months.",
     "safety": "Boxed warning for thrombotic events and acute and recurrent gallbladder disease. No contraindications; viral infection and nasopharyngitis are the most common reactions.",
     "indication": "Routine prophylaxis against bleeding episodes in patients aged 12 years and older with hemophilia A or B, with or without inhibitors.",
     "mechanism": "A double-stranded siRNA that degrades antithrombin messenger RNA through RNA interference, lowering plasma antithrombin levels."

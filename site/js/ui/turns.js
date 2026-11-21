@@ -3,14 +3,14 @@
 // the answer's and is set in ink when it is within three years.
 
 import { h, sr } from './dom.js';
-import { typeset, glossLine, THIN } from './format.js';
+import { tidy, typeset, glossLine, THIN } from './format.js';
 
 const ARROW = { later: '↑', earlier: '↓' };
 
 function fact(f) {
   if (f.value == null) return h('li', { class: 'fact' }, '–');
   return h('li', { class: 'fact', 'data-state': f.match ? 'match' : f.near ? 'near' : null },
-    String(f.value), f.direction && `${THIN}${ARROW[f.direction]}`);
+    tidy(f.value), f.direction && `${THIN}${ARROW[f.direction]}`);
 }
 
 // turns: [{ drug, facts, clue }] in the order played (see game.turns). describe(turn) is the

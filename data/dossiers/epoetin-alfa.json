@@ -14,7 +14,7 @@
   "route": "intravenous",
   "form": "injection",
   "pk": {
-    "context": "100 Units/kg intravenous, single dose, patients",
+    "context": "100 units/kg intravenous, single dose, patients",
     "model": "bolus",
     "tmaxH": 0,
     "halfLifeH": 8.5
@@ -31,7 +31,7 @@
   "clues": {
     "kinetics": "Pharmacokinetics in pediatric patients resemble those in adults, with no apparent difference in patients above or below 65 years of age.",
     "substance": "A 165-amino acid recombinant molecule made in mammalian cells, with a molecular weight of about 30,400 daltons.",
-    "product": "Approved under BLA 103234 as single-dose vials of 2,000 to 10,000 Units/mL and multiple-dose vials of 20,000 Units/2 mL.",
+    "product": "Approved under a BLA as single-dose vials of 2,000 to 10,000 units/mL and multiple-dose vials of 20,000 units/2 mL.",
     "safety": "Boxed warning for death, heart attack, stroke, clots and tumor progression. Contraindicated in uncontrolled hypertension, pure red cell aplasia and serious allergic reactions.",
     "indication": "Anemia from chronic kidney disease in patients on or off dialysis, from zidovudine in HIV, and from chemotherapy; also reducing transfusions in some surgery.",
     "mechanism": "Stimulates red cell production by the same mechanism as the body's own erythropoietin."

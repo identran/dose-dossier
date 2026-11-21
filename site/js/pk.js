@@ -8,11 +8,15 @@
 //               terminal slope is used instead.
 //   bolus       intravenous bolus, mono-exponential decline from Cmax.
 //   infusion    constant-rate infusion ending at Tmax, then mono-exponential decline.
+//
+// The profile runs for five half-lives past the peak, or, where the transit form declines more
+// slowly than that, until it has fallen to a twelfth of the peak.
 
 const LN2 = Math.LN2;
 // One turn of the dial, chosen as the shortest of these that holds the whole profile.
-const PERIODS_H = [6, 12, 24, 48, 96, 168, 336, 672, 1344, 2016, 4032];
-const NICE_SPANS_H = [6, 8, 12, 24, 36, 48, 72, 96, 120, 168, 240, 336, 504, 672, 1008, 1344, 2016, 2688, 4032];
+const PERIODS_H = [6, 12, 24, 48, 96, 168, 336, 672, 1344, 2016, 4032, 8064];
+const NICE_SPANS_H = [6, 8, 12, 24, 36, 48, 72, 96, 120, 168, 240, 336, 504, 672, 1008, 1344, 2016, 2688, 4032, 6048, 8064];
+const TAIL = 1 / 12; // of the peak: a profile is not cut off above this
 
 function solveKa(ke, tmax) {
   // tmax(ka) = ln(ka / ke) / (ka - ke) falls monotonically from 1/ke toward 0.
@@ -50,7 +54,14 @@ export function makeCurve(pk) {
     c = t => (t <= 0 ? 0 : cmax * (Math.exp(-ke * t) - Math.exp(-ka * t)) / norm);
   }
 
-  const span = pk.spanH || NICE_SPANS_H.find(s => s >= tmax + 5 * halfLifeH) || NICE_SPANS_H.at(-1);
+  // The time after the peak at which the curve has fallen to TAIL of it.
+  let low = tmax;
+  let high = tmax + 40 * halfLifeH;
+  for (let i = 0; i < 60; i++) {
+    const mid = (low + high) / 2;
+    if (c(mid) > TAIL * cmax) low = mid; else high = mid;
+  }
+  const span = pk.spanH || NICE_SPANS_H.find(s => s >= Math.max(tmax + 5 * halfLifeH, high)) || NICE_SPANS_H.at(-1);
   const period = pk.periodH || PERIODS_H.find(p => p >= span * 0.95) || PERIODS_H.at(-1);
 
   // Cumulative AUC on a grid dense near the origin, where the curve moves fastest.

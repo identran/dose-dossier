@@ -125,7 +125,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   let tickLabels = [];
   let cmaxLabel = null;
 
-  const forceSVG = wanted === 'svg' || new URLSearchParams(location.search).get('dial') === 'svg';
+  const forceSVG = wanted === 'svg';
 
   function mount(next) {
     renderer?.destroy();

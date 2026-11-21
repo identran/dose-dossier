@@ -8,7 +8,7 @@ import { renderDoseForm } from './glyph.js';
 import * as game from './game.js';
 import { createStore } from './store.js';
 import { $, h } from './ui/dom.js';
-import { profileLine, probeLine, profileRows, inSentence, typeset, glossLine } from './ui/format.js';
+import { profileLine, probeLine, profileRows, statements, inSentence, tidy, typeset, glossLine } from './ui/format.js';
 import { createCombobox } from './ui/combobox.js';
 import { renderTurns } from './ui/turns.js';
 import { renderDossier } from './ui/dossier.js';
@@ -30,6 +30,9 @@ const el = {
   revision: $('#revision'), dossierSection: $('#dossier-section'), dossier: $('#dossier'), turns: $('#turns'),
   explain: $('#explain'), theme: $('#theme'), live: $('#live'),
 };
+
+// What stands under the figure is held back until the day has loaded, so nothing is seen to move.
+const reveal = () => $('.page').removeAttribute('data-loading');
 
 const safely = (what, fn) => { try { return fn(); } catch (error) { console.error(what, error); return undefined; } };
 
@@ -99,13 +102,16 @@ function dayHref(day, today) {
 
 async function start() {
   const index = await load('index.json');
-  const today = game.todayNumber(index.epoch);
+  // Before the epoch the calendar day is 0 or less, and day 1 is on show as a preview.
+  const now = new Date();
+  const opened = game.calendarDay(index.epoch, now);
+  const today = game.todayNumber(index.epoch, now);
   const day = game.playableDay(params.get('day'), today);
   // A day that does not exist yet shows today, under today's address.
   if (params.has('day') && game.parseDay(params.get('day')) !== day) history.replaceState(null, '', dayHref(today, today));
   const file = String(game.dossierNumber(day, index.days)).padStart(3, '0');
   const dossier = await load(`day/${file}.json`);
-  play({ index, today, day, dossier });
+  play({ index, opened, today, day, dossier });
   applyExplain();
 }
 
@@ -128,7 +134,7 @@ el.explain.addEventListener('click', () => {
 
 /* The day */
 
-function play({ index, today, day, dossier }) {
+function play({ index, opened, today, day, dossier }) {
   // Guesses are compared on the index's attributes; the answer always has its own.
   const byId = new Map(index.drugs.map(drug => [drug.id, drug]));
   if (!byId.has(dossier.id)) byId.set(dossier.id, dossier);
@@ -137,14 +143,16 @@ function play({ index, today, day, dossier }) {
   const drugOf = id => byId.get(id) || { id, generic: id };
   const answer = drugOf(dossier.id);
   const clues = dossier.clues || [];
-  const nowToday = () => game.todayNumber(index.epoch);
+  const nowToday = () => game.calendarDay(index.epoch);
+  // A preview is played for nothing: it is not kept, and it is never counted.
+  const preview = opened < 1;
 
   let greet = Object.keys(store.games()).length === 0; // first visit, until the first keystroke
-  let state = store.game(day);
+  let state = preview ? null : store.game(day);
   if (!state || state.answerId !== dossier.id) state = game.newGame(day, dossier.id);
 
   // Masthead
-  el.day.textContent = `Day ${day}`;
+  el.day.textContent = preview ? `Preview of day ${day} · opens ${openingDate(index.epoch)}` : `Day ${day}`;
   document.title = `Dose Dossier, day ${day}`;
   if (day > 1) { el.earlier.href = dayHref(day - 1, today); el.earlier.hidden = false; }
   if (day < today) { el.later.href = dayHref(day + 1, today); el.later.hidden = false; }
@@ -166,9 +174,8 @@ function play({ index, today, day, dossier }) {
     safely('dial.setDetails', () => dial.setDetails('figure-data'));
     safely('dial.setDescription', () => dial.setDescription('dial-hint'));
   }
-  el.context.textContent = context;
-  // Each of its three statements keeps to one line.
-  el.profile.replaceChildren(...profile.split(' · ').flatMap((part, i) => [i ? ' · ' : '', h('span', null, part)]));
+  el.context.textContent = tidy(context);
+  el.profile.replaceChildren(...statements(profile));
   el.table.hidden = false;
   // The glyph takes the day's accent, not the product's raw colour: one accent on the page.
   const pill = dossier.pill ? { shape: dossier.pill.shape, desc: dossier.pill.desc } : null;
@@ -205,7 +212,15 @@ function play({ index, today, day, dossier }) {
     search: text => game.search(drugs, text, { exclude: state.guesses }),
     onChoose: drug => say(`Enter to guess ${inSentence(drug.generic)}`),
     onAnnounce: announce,
+    onEmpty: guessedNote,
   });
+
+  // A text with no suggestion may name only what has been guessed already: then that is the reason given.
+  function guessedNote(text) {
+    const guessed = game.search(drugs, text);
+    if (!guessed.length) return null;
+    return guessed.length === 1 ? `${guessed[0].drug.generic} already guessed` : 'Already guessed';
+  }
 
   // The status line: a note on the last action, or the offer of a new day, or what is left.
   let note = '';
@@ -255,7 +270,7 @@ function play({ index, today, day, dossier }) {
       el.answer.textContent = dossier.generic;
       el.brand.textContent = dossier.brand || '';
       el.brand.hidden = !dossier.brand;
-      el.answerFacts.replaceChildren(...RULES.compare.map(rule => h('li', null, String(answer[rule.key] ?? '–'))));
+      el.answerFacts.replaceChildren(...RULES.compare.map(rule => h('li', null, tidy(answer[rule.key] ?? '–'))));
       el.tell.replaceChildren(...typeset(dossier.tell || ''));
       el.tell.hidden = !dossier.tell;
       el.outcome.textContent = game.outcomeText(state);
@@ -296,7 +311,7 @@ function play({ index, today, day, dossier }) {
       // Text that names no drug yet: Enter fills in the first suggestion, and a second Enter guesses it.
       if (!combo.completeFirst()) {
         el.input.setAttribute('aria-invalid', 'true');
-        say('No such drug in the list');
+        say(guessedNote(text) || 'No such drug in the list');
       }
       return el.input.focus();
     }
@@ -309,7 +324,7 @@ function play({ index, today, day, dossier }) {
     }
 
     state = next;
-    store.saveGame(state);
+    if (!preview) store.saveGame(state);
     combo.clear();
     greet = false;
     note = '';
@@ -343,7 +358,7 @@ function play({ index, today, day, dossier }) {
 
   // A tab left open past midnight offers the new day.
   function checkDay() {
-    if (stale || nowToday() <= today) return;
+    if (stale || nowToday() <= opened) return;
     stale = true;
     renderStatus();
   }
@@ -351,7 +366,14 @@ function play({ index, today, day, dossier }) {
   window.addEventListener('focus', checkDay);
 
   render();
+  reveal();
   if (state.status === 'playing' && window.matchMedia('(min-width: 60rem)').matches) el.input.focus({ preventScroll: true });
+}
+
+// "December 1": the day the game opens, from the schedule's epoch.
+function openingDate(epoch) {
+  const [y, m, d] = epoch.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 }
 
 async function copy(text) {
@@ -376,5 +398,6 @@ async function copy(text) {
 start().catch(error => {
   console.error(error);
   el.status.textContent = 'The dossier could not be loaded';
+  reveal();
   initSheets();
 });

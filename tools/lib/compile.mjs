@@ -5,14 +5,14 @@ const ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'ei
 const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 const words = n => (n < 20 ? ONES[n] : n < 100 ? TENS[Math.floor(n / 10)] + (n % 10 ? `-${ONES[n % 10]}` : '') : String(n));
 
-// "The generic name begins with S and has ten letters." Multi-word or hyphenated names give the word count and
-// count letters only: "The generic name begins with I and has two words and fifteen letters."
+// "The generic name begins with S and has ten letters." A name of several words says so, and counts letters only:
+// "The generic name begins with B and has seventeen letters in two words." A hyphen does not make a word.
 export function nameClue(generic) {
-  const parts = generic.trim().split(/[\s-]+/).filter(Boolean);
+  const parts = generic.trim().split(/\s+/).filter(part => /\p{L}/u.test(part));
   const letters = generic.replace(/[^\p{L}]/gu, '').length;
   const first = generic.trim()[0].toUpperCase();
-  if (parts.length === 1) return `The generic name begins with ${first} and has ${words(letters)} letters.`;
-  return `The generic name begins with ${first} and has ${words(parts.length)} words and ${words(letters)} letters.`;
+  const count = `The generic name begins with ${first} and has ${words(letters)} letters`;
+  return parts.length === 1 ? `${count}.` : `${count} in ${words(parts.length)} words.`;
 }
 
 export function compileClues(clues, generic) {

@@ -60,7 +60,7 @@
   {"id": "remdesivir", "generic": "Remdesivir", "brand": "Veklury", "aliases": [], "area": "Infectious disease", "class": "SARS-CoV-2 RdRp inhibitor", "sponsor": "Gilead", "approved": 2020},
   {"id": "ritlecitinib", "generic": "Ritlecitinib", "brand": "Litfulo", "aliases": ["Ritlecitinib tosylate"], "area": "Dermatology", "class": "JAK inhibitor", "sponsor": "Pfizer", "approved": 2023},
   {"id": "romosozumab", "generic": "Romosozumab", "brand": "Evenity", "aliases": ["Romosozumab-aqqg"], "area": "Endocrinology", "class": "Sclerostin blocking antibody", "sponsor": "Amgen", "approved": 2019},
-  {"id": "sacubitril-valsartan", "generic": "Sacubitril / Valsartan", "brand": "Entresto", "aliases": [], "area": "Cardiology", "class": "ARNI", "sponsor": "Novartis", "approved": 2015},
+  {"id": "sacubitril-valsartan", "generic": "Sacubitril/valsartan", "brand": "Entresto", "aliases": [], "area": "Cardiology", "class": "ARNI", "sponsor": "Novartis", "approved": 2015},
   {"id": "sarilumab", "generic": "Sarilumab", "brand": "Kevzara", "aliases": [], "area": "Immunology", "class": "IL-6 receptor antibody", "sponsor": "Sanofi", "approved": 2017},
   {"id": "setmelanotide", "generic": "Setmelanotide", "brand": "Imcivree", "aliases": ["Setmelanotide acetate"], "area": "Endocrinology", "class": "MC4 receptor agonist", "sponsor": "Rhythm", "approved": 2020},
   {"id": "simvastatin", "generic": "Simvastatin", "brand": "Zocor", "aliases": [], "area": "Cardiology", "class": "Statin", "sponsor": "Merck", "approved": 1991},

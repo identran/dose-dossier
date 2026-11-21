@@ -7,7 +7,7 @@ export const RULES = {
   // one level per miss, complete from the fourth.
   revealComplete: 4,
   // A structure with more heavy atoms than this is not drawn; the format figure stands in.
-  maxHeavyAtoms: 70,
+  maxHeavyAtoms: 90,
   // What a guess is compared on, in display order. 'exact' compares names; 'year' also says which
   // way the answer lies and whether it is within `near` years.
   compare: [
@@ -28,13 +28,17 @@ export const RULES = {
 
 const DAY_MS = 864e5;
 
-// Whole local calendar days since the epoch, 1-based, so the day turns at local midnight. Never less than 1.
-export function todayNumber(epoch, now = new Date()) {
+// Whole local calendar days since the epoch, 1-based, so the day turns at local midnight.
+// Before the epoch this is 0 or less: the game has not opened.
+export function calendarDay(epoch, now = new Date()) {
   const [y, m, d] = String(epoch).split('-').map(Number);
   const then = Date.UTC(y, m - 1, d);
   const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-  return Math.max(1, Math.round((today - then) / DAY_MS) + 1);
+  return Math.round((today - then) / DAY_MS) + 1;
 }
+
+// The day on show. Never less than 1: before the epoch, day 1 is shown as a preview.
+export const todayNumber = (epoch, now = new Date()) => Math.max(1, calendarDay(epoch, now));
 
 // The day numbers keep counting; the dossiers wrap.
 export function dossierNumber(day, days) {
@@ -165,6 +169,9 @@ export function fold(text) {
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
+// A folded name without its spaces, so that "zpak" finds Z-Pak and "tdm1" finds T-DM1.
+const tight = key => key.replaceAll(' ', '');
+
 // Precompute the folded names of every guessable drug.
 export function buildIndex(drugs) {
   return drugs.map(drug => ({
@@ -174,15 +181,15 @@ export function buildIndex(drugs) {
       { text: drug.generic, kind: 'generic' },
       ...(drug.brand ? [{ text: drug.brand, kind: 'brand' }] : []),
       ...(drug.aliases || []).map(text => ({ text, kind: 'alias' })),
-    ].map(n => ({ ...n, key: fold(n.text) })),
+    ].map(n => ({ ...n, key: fold(n.text) })).map(n => ({ ...n, tight: tight(n.key) })),
   }));
 }
 
 const PREFIX_RANK = { generic: 1, brand: 2, alias: 3 };
 
-function rank(name, q) {
-  if (name.key === q) return 0;
-  if (name.key.startsWith(q)) return PREFIX_RANK[name.kind];
+function rank(name, q, qt) {
+  if (name.key === q || name.tight === qt) return 0;
+  if (name.key.startsWith(q) || name.tight.startsWith(qt)) return PREFIX_RANK[name.kind];
   const at = name.key.indexOf(q);
   if (at < 0) return Infinity;
   return name.key[at - 1] === ' ' ? 4 : 5;
@@ -193,6 +200,7 @@ function rank(name, q) {
 export function search(index, query, { exclude = [], limit = RULES.suggestions.limit } = {}) {
   const q = fold(query);
   if (!q) return [];
+  const qt = tight(q);
   const skip = new Set(exclude);
   const hits = [];
   for (const entry of index) {
@@ -200,7 +208,7 @@ export function search(index, query, { exclude = [], limit = RULES.suggestions.l
     let best = Infinity;
     let via = null;
     for (const name of entry.names) {
-      const r = rank(name, q);
+      const r = rank(name, q, qt);
       if (r < best) { best = r; via = name; }
     }
     if (best < Infinity) hits.push({ entry, best, via });
@@ -216,7 +224,9 @@ export function search(index, query, { exclude = [], limit = RULES.suggestions.l
 export function resolve(index, text) {
   const q = fold(text);
   if (!q) return null;
-  const hit = index.find(entry => entry.names.some(n => n.key === q));
+  const qt = tight(q);
+  const hit = index.find(entry => entry.names.some(n => n.key === q))
+    || index.find(entry => entry.names.some(n => n.tight === qt));
   return hit ? hit.drug : null;
 }
 

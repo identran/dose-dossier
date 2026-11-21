@@ -46,6 +46,9 @@ a { color: inherit; }
 [hidden] { display: none !important; }
 ::selection { background: var(--ink); color: var(--paper); }
 
+/* A statement of the profile, or a short hyphenated term, keeps to one line. */
+.nb { white-space: nowrap; }
+
 .sr {
   position: absolute;
   width: 1px;
@@ -124,8 +127,12 @@ button:focus-visible, a:focus-visible {
   display: flex;
   align-items: baseline;
   gap: var(--space-2);
+  min-height: calc(1.45em + 2 * var(--space-1)); /* a line with a link in it, there before the day is known */
   color: var(--mute);
 }
+
+/* Until the day has loaded, what depends on it is out of sight and in its place. */
+.page[data-loading] :is(.caption, .play, .colophon) { visibility: hidden; }
 
 /* Figure */
 
@@ -137,7 +144,6 @@ button:focus-visible, a:focus-visible {
 .glyph { display: inline-block; width: 1.5em; height: 1.5em; margin-right: 0.5em; vertical-align: -0.4em; }
 .glyph > * { display: block; width: 100%; height: 100%; }
 .caption .text-button { margin-left: 0.5em; padding: 0; }
-#profile span { white-space: nowrap; }
 /* The readout keeps its line whether or not it has anything to say, so nothing moves. */
 .probe { min-height: 1.45em; color: var(--ink); font-variant-numeric: tabular-nums; }
 
@@ -192,14 +198,18 @@ button:focus-visible, a:focus-visible {
   text-underline-offset: 0.25em;
 }
 
-.status { min-height: 1.45em; margin-top: var(--space-1); color: var(--mute); }
+.status { min-height: 1.45em; margin-top: var(--space-1); color: var(--mute); text-wrap: balance; }
 
 /* Result */
 
 .answer { font-size: var(--size-2xl); line-height: 1.15; }
 .answer:focus { outline: none; }
 .answer-brand { color: var(--mute); }
-.answer-facts { display: flex; flex-wrap: wrap; column-gap: var(--space-3); margin-top: var(--space-1); }
+/* The answer's own attributes, set as a guess's are: two to a line in a narrow column, four from 30rem. */
+.result { container-type: inline-size; }
+.answer-facts { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; column-gap: var(--space-3); margin-top: var(--space-1); }
+@container (min-width: 30rem) { .answer-facts { grid-template-columns: repeat(4, auto); } }
+@container (max-width: 15rem) { .answer-facts { grid-template-columns: minmax(0, 1fr); } }
 .tell, .outcome, .revision { margin-top: var(--space-2); }
 .revision { color: var(--mute); }
 
@@ -218,6 +228,8 @@ button:focus-visible, a:focus-visible {
 .dossier { margin-top: var(--space-4); }
 .module + .module { margin-top: var(--space-3); }
 .clue { margin-top: var(--space-1); }
+/* Running text does not end on a word alone. */
+.clue, .tell, .gloss, .sheet-body > p { text-wrap: pretty; }
 .clue-module { margin-right: 0.15em; color: var(--mute); }
 
 /* Turns: one list, newest first. The comparison is a table without rules: its columns are as wide
@@ -240,6 +252,8 @@ button:focus-visible, a:focus-visible {
 .turn, .turn > * { grid-column: 1 / -1; }
 .turn .facts { grid-column: 1 / span 2; }
 .fact:nth-child(odd) { padding-right: var(--space-3); }
+/* A name or a fact longer than the line, which is a phone at twice the text size, breaks where it must. */
+.turn-name, .fact, .answer-facts li, .answer-brand { overflow-wrap: break-word; }
 .turn-name .aka { margin-left: 0.15em; color: var(--mute); }
 .facts { color: var(--mute); }
 .fact:last-child { white-space: nowrap; }
@@ -363,6 +377,8 @@ button:focus-visible, a:focus-visible {
   .day, .masthead-nav { flex-wrap: wrap; row-gap: 0; }
   .masthead-nav { order: 1; }
   .button { padding-inline: var(--space-2); }
+  /* The longest names are one word of nineteen letters: a step down the scale keeps it whole. */
+  .answer { font-size: var(--size-xl); line-height: 1.2; }
 }
 
 /* Narrower still, which is a phone at twice the text size: the button goes under the field,
@@ -371,6 +387,7 @@ button:focus-visible, a:focus-visible {
 @media (max-width: 19.99rem) {
   .guess-form { grid-template-columns: minmax(0, 1fr); }
   .guess-form .button { grid-row: 3; justify-self: start; margin-top: var(--space-2); }
+  .nb { white-space: normal; }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-2); }
 }
 

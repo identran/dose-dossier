@@ -411,7 +411,7 @@
   },
   "clues": {
     "kinetics": "Absolute bioavailability is about 36%, and a high-fat meal raises exposure by 21%. More than 99% is bound to plasma proteins, and elimination is mainly by hepatic metabolism.",
-    "substance": "A crystalline powder with aqueous solubility of about 10 μg/mL at room temperature. Molecular weight 522.6.",
+    "substance": "A crystalline powder with aqueous solubility of about 10 µg/mL at room temperature. Molecular weight 522.6.",
     "product": "Tablets under an NDA, in 60 and 90 mg strengths, dosed twice daily.",
     "safety": "Boxed warning for bleeding risk that can be fatal. Contraindicated with prior intracranial hemorrhage or active pathological bleeding; dyspnea and dizziness are reported non-hemorrhagic reactions.",
     "indication": "Reducing cardiovascular death, MI and stroke after acute coronary syndrome, a first MI or stroke in high-risk coronary artery disease, and stroke in acute ischemic stroke or high-risk TIA.",
@@ -434,7 +434,7 @@
       "The primary route of ticagrelor elimination is hepatic metabolism"
     ],
     "clues.substance": [
-      "Ticagrelor is a crystalline powder with an aqueous solubility of approximately 10 μg/mL at room temperature",
+      "Ticagrelor is a crystalline powder with an aqueous solubility of approximately 10 µg/mL at room temperature",
       "molecular weight 522.6"
     ],
     "clues.product": [

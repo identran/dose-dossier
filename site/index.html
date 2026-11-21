@@ -8,11 +8,43 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ECEAE5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
+  <!-- Link previews need absolute addresses: change these three if the site moves. -->
+  <link rel="canonical" href="https://identran.github.io/dose-dossier/">
+  <meta property="og:url" content="https://identran.github.io/dose-dossier/">
+  <meta property="og:image" content="https://identran.github.io/dose-dossier/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A plasma concentration profile wound round a ring, beside the words Dose Dossier">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dose Dossier">
+  <meta property="og:description" content="A daily guessing game for people in drug development. Name the drug from its pharmacokinetic profile and its dossier.">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="preload" href="assets/fonts/dossier-text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dossier-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="data/index.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="css/app.css">
+  <!-- Everything js/app.js imports, so the modules arrive together and not a level at a time. -->
+  <link rel="modulepreload" href="js/pk.js">
+  <link rel="modulepreload" href="js/game.js">
+  <link rel="modulepreload" href="js/store.js">
+  <link rel="modulepreload" href="js/glyph.js">
+  <link rel="modulepreload" href="js/molecule.js">
+  <link rel="modulepreload" href="js/dial/index.js">
+  <link rel="modulepreload" href="js/dial/model.js">
+  <link rel="modulepreload" href="js/dial/gl.js">
+  <link rel="modulepreload" href="js/dial/shader.js">
+  <link rel="modulepreload" href="js/dial/svg.js">
+  <link rel="modulepreload" href="js/ui/dom.js">
+  <link rel="modulepreload" href="js/ui/format.js">
+  <link rel="modulepreload" href="js/ui/combobox.js">
+  <link rel="modulepreload" href="js/ui/turns.js">
+  <link rel="modulepreload" href="js/ui/dossier.js">
+  <link rel="modulepreload" href="js/ui/gloss.js">
+  <link rel="modulepreload" href="js/ui/sheets.js">
   <script>
     // Apply a stored or requested theme before first paint. The key is the one in js/store.js.
     try {
@@ -24,7 +56,7 @@
   <script type="module" src="js/app.js"></script>
 </head>
 <body>
-  <main class="page">
+  <main class="page" data-loading>
     <header class="masthead">
       <h1>Dose Dossier</h1>
       <nav class="masthead-nav" aria-label="About">

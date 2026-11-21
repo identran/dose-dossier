@@ -383,7 +383,7 @@
     "kinetics": "Absolute bioavailability is 46%, and a high-fat meal raises exposure by about 22%. About 85% is protein bound, and it is cleared mainly by hepatic metabolism through CYP3A and SULT2A1.",
     "substance": "A molecular weight of 447.5, with high solubility at or below pH 4 that falls significantly above pH 4.",
     "product": "Approved under an NDA as 75, 100 and 125 mg tablets, dosed once daily.",
-    "safety": "No boxed warning and no contraindications. In a labelled combination regimen, decreased neutrophils and hemoglobin, stomatitis and diarrhea are among the most common reactions.",
+    "safety": "No boxed warning and no contraindications. In a labeled combination regimen, decreased neutrophils and hemoglobin, stomatitis and diarrhea are among the most common reactions.",
     "indication": "HR-positive, HER2-negative advanced or metastatic breast cancer, with an aromatase inhibitor or fulvestrant; PIK3CA-mutated disease with inavolisib and fulvestrant.",
     "mechanism": "Inhibits cyclin-dependent kinases 4 and 6, blocking progression from G1 into S phase and reducing Rb phosphorylation."
   },

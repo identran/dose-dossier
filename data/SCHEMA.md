@@ -93,7 +93,8 @@ later slots reveal:
 | `indication` | Clinical | class |
 | `mechanism` | Nonclinical | – |
 
-The build appends a seventh clue generated from the name ("The generic name begins with S and has ten letters.").
+The build appends a seventh clue generated from the name ("The generic name begins with S and has ten letters.",
+or for a name of several words "… and has seventeen letters in two words.").
 
 ## Compiled day file
 

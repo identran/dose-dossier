@@ -406,7 +406,7 @@
     "kinetics": "Absolute bioavailability is 25%, and a high-fat meal leaves overall exposure unchanged but lowers peak levels by 54%. It is 97.5% bound to plasma protein and mainly metabolized by CYP3A enzymes.",
     "substance": "Supplied as a maleate salt, with an active moiety of molecular weight 465.5. It is a white to pale brown powder with pH-dependent solubility.",
     "product": "Approved under an NDA as 100 mg tablets, taken twice daily.",
-    "safety": "No boxed warning and no contraindications. The most common Grade 3 or 4 abnormalities are a falling neutrophil count and rising uric acid, at 32% and 27%.",
+    "safety": "No boxed warning and no contraindications. The most common grade 3 or 4 abnormalities are a falling neutrophil count and rising uric acid, at 32% and 27%.",
     "indication": "Mantle cell lymphoma, untreated (with bendamustine and rituximab) or after at least one prior therapy, and chronic lymphocytic leukemia or small lymphocytic lymphoma.",
     "mechanism": "A covalent inhibitor of Bruton tyrosine kinase, bonding a cysteine in its active site and so blocking B-cell receptor signaling."
   },

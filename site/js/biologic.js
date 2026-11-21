@@ -13,6 +13,7 @@ const MARGIN = 0.05;  // of the inscribed radius
 const SCALE = 0.7;    // one figure unit / slot radius
 const RISE = 0.17;    // the figure sits this far above centre, the caption below it
 const FONT = 0.115;   // caption size / slot radius
+const MIN_FONT = 10;   // px: on a phone the caption stays readable
 const LINES = [0.67, 0.85]; // caption baselines / slot radius
 const MS = 320;
 
@@ -305,7 +306,7 @@ function build(st) {
   st.items = st.figure.items.map(item => ({ ...item, el: null }));
 
   // The caption shrinks if a long type name would not fit the chord of the circle at its height.
-  st.font = R * FONT;
+  st.font = Math.max(R * FONT, MIN_FONT);
   [st.type, st.mass].forEach((str, i) => {
     if (!str) return;
     const room = 2 * Math.sqrt(1 - (LINES[i] + 0.03) ** 2) * R * 0.94, width = textWidth(el, str, st.font);
@@ -354,7 +355,9 @@ function show(st, animate) {
       fill: 'currentColor', stroke: 'none', 'font-size': f2(st.font), 'text-anchor': 'middle',
       style: 'font-family:var(--font-data);font-weight:400;font-style:normal',
     }, root);
-    node('text', { x: f2(st.ox), y: f2(st.h / 2 + LINES[n - 3] * R), ...(moving && { class: 'dd-bio-in' }) }, st.caption).textContent = str;
+    // The second line keeps a line's distance from the first when the minimum size is in force.
+    const drop = n === 3 ? 0 : Math.max((LINES[1] - LINES[0]) * R, st.font * 1.15);
+    node('text', { x: f2(st.ox), y: f2(st.h / 2 + LINES[0] * R + drop), ...(moving && { class: 'dd-bio-in' }) }, st.caption).textContent = str;
   }
   st.shown = level;
 

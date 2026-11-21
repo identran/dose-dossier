@@ -31,7 +31,7 @@
     "product": "Approved under a BLA as 45 mg/0.5 mL and 90 mg/mL prefilled syringes, plus 130 mg/26 mL intravenous vials; maintenance is every 8 to 12 weeks.",
     "safety": "No boxed warning. Contraindicated with clinically significant hypersensitivity to it or its excipients; arthralgia and nausea were more frequent than with placebo.",
     "indication": "Moderate to severe plaque psoriasis, active psoriatic arthritis, and moderately to severely active Crohn's disease and ulcerative colitis.",
-    "mechanism": "It binds the p40 subunit shared by the cytokines interleukin-12 and interleukin-23, disrupting their signalling through a shared receptor chain."
+    "mechanism": "It binds the p40 subunit shared by the cytokines interleukin-12 and interleukin-23, disrupting their signaling through a shared receptor chain."
   },
   "tell": "Its p40 target is shared by two cytokines, IL-12 and IL-23, setting this antibody apart.",
   "source": {

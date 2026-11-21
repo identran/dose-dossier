@@ -47,7 +47,7 @@ active ingredient; or when the digest is plainly the wrong product. Do not skip 
 `pill` — the product as described under How supplied or Dosage forms:
 - `shape` from `vocab.json` `pillShapes` (tablets and capsules by their shape; injectables "vial", "pen" or "syringe"; "inhaler", "patch", "dropper").
 - `color`: one flat hex colour for the described colour of the tablet, capsule or solution; `color2` for the second half of a two-tone capsule. Omit `color` when the product is colourless or no colour is described.
-- `desc`: a few words, lower case, no brand and no imprint ("yellow, film-coated, almond-shaped tablet", "clear, colourless solution in a single-dose vial").
+- `desc`: a few words, lower case, no brand and no imprint ("yellow, film-coated, almond-shaped tablet", "clear, colorless solution in a single-dose vial").
 
 `biologic` — write this only when the drug is a biologic or a large peptide by molecule type, as its description states: a monoclonal antibody or antibody fragment, a bispecific, an Fc-fusion or other recombinant protein, an antibody-drug conjugate, a peptide (a chain of amino acids, such as a GLP-1 analog or a lipopeptide) or an oligonucleotide. Decide by what the molecule is, never by its mass: a large small molecule (a polyene or macrolide antibiotic, a taxane, a rapalog, a glycopeptide, a cardiac glycoside, a cyclodextrin such as sugammadex) is not a biologic however heavy it is, and gets no `biologic` block; its structure comes from the pipeline, or it has neither when PubChem has none. The block is `{ "format": …, "isotype": …, "massKDa": … }` with format one of antibody, bispecific, fragment, fc-fusion, conjugate (an antibody-drug conjugate or a pegylated protein, not a small-molecule complex), peptide, protein, oligonucleotide; isotype as the description gives it ("IgG1 κ", "IgG4 κ") or null; mass in kilodaltons from the description, or null if not stated.
 
@@ -64,7 +64,7 @@ active ingredient; or when the digest is plainly the wrong product. Do not skip 
 
 A clue states what the digest supports from its slot's list; it need not cover every item, and a slot with little to say can be one short sentence. "No boxed warning" needs no quote when the digest has no boxed warning section.
 
-No clue names the drug, a brand, a salt or alias, a metabolite named after the drug, or any word containing the first five letters of the generic name. No clue repeats what the figure already prints (Tmax, half-life, Cmax). Where the label uses the brand in capitals, write "it" or "the drug". Every number in a clue must appear in that clue's quotes.
+No clue names the drug, a brand, a salt or alias, a metabolite named after the drug, or any word containing the first five letters of the generic name. No clue repeats what the figure already prints (Tmax, half-life, Cmax). Where the label uses the brand in capitals, write "it" or "the drug". Every number in a clue must appear in that clue's quotes. Clues, the tell and `desc` take the labels' American spelling (color, metabolized, signaling) and sentence-case words ("Chinese hamster ovary", "grade 3", "units"). The product clue says "an NDA" or "a BLA", never the application number, and names no branded device or formulation.
 
 `tell` — one sentence, at most 140 characters, shown after the game: what in this dossier most sets the drug apart. It may name the drug and its class. State only what the digest supports.
 

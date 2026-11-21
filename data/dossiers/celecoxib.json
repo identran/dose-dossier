@@ -21,7 +21,7 @@
   "pill": {
     "shape": "capsule",
     "color": "#F7F7F5",
-    "desc": "white capsule with a coloured band, band colour varies by strength"
+    "desc": "white capsule with a colored band, band color varies by strength"
   },
   "structure": {
     "cid": 2662,

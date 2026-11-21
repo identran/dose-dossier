@@ -458,7 +458,7 @@
     "product": "Approved under an NDA as 100 and 150 mg soft capsules, dosed twice daily.",
     "safety": "No boxed warning and no contraindications. Bronchitis is the most frequent serious adverse reaction, and pneumonia the most common fatal one.",
     "indication": "Idiopathic pulmonary fibrosis, chronic fibrosing interstitial lung diseases with a progressive phenotype, and systemic sclerosis-associated interstitial lung disease.",
-    "mechanism": "Blocks several receptor tyrosine kinases, including PDGF, FGF and VEGF receptors, that are involved in fibrotic remodelling of lung tissue."
+    "mechanism": "Blocks several receptor tyrosine kinases, including PDGF, FGF and VEGF receptors, that are involved in fibrotic remodeling of lung tissue."
   },
   "tell": "A kinase inhibitor with an effective half-life of 9.5 hours and an absolute bioavailability of only 4.7%.",
   "source": {

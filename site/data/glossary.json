@@ -15,7 +15,7 @@
   {"term":"protein binding","also":["protein bound","protein-bound","plasma proteins","plasma protein"],"gloss":"Protein binding: the share of drug in plasma held by proteins and not free to act."},
   {"term":"volume of distribution","gloss":"Volume of distribution: how far a drug spreads from plasma into the tissues."},
   {"term":"clearance","gloss":"Clearance: the volume of plasma freed of drug per unit of time."},
-  {"term":"hepatic","also":["hepatically"],"gloss":"Hepatic: of the liver, where most drugs are metabolised."},
+  {"term":"hepatic","also":["hepatically"],"gloss":"Hepatic: of the liver, where most drugs are metabolized."},
   {"term":"renal","also":["renally"],"gloss":"Renal: of the kidneys, which excrete drugs and metabolites in urine."},
   {"term":"metabolite","also":["metabolites"],"gloss":"Metabolite: a compound the body makes from a drug; some are active themselves."},
   {"term":"prodrug","also":["prodrugs"],"gloss":"Prodrug: an inactive form that the body converts into the active drug."},

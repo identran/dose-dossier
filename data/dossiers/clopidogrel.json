@@ -255,7 +255,7 @@
   "clues": {
     "kinetics": "Absorption is at least 50%, judged by urinary excretion of metabolites. About half of a dose is excreted in urine and 46% in feces over 5 days; most circulating metabolites are an inactive acid.",
     "substance": "A bisulfate salt; the parent moiety has a molecular weight of 321.8. It is practically insoluble in water at neutral pH but freely soluble at pH 1.",
-    "product": "Approved under NDA 020839 as 75 mg and 300 mg tablets, taken daily.",
+    "product": "Approved under an NDA as 75 mg and 300 mg tablets, taken daily.",
     "safety": "Boxed warning for diminished effect with two loss-of-function CYP2C19 alleles. Contraindicated with active bleeding and hypersensitivity; intracranial hemorrhage and fatal bleeding are key.",
     "indication": "Acute coronary syndrome, including NSTEMI and STEMI, and recent MI, recent stroke or established peripheral arterial disease, to reduce the rate of MI and stroke.",
     "mechanism": "Its CYP2C19-formed thiol metabolite irreversibly binds P2Y12 ADP receptors on platelets, blocking aggregation for the lifespan of the platelet."

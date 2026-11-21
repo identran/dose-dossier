@@ -23,7 +23,7 @@
   "pill": {
     "shape": "round",
     "color": "#F4C7A1",
-    "desc": "round, film-coated tablet, colour varies by strength"
+    "desc": "round, film-coated tablet, color varies by strength"
   },
   "structure": {
     "cid": 5002,
@@ -326,7 +326,7 @@
     "indication": "Schizophrenia, manic episodes of bipolar I disorder, and depressive episodes of bipolar disorder.",
     "mechanism": "Its action is unclear, but may come from combined dopamine type 2 and serotonin type 2 antagonism."
   },
-  "tell": "Its active metabolite, norquetiapine, matches it at D2 receptors but is more active at 5HT2A receptors.",
+  "tell": "Its active metabolite, norquetiapine, matches it at D2 receptors but is more active at 5-HT2A receptors.",
   "source": {
     "setId": "8ae62aaf-f8c5-417f-baac-0098369ca322",
     "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ae62aaf-f8c5-417f-baac-0098369ca322",

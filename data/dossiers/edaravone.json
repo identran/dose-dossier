@@ -17,7 +17,7 @@
     "halfLifeH": 6.75
   },
   "pill": {
-    "shape": "vial",
+    "shape": "dropper",
     "color": "#FAF9F4",
     "desc": "white to off-white, opaque suspension in an amber glass bottle"
   },

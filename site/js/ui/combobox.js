@@ -5,7 +5,7 @@ import { h } from './dom.js';
 
 const COUNT_DELAY_MS = 500; // the number of suggestions is announced once typing pauses
 
-export function createCombobox({ input, listbox, search, rows, onChoose, onAnnounce }) {
+export function createCombobox({ input, listbox, search, rows, onChoose, onAnnounce, onEmpty }) {
   let options = [];
   let active = -1;
   let chosen = null; // { drug, text } while the field still holds a picked option
@@ -65,7 +65,8 @@ export function createCombobox({ input, listbox, search, rows, onChoose, onAnnou
     clearTimeout(counting);
     if (!input.value.trim()) return;
     const n = options.length;
-    counting = setTimeout(() => onAnnounce?.(n ? `${n} ${n === 1 ? 'suggestion' : 'suggestions'}` : 'No match'), COUNT_DELAY_MS);
+    const text = input.value;
+    counting = setTimeout(() => onAnnounce?.(n ? `${n} ${n === 1 ? 'suggestion' : 'suggestions'}` : onEmpty?.(text) || 'No match'), COUNT_DELAY_MS);
   });
 
   input.addEventListener('keydown', event => {
