@@ -290,7 +290,7 @@
     "product": "Approved under an NDA in 20 mg and 40 mg strengths, with granule packets from 2.5 to 40 mg. Dosed once daily.",
     "safety": "No boxed warning; contraindicated with rilpivirine-containing products and in hypersensitivity to substituted benzimidazoles. Headache and diarrhea are the most frequent adverse reactions.",
     "indication": "Short-term healing of erosive esophagitis and its maintenance, relief of heartburn from reflux disease, reducing NSAID-associated gastric ulcer risk, and H. pylori eradication with antibiotics.",
-    "mechanism": "Blocks the final step of acid production by inhibiting the H+/K+ ATPase of gastric parietal cells, after conversion to an active sulphenamide in their acidic compartment."
+    "mechanism": "Blocks the final step of acid production by inhibiting the H⁺/K⁺ ATPase of gastric parietal cells, after conversion to an active sulphenamide in their acidic compartment."
   },
   "tell": "Autoinhibition of its own CYP2C19 clearance and a magnesium trihydrate salt mark the single-enantiomer successor to omeprazole.",
   "source": {

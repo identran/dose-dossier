@@ -1,6 +1,6 @@
 // Flat silhouette of a dosage form in the day's one colour.
 // renderDoseForm(el, pill, form): `pill` is the dossier's optional { shape, color, desc }; without
-// it the shape follows `form`. The fill is pill.color, or the day's accent. A second colour in the
+// it the shape follows `form`. The fill is the day's accent, which the build derives from pill.color. A second colour in the
 // data (a two-tone capsule) is not drawn: the palette has one accent, and the gap between the
 // halves already says capsule. Corners are sharp or true arcs, never eased.
 
@@ -101,8 +101,6 @@ export function renderDoseForm(el, pill, form) {
     const path = document.createElementNS(NS, 'path');
     path.setAttribute('d', part.d);
     if (part.turn) path.setAttribute('transform', `rotate(${part.turn} 50 50)`);
-    // An unparsable colour is ignored by the browser, leaving the accent.
-    if (pill?.color) path.style.fill = pill.color;
     svg.appendChild(path);
   }
   el.replaceChildren(svg);

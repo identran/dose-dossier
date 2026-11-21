@@ -35,14 +35,14 @@ const REACH_TOUCH = 22;
 const BAND = 12;            // CSS px either side of the profile band that still counts as over it
 
 const FALLBACK = {
-  light: { paper: '#ECEAE5', ink: '#111111', mute: '#6B6A66' },
+  light: { paper: '#ECEAE5', ink: '#111111', mute: '#5E5D59' },
   dark: { paper: '#0D0D0D', ink: '#DEDCD6', mute: '#8F8E8A' },
 };
 
 const CSS = `
 .dial-root{position:relative;width:100%;aspect-ratio:1/1;touch-action:manipulation;-webkit-tap-highlight-color:transparent;outline:none}
 .dial-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.dial-labels{position:absolute;inset:0;pointer-events:none;font-family:var(--font-data,Georgia,'Times New Roman',serif);font-size:var(--size-s,0.8rem);line-height:1;font-variant-numeric:lining-nums;color:var(--mute,#6B6A66)}
+.dial-labels{position:absolute;inset:0;pointer-events:none;font-family:var(--font-data,Georgia,'Times New Roman',serif);font-size:var(--size-s,0.8rem);line-height:1;font-variant-numeric:lining-nums;color:var(--mute,#5E5D59)}
 .dial-label{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:auto;-webkit-user-select:text;user-select:text}
 .dial-label sub{font-size:0.75em}
 .dial-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
