@@ -31666,11 +31666,70 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 2,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-3.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "QELBREE",
+    "substance": "VILOXAZINE HYDROCHLORIDE",
+    "application": "NDA 211964",
+    "applications": [
+      "NDA 211964"
+    ],
+    "setId": "aedf408d-0f84-418d-9416-7c39ddb0d29a",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aedf408d-0f84-418d-9416-7c39ddb0d29a",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Supernus Pharmaceuticals, Inc",
+    "effective": "2026-10-05",
+    "sectionLengths": {
+      "boxed_warning": 670,
+      "indications_and_usage": 358,
+      "dosage_forms_and_strengths": 402,
+      "contraindications": 612,
+      "description": 1353,
+      "mechanism_of_action": 179,
+      "pharmacokinetics": 3960,
+      "clinical_pharmacology": 4721,
+      "adverse_reactions": 7277,
+      "nonclinical_toxicology": 1459,
+      "how_supplied": 1182
+    },
+    "approved": "2021-04-02",
+    "approvedYear": 2021,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2021-04-02",
+      "application": "NDA 211964"
+    },
+    "sponsorFda": "SUPERNUS PHARMS",
+    "products": [
+      {
+        "brand": "QELBREE",
+        "form": "CAPSULE, EXTENDED RELEASE",
+        "route": "ORAL",
+        "strength": "EQ 200MG BASE",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "QELBREE",
+        "form": "CAPSULE, EXTENDED RELEASE",
+        "route": "ORAL",
+        "strength": "EQ 100MG BASE",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "QELBREE",
+        "form": "CAPSULE, EXTENDED RELEASE",
+        "route": "ORAL",
+        "strength": "EQ 150MG BASE",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "viloxazine|qelbree"
   },
   {
     "id": "voclosporin",
@@ -31681,11 +31740,56 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 2,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-1.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "LUPKYNIS",
+    "substance": "VOCLOSPORIN",
+    "application": "NDA 213716",
+    "applications": [
+      "NDA 213716"
+    ],
+    "setId": "9f489295-1156-52c7-5fd0-5c4c52f9b813",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f489295-1156-52c7-5fd0-5c4c52f9b813",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Aurinia Pharma U.S., Inc.",
+    "effective": "2026-11-11",
+    "sectionLengths": {
+      "boxed_warning": 465,
+      "indications_and_usage": 733,
+      "dosage_forms_and_strengths": 155,
+      "contraindications": 666,
+      "description": 1216,
+      "mechanism_of_action": 861,
+      "pharmacokinetics": 5985,
+      "clinical_pharmacology": 8380,
+      "adverse_reactions": 11663,
+      "nonclinical_toxicology": 1470,
+      "how_supplied": 1104
+    },
+    "approved": "2021-01-22",
+    "approvedYear": 2021,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2021-01-22",
+      "application": "NDA 213716"
+    },
+    "sponsorFda": "AURINIA",
+    "products": [
+      {
+        "brand": "LUPKYNIS",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "7.9MG",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "voclosporin|lupkynis"
   },
   {
     "id": "vonoprazan",
@@ -31696,11 +31800,63 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-4.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "VOQUEZNA",
+    "substance": "VONOPRAZAN FUMARATE",
+    "application": "NDA 215151",
+    "applications": [
+      "NDA 215151"
+    ],
+    "setId": "0cc52ac5-77ec-4d66-a770-762a1a960914",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cc52ac5-77ec-4d66-a770-762a1a960914",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Phathom Pharmaceuticals Inc.",
+    "effective": "2026-07-16",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 1250,
+      "dosage_forms_and_strengths": 308,
+      "contraindications": 580,
+      "description": 1349,
+      "mechanism_of_action": 680,
+      "pharmacokinetics": 7106,
+      "clinical_pharmacology": 11371,
+      "adverse_reactions": 10954,
+      "nonclinical_toxicology": 2494,
+      "how_supplied": 465
+    },
+    "approved": "2023-11-01",
+    "approvedYear": 2023,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2023-11-01",
+      "application": "NDA 215151"
+    },
+    "sponsorFda": "PHATHOM",
+    "products": [
+      {
+        "brand": "VOQUEZNA",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 20MG BASE",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "VOQUEZNA",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 10MG BASE",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "vonoprazan|voquezna"
   },
   {
     "id": "voriconazole",
@@ -31711,11 +31867,56 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-4.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "VFEND",
+    "substance": "VORICONAZOLE",
+    "application": "NDA 021267",
+    "applications": [
+      "NDA 021267"
+    ],
+    "setId": "08d08721-1f4c-478a-8abf-d9c402d50553",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=08d08721-1f4c-478a-8abf-d9c402d50553",
+    "routes": [
+      "intravenous"
+    ],
+    "manufacturer": "Roerig",
+    "effective": "2026-03-20",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 2050,
+      "dosage_forms_and_strengths": 461,
+      "contraindications": 2324,
+      "description": 1057,
+      "mechanism_of_action": 60,
+      "pharmacokinetics": 27106,
+      "clinical_pharmacology": 27896,
+      "adverse_reactions": 9144,
+      "nonclinical_toxicology": 1094,
+      "how_supplied": 1172
+    },
+    "approved": "2002-05-24",
+    "approvedYear": 2002,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2002-05-24",
+      "application": "NDA 021266"
+    },
+    "sponsorFda": "PF PRISM CV",
+    "products": [
+      {
+        "brand": "VFEND",
+        "form": "POWDER",
+        "route": "INTRAVENOUS",
+        "strength": "200MG/VIAL",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "voriconazole|vfend"
   },
   {
     "id": "vortioxetine",
@@ -31726,11 +31927,77 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-3.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "Trintellix",
+    "substance": "VORTIOXETINE HYDROBROMIDE",
+    "application": "NDA 204447",
+    "applications": [
+      "NDA 204447"
+    ],
+    "setId": "1a5b68e2-14d0-419d-9ec6-1ca97145e838",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a5b68e2-14d0-419d-9ec6-1ca97145e838",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Takeda Pharmaceuticals America, Inc.",
+    "effective": "2025-03-05",
+    "sectionLengths": {
+      "boxed_warning": 725,
+      "indications_and_usage": 209,
+      "dosage_forms_and_strengths": 436,
+      "contraindications": 1209,
+      "description": 974,
+      "mechanism_of_action": 453,
+      "pharmacokinetics": 3772,
+      "clinical_pharmacology": 5747,
+      "adverse_reactions": 10001,
+      "nonclinical_toxicology": 1482,
+      "how_supplied": 580
+    },
+    "approved": "2013-09-30",
+    "approvedYear": 2013,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2013-09-30",
+      "application": "NDA 204447"
+    },
+    "sponsorFda": "TAKEDA PHARMS USA",
+    "products": [
+      {
+        "brand": "TRINTELLIX",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 10MG BASE",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "TRINTELLIX",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 15MG BASE **Federal Register determination that product was not discontinued or withdrawn for safety or effectiveness reasons**",
+        "marketing": "Discontinued"
+      },
+      {
+        "brand": "TRINTELLIX",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 5MG BASE",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "TRINTELLIX",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "EQ 20MG BASE",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "vortioxetine|trintellix"
   },
   {
     "id": "vosoritide",
@@ -31741,12 +32008,71 @@
     "type": "peptide",
     "route": "subcutaneous",
     "fame": 2,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-1.json",
       "scout-4.json"
     ],
-    "mentions": 2
+    "mentions": 2,
+    "labelBrand": "VOXZOGO 0.4mg",
+    "substance": null,
+    "application": "NDA 214938",
+    "applications": [
+      "NDA 214938"
+    ],
+    "setId": "228e8560-04a4-4bb1-a81f-29531a9e4d27",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=228e8560-04a4-4bb1-a81f-29531a9e4d27",
+    "routes": [],
+    "manufacturer": "BioMarin Pharmaceutical Inc.",
+    "effective": "2025-11-25",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 785,
+      "dosage_forms_and_strengths": 294,
+      "contraindications": 36,
+      "description": 2399,
+      "mechanism_of_action": 1029,
+      "pharmacokinetics": 3028,
+      "clinical_pharmacology": 6578,
+      "adverse_reactions": 5403,
+      "nonclinical_toxicology": 398,
+      "how_supplied": 1433
+    },
+    "approved": "2021-11-19",
+    "approvedYear": 2021,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2021-11-19",
+      "application": "NDA 214938"
+    },
+    "sponsorFda": "BIOMARIN PHARM",
+    "products": [
+      {
+        "brand": "VOXZOGO",
+        "form": "POWDER",
+        "route": "SUBCUTANEOUS",
+        "strength": "0.56MG/VIAL",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "VOXZOGO",
+        "form": "POWDER",
+        "route": "SUBCUTANEOUS",
+        "strength": "1.2MG/VIAL",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "VOXZOGO",
+        "form": "POWDER",
+        "route": "SUBCUTANEOUS",
+        "strength": "0.4MG/VIAL",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [
+      "brand \"Voxzogo\" not matched; label brand is VOXZOGO 0.4mg, VOXZOGO 0.56mg, VOXZOGO 1.2mg"
+    ],
+    "_sig": "vosoritide|voxzogo"
   },
   {
     "id": "vutrisiran",
@@ -31757,12 +32083,57 @@
     "type": "oligonucleotide",
     "route": "subcutaneous",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-1.json",
       "scout-4.json"
     ],
-    "mentions": 2
+    "mentions": 2,
+    "labelBrand": "AMVUTTRA",
+    "substance": "VUTRISIRAN SODIUM",
+    "application": "NDA 215515",
+    "applications": [
+      "NDA 215515"
+    ],
+    "setId": "8db0facb-81b6-4006-9239-27dc6409c5d3",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3",
+    "routes": [
+      "subcutaneous"
+    ],
+    "manufacturer": "Alnylam Pharmaceuticals, Inc.",
+    "effective": "2025-11-06",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 926,
+      "dosage_forms_and_strengths": 209,
+      "contraindications": 37,
+      "description": 1150,
+      "mechanism_of_action": 249,
+      "pharmacokinetics": 2987,
+      "clinical_pharmacology": 5247,
+      "adverse_reactions": 3255,
+      "nonclinical_toxicology": 1077,
+      "how_supplied": 633
+    },
+    "approved": "2022-06-13",
+    "approvedYear": 2022,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2022-06-13",
+      "application": "NDA 215515"
+    },
+    "sponsorFda": "ALNYLAM PHARMS INC",
+    "products": [
+      {
+        "brand": "AMVUTTRA",
+        "form": "SOLUTION",
+        "route": "SUBCUTANEOUS",
+        "strength": "EQ 25MG BASE/0.5ML (EQ 25MG BASE/0.5ML)",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "vutrisiran|amvuttra"
   },
   {
     "id": "warfarin",
@@ -31773,11 +32144,14 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 5,
-    "status": "pending",
+    "status": "reject",
+    "reject": "ANDA only",
     "sources": [
       "scout-1.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "rejectDetail": null,
+    "_sig": "warfarin|coumadin"
   },
   {
     "id": "zanubrutinib",
@@ -31788,11 +32162,59 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-2.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "BRUKINSA",
+    "substance": "ZANUBRUTINIB",
+    "application": "NDA 213217",
+    "applications": [
+      "NDA 213217",
+      "NDA 218785"
+    ],
+    "setId": "3e08fe23-d70e-424c-bc51-1222e320f902",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "BeOne Medicines USA, Inc.",
+    "effective": "2026-09-04",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 2850,
+      "dosage_forms_and_strengths": 334,
+      "contraindications": 37,
+      "description": 1264,
+      "mechanism_of_action": 560,
+      "pharmacokinetics": 5763,
+      "clinical_pharmacology": 7328,
+      "adverse_reactions": 24575,
+      "nonclinical_toxicology": 960,
+      "how_supplied": 529
+    },
+    "approved": "2019-11-14",
+    "approvedYear": 2019,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2019-11-14",
+      "application": "NDA 213217"
+    },
+    "sponsorFda": "BEONE MEDICINES USA",
+    "products": [
+      {
+        "brand": "BRUKINSA",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "80MG",
+        "marketing": "Discontinued"
+      }
+    ],
+    "notes": [
+      "Drugs@FDA marks every product discontinued, but the label is recent"
+    ],
+    "_sig": "zanubrutinib|brukinsa"
   },
   {
     "id": "zidovudine",
@@ -31803,11 +32225,59 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-4.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "RETROVIR",
+    "substance": "ZIDOVUDINE",
+    "application": "NDA 019655",
+    "applications": [
+      "NDA 019655",
+      "NDA 019910",
+      "NDA 019951"
+    ],
+    "setId": "6df09f15-b102-431c-adde-d7aeef6f5d84",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6df09f15-b102-431c-adde-d7aeef6f5d84",
+    "routes": [
+      "oral",
+      "intravenous"
+    ],
+    "manufacturer": "ViiV Healthcare Company",
+    "effective": "2024-11-13",
+    "sectionLengths": {
+      "boxed_warning": 1353,
+      "indications_and_usage": 1635,
+      "dosage_forms_and_strengths": 606,
+      "contraindications": 330,
+      "description": 1381,
+      "mechanism_of_action": 63,
+      "pharmacokinetics": 9345,
+      "clinical_pharmacology": 11875,
+      "adverse_reactions": 8076,
+      "nonclinical_toxicology": 3282,
+      "how_supplied": 881
+    },
+    "approved": "1987-03-19",
+    "approvedYear": 1987,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "1987-03-19",
+      "application": "NDA 019655"
+    },
+    "sponsorFda": "VIIV HLTHCARE",
+    "products": [
+      {
+        "brand": "RETROVIR",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "100MG",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "zidovudine|retrovir"
   },
   {
     "id": "zilucoplan",
@@ -31818,11 +32288,14 @@
     "type": "peptide",
     "route": "subcutaneous",
     "fame": 2,
-    "status": "pending",
+    "status": "reject",
+    "reject": "not found",
     "sources": [
       "scout-3.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "rejectDetail": null,
+    "_sig": "zilucoplan|zilbrysq"
   },
   {
     "id": "zoledronic-acid",
@@ -31833,11 +32306,56 @@
     "type": "small molecule",
     "route": "intravenous",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-1.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "Reclast",
+    "substance": "ZOLEDRONIC ACID",
+    "application": "NDA 021817",
+    "applications": [
+      "NDA 021817"
+    ],
+    "setId": "5a9b3737-9ce6-4a89-b76e-6aab79eba9cf",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a9b3737-9ce6-4a89-b76e-6aab79eba9cf",
+    "routes": [
+      "intravenous"
+    ],
+    "manufacturer": "Sandoz Inc",
+    "effective": "2026-02-03",
+    "sectionLengths": {
+      "boxed_warning": 0,
+      "indications_and_usage": 2521,
+      "dosage_forms_and_strengths": 119,
+      "contraindications": 630,
+      "description": 1016,
+      "mechanism_of_action": 602,
+      "pharmacokinetics": 4451,
+      "clinical_pharmacology": 5751,
+      "adverse_reactions": 26596,
+      "nonclinical_toxicology": 2624,
+      "how_supplied": 386
+    },
+    "approved": "2007-04-16",
+    "approvedYear": 2007,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2001-08-20",
+      "application": "NDA 021223"
+    },
+    "sponsorFda": "SANDOZ",
+    "products": [
+      {
+        "brand": "RECLAST",
+        "form": "INJECTABLE",
+        "route": "INTRAVENOUS",
+        "strength": "EQ 5MG BASE/100ML",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "zoledronic acid|reclast"
   },
   {
     "id": "zolpidem",
@@ -31848,11 +32366,63 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 4,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-3.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "Ambien",
+    "substance": "ZOLPIDEM TARTRATE",
+    "application": "NDA 019908",
+    "applications": [
+      "NDA 019908"
+    ],
+    "setId": "747949c5-2c91-4909-8a07-71b6826f8e97",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=747949c5-2c91-4909-8a07-71b6826f8e97",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Cosette Pharmaceuticals, Inc.",
+    "effective": "2025-02-07",
+    "sectionLengths": {
+      "boxed_warning": 749,
+      "indications_and_usage": 606,
+      "dosage_forms_and_strengths": 413,
+      "contraindications": 340,
+      "description": 853,
+      "mechanism_of_action": 346,
+      "pharmacokinetics": 7319,
+      "clinical_pharmacology": 8159,
+      "adverse_reactions": 459,
+      "nonclinical_toxicology": 1384,
+      "how_supplied": 445
+    },
+    "approved": "1992-12-16",
+    "approvedYear": 1992,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "1992-12-16",
+      "application": "NDA 019908"
+    },
+    "sponsorFda": "COSETTE",
+    "products": [
+      {
+        "brand": "AMBIEN",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "10MG",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "AMBIEN",
+        "form": "TABLET",
+        "route": "ORAL",
+        "strength": "5MG",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "zolpidem|ambien"
   },
   {
     "id": "zuranolone",
@@ -31863,10 +32433,69 @@
     "type": "small molecule",
     "route": "oral",
     "fame": 3,
-    "status": "pending",
+    "status": "ok",
     "sources": [
       "scout-3.json"
     ],
-    "mentions": 1
+    "mentions": 1,
+    "labelBrand": "ZURZUVAE",
+    "substance": "ZURANOLONE",
+    "application": "NDA 217369",
+    "applications": [
+      "NDA 217369"
+    ],
+    "setId": "f18e53b0-d0bb-422d-8de7-ab64b7292b29",
+    "dailymed": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f18e53b0-d0bb-422d-8de7-ab64b7292b29",
+    "routes": [
+      "oral"
+    ],
+    "manufacturer": "Biogen MA Inc.",
+    "effective": "2026-06-15",
+    "sectionLengths": {
+      "boxed_warning": 990,
+      "indications_and_usage": 276,
+      "dosage_forms_and_strengths": 376,
+      "contraindications": 37,
+      "description": 1205,
+      "mechanism_of_action": 198,
+      "pharmacokinetics": 4161,
+      "clinical_pharmacology": 4732,
+      "adverse_reactions": 4274,
+      "nonclinical_toxicology": 2361,
+      "how_supplied": 646
+    },
+    "approved": "2023-08-04",
+    "approvedYear": 2023,
+    "approvedNote": null,
+    "firstApprovalSameMoiety": {
+      "date": "2023-08-04",
+      "application": "NDA 217369"
+    },
+    "sponsorFda": "BIOGEN",
+    "products": [
+      {
+        "brand": "ZURZUVAE",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "30MG",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "ZURZUVAE",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "20MG",
+        "marketing": "Prescription"
+      },
+      {
+        "brand": "ZURZUVAE",
+        "form": "CAPSULE",
+        "route": "ORAL",
+        "strength": "25MG",
+        "marketing": "Prescription"
+      }
+    ],
+    "notes": [],
+    "_sig": "zuranolone|zurzuvae"
   }
 ]
