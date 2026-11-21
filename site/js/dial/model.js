@@ -9,7 +9,7 @@ export const TAU = Math.PI * 2;
 export const GEOM = Object.freeze({
   R0: 0.64,       // base ring, zero concentration
   H: 0.26,        // displacement at Cmax
-  CENTER: 0.56,   // half-side of the reserved centre square, as a fraction of R0
+  CENTER: 0.54,   // half-side of the reserved centre square, as a fraction of R0
 });
 
 // Line weights and node sizes in CSS pixels. "Quiet" is always a lighter weight or a smaller
@@ -134,7 +134,6 @@ export function cmaxLabelTurn(curve) {
 }
 
 export const easeInOut = x => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
-export const easeOut = x => 1 - (1 - x) * (1 - x);
 
 // sRGB bytes to linear light, for blending in the shader.
 export function toLinear(rgb) {

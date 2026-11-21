@@ -2,7 +2,8 @@
 //
 //   const dial = createDial(containerEl, { onProbe });
 //   dial.center                              element over the ring's interior
-//   dial.setChallenge({ curve, times, accent, seed })
+//   dial.setChallenge({ curve, times, accent, seed })   seed is accepted and unused: every mark
+//                                                        is a function of the curve, none is random
 //   dial.setProgress(k, { animate })         1..times.length
 //   dial.setSolved(bool)
 //   dial.setTheme('light' | 'dark')
@@ -185,7 +186,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     for (const { el, turn } of tickLabels) {
       const a = TAU * turn;
       const extent = (Math.abs(Math.sin(a)) * el.offsetWidth + Math.abs(Math.cos(a)) * el.offsetHeight) / 2;
-      put(el, turn, GEOM.R0 * box.s - STYLE.tickMajor - 5 - extent);
+      put(el, turn, GEOM.R0 * box.s - STYLE.tickMajor - 4 - extent);
     }
     const turn = cmaxLabelTurn(challenge.curve);
     const a = TAU * turn;
