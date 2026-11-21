@@ -3,11 +3,15 @@
 
 import { h } from './dom.js';
 
-export function createCombobox({ input, listbox, search, onAnnounce }) {
+const COUNT_DELAY_MS = 500; // the number of suggestions is announced once typing pauses
+
+export function createCombobox({ input, listbox, search, rows, onChoose, onAnnounce }) {
   let options = [];
   let active = -1;
   let chosen = null; // { drug, text } while the field still holds a picked option
+  let counting = 0;
 
+  if (rows) listbox.style.setProperty('--rows', rows);
   const isOpen = () => !listbox.hidden;
 
   function setActive(index) {
@@ -45,18 +49,23 @@ export function createCombobox({ input, listbox, search, onAnnounce }) {
 
   function choose(index) {
     const option = options[index];
-    if (!option) return;
+    if (!option) return null;
+    clearTimeout(counting);
     input.value = option.drug.generic;
     chosen = { drug: option.drug, text: input.value };
     close();
-    onAnnounce?.(`${option.drug.generic} selected`);
+    onChoose?.(option.drug);
+    return option.drug;
   }
 
   input.addEventListener('input', () => {
     chosen = null;
     refresh();
     open();
-    if (input.value.trim()) onAnnounce?.(options.length ? `${options.length} suggestions` : 'No match');
+    clearTimeout(counting);
+    if (!input.value.trim()) return;
+    const n = options.length;
+    counting = setTimeout(() => onAnnounce?.(n ? `${n} ${n === 1 ? 'suggestion' : 'suggestions'}` : 'No match'), COUNT_DELAY_MS);
   });
 
   input.addEventListener('keydown', event => {
@@ -109,19 +118,17 @@ export function createCombobox({ input, listbox, search, onAnnounce }) {
     // The picked drug, if the field has not been edited since it was picked.
     chosen: () => (chosen && chosen.text === input.value ? chosen.drug : null),
     text: () => input.value,
-    // Open the list with its first option highlighted, for a name that did not resolve.
-    suggest() {
+    // Fill the field with the first suggestion for what is typed; returns that drug, or null.
+    completeFirst() {
       refresh();
-      open();
-      if (options.length) setActive(0);
-      return options.length;
+      return choose(0);
     },
     clear() {
+      clearTimeout(counting);
       input.value = '';
       chosen = null;
       options = [];
       close();
     },
-    close,
   };
 }
