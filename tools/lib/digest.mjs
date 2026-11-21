@@ -160,17 +160,36 @@ function pkTables(label, cap) {
 }
 
 const INJECTED = /intravenous|subcutaneous|intramuscular|intrathecal|intravitreal|intra-?articular|epidural|infus|inject/i;
+const DURATION = [
+  /infus\w*[^.]{0,80}\bover\b[^.]{0,40}?\d/i,
+  /\bover\s+(?:approximately|about|at least|no less than|a period of|a minimum of)?\s*\d+(?:\.\d+)?(?:\s*(?:to|-|or)\s*\d+(?:\.\d+)?)?\s*(?:minutes?|mins?|hours?|hrs?|seconds?)/i,
+  /\b\d+(?:\.\d+)?[- ](?:minute|hour|second)\s+(?:intravenous\s+)?(?:infusion|injection)/i,
+  /intravenous(?:ly)?\s+(?:bolus|push)|\bIV\s+(?:bolus|push)|\bbolus\b/i,
+  /subcutaneous(?:ly)?\s+(?:injection|inject)[^.]{0,60}(?:once|every|weekly|monthly|daily)|(?:once|every)\s+(?:\d+\s+)?(?:weekly|monthly|daily|weeks?|months?|days?)[^.]{0,60}subcutaneous/i,
+  /(?:administered|given|infused|injected)\s+(?:as\s+)?(?:an?\s+)?(?:intravenous|subcutaneous|intramuscular)\s+(?:infusion|injection)/i,
+];
+const INJ_ROUTE = /intravenous|subcutaneous|intramuscular|intrathecal|intravitreal|infus|inject/i;
+// Sentences that say how and how fast the product is given come first, then other dosing-route text.
 function administration(rec, label, cap) {
   const given = [...(rec.routes || []), ...(rec.products || []).map(p => `${p.form} ${p.route}`)].join(' ');
-  if (!INJECTED.test(given)) return '';
+  if (!INJ_ROUTE.test(given)) return '';
   const text = cleanLabelText(label.dosage_and_administration);
-  const key = /infus|over (?:\d|a |approximately|at least|no less)|bolus|inject|once (?:weekly|every|monthly|daily)|every \d+ (?:weeks?|days?|hours?|months?)|per (?:minute|hour)/i;
-  const picked = sentences(text).filter(x => key.test(x) && x.length < 400);
-  return picked.length ? trimAt(picked.slice(0, 4).join(' '), cap) : '';
+  const all = sentences(text).map(x => (x.length > 450 ? x.slice(0, 450) : x));
+  const seen = new Set();
+  const first = [], rest = [];
+  const key = /infus|bolus|inject|once (?:weekly|every|monthly|daily)|every \d+ (?:weeks?|days?|hours?|months?)/i;
+  for (const x of all) {
+    const k = x.toLowerCase().replace(/\W+/g, ' ');
+    if (seen.has(k)) continue;
+    seen.add(k);
+    if (DURATION.some(r => r.test(x))) first.push(x); else if (key.test(x)) rest.push(x);
+  }
+  const picked = [...first, ...rest];
+  return picked.length ? trimAt(picked.join(' '), cap) : '';
 }
 
 export function buildDigest(rec, label, structure = null) {
-  const caps = { tables: 2000, admin: 500, boxed: 600, ind: 900, forms: 600, contra: 700, desc: 1500, moa: 1400, pk: 6500, ae: 500, nonclin: 500, supplied: 700 };
+  const caps = { tables: 2000, admin: 600, boxed: 600, ind: 900, forms: 600, contra: 700, desc: 1500, moa: 1400, pk: 6500, ae: 500, nonclin: 500, supplied: 700 };
   const pk = pharmacokinetics(label);
   const raw = {
     boxed: get(label, 'boxed_warning'),
