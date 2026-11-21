@@ -10,7 +10,8 @@
 //   infusion    constant-rate infusion ending at Tmax, then mono-exponential decline.
 
 const LN2 = Math.LN2;
-const PERIODS_H = [24, 168, 672, 2016];
+// One turn of the dial, chosen as the shortest of these that holds the whole profile.
+const PERIODS_H = [6, 12, 24, 48, 96, 168, 336, 672, 1344, 2016, 4032];
 const NICE_SPANS_H = [6, 8, 12, 24, 36, 48, 72, 96, 120, 168, 240, 336, 504, 672, 1008, 1344, 2016, 2688, 4032];
 
 function solveKa(ke, tmax) {
@@ -26,7 +27,10 @@ function solveKa(ke, tmax) {
 }
 
 export function makeCurve(pk) {
-  const { tmaxH: tmax, cmax, halfLifeH } = pk;
+  const { tmaxH: tmax, halfLifeH } = pk;
+  // Without a label Cmax the profile is relative: it peaks at 1 and has no unit.
+  const relative = pk.cmax == null;
+  const cmax = relative ? 1 : pk.cmax;
   const model = pk.model || 'absorption';
   const ke = LN2 / halfLifeH;
   let c;
@@ -47,7 +51,7 @@ export function makeCurve(pk) {
   }
 
   const span = pk.spanH || NICE_SPANS_H.find(s => s >= tmax + 5 * halfLifeH) || NICE_SPANS_H.at(-1);
-  const period = pk.periodH || PERIODS_H.find(p => span / p <= 3) || PERIODS_H.at(-1);
+  const period = pk.periodH || PERIODS_H.find(p => p >= span * 0.95) || PERIODS_H.at(-1);
 
   // Cumulative AUC on a grid dense near the origin, where the curve moves fastest.
   const N = 2048;
@@ -66,17 +70,17 @@ export function makeCurve(pk) {
     return cum[i] + (cum[i + 1] - cum[i]) * (x - i);
   };
 
-  return { c, auc, span, period, tmax, cmax, halfLife: halfLifeH, model, unit: pk.unit, aucTotal: cum[N] };
+  return { c, auc, span, period, tmax, cmax, halfLife: halfLifeH, model, relative, unit: relative ? null : pk.unit, aucTotal: cum[N] };
 }
 
-// n sampling times: pre-dose, two on the rise, the peak, then geometric spacing out to the span.
-export function sampleTimes(curve, n = 11) {
+// n sampling times: pre-dose, the rise, the peak, then points that spread out along the decline.
+export function sampleTimes(curve, n = 8) {
   const { tmax, span, model } = curve;
-  const head = model === 'bolus' ? [0] : [0, tmax / 4, tmax / 2, tmax];
-  const start = model === 'bolus' ? span / 200 : tmax;
+  const head = model === 'bolus' ? [0] : tmax < span / 60 ? [0, tmax] : [0, tmax / 2, tmax];
+  const from = model === 'bolus' ? 0 : tmax;
   const rest = n - head.length;
   const out = head.slice();
-  for (let i = 1; i <= rest; i++) out.push(start * Math.pow(span / start, i / rest));
+  for (let i = 1; i <= rest; i++) out.push(from + (span - from) * Math.pow(i / rest, 1.7));
   return out;
 }
 
