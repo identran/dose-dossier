@@ -23,6 +23,15 @@
 </head>
 <body>
   <main class="page">
+    <figure class="figure">
+      <div id="dial" class="dial"></div>
+      <figcaption class="caption">
+        <span id="glyph" class="glyph"></span>
+        <span id="context"></span>
+        <span id="probe" class="probe" aria-live="off"></span>
+      </figcaption>
+    </figure>
+
     <header class="masthead">
       <h1>Dose Dossier</h1>
       <nav class="masthead-nav" aria-label="About">
@@ -35,15 +44,6 @@
         <a id="later" hidden>Later</a>
       </p>
     </header>
-
-    <figure class="figure">
-      <div id="dial" class="dial"></div>
-      <figcaption class="caption">
-        <span id="glyph" class="glyph"></span>
-        <span id="context"></span>
-        <output id="probe" class="probe" aria-hidden="true"></output>
-      </figcaption>
-    </figure>
 
     <section class="play" aria-label="Your guess">
       <form id="guess-form" class="guess-form" autocomplete="off" novalidate>

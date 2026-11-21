@@ -1,0 +1,383 @@
+/* Dose Dossier. Ink on paper: four colour tokens, one size scale, no boxes. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root { --pad: 1rem; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--size-m);
+  line-height: 1.5;
+}
+
+h1, h2, h3, p, ol, ul, dl, dt, dd, figure { margin: 0; padding: 0; font: inherit; }
+ol, ul { list-style: none; }
+
+button, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  appearance: none;
+}
+
+button { cursor: pointer; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+::selection { background: var(--ink); color: var(--paper); }
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Controls */
+
+.text-button, .day a {
+  padding: var(--space-1) 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.text-button:hover, .day a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+/* Text controls take a heavy underline for focus rather than a ring, so nothing reads as a box. */
+.text-button:focus-visible, a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+.button {
+  padding: var(--space-1) var(--space-3);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.button:disabled { background: var(--mute); cursor: default; }
+.button:focus-visible { outline-offset: 2px; }
+
+/* Page */
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: var(--pad) max(var(--pad), env(safe-area-inset-right)) var(--space-4) max(var(--pad), env(safe-area-inset-left));
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-size: var(--size-xl);
+  line-height: 1.2;
+}
+
+.masthead-nav { display: flex; gap: var(--space-2); font-size: var(--size-s); }
+
+.day {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  color: var(--mute);
+}
+
+/* Figure */
+
+.figure { container-type: inline-size; }
+/* In one column the figure never takes more than about three fifths of the screen height. */
+.dial { width: 100%; max-width: 62vh; max-width: 62svh; margin: 0 auto; aspect-ratio: 1; }
+
+.caption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  color: var(--mute);
+}
+
+.glyph { width: 2rem; height: 2rem; }
+.glyph > * { display: block; width: 100%; height: 100%; }
+
+.probe {
+  grid-column: 2;
+  min-height: 1.5em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@container (min-width: 36rem) {
+  .caption { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .probe { grid-column: 3; text-align: right; }
+}
+
+/* Guess */
+
+.play { margin-top: var(--space-3); }
+
+.guess-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--space-2);
+}
+
+.combo { position: relative; }
+
+.field {
+  display: block;
+  width: 100%;
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--ink);
+  font-size: var(--size-l);
+  text-overflow: ellipsis;
+}
+
+.field::placeholder { color: var(--mute); opacity: 1; }
+.field:focus { outline: none; padding-bottom: calc(var(--space-1) - 1px); border-bottom-width: 2px; }
+.field:disabled { border-bottom-color: var(--mute); }
+
+.suggestions {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-1) 0 var(--space-2);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.suggestions li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0 calc(-1 * var(--space-2));
+  padding: var(--space-1) var(--space-2);
+  cursor: pointer;
+}
+
+.suggestions .via { color: var(--mute); font-size: var(--size-s); }
+.suggestions [aria-selected='true'] { background: var(--ink); color: var(--paper); }
+.suggestions [aria-selected='true'] .via { color: var(--paper); }
+
+.status {
+  min-height: 1.5em;
+  margin-top: var(--space-1);
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  color: var(--mute);
+}
+
+/* Result */
+
+.answer {
+  font-family: var(--font-display);
+  font-size: var(--size-2xl);
+  line-height: 1.2;
+}
+
+.answer:focus { outline: none; }
+.answer-brand { color: var(--mute); }
+.outcome { margin-top: var(--space-2); }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Guesses */
+
+.guesses ol { display: grid; row-gap: var(--space-2); margin-top: var(--space-3); }
+.guesses ol:empty { display: none; }
+.guess .aka { margin-left: 0.4em; color: var(--mute); }
+
+.facts {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1.2fr) 4rem;
+  column-gap: var(--space-2);
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  color: var(--mute);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.fact[data-match='true'], .fact .dir { color: var(--ink); font-weight: 700; }
+
+/* Dossier */
+
+.dossier { margin-top: var(--space-4); }
+.module h3 { font-family: var(--font-display); }
+.module.is-pending h3 { color: var(--mute); }
+.module.is-open { margin-bottom: var(--space-3); }
+.clue { margin-top: var(--space-1); }
+.clue-title { margin-right: 0.4em; color: var(--mute); }
+
+.colophon {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  font-size: var(--size-s);
+  color: var(--mute);
+}
+
+.colophon .text-button { flex: none; }
+
+/* Sheets: how to play, statistics */
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: var(--pad);
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.sheet::backdrop { background: transparent; }
+.sheet-body { max-width: 34rem; margin: 0 auto; }
+
+.sheet-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.sheet h2 { font-family: var(--font-display); font-size: var(--size-xl); line-height: 1.2; }
+.sheet h3 { margin: var(--space-4) 0 var(--space-2); font-family: var(--font-display); }
+
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--space-2); }
+.figures div { display: flex; flex-direction: column-reverse; }
+.figures dd { font-family: var(--font-display); font-size: var(--size-2xl); line-height: 1.2; font-variant-numeric: lining-nums; }
+.figures dt { font-family: var(--font-data); font-size: var(--size-s); color: var(--mute); }
+
+.distribution li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-2);
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.distribution .n { color: var(--mute); text-align: right; }
+.distribution .bar { display: flex; align-items: center; gap: var(--space-1); }
+
+.distribution .bar::before {
+  content: '';
+  width: calc(var(--share, 0) * (100% - 2rem));
+  height: 0.5rem;
+  background: var(--ink);
+}
+
+/* Desktop: the figure is the hero, sticky on the left; the text column runs beside it. */
+
+@media (min-width: 960px) {
+  html { font-size: 106.25%; }
+
+  :root {
+    --pad: 3rem;
+    --gap: 4.5rem;
+    --col: 34rem;
+    --col-min: 23rem;
+    --caption: 3.5rem;
+    --dial: max(20rem, min(100vh - 2 * var(--pad) - var(--caption), 100vw - 2 * var(--pad) - var(--gap) - var(--col-min), 56rem));
+    --edge: max(var(--pad), (100vw - var(--dial) - var(--gap) - var(--col)) / 2);
+  }
+
+  .page {
+    grid-template-columns: var(--dial) minmax(0, var(--col));
+    grid-template-rows: repeat(4, auto) 1fr;
+    column-gap: var(--gap);
+    justify-content: center;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: var(--pad);
+  }
+
+  .figure {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: start;
+    position: sticky;
+    top: var(--pad);
+  }
+
+  .dial { max-width: none; }
+  .masthead, .play, .guesses, .dossier, .colophon { grid-column: 2; }
+  .masthead { margin-top: 0; column-gap: var(--space-3); }
+  .masthead h1 { font-size: var(--size-2xl); }
+  .masthead-nav { gap: var(--space-3); }
+  .colophon { align-self: end; }
+
+  /* A sheet replaces the text column and leaves the figure in view. */
+  .sheet {
+    inset: 0 0 0 auto;
+    width: calc(100vw - var(--edge) - var(--dial) - var(--gap) / 2);
+    padding: var(--pad) var(--pad) var(--pad) calc(var(--gap) / 2);
+  }
+
+  .sheet-body { margin: 0; }
+}
+
+/* Motion: a new line is written in from the left. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .is-new { animation: write 0.6s cubic-bezier(0.2, 0.6, 0.2, 1) backwards; }
+
+  @keyframes write {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+}
