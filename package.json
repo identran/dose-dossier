@@ -4,11 +4,17 @@
   "private": true,
   "type": "module",
   "description": "Dose Dossier: a daily guess-the-drug game built from public FDA labels.",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "node tools/build.mjs",
     "check": "node tools/build.mjs --check",
-    "fetch-label": "node tools/fetch-label.mjs",
-    "fetch-structure": "node tools/fetch-structure.mjs"
+    "fetch-label": "NODE_USE_ENV_PROXY=1 node tools/fetch-label.mjs",
+    "fetch-structure": "NODE_USE_ENV_PROXY=1 node tools/fetch-structure.mjs",
+    "resolve": "NODE_USE_ENV_PROXY=1 node tools/resolve.mjs",
+    "digest": "node tools/digest.mjs",
+    "structures": "NODE_USE_ENV_PROXY=1 node tools/structures.mjs",
+    "verify": "node tools/verify.mjs"
   }
 }

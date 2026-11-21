@@ -20,6 +20,7 @@ export async function resolveParentCid(nameOrCid) {
 
 export function buildStructure(record, cid, formula) {
   const c = record.PC_Compounds[0];
+  const charges = new Map((c.atoms.charge || []).map(x => [x.aid, x.value])); // formal charges, non-zero only
   const xs = c.coords[0].conformers[0].x;
   const ys = c.coords[0].conformers[0].y;
   const keep = new Map(); // PubChem aid -> new index
@@ -28,7 +29,7 @@ export function buildStructure(record, cid, formula) {
     const el = SYMBOLS[c.atoms.element[i]];
     if (el === 'H') return;
     keep.set(aid, atoms.length);
-    atoms.push([xs[i], ys[i], el]); // PubChem 2D coordinates already have y pointing up (checked against its PNG depiction); no flip
+    atoms.push([xs[i], ys[i], el, charges.get(aid) || 0]); // PubChem 2D coordinates already have y pointing up (checked against its PNG depiction); no flip
   });
   const bonds = [];
   c.bonds.aid1.forEach((a, i) => {
@@ -47,18 +48,26 @@ export function buildStructure(record, cid, formula) {
   return {
     cid,
     formula,
-    atoms: atoms.map(([x, y, el]) => [r2((x - cx) / mean), r2((y - cy) / mean), el]),
+    // a fourth entry (formal charge) is carried only where it is non-zero
+    atoms: atoms.map(([x, y, el, q]) => (q ? [r2((x - cx) / mean), r2((y - cy) / mean), el, q] : [r2((x - cx) / mean), r2((y - cy) / mean), el])),
     bonds,
   };
 }
 
-export async function fetchStructure(nameOrCid) {
+// Parent-compound structure plus its molecular weight (g/mol) from PubChem.
+export async function fetchStructureWithMw(nameOrCid) {
   const cid = await resolveParentCid(nameOrCid);
   const rec = await getJSON(`${PUG}/compound/cid/${cid}/record/JSON?record_type=2d`);
   if (!rec?.PC_Compounds) throw new Error(`PubChem: no 2D record for CID ${cid}`);
-  const prop = await getJSON(`${PUG}/compound/cid/${cid}/property/MolecularFormula/JSON`);
-  const formula = prop?.PropertyTable?.Properties?.[0]?.MolecularFormula;
-  return buildStructure(rec, cid, formula);
+  const prop = await getJSON(`${PUG}/compound/cid/${cid}/property/MolecularFormula,MolecularWeight/JSON`);
+  const p = prop?.PropertyTable?.Properties?.[0];
+  if (!p?.MolecularFormula) throw new Error(`PubChem: no molecular formula for CID ${cid}`);
+  return { ...buildStructure(rec, cid, p.MolecularFormula), molecularWeight: p.MolecularWeight ? Number(p.MolecularWeight) : null };
+}
+
+export async function fetchStructure(nameOrCid) {
+  const { molecularWeight, ...structure } = await fetchStructureWithMw(nameOrCid);
+  return structure;
 }
 
 // Heavy-atom count implied by a Hill-style molecular formula such as C22H30N6O4S.
