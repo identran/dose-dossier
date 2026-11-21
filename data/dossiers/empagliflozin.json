@@ -1,0 +1,411 @@
+{
+  "id": "empagliflozin",
+  "generic": "Empagliflozin",
+  "brand": "Jardiance",
+  "aliases": [],
+  "application": "NDA 204629",
+  "approved": 2014,
+  "sponsor": "Boehringer Ingelheim",
+  "area": "Endocrinology",
+  "class": "SGLT2 inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "25 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 12.4,
+    "cmax": 309.8,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F2E7A1",
+    "desc": "pale yellow, oval, biconvex, film-coated tablet"
+  },
+  "structure": {
+    "cid": 11949646,
+    "formula": "C23H27ClO7",
+    "atoms": [
+      [
+        0.79,
+        -1.15,
+        "Cl"
+      ],
+      [
+        1.66,
+        3.35,
+        "O"
+      ],
+      [
+        -0.94,
+        4.85,
+        "O"
+      ],
+      [
+        -0.94,
+        2.85,
+        "O"
+      ],
+      [
+        0.79,
+        5.85,
+        "O"
+      ],
+      [
+        3.39,
+        4.35,
+        "O"
+      ],
+      [
+        -3.39,
+        -4.99,
+        "O"
+      ],
+      [
+        -0.94,
+        -4.15,
+        "O"
+      ],
+      [
+        -0.07,
+        4.35,
+        "C"
+      ],
+      [
+        -0.07,
+        3.35,
+        "C"
+      ],
+      [
+        0.79,
+        4.85,
+        "C"
+      ],
+      [
+        0.79,
+        2.85,
+        "C"
+      ],
+      [
+        1.66,
+        4.35,
+        "C"
+      ],
+      [
+        0.79,
+        1.85,
+        "C"
+      ],
+      [
+        2.52,
+        4.85,
+        "C"
+      ],
+      [
+        -0.07,
+        1.35,
+        "C"
+      ],
+      [
+        1.66,
+        1.35,
+        "C"
+      ],
+      [
+        -0.07,
+        0.35,
+        "C"
+      ],
+      [
+        -1.81,
+        -4.65,
+        "C"
+      ],
+      [
+        -0.94,
+        -0.15,
+        "C"
+      ],
+      [
+        1.66,
+        0.35,
+        "C"
+      ],
+      [
+        -1.91,
+        -5.64,
+        "C"
+      ],
+      [
+        0.79,
+        -0.15,
+        "C"
+      ],
+      [
+        -2.72,
+        -4.24,
+        "C"
+      ],
+      [
+        -2.89,
+        -5.85,
+        "C"
+      ],
+      [
+        -0.94,
+        -1.15,
+        "C"
+      ],
+      [
+        -0.94,
+        -3.15,
+        "C"
+      ],
+      [
+        -0.07,
+        -1.65,
+        "C"
+      ],
+      [
+        -1.81,
+        -1.65,
+        "C"
+      ],
+      [
+        -0.07,
+        -2.65,
+        "C"
+      ],
+      [
+        -1.81,
+        -2.65,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        22,
+        1
+      ],
+      [
+        1,
+        11,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        3,
+        9,
+        1
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        5,
+        14,
+        1
+      ],
+      [
+        6,
+        23,
+        1
+      ],
+      [
+        6,
+        24,
+        1
+      ],
+      [
+        7,
+        18,
+        1
+      ],
+      [
+        7,
+        26,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        15,
+        17,
+        1
+      ],
+      [
+        16,
+        20,
+        2
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        17,
+        22,
+        2
+      ],
+      [
+        18,
+        21,
+        1
+      ],
+      [
+        18,
+        23,
+        1
+      ],
+      [
+        19,
+        25,
+        1
+      ],
+      [
+        20,
+        22,
+        1
+      ],
+      [
+        21,
+        24,
+        1
+      ],
+      [
+        25,
+        27,
+        2
+      ],
+      [
+        25,
+        28,
+        1
+      ],
+      [
+        26,
+        29,
+        2
+      ],
+      [
+        26,
+        30,
+        1
+      ],
+      [
+        27,
+        29,
+        1
+      ],
+      [
+        28,
+        30,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Plasma protein binding is 86.2%, and a high-fat meal lowers exposure by only about 16%, so food is not clinically relevant. Most of the dose is excreted in urine (54.4%) and feces (41.2%).",
+    "substance": "A free base rather than a salt, with a molecular weight of 450.91. A non-hygroscopic powder that is very slightly soluble in water.",
+    "product": "Approved under an NDA as 10 mg and 25 mg tablets, taken once daily.",
+    "safety": "No boxed warning. Contraindicated in hypersensitivity to the drug or its excipients, and angioedema has occurred.",
+    "indication": "Heart failure, to cut cardiovascular death and hospitalization; chronic kidney disease at risk of progression; cardiovascular death in type 2 diabetes with established heart disease; glycemic control from age 10.",
+    "mechanism": "Inhibits SGLT2, the main kidney transporter reabsorbing glucose, so urinary glucose excretion rises; it also reduces sodium reabsorption."
+  },
+  "tell": "An SGLT2 inhibitor whose first listed indication is reducing cardiovascular death and heart failure hospitalization.",
+  "source": {
+    "setId": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak plasma concentrations of empagliflozin were reached at 1.5 hours post-dose",
+    "pk.halfLifeH": "The apparent terminal elimination half-life of empagliflozin was estimated to be 12.4 h",
+    "pk.cmax": "4,740 nmol∙h/L and 687 nmol/L",
+    "pill": "pale yellow, oval, biconvex, film-coated tablets debossed with \"S 25\"",
+    "clues.kinetics": [
+      "plasma protein binding was 86.2%",
+      "AUC decreased by approximately 16%",
+      "The observed effect of food on empagliflozin pharmacokinetics was not considered clinically relevant",
+      "eliminated in feces (41.2%) or urine (54.4%)"
+    ],
+    "clues.substance": [
+      "10 mg or 25 mg of empagliflozin (free base)",
+      "the molecular weight is 450.91",
+      "non-hygroscopic powder",
+      "very slightly soluble in water"
+    ],
+    "clues.product": [
+      "Application: NDA 204629",
+      "Tablets: 10 mg, 25 mg",
+      "10 mg empagliflozin once daily treatment"
+    ],
+    "clues.safety": [
+      "with a hypersensitivity to empagliflozin or any of the excipients in JARDIANCE",
+      "reactions such as angioedema have occurred"
+    ],
+    "clues.indication": [
+      "to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure",
+      "chronic kidney disease at risk of progression",
+      "to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease",
+      "to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus"
+    ],
+    "clues.mechanism": [
+      "an inhibitor of SGLT2, the predominant transporter responsible for reabsorption of glucose",
+      "increases urinary glucose excretion",
+      "reduces sodium reabsorption"
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "dalfampridine",
+  "generic": "Dalfampridine",
+  "brand": "Ampyra",
+  "aliases": [],
+  "application": "NDA 022250",
+  "approved": 2010,
+  "sponsor": "Acorda",
+  "area": "Neurology",
+  "class": "Potassium channel blocker",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 3.5,
+    "halfLifeH": 5.85
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F7F7F2",
+    "desc": "white to off-white, biconvex, oval, film-coated, non-scored tablet"
+  },
+  "structure": {
+    "cid": 1727,
+    "formula": "C5H6N2",
+    "atoms": [
+      [
+        0,
+        1.5,
+        "N"
+      ],
+      [
+        0,
+        -1.5,
+        "N"
+      ],
+      [
+        0,
+        0.5,
+        "C"
+      ],
+      [
+        0.87,
+        0,
+        "C"
+      ],
+      [
+        -0.87,
+        0,
+        "C"
+      ],
+      [
+        0.87,
+        -1,
+        "C"
+      ],
+      [
+        -0.87,
+        -1,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        5,
+        2
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        4,
+        6,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Relative bioavailability is 96% against an oral solution, and food changes exposure only slightly. It is largely unbound in plasma (97-99% unbound), and 95.9% of the dose is recovered in urine.",
+    "substance": "A fine white powder with a molecular weight of 94.1 that is soluble in water.",
+    "product": "Approved under an NDA as a 10 mg extended-release tablet, taken twice daily.",
+    "safety": "No boxed warning. Contraindicated with a history of seizure, CrCl of 50 mL/min or less, or hypersensitivity to the drug; seizures rise with dose.",
+    "indication": "To improve walking in adults with multiple sclerosis, shown by an increase in walking speed.",
+    "mechanism": "A broad-spectrum potassium channel blocker that increases conduction of action potentials in demyelinated axons by inhibiting potassium channels."
+  },
+  "tell": "Known chemically as 4-aminopyridine, this potassium channel blocker improves walking in multiple sclerosis.",
+  "source": {
+    "setId": "550eb76a-e4a6-4fa1-ad65-c0fd8b0ce783",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=550eb76a-e4a6-4fa1-ad65-c0fd8b0ce783",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "occurring 3 to 4 hours post-administration",
+    "pk.halfLifeH": "The apparent elimination half-life of dalfampridine following administration of the extended release tablet formulation of AMPYRA is 5.2 to 6.5 hours",
+    "pill": "film-coated, white to off-white, biconvex, oval shaped, non-scored tablets with flat edge",
+    "clues.kinetics": [
+      "relative bioavailability is 96% when compared to an aqueous oral solution",
+      "When dalfampridine is taken with food, there is a slight increase in Cmax (12–17%)",
+      "Dalfampridine is largely unbound to plasma proteins (97–99%)",
+      "95.9% of the dose recovered in urine"
+    ],
+    "clues.substance": [
+      "Dalfampridine is a fine white powder with a molecular weight of 94.1",
+      "soluble in water, methanol, acetone"
+    ],
+    "clues.product": [
+      "Application: NDA 022250",
+      "AMPYRA is available in a 10 mg strength",
+      "formulated as an extended-release tablet for twice-daily oral administration"
+    ],
+    "clues.safety": [
+      "History of seizure",
+      "Moderate or severe renal impairment (CrCl≤50 mL/min)",
+      "History of hypersensitivity to AMPYRA or 4-aminopyridine",
+      "a dose-dependent increase in the incidence of seizures"
+    ],
+    "clues.indication": [
+      "indicated as a treatment to improve walking in adult patients with multiple sclerosis (MS)",
+      "This was demonstrated by an increase in walking speed"
+    ],
+    "clues.mechanism": [
+      "Dalfampridine is a broad spectrum potassium channel blocker",
+      "increase conduction of action potentials in demyelinated axons through inhibition of potassium channels"
+    ]
+  }
+}

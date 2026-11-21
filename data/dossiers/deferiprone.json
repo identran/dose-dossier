@@ -1,0 +1,183 @@
+{
+  "id": "deferiprone",
+  "generic": "Deferiprone",
+  "brand": "Ferriprox",
+  "aliases": [],
+  "application": "NDA 021825",
+  "approved": 2011,
+  "sponsor": "Apotex",
+  "area": "Hematology",
+  "class": "Iron chelator",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1000 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 1.8,
+    "cmax": 6,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#F5F3EC",
+    "desc": "white to off-white, capsule-shaped, film-coated tablet with a functional score"
+  },
+  "structure": {
+    "cid": 2972,
+    "formula": "C7H9NO2",
+    "atoms": [
+      [
+        1.3,
+        1,
+        "O"
+      ],
+      [
+        -0.43,
+        2,
+        "O"
+      ],
+      [
+        -0.43,
+        -1,
+        "N"
+      ],
+      [
+        0.43,
+        -0.5,
+        "C"
+      ],
+      [
+        0.43,
+        0.5,
+        "C"
+      ],
+      [
+        -1.3,
+        -0.5,
+        "C"
+      ],
+      [
+        1.3,
+        -1,
+        "C"
+      ],
+      [
+        -0.43,
+        -2,
+        "C"
+      ],
+      [
+        -0.43,
+        1,
+        "C"
+      ],
+      [
+        -1.3,
+        0.5,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        1,
+        8,
+        2
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        3,
+        4,
+        2
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        5,
+        9,
+        2
+      ],
+      [
+        8,
+        9,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Metabolized mainly by UGT1A6, with 75% to 90% of the dose recovered in urine within 24 hours. A high-fat meal leaves its Cmax and AUC unchanged.",
+    "substance": "A white to pinkish-white powder, sparingly soluble in water, with a molecular weight of 139.15.",
+    "product": "Approved under NDA 021825 as 1,000 mg tablets, dosed twice a day or three times a day.",
+    "safety": "Boxed warning for agranulocytosis and neutropenia, which can cause serious infection and death. Contraindicated in hypersensitivity to the drug or its excipients; pyrexia and abdominal pain are common.",
+    "indication": "Transfusional iron overload in patients 8 years and older with thalassemia, sickle cell disease or other anemias.",
+    "mechanism": "A chelator with affinity for iron, forming neutral 3:1 complexes that are stable at physiological pH."
+  },
+  "tell": "An iron chelator whose boxed warning concerns agranulocytosis, with neutrophil counts to be checked before and during therapy.",
+  "source": {
+    "setId": "946718ff-df43-1baa-74d1-e5bcfbe8ad86",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=946718ff-df43-1baa-74d1-e5bcfbe8ad86",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Peak serum concentrations of deferiprone occur approximately 2 hours after a single dose",
+    "pk.halfLifeH": "The mean ± SD elimination half-life of deferiprone is 1.8 ± 0.3 hours",
+    "pk.cmax": "the mean ± SD C max of deferiprone in serum was 6 ± 2 mcg/mL",
+    "pill": "capsule-shaped, white to off-white tablets with functional scoring",
+    "clues.kinetics": [
+      "Deferiprone is metabolized primarily by UGT1A6",
+      "75% to 90% of the administered dose was recovered in urine",
+      "in the first 24 hours",
+      "the C max and the AUC of deferiprone remain unchanged after a high-fat meal"
+    ],
+    "clues.substance": [
+      "is a white to pinkish-white powder",
+      "It is sparingly soluble in deionized water",
+      "its molecular weight is 139.15 g/mol"
+    ],
+    "clues.product": [
+      "Application: NDA 021825",
+      "Tablets (twice a day): 1,000 mg, capsule-shaped, white to off-white tablets",
+      "Tablets (three times a day): 1,000 mg film-coated"
+    ],
+    "clues.safety": [
+      "WARNING: AGRANULOCYTOSIS AND NEUTROPENIA",
+      "FERRIPROX can cause agranulocytosis that can lead to serious infections and death",
+      "contraindicated in patients with known hypersensitivity to deferiprone or to any of the excipients",
+      "pyrexia, abdominal pain, bone pain"
+    ],
+    "clues.indication": [
+      "treatment of transfusional iron overload in adult and pediatric patients 8 years of age and older with thalassemia syndromes, sickle cell disease or other anemias"
+    ],
+    "clues.mechanism": [
+      "is a chelating agent with an affinity for ferric ions (iron III)",
+      "form neutral 3:1 (deferiprone:iron) complexes that are stable at physiological pH"
+    ]
+  }
+}

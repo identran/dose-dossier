@@ -1,0 +1,518 @@
+{
+  "id": "montelukast",
+  "generic": "Montelukast",
+  "brand": "Singulair",
+  "aliases": [
+    "Montelukast sodium"
+  ],
+  "salt": "Montelukast sodium",
+  "application": "NDA 020830",
+  "approved": 1998,
+  "sponsor": "Merck",
+  "area": "Pulmonology",
+  "class": "Leukotriene antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 3.5,
+    "halfLifeH": 4.1
+  },
+  "pill": {
+    "shape": "square",
+    "color": "#D8C3A0",
+    "desc": "beige, film-coated, rounded square tablet"
+  },
+  "structure": {
+    "cid": 5281040,
+    "formula": "C35H36ClNO3S",
+    "atoms": [
+      [
+        -5.64,
+        2.45,
+        "Cl"
+      ],
+      [
+        3.05,
+        -0.51,
+        "S"
+      ],
+      [
+        4.77,
+        -4.5,
+        "O"
+      ],
+      [
+        5.64,
+        -3,
+        "O"
+      ],
+      [
+        2.19,
+        -4,
+        "O"
+      ],
+      [
+        -2.12,
+        2.47,
+        "N"
+      ],
+      [
+        3.91,
+        -2.01,
+        "C"
+      ],
+      [
+        4.91,
+        -2.01,
+        "C"
+      ],
+      [
+        4.41,
+        -1.15,
+        "C"
+      ],
+      [
+        3.05,
+        -1.51,
+        "C"
+      ],
+      [
+        3.91,
+        -3,
+        "C"
+      ],
+      [
+        4.77,
+        -3.5,
+        "C"
+      ],
+      [
+        2.19,
+        -0.02,
+        "C"
+      ],
+      [
+        1.33,
+        -0.51,
+        "C"
+      ],
+      [
+        2.19,
+        0.98,
+        "C"
+      ],
+      [
+        1.33,
+        -1.51,
+        "C"
+      ],
+      [
+        1.33,
+        1.48,
+        "C"
+      ],
+      [
+        3.05,
+        1.48,
+        "C"
+      ],
+      [
+        0.46,
+        -2.01,
+        "C"
+      ],
+      [
+        0.46,
+        -3,
+        "C"
+      ],
+      [
+        1.33,
+        2.47,
+        "C"
+      ],
+      [
+        3.05,
+        2.47,
+        "C"
+      ],
+      [
+        1.33,
+        -3.5,
+        "C"
+      ],
+      [
+        -0.4,
+        -1.51,
+        "C"
+      ],
+      [
+        2.19,
+        2.97,
+        "C"
+      ],
+      [
+        -0.4,
+        -3.5,
+        "C"
+      ],
+      [
+        -1.26,
+        -2.01,
+        "C"
+      ],
+      [
+        0.46,
+        2.97,
+        "C"
+      ],
+      [
+        0.83,
+        -4.36,
+        "C"
+      ],
+      [
+        1.82,
+        -2.64,
+        "C"
+      ],
+      [
+        -1.26,
+        -3,
+        "C"
+      ],
+      [
+        -0.4,
+        2.47,
+        "C"
+      ],
+      [
+        -1.26,
+        2.97,
+        "C"
+      ],
+      [
+        -1.26,
+        3.96,
+        "C"
+      ],
+      [
+        -2.98,
+        2.97,
+        "C"
+      ],
+      [
+        -2.12,
+        4.46,
+        "C"
+      ],
+      [
+        -2.98,
+        3.96,
+        "C"
+      ],
+      [
+        -3.87,
+        2.44,
+        "C"
+      ],
+      [
+        -3.87,
+        4.5,
+        "C"
+      ],
+      [
+        -4.78,
+        2.95,
+        "C"
+      ],
+      [
+        -4.78,
+        3.99,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        39,
+        1
+      ],
+      [
+        1,
+        9,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        3,
+        11,
+        2
+      ],
+      [
+        4,
+        22,
+        1
+      ],
+      [
+        5,
+        32,
+        2
+      ],
+      [
+        5,
+        34,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        6,
+        10,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        14,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        15,
+        18,
+        1
+      ],
+      [
+        16,
+        20,
+        2
+      ],
+      [
+        17,
+        21,
+        1
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        18,
+        23,
+        2
+      ],
+      [
+        19,
+        22,
+        1
+      ],
+      [
+        19,
+        25,
+        2
+      ],
+      [
+        20,
+        24,
+        1
+      ],
+      [
+        20,
+        27,
+        1
+      ],
+      [
+        21,
+        24,
+        2
+      ],
+      [
+        22,
+        28,
+        1
+      ],
+      [
+        22,
+        29,
+        1
+      ],
+      [
+        23,
+        26,
+        1
+      ],
+      [
+        25,
+        30,
+        1
+      ],
+      [
+        26,
+        30,
+        2
+      ],
+      [
+        27,
+        31,
+        2
+      ],
+      [
+        31,
+        32,
+        1
+      ],
+      [
+        32,
+        33,
+        1
+      ],
+      [
+        33,
+        35,
+        2
+      ],
+      [
+        34,
+        36,
+        2
+      ],
+      [
+        34,
+        37,
+        1
+      ],
+      [
+        35,
+        36,
+        1
+      ],
+      [
+        36,
+        38,
+        1
+      ],
+      [
+        37,
+        39,
+        2
+      ],
+      [
+        38,
+        40,
+        2
+      ],
+      [
+        39,
+        40,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Oral bioavailability is 64%, and a standard morning meal does not change it. Over 99% is bound to plasma proteins, and the drug leaves almost entirely through bile.",
+    "substance": "A monosodium salt that is a hygroscopic powder, freely soluble in water; the active moiety has a molecular weight of 586.2.",
+    "product": "Approved under an NDA as 10 mg tablets, 4 and 5 mg chewable tablets and 4 mg oral granules, dosed once daily.",
+    "safety": "Boxed warning for serious neuropsychiatric events; contraindicated in hypersensitivity to any component. Upper respiratory infection and headache are the most common reactions.",
+    "indication": "Prophylaxis and chronic treatment of asthma, prevention of exercise-induced bronchoconstriction, and relief of allergic rhinitis symptoms.",
+    "mechanism": "Binds the CysLT1 receptor with high affinity and selectivity, blocking LTD4 actions there without any agonist activity."
+  },
+  "tell": "A leukotriene receptor antagonist whose boxed warning covers serious neuropsychiatric events.",
+  "source": {
+    "setId": "482dcc92-b47f-4ea6-854a-f5ac2aea7842",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=482dcc92-b47f-4ea6-854a-f5ac2aea7842",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the mean peak montelukast plasma concentration (C max ) is achieved in 3 to 4 hours (T max )",
+    "pk.halfLifeH": "the mean plasma half-life of montelukast ranged from 2.7 to 5.5 hours in healthy young adults",
+    "pill": "Tablets: 10 mg, beige, rounded square-shaped, film-coated tablets",
+    "clues.kinetics": [
+      "The mean oral bioavailability is 64%",
+      "The oral bioavailability and C max are not influenced by a standard meal in the morning",
+      "Montelukast is more than 99% bound to plasma proteins",
+      "montelukast and its metabolites are excreted almost exclusively via the bile"
+    ],
+    "clues.substance": [
+      "Montelukast sodium is described chemically as",
+      "monosodium salt",
+      "is a hygroscopic, optically active, white to off-white powder",
+      "Montelukast sodium is freely soluble in ethanol, methanol, and water",
+      "molecular weight 586.2"
+    ],
+    "clues.product": [
+      "Application: NDA 020830",
+      "Tablets: 10 mg, beige",
+      "Chewable Tablets: 5 mg, pink",
+      "Oral Granules: 4 mg, white granules",
+      "During once-daily dosing with 10-mg montelukast"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS NEUROPSYCHIATRIC EVENTS",
+      "SINGULAIR is contraindicated in patients with hypersensitivity to any of its components",
+      "were: upper respiratory infection, fever, headache"
+    ],
+    "clues.indication": [
+      "Prophylaxis and chronic treatment of asthma in patients 12 months of age and older",
+      "Acute prevention of exercise-induced bronchoconstriction (EIB)",
+      "Relief of symptoms of allergic rhinitis (AR)"
+    ],
+    "clues.mechanism": [
+      "binds with high affinity and selectivity to the CysLT 1 receptor",
+      "Montelukast inhibits physiologic actions of LTD 4 at the CysLT 1 receptor without any agonist activity"
+    ]
+  }
+}

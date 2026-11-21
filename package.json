@@ -16,6 +16,7 @@
     "digest": "node tools/digest.mjs",
     "structures": "NODE_USE_ENV_PROXY=1 node tools/structures.mjs",
     "verify": "node tools/verify.mjs",
-    "assemble": "node tools/assemble.mjs"
+    "assemble": "node tools/assemble.mjs",
+    "schedule": "node tools/schedule.mjs"
   }
 }

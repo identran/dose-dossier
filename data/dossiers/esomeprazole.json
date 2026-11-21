@@ -288,7 +288,7 @@
     "kinetics": "Systemic bioavailability rises from about 64% after one dose to about 90% at steady state, because the drug inhibits its own CYP2C19 clearance. It is 97% bound to plasma proteins.",
     "substance": "A magnesium salt, the trihydrate weighing 767.2 against 345.4 for the free active moiety. It is only slightly soluble in water.",
     "product": "Approved under an NDA in 20 mg and 40 mg strengths, with granule packets from 2.5 to 40 mg. Dosed once daily.",
-    "safety": "No boxed warning; contraindicated with rilpivirine-containing products and in hypersensitivity to substituted benzimidazoles. Headache and diarrhea are the most frequent adverse reactions.",
+    "safety": "No boxed warning; contraindicated with rilpivirine-containing products and in hypersensitivity to the drug or its chemical relatives. Headache and diarrhea are the most frequent adverse reactions.",
     "indication": "Short-term healing of erosive esophagitis and its maintenance, relief of heartburn from reflux disease, reducing NSAID-associated gastric ulcer risk, and H. pylori eradication with antibiotics.",
     "mechanism": "Blocks the final step of acid production by inhibiting the H⁺/K⁺ ATPase of gastric parietal cells, after conversion to an active sulphenamide in their acidic compartment."
   },

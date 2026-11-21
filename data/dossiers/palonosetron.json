@@ -1,0 +1,326 @@
+{
+  "id": "palonosetron",
+  "generic": "Palonosetron",
+  "brand": "Aloxi",
+  "aliases": [
+    "Palonosetron hydrochloride"
+  ],
+  "salt": "Palonosetron hydrochloride",
+  "application": "NDA 021372",
+  "approved": 2003,
+  "sponsor": "Helsinn",
+  "area": "Gastroenterology",
+  "class": "5-HT3 antagonist",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "0.5 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 5.1,
+    "halfLifeH": 37,
+    "cmax": 0.81,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#E3D3B0",
+    "desc": "light beige, opaque soft gelatin capsule"
+  },
+  "structure": {
+    "cid": 6337614,
+    "formula": "C19H24N2O",
+    "atoms": [
+      [
+        -1.2,
+        -0.14,
+        "O"
+      ],
+      [
+        -0.13,
+        1.94,
+        "N"
+      ],
+      [
+        0.3,
+        -0.14,
+        "N"
+      ],
+      [
+        -1,
+        1.94,
+        "C"
+      ],
+      [
+        0.3,
+        0.72,
+        "C"
+      ],
+      [
+        0.91,
+        1.33,
+        "C"
+      ],
+      [
+        -1.79,
+        0.93,
+        "C"
+      ],
+      [
+        -1.11,
+        3.22,
+        "C"
+      ],
+      [
+        -1.09,
+        0.43,
+        "C"
+      ],
+      [
+        -0.25,
+        3.22,
+        "C"
+      ],
+      [
+        1.04,
+        -1.43,
+        "C"
+      ],
+      [
+        1.04,
+        -0.57,
+        "C"
+      ],
+      [
+        0.3,
+        -1.86,
+        "C"
+      ],
+      [
+        1.78,
+        -1.86,
+        "C"
+      ],
+      [
+        -0.45,
+        -0.57,
+        "C"
+      ],
+      [
+        -0.45,
+        -1.43,
+        "C"
+      ],
+      [
+        1.79,
+        -2.71,
+        "C"
+      ],
+      [
+        0.31,
+        -2.76,
+        "C"
+      ],
+      [
+        1.07,
+        -3.16,
+        "C"
+      ],
+      [
+        -1.23,
+        -1.87,
+        "C"
+      ],
+      [
+        -0.46,
+        -3.22,
+        "C"
+      ],
+      [
+        -1.24,
+        -2.77,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        14,
+        2
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        8,
+        1
+      ],
+      [
+        1,
+        9,
+        1
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        2,
+        14,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        12,
+        15,
+        1
+      ],
+      [
+        12,
+        17,
+        2
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        15,
+        19,
+        2
+      ],
+      [
+        16,
+        18,
+        1
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        17,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is 97%, and a high-fat meal does not change absorption. About 62% is bound to plasma proteins, and about half the dose is metabolized, with about 40% excreted unchanged in urine.",
+    "substance": "A hydrochloride salt that exists as a single isomer, with a molecular weight of 296.4 for the active moiety. It is a crystalline powder that is freely soluble in water.",
+    "product": "Approved under an NDA as 0.5 mg capsules, given as a single oral dose.",
+    "safety": "No boxed warning. Contraindicated in known hypersensitivity to the drug; headache and constipation are the most common adverse reactions.",
+    "indication": "Prevention of acute nausea and vomiting from initial and repeat courses of moderately emetogenic cancer chemotherapy in adults.",
+    "mechanism": "Acts as an antagonist at serotonin 5-HT3 receptors, with strong binding and little or no affinity for other receptors. It blocks the vagal signal that starts the vomiting reflex."
+  },
+  "tell": "A 37-hour terminal half-life and 97% oral bioavailability set this 5-HT3 antagonist apart from its class.",
+  "source": {
+    "setId": "ab89d423-4275-4651-9ae7-9002f17ab0a1",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab89d423-4275-4651-9ae7-9002f17ab0a1",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "T max (hours) | 5.1 ± 1.7",
+    "pk.halfLifeH": "In healthy subjects given ALOXI Capsules 0.5 mg, the terminal elimination half-life (t½) of palonosetron was 37 ± 12 hours",
+    "pk.cmax": "C m ax (ng/mL) | 0.81 ± 0.17",
+    "pill": "0.5 mg palonosetron supplied in a light beige opaque soft gelatin capsule",
+    "clues.kinetics": [
+      "absolute bioavailability reaching 97%",
+      "A high fat meal did not affect the C max and AUC of oral palonosetron",
+      "Approximately 62% of palonosetron is bound to plasma proteins",
+      "approximately 50% metabolized",
+      "The amount of unchanged palonosetron excreted in the urine represented approximately 40% of the administered dose"
+    ],
+    "clues.substance": [
+      "Palonosetron hydrochloride exists as a single isomer",
+      "molecular weight 296.4",
+      "crystalline powder. It is freely soluble in water"
+    ],
+    "clues.product": [
+      "Application: NDA 021372",
+      "Capsules: 0.5 mg palonosetron supplied in a light beige opaque soft gelatin capsule",
+      "after a single oral dose of 0.5 mg ALOXI"
+    ],
+    "clues.safety": [
+      "contraindicated in patients known to have hypersensitivity to palonosetron",
+      "Most common adverse reactions (≥1 %) are: headache, constipation and fatigue"
+    ],
+    "clues.indication": [
+      "for the prevention of acute nausea and vomiting associated with initial and repeat courses of moderately emetogenic cancer chemotherapy",
+      "indicated in adults"
+    ],
+    "clues.mechanism": [
+      "is a 5-HT 3 receptor antagonist with a strong binding affinity for this receptor and little or no affinity for other receptors",
+      "activates 5-HT 3 receptors located on vagal afferents to initiate the vomiting reflex"
+    ]
+  }
+}

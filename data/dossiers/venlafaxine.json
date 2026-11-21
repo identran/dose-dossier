@@ -1,0 +1,291 @@
+{
+  "id": "venlafaxine",
+  "generic": "Venlafaxine",
+  "brand": "Effexor XR",
+  "aliases": [
+    "Venlafaxine hydrochloride",
+    "Effexor"
+  ],
+  "salt": "Venlafaxine hydrochloride",
+  "application": "NDA 020699",
+  "approved": 1993,
+  "sponsor": "Pfizer",
+  "area": "Psychiatry",
+  "class": "SNRI",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "150 mg oral, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 5.5,
+    "halfLifeH": 5,
+    "cmax": 150,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#D2691E",
+    "desc": "dark orange extended-release capsule"
+  },
+  "structure": {
+    "cid": 5656,
+    "formula": "C17H27NO2",
+    "atoms": [
+      [
+        -2.57,
+        0.13,
+        "O"
+      ],
+      [
+        2.43,
+        0.13,
+        "O"
+      ],
+      [
+        -1.57,
+        1.87,
+        "N"
+      ],
+      [
+        -2.07,
+        -0.73,
+        "C"
+      ],
+      [
+        -1.57,
+        0.13,
+        "C"
+      ],
+      [
+        -2.93,
+        -1.23,
+        "C"
+      ],
+      [
+        -1.2,
+        -1.23,
+        "C"
+      ],
+      [
+        -2.93,
+        -2.23,
+        "C"
+      ],
+      [
+        -1.2,
+        -2.23,
+        "C"
+      ],
+      [
+        -2.07,
+        -2.73,
+        "C"
+      ],
+      [
+        -2.07,
+        1,
+        "C"
+      ],
+      [
+        -0.57,
+        0.13,
+        "C"
+      ],
+      [
+        -0.07,
+        1,
+        "C"
+      ],
+      [
+        -0.07,
+        -0.73,
+        "C"
+      ],
+      [
+        -2.07,
+        2.73,
+        "C"
+      ],
+      [
+        -0.57,
+        1.87,
+        "C"
+      ],
+      [
+        0.93,
+        1,
+        "C"
+      ],
+      [
+        0.93,
+        -0.73,
+        "C"
+      ],
+      [
+        1.43,
+        0.13,
+        "C"
+      ],
+      [
+        2.93,
+        1,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        18,
+        1
+      ],
+      [
+        1,
+        19,
+        1
+      ],
+      [
+        2,
+        10,
+        1
+      ],
+      [
+        2,
+        14,
+        1
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        11,
+        12,
+        2
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        16,
+        1
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        17,
+        18,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 45%, and food does not affect it. It is 27% bound to plasma proteins and extensively metabolized in the liver, with about 87% of a dose recovered in urine within 48 hours.",
+    "substance": "A hydrochloride salt whose active moiety has a molecular weight of 277.4. Its solubility in water is very high, at 572 mg/mL.",
+    "product": "An NDA extended-release capsule in 37.5, 75 and 150 mg strengths, taken once a day.",
+    "safety": "Boxed warning for suicidal thoughts and behavior in pediatric and young adult patients. Contraindicated with MAOIs, including linezolid, and in hypersensitivity; nausea and somnolence are most common.",
+    "indication": "In adults: major depressive disorder, generalized anxiety disorder, social anxiety disorder and panic disorder.",
+    "mechanism": "Its action is unclear, but is thought to potentiate serotonin and norepinephrine in the central nervous system by blocking their reuptake."
+  },
+  "tell": "Its extended-release capsule gives a lower, later peak than twice-daily immediate-release venlafaxine, allowing once-daily dosing.",
+  "source": {
+    "setId": "c848a5d8-ba94-4c84-80e3-0bf35fb8e32e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c848a5d8-ba94-4c84-80e3-0bf35fb8e32e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Effexor XR (150 mg once daily) | 150 | 5.5 | 260 | 9",
+    "pk.halfLifeH": "The apparent elimination half-life is 5 ± 2 hours for venlafaxine",
+    "pk.cmax": "Effexor XR (150 mg once daily) | 150 | 5.5 | 260 | 9",
+    "pill": "150 mg extended-release capsule: dark orange cap and body",
+    "clues.kinetics": [
+      "The absolute bioavailability of venlafaxine is approximately 45%",
+      "Food did not affect the bioavailability of venlafaxine or its active metabolite",
+      "Venlafaxine is 27% and ODV is 30% bound to plasma proteins",
+      "undergoes extensive presystemic metabolism in the liver",
+      "Approximately 87% of a venlafaxine dose is recovered in the urine within 48 hours"
+    ],
+    "clues.substance": [
+      "molecular weight 277.4",
+      "Venlafaxine hydrochloride is a white to off-white crystalline solid, with a solubility of 572 mg/mL in water"
+    ],
+    "clues.product": [
+      "NDA 020699",
+      "CAPSULE, EXTENDED RELEASE (oral): EQ 150MG BASE; EQ 75MG BASE; EQ 100MG BASE; EQ 37.5MG BASE",
+      "for once-a-day oral administration"
+    ],
+    "clues.safety": [
+      "WARNING: SUICIDAL THOUGHTS AND BEHAVIORS Antidepressants increased the risk of suicidal thoughts and behavior in pediatric and young adult patients",
+      "taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue)",
+      "with known hypersensitivity to venlafaxine hydrochloride",
+      "nausea (30.0%), somnolence (15.3%)"
+    ],
+    "clues.indication": [
+      "Effexor XR is indicated in adults for the treatment of: • Major Depressive Disorder (MDD) • Generalized Anxiety Disorder (GAD) • Social Anxiety Disorder (SAD) • Panic Disorder (PD)"
+    ],
+    "clues.mechanism": [
+      "is unclear, but is thought to be related to the potentiation of serotonin and norepinephrine in the central nervous system, through inhibition of their reuptake"
+    ]
+  }
+}

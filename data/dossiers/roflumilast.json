@@ -1,0 +1,351 @@
+{
+  "id": "roflumilast",
+  "generic": "Roflumilast",
+  "brand": "Daliresp",
+  "aliases": [
+    "Zoryve"
+  ],
+  "application": "NDA 022522",
+  "approved": 2011,
+  "sponsor": "AbbVie",
+  "area": "Pulmonology",
+  "class": "PDE4 inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "500 mcg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 17
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F5F3EE",
+    "desc": "white to off-white, round, embossed tablet"
+  },
+  "structure": {
+    "cid": 449193,
+    "formula": "C17H14Cl2F2N2O3",
+    "atoms": [
+      [
+        0.07,
+        2.5,
+        "Cl"
+      ],
+      [
+        3.53,
+        2.5,
+        "Cl"
+      ],
+      [
+        1.8,
+        -4.5,
+        "F"
+      ],
+      [
+        2.67,
+        -3,
+        "F"
+      ],
+      [
+        -0.8,
+        -2,
+        "O"
+      ],
+      [
+        0.93,
+        -3,
+        "O"
+      ],
+      [
+        0.07,
+        1.5,
+        "O"
+      ],
+      [
+        1.8,
+        1.5,
+        "N"
+      ],
+      [
+        1.8,
+        4.5,
+        "N"
+      ],
+      [
+        -2.53,
+        -2,
+        "C"
+      ],
+      [
+        -3.53,
+        -2,
+        "C"
+      ],
+      [
+        -3.03,
+        -2.87,
+        "C"
+      ],
+      [
+        -1.67,
+        -1.5,
+        "C"
+      ],
+      [
+        0.07,
+        -1.5,
+        "C"
+      ],
+      [
+        0.93,
+        -2,
+        "C"
+      ],
+      [
+        0.07,
+        -0.5,
+        "C"
+      ],
+      [
+        0.93,
+        0,
+        "C"
+      ],
+      [
+        1.8,
+        -1.5,
+        "C"
+      ],
+      [
+        1.8,
+        -0.5,
+        "C"
+      ],
+      [
+        0.93,
+        1,
+        "C"
+      ],
+      [
+        1.8,
+        2.5,
+        "C"
+      ],
+      [
+        1.8,
+        -3.5,
+        "C"
+      ],
+      [
+        0.93,
+        3,
+        "C"
+      ],
+      [
+        2.67,
+        3,
+        "C"
+      ],
+      [
+        0.93,
+        4,
+        "C"
+      ],
+      [
+        2.67,
+        4,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        22,
+        1
+      ],
+      [
+        1,
+        23,
+        1
+      ],
+      [
+        2,
+        21,
+        1
+      ],
+      [
+        3,
+        21,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        4,
+        13,
+        1
+      ],
+      [
+        5,
+        14,
+        1
+      ],
+      [
+        5,
+        21,
+        1
+      ],
+      [
+        6,
+        19,
+        2
+      ],
+      [
+        7,
+        19,
+        1
+      ],
+      [
+        7,
+        20,
+        1
+      ],
+      [
+        8,
+        24,
+        2
+      ],
+      [
+        8,
+        25,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        13,
+        14,
+        2
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        15,
+        16,
+        2
+      ],
+      [
+        16,
+        18,
+        1
+      ],
+      [
+        16,
+        19,
+        1
+      ],
+      [
+        17,
+        18,
+        2
+      ],
+      [
+        20,
+        22,
+        2
+      ],
+      [
+        20,
+        23,
+        1
+      ],
+      [
+        22,
+        24,
+        1
+      ],
+      [
+        23,
+        25,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 80%, and food does not change total absorption. About 99% is bound to plasma proteins, and the drug is extensively metabolized, with about 70% of radioactivity recovered in urine.",
+    "substance": "Molecular weight 403.2. A white to off-white, non-hygroscopic powder that is practically insoluble in water.",
+    "product": "Approved under an NDA as 250 mcg and 500 mcg tablets, dosed once daily.",
+    "safety": "No boxed warning. Contraindicated in moderate to severe liver impairment; diarrhea and nausea are the reactions most often leading to discontinuation.",
+    "indication": "Reducing the risk of COPD exacerbations in patients with severe COPD associated with chronic bronchitis and a history of exacerbations.",
+    "mechanism": "A selective inhibitor of phosphodiesterase 4, which leads to accumulation of intracellular cyclic AMP in lung cells."
+  },
+  "tell": "A PDE4 inhibitor for severe COPD whose N-oxide metabolite reaches about 10-fold the parent drug's plasma exposure.",
+  "source": {
+    "setId": "c9a1d0a8-581f-4f91-a2b8-f419192d0ebf",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9a1d0a8-581f-4f91-a2b8-f419192d0ebf",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "typically occur approximately one hour after dosing",
+    "pk.halfLifeH": "the median plasma effective half-life of roflumilast and its N-oxide metabolite are approximately 17 and 30 hours",
+    "pill": "DALIRESP 500 mcg is supplied as white to off-white, round tablets",
+    "clues.kinetics": [
+      "The absolute bioavailability of roflumilast following a 500 mcg oral dose is approximately 80%",
+      "Food has no effect on total drug absorption",
+      "Plasma protein binding of roflumilast and its N-oxide metabolite is approximately 99% and 97%",
+      "Roflumilast is extensively metabolized via Phase I (cytochrome P450) and Phase II (conjugation) reactions",
+      "about 70% of the radioactivity was recovered in the urine"
+    ],
+    "clues.substance": [
+      "molecular weight 403.2",
+      "The drug substance is a white to off-white non-hygroscopic powder",
+      "It is practically insoluble in water and hexane"
+    ],
+    "clues.product": [
+      "Application: NDA 022522",
+      "Tablets: 250 mcg, 500 mcg ( 3 )",
+      "following once-daily dosing"
+    ],
+    "clues.safety": [
+      "Moderate to severe liver impairment (Child-Pugh B or C)",
+      "The most common adverse reactions that led to discontinuation of DALIRESP were diarrhea (2.4%) and nausea (1.6%)"
+    ],
+    "clues.indication": [
+      "indicated as a treatment to reduce the risk of COPD exacerbations in patients with severe COPD associated with chronic bronchitis and a history of exacerbations"
+    ],
+    "clues.mechanism": [
+      "Roflumilast and its active metabolite (roflumilast N-oxide) are selective inhibitors of phosphodiesterase 4 (PDE4)",
+      "leads to accumulation of intracellular cyclic AMP"
+    ]
+  }
+}

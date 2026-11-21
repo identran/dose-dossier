@@ -1,0 +1,356 @@
+{
+  "id": "celecoxib",
+  "generic": "Celecoxib",
+  "brand": "Celebrex",
+  "aliases": [],
+  "application": "NDA 020998",
+  "approved": 1998,
+  "sponsor": "Pfizer",
+  "area": "Pain",
+  "class": "COX-2 inhibitor",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "200 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2.8,
+    "halfLifeH": 11.2,
+    "cmax": 705,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#F7F7F5",
+    "desc": "white capsule with a coloured band, band colour varies by strength"
+  },
+  "structure": {
+    "cid": 2662,
+    "formula": "C17H14F3N3O2S",
+    "atoms": [
+      [
+        -1.36,
+        -3.08,
+        "S"
+      ],
+      [
+        -3.03,
+        4.08,
+        "F"
+      ],
+      [
+        -1.64,
+        3.86,
+        "F"
+      ],
+      [
+        -3.26,
+        2.68,
+        "F"
+      ],
+      [
+        -2.36,
+        -3.08,
+        "O"
+      ],
+      [
+        -0.36,
+        -3.08,
+        "O"
+      ],
+      [
+        -1.36,
+        0.92,
+        "N"
+      ],
+      [
+        -2.17,
+        1.51,
+        "N"
+      ],
+      [
+        -1.36,
+        -4.08,
+        "N"
+      ],
+      [
+        -0.55,
+        1.51,
+        "C"
+      ],
+      [
+        -1.36,
+        -0.08,
+        "C"
+      ],
+      [
+        0.4,
+        1.2,
+        "C"
+      ],
+      [
+        -0.86,
+        2.46,
+        "C"
+      ],
+      [
+        -1.86,
+        2.46,
+        "C"
+      ],
+      [
+        -2.22,
+        -0.58,
+        "C"
+      ],
+      [
+        -0.49,
+        -0.58,
+        "C"
+      ],
+      [
+        -1.36,
+        -2.08,
+        "C"
+      ],
+      [
+        1.14,
+        1.87,
+        "C"
+      ],
+      [
+        0.61,
+        0.22,
+        "C"
+      ],
+      [
+        -2.22,
+        -1.58,
+        "C"
+      ],
+      [
+        -0.49,
+        -1.58,
+        "C"
+      ],
+      [
+        2.3,
+        0.58,
+        "C"
+      ],
+      [
+        2.1,
+        1.56,
+        "C"
+      ],
+      [
+        1.56,
+        -0.09,
+        "C"
+      ],
+      [
+        -2.45,
+        3.27,
+        "C"
+      ],
+      [
+        3.26,
+        0.27,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        5,
+        2
+      ],
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        16,
+        1
+      ],
+      [
+        1,
+        24,
+        1
+      ],
+      [
+        2,
+        24,
+        1
+      ],
+      [
+        3,
+        24,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        6,
+        10,
+        1
+      ],
+      [
+        7,
+        13,
+        2
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        9,
+        12,
+        2
+      ],
+      [
+        10,
+        14,
+        2
+      ],
+      [
+        10,
+        15,
+        1
+      ],
+      [
+        11,
+        17,
+        2
+      ],
+      [
+        11,
+        18,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        13,
+        24,
+        1
+      ],
+      [
+        14,
+        19,
+        1
+      ],
+      [
+        15,
+        20,
+        2
+      ],
+      [
+        16,
+        19,
+        2
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        17,
+        22,
+        1
+      ],
+      [
+        18,
+        23,
+        2
+      ],
+      [
+        21,
+        22,
+        2
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        21,
+        25,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability has not been studied, and food increases total absorption by 10% to 20%. Protein binding is about 97%, and the drug is mainly cleared by CYP2C9 metabolism.",
+    "substance": "Molecular weight 381.4, and it is practically insoluble in aqueous media at physiological pH.",
+    "product": "Approved under an NDA in strengths from 50 mg to 400 mg; doses up to 200 mg are given twice daily.",
+    "safety": "Boxed warning on serious cardiovascular and gastrointestinal events. Contraindicated around bypass graft surgery and with sulfonamide allergy; dyspepsia and abdominal pain are common reasons for stopping.",
+    "indication": "Relief of osteoarthritis, rheumatoid arthritis, juvenile rheumatoid arthritis from age 2, ankylosing spondylitis, acute pain in adults and primary dysmenorrhea.",
+    "mechanism": "It is believed to work by inhibiting prostaglandin synthesis, primarily through inhibition of the enzyme COX-2."
+  },
+  "tell": "A high fat meal delays this COX-2 inhibitor's peak by 1 to 2 hours while raising total absorption 10% to 20%.",
+  "source": {
+    "setId": "2d6675e4-5859-4be2-8037-a20ce9f707aa",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d6675e4-5859-4be2-8037-a20ce9f707aa",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "705 (38) | 2.8 (37) | 11.2 (31) | 429 (34) | 27.7 (28)",
+    "pk.halfLifeH": "705 (38) | 2.8 (37) | 11.2 (31) | 429 (34) | 27.7 (28)",
+    "pk.cmax": "705 (38) | 2.8 (37) | 11.2 (31) | 429 (34) | 27.7 (28)",
+    "pill": "50 mg capsules are white",
+    "clues.kinetics": [
+      "Absolute bioavailability studies have not been conducted",
+      "an increase in total absorption (AUC) of 10% to 20%",
+      "highly protein bound (~97%)",
+      "Celecoxib metabolism is primarily mediated via CYP2C9"
+    ],
+    "clues.substance": [
+      "molecular weight 381.4",
+      "practically insoluble in aqueous media at physiological pH range"
+    ],
+    "clues.product": [
+      "NDA 020998",
+      "CELEBREX (celecoxib) capsules: 50 mg, 100 mg, 200 mg, and 400 mg",
+      "up to 200 mg twice daily"
+    ],
+    "clues.safety": [
+      "WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTROINTESTINAL EVENTS",
+      "In the setting of CABG surgery",
+      "In patients who have demonstrated allergic-type reactions to sulfonamides",
+      "Among the most common reasons for discontinuation due to adverse events"
+    ],
+    "clues.indication": [
+      "Juvenile Rheumatoid Arthritis (JRA) in patients 2 years and older",
+      "Osteoarthritis (OA)",
+      "Rheumatoid Arthritis (RA)",
+      "Ankylosing Spondylitis (AS)",
+      "For the management of acute pain in adults",
+      "For the management of primary dysmenorrhea"
+    ],
+    "clues.mechanism": [
+      "inhibition of prostaglandin synthesis, primarily via inhibition of COX-2"
+    ]
+  }
+}

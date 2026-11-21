@@ -1,0 +1,78 @@
+{
+  "id": "darbepoetin-alfa",
+  "generic": "Darbepoetin alfa",
+  "brand": "Aranesp",
+  "aliases": [],
+  "application": "BLA 103951",
+  "approved": 2001,
+  "sponsor": "Amgen",
+  "area": "Hematology",
+  "class": "Erythropoiesis stimulator",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "0.45 mcg/kg intravenous, single dose, patients",
+    "model": "bolus",
+    "tmaxH": 0,
+    "halfLifeH": 21
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colorless solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "protein",
+    "isotype": null,
+    "massKDa": 37
+  },
+  "clues": {
+    "kinetics": "Subcutaneous bioavailability is 37% in patients on dialysis, and apparent clearance is about 1.4 times faster in dialysis patients than in those not on dialysis.",
+    "substance": "Produced by recombinant DNA technology in Chinese hamster ovary cells, as a sterile, colorless, preservative-free solution of about 37,000 daltons.",
+    "product": "Approved under BLA 103951 as single-dose vials and prefilled syringes, given weekly or once every 2 weeks.",
+    "safety": "Boxed warning for death, heart attack, stroke, clots and tumor progression. Contraindicated in uncontrolled hypertension and pure red cell aplasia; hypertension and dyspnea are the most common reactions.",
+    "indication": "Treating anemia from chronic kidney disease in patients on or off dialysis, and anemia from the effects of concomitant myelosuppressive chemotherapy.",
+    "mechanism": "Stimulates red cell production by the same mechanism as the body's own erythropoietin."
+  },
+  "tell": "An erythropoiesis stimulator with a half-life about three times that of epoetin alfa when given intravenously.",
+  "source": {
+    "setId": "0fd36cb9-c4f6-4167-93c9-8530865db3f9",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0fd36cb9-c4f6-4167-93c9-8530865db3f9",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Following intravenous administration of Aranesp to patients with CKD receiving dialysis",
+    "pk.halfLifeH": "a mean terminal half-life (t 1/2 ) of 21 hours",
+    "pill": "Aranesp is a clear, colorless solution available as: Single - dose vials",
+    "biologic": "The approximate molecular weight of darbepoetin alfa is 37,000 daltons",
+    "clues.kinetics": [
+      "The bioavailability of Aranesp in patients with CKD receiving dialysis after subcutaneous administration was 37%",
+      "Aranesp apparent clearance was approximately 1.4 times faster on average in patients receiving dialysis compared to patients not receiving dialysis"
+    ],
+    "clues.substance": [
+      "produced in Chinese hamster ovary (CHO) cells by recombinant DNA technology",
+      "The approximate molecular weight of darbepoetin alfa is 37,000 daltons",
+      "sterile, colorless, preservative-free solution"
+    ],
+    "clues.product": [
+      "Application: BLA 103951",
+      "Single - dose vials",
+      "Single - dose prefilled syringes",
+      "0.45 mcg/kg intravenously or subcutaneously as a weekly injection",
+      "0.75 mcg/kg once every 2 weeks"
+    ],
+    "clues.safety": [
+      "WARNING: ESAs INCREASE THE RISK OF DEATH, MYOCARDIAL INFARCTION, STROKE, VENOUS THROMBOEMBOLISM, THROMBOSIS OF VASCULAR ACCESS AND TUMOR PROGRESSION OR RECURRENCE",
+      "Uncontrolled hypertension",
+      "Pure red cell aplasia (PRCA)",
+      "Hypertension 31%",
+      "Dyspnea 17%"
+    ],
+    "clues.indication": [
+      "Chronic Kidney Disease (CKD) in patients on dialysis and patients not on dialysis",
+      "The effects of concomitant myelosuppressive chemotherapy"
+    ],
+    "clues.mechanism": [
+      "Aranesp stimulates erythropoiesis by the same mechanism as endogenous erythropoietin"
+    ]
+  }
+}

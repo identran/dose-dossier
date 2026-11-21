@@ -1,0 +1,88 @@
+{
+  "id": "fam-trastuzumab-deruxtecan-nxki",
+  "generic": "Trastuzumab deruxtecan",
+  "brand": "Enhertu",
+  "aliases": [
+    "T-DXd",
+    "Fam-trastuzumab deruxtecan-nxki"
+  ],
+  "application": "BLA 761139",
+  "approved": 2019,
+  "sponsor": "Daiichi Sankyo",
+  "area": "Oncology",
+  "class": "HER2 antibody-drug conjugate",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "5.4 mg/kg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 1.5,
+    "halfLifeH": 133.2,
+    "cmax": 132,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F5F1DC",
+    "desc": "yellowish-white lyophilized powder in a single-dose vial"
+  },
+  "biologic": {
+    "format": "conjugate",
+    "isotype": "IgG1",
+    "massKDa": null
+  },
+  "clues": {
+    "kinetics": "Given only by intravenous infusion, and the antibody is broken down to peptides and amino acids. The payload is about 97% protein bound and primarily metabolized by CYP3A4.",
+    "substance": "A humanized biologic made in Chinese hamster ovary cells by recombinant DNA technology, supplied as a preservative-free lyophilized powder in 100 mg single-dose vials.",
+    "product": "Approved under a BLA in a single 100 mg vial strength, given at 5.4 mg/kg every 3 weeks.",
+    "safety": "Boxed warning for interstitial lung disease, pneumonitis and embryo-fetal toxicity. Nausea and decreased white blood cell count are the most common adverse reactions.",
+    "indication": "Biomarker-selected breast cancer: early disease as neoadjuvant or adjuvant treatment, and metastatic disease first-line as part of a combination.",
+    "mechanism": "Binds HER2 on tumor cells, is internalized, and releases a topoisomerase I inhibitor that damages DNA and causes cell death."
+  },
+  "tell": "Its 5.4 to 5.7 day half-life and topoisomerase I payload set this HER2-directed antibody-drug conjugate apart.",
+  "source": {
+    "setId": "7e67e73e-ddf4-4e4d-8b50-09d7514910b6",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e67e73e-ddf4-4e4d-8b50-09d7514910b6",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "First infusion: Administer infusion over 90 minutes",
+    "pk.halfLifeH": "The median elimination half-life of fam-trastuzumab deruxtecan-nxki is 5.4 to 5.7 days",
+    "pk.cmax": "of fam-trastuzumab deruxtecan-nxki is 132 µg/mL",
+    "pill": "white to yellowish white lyophilized powder in a single-dose vial",
+    "biologic": "HER2-directed antibody and topoisomerase inhibitor conjugate",
+    "clues.kinetics": [
+      "For intravenous infusion only",
+      "expected to be degraded into small peptides and amino acids",
+      "DXd plasma protein binding is approximately 97%",
+      "primarily metabolized by CYP3A4"
+    ],
+    "clues.substance": [
+      "a humanized anti-HER2 IgG1 monoclonal antibody",
+      "The antibody is produced in Chinese hamster ovary cells by recombinant DNA technology",
+      "preservative-free lyophilized powder in single-dose vials",
+      "One 100 mg single-dose vial"
+    ],
+    "clues.product": [
+      "BLA 761139",
+      "For injection: 100 mg lyophilized powder in a single-dose vial",
+      "ENHERTU 5.4 mg/kg every 3 weeks"
+    ],
+    "clues.safety": [
+      "WARNING: INTERSTITIAL LUNG DISEASE and EMBRYO-FETAL TOXICITY",
+      "Interstitial Lung Disease (ILD) and pneumonitis",
+      "decreased white blood cell count (73%), nausea (72%)"
+    ],
+    "clues.indication": [
+      "HER2-Positive Early Breast Cancer",
+      "as neoadjuvant treatment of adult patients with HER2-positive",
+      "as adjuvant treatment of adult patients with HER2-positive",
+      "HER2-Positive Metastatic Breast Cancer in combination with pertuzumab as first-line treatment"
+    ],
+    "clues.mechanism": [
+      "Following binding to HER2 on tumor cells",
+      "is a topoisomerase I inhibitor attached to the antibody",
+      "causes DNA damage and apoptotic cell death"
+    ]
+  }
+}

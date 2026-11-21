@@ -1,0 +1,85 @@
+{
+  "id": "denosumab",
+  "generic": "Denosumab",
+  "brand": "Prolia",
+  "aliases": [
+    "Xgeva"
+  ],
+  "application": "BLA 125320",
+  "approved": 2010,
+  "sponsor": "Amgen",
+  "area": "Endocrinology",
+  "class": "RANKL blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "60 mg subcutaneous, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 240,
+    "halfLifeH": 609.6,
+    "cmax": 6.75,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "syringe",
+    "color": "#F3E8A3",
+    "desc": "clear, colorless to pale yellow solution in a single-dose prefilled syringe"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG2",
+    "massKDa": 147
+  },
+  "clues": {
+    "kinetics": "The drug shows no accumulation with repeated dosing, and renal impairment has no effect on its pharmacokinetics.",
+    "substance": "Produced in genetically engineered Chinese hamster ovary cells, with a molecular weight of about 147 kDa. Supplied as a preservative-free, sorbitol-containing solution.",
+    "product": "Approved under a BLA, dosed once every 6 months.",
+    "safety": "Boxed warning for severe hypocalcemia in advanced kidney disease. Contraindicated with pre-existing hypocalcemia, pregnancy or hypersensitivity; back pain and arthralgia are common.",
+    "indication": "Osteoporosis in postmenopausal women and men at high risk for fracture, glucocorticoid-induced osteoporosis, and bone mass in people on cancer hormone therapy.",
+    "mechanism": "Binds RANKL and prevents it from activating RANK on osteoclasts, inhibiting their formation, function and survival."
+  },
+  "tell": "Its RANKL target and boxed warning for severe hypocalcemia in advanced kidney disease set it apart.",
+  "source": {
+    "setId": "49e5afe9-a0c7-40c4-af9f-f287a80c5c88",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49e5afe9-a0c7-40c4-af9f-f287a80c5c88",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the median time to maximum denosumab concentration (T max ) was 10 days",
+    "pk.halfLifeH": "a mean half-life of 25.4 days",
+    "pk.cmax": "The mean maximum denosumab concentration (C max ) was 6.75 mcg/mL",
+    "pill": "Injection: 60 mg/mL clear, colorless to pale yellow solution in a single-dose prefilled syringe",
+    "biologic": "Denosumab is a human IgG2 monoclonal antibody",
+    "clues.kinetics": [
+      "No accumulation or change in denosumab pharmacokinetics with time is observed with multiple dosing",
+      "the degree of renal impairment had no effect on the pharmacokinetics of denosumab"
+    ],
+    "clues.substance": [
+      "produced in genetically engineered mammalian (Chinese hamster ovary) cells",
+      "approximate molecular weight of 147 kDa",
+      "sterile, preservative-free, clear, colorless to pale yellow solution",
+      "sorbitol (47 mg)"
+    ],
+    "clues.product": [
+      "Application: BLA 125320",
+      "once every 6 months"
+    ],
+    "clues.safety": [
+      "WARNING: SEVERE HYPOCALCEMIA IN PATIENTS WITH ADVANCED KIDNEY DISEASE",
+      "Patients with hypocalcemia",
+      "Pregnant women",
+      "Patients with hypersensitivity to Prolia",
+      "back pain, arthralgia, and nasopharyngitis"
+    ],
+    "clues.indication": [
+      "of postmenopausal women with osteoporosis at high risk for fracture",
+      "to increase bone mass in men at high risk for fracture receiving androgen deprivation therapy",
+      "of glucocorticoid-induced osteoporosis"
+    ],
+    "clues.mechanism": [
+      "Prolia binds to RANKL",
+      "Prolia prevents RANKL from activating its receptor, RANK, on the surface of osteoclasts",
+      "Prevention of the RANKL/RANK interaction inhibits osteoclast formation, function, and survival"
+    ]
+  }
+}

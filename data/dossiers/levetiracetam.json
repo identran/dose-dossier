@@ -1,0 +1,210 @@
+{
+  "id": "levetiracetam",
+  "generic": "Levetiracetam",
+  "brand": "Keppra",
+  "aliases": [
+    "Keppra XR"
+  ],
+  "application": "NDA 021872",
+  "approved": 1999,
+  "sponsor": "UCB",
+  "area": "Neurology",
+  "class": "SV2A ligand",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "1500 mg intravenous, single dose, healthy adults",
+    "model": "infusion",
+    "tmaxH": 0.25,
+    "halfLifeH": 7
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colourless solution in a single-use vial"
+  },
+  "structure": {
+    "cid": 5284583,
+    "formula": "C8H14N2O2",
+    "atoms": [
+      [
+        1.75,
+        0.76,
+        "O"
+      ],
+      [
+        -1.75,
+        -0.52,
+        "O"
+      ],
+      [
+        -0.01,
+        0.48,
+        "N"
+      ],
+      [
+        -0.88,
+        -2.02,
+        "N"
+      ],
+      [
+        -0.82,
+        1.07,
+        "C"
+      ],
+      [
+        -0.01,
+        -0.52,
+        "C"
+      ],
+      [
+        -0.51,
+        2.02,
+        "C"
+      ],
+      [
+        0.49,
+        2.02,
+        "C"
+      ],
+      [
+        0.8,
+        1.07,
+        "C"
+      ],
+      [
+        0.85,
+        -1.02,
+        "C"
+      ],
+      [
+        -0.88,
+        -1.02,
+        "C"
+      ],
+      [
+        0.85,
+        -2.02,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        8,
+        2
+      ],
+      [
+        1,
+        10,
+        2
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        3,
+        10,
+        1
+      ],
+      [
+        4,
+        6,
+        1
+      ],
+      [
+        5,
+        9,
+        1
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Almost completely absorbed after oral dosing, and the injection is bioequivalent to tablets. Under 10% bound to plasma protein, and 66% of the dose is excreted unchanged by the kidneys.",
+    "substance": "A single enantiomer, crystalline powder with a molecular weight of 170.21 that is very soluble in water.",
+    "product": "Approved under an NDA as 500 mg per 5 mL single-use vials that must be diluted before intravenous infusion.",
+    "safety": "Contraindicated with known hypersensitivity, as anaphylaxis and angioedema have occurred; no boxed warning. Somnolence and asthenia are the most common reactions.",
+    "indication": "Partial-onset seizures from 1 month of age; adjunctive therapy for myoclonic seizures in juvenile myoclonic epilepsy and for primary generalized tonic-clonic seizures; intravenous when oral dosing is not feasible.",
+    "mechanism": "Binds the synaptic vesicle protein SV2A, thought to regulate vesicle exocytosis; the precise antiepileptic mechanism is unknown."
+  },
+  "tell": "Chemically unrelated to existing antiepileptic drugs, it binds the synaptic vesicle protein SV2A.",
+  "source": {
+    "setId": "c6d5784d-abf9-45fe-ac5a-d5c53bd50f7e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6d5784d-abf9-45fe-ac5a-d5c53bd50f7e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "administered as a 15-minute infusion",
+    "pk.halfLifeH": [
+      "Levetiracetam plasma half-life in adults is 7",
+      "hour and is unaffected by either dose"
+    ],
+    "pill": [
+      "a clear, colorless, sterile solution",
+      "supplied in single-use 5 mL vials"
+    ],
+    "clues.kinetics": [
+      "Levetiracetam is rapidly and almost completely absorbed after oral administration",
+      "Levetiracetam injection and tablets are bioequivalent",
+      "Levetiracetam is not significantly protein-bound (<10% bound)",
+      "Sixty-six percent (66%) of the dose is renally excreted unchanged"
+    ],
+    "clues.substance": [
+      "The chemical name of levetiracetam, a single enantiomer",
+      "is a white to off-white crystalline powder",
+      "its molecular weight is 170.21",
+      "It is very soluble in water (104.0 g/100 mL)"
+    ],
+    "clues.product": [
+      "Application: NDA 021872",
+      "Injection: 500 mg/5 mL single-use vial",
+      "KEPPRA injection must be diluted prior to intravenous infusion"
+    ],
+    "clues.safety": [
+      "KEPPRA is contraindicated in patients with a hypersensitivity to levetiracetam",
+      "Reactions have included anaphylaxis and angioedema",
+      "the most common adverse reactions in adult patients receiving KEPPRA in combination with other AEDs, for events with rates greater than placebo, were somnolence, asthenia"
+    ],
+    "clues.indication": [
+      "KEPPRA is indicated for the treatment of partial-onset seizures in patients 1 month of age and older",
+      "Myoclonic seizures in patients 12 years of age and older with juvenile myoclonic epilepsy",
+      "Primary generalized tonic-clonic seizures in patients 6 years of age and older",
+      "KEPPRA injection is for intravenous use only as an alternative for patients when oral administration is temporarily not feasible"
+    ],
+    "clues.mechanism": [
+      "Experimental data indicate that this binding site is the synaptic vesicle protein SV2A, thought to be involved in the regulation of vesicle exocytosis",
+      "The precise mechanism(s) by which levetiracetam exerts its antiepileptic effect is unknown"
+    ]
+  }
+}

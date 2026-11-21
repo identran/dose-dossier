@@ -1,0 +1,85 @@
+{
+  "id": "natalizumab",
+  "generic": "Natalizumab",
+  "brand": "Tysabri",
+  "aliases": [],
+  "application": "BLA 125104",
+  "approved": 2004,
+  "sponsor": "Biogen",
+  "area": "Neurology",
+  "class": "Integrin blocking antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "300 mg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 1,
+    "halfLifeH": 264,
+    "cmax": 110,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "colorless, clear to slightly opalescent solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG4 κ",
+    "massKDa": 149
+  },
+  "clues": {
+    "kinetics": "Clearance rises with body weight, but less than proportionally, and persistent anti-drug antibodies raise it about 3-fold. Renal or hepatic insufficiency has not been studied.",
+    "substance": "A recombinant, humanized protein made in murine myeloma cells, with a molecular weight of 149 kilodaltons.",
+    "product": "Approved under a BLA as a single-dose 300 mg/15 mL vial for dilution, dosed every four weeks.",
+    "safety": "Boxed warning for progressive multifocal leukoencephalopathy, a viral brain infection often fatal or severely disabling. Contraindicated in PML and prior hypersensitivity; headache and fatigue are most common.",
+    "indication": "Relapsing forms of multiple sclerosis as monotherapy, and moderately to severely active Crohn's disease.",
+    "mechanism": "Binds α4β1 and α4β7 integrins on all leukocytes except neutrophils, blocking their adhesion and migration into inflamed tissue."
+  },
+  "tell": "An α4-integrin antibody dispensed only through registered infusion centers, under a boxed PML warning.",
+  "source": {
+    "setId": "c5fdde91-1989-4dd2-9129-4f3323ea2962",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5fdde91-1989-4dd2-9129-4f3323ea2962",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "300 mg infused intravenously over one hour",
+    "pk.halfLifeH": "The mean ± SD half-life, volume of distribution, and clearance of natalizumab were 11 ± 4 days",
+    "pk.cmax": "the mean ± SD maximum observed serum concentration was 110 ± 52 mcg/mL",
+    "pill": "colorless and clear to slightly opalescent solution in a single-dose vial",
+    "biologic": [
+      "recombinant humanized IgG4κ monoclonal antibody",
+      "The molecular weight of natalizumab is 149 kilodaltons"
+    ],
+    "clues.kinetics": [
+      "Natalizumab clearance increased with body weight in a less than proportional manner",
+      "The presence of persistent anti-natalizumab antibodies increased natalizumab clearance approximately 3-fold",
+      "Pharmacokinetics of natalizumab in patients with renal or hepatic insufficiency have not been studied"
+    ],
+    "clues.substance": [
+      "recombinant humanized",
+      "produced in murine myeloma cells",
+      "The molecular weight of natalizumab is 149 kilodaltons"
+    ],
+    "clues.product": [
+      "BLA 125104",
+      "single-dose vial for dilution prior to infusion",
+      "300 mg infused intravenously over one hour, every four weeks"
+    ],
+    "clues.safety": [
+      "WARNING: PROGRESSIVE MULTIFOCAL LEUKOENCEPHALOPATHY",
+      "an opportunistic viral infection of the brain that usually leads to death or severe disability",
+      "TYSABRI is contraindicated in patients who have or have had progressive multifocal leukoencephalopathy (PML)",
+      "TYSABRI is contraindicated in patients who have had a hypersensitivity reaction to TYSABRI",
+      "The most common adverse reactions (incidence ≥ 10%) were headache and fatigue"
+    ],
+    "clues.indication": [
+      "indicated as monotherapy for the treatment of relapsing forms of multiple sclerosis",
+      "moderately to severely active Crohn's disease with evidence of inflammation"
+    ],
+    "clues.mechanism": [
+      "binds to the α4-subunit of α4β1 and α4β7 integrins",
+      "expressed on the surface of all leukocytes except neutrophils",
+      "Disruption of these molecular interactions prevents transmigration of leukocytes across the endothelium"
+    ]
+  }
+}

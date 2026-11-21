@@ -1,0 +1,86 @@
+{
+  "id": "ranibizumab",
+  "generic": "Ranibizumab",
+  "brand": "Lucentis",
+  "aliases": [
+    "Susvimo"
+  ],
+  "application": "BLA 125156",
+  "approved": 2006,
+  "sponsor": "Genentech",
+  "area": "Ophthalmology",
+  "class": "VEGF inhibitor",
+  "route": "intravitreal",
+  "form": "injection",
+  "pk": {
+    "context": "0.5 mg intravitreal, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 24,
+    "halfLifeH": 216,
+    "cmax": 1.7,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "syringe",
+    "color": "#F7F1D0",
+    "desc": "colorless to pale yellow solution in a prefilled syringe"
+  },
+  "biologic": {
+    "format": "fragment",
+    "isotype": "IgG1 κ",
+    "massKDa": 48
+  },
+  "clues": {
+    "kinetics": "Serum concentrations are approximately 90,000-fold lower than vitreous concentrations. No dose adjustment is needed for renal impairment.",
+    "substance": "Recombinant and humanized, made in an Escherichia coli expression system at about 48 kilodaltons. Supplied as a preservative-free sterile solution.",
+    "product": "Approved under a BLA as single-dose prefilled syringes in two strengths, given once a month.",
+    "safety": "No boxed warning; contraindicated with ocular or periocular infections or hypersensitivity. Conjunctival hemorrhage and eye pain are the most common reactions.",
+    "indication": "Wet age-related macular degeneration, macular edema after retinal vein occlusion, diabetic macular edema and retinopathy, and myopic choroidal neovascularization.",
+    "mechanism": "Binds VEGF-A and blocks its interaction with VEGFR1 and VEGFR2 on endothelial cells, reducing vascular leakage and new vessel formation."
+  },
+  "tell": "Made in Escherichia coli and injected into the eye, this VEGF-A binder has a vitreous half-life of about 9 days.",
+  "source": {
+    "setId": "de4e66cc-ca05-4dc9-8262-e00e9b41c36d",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de4e66cc-ca05-4dc9-8262-e00e9b41c36d",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "maximum serum concentrations are predicted to be reached at approximately 1 day",
+    "pk.halfLifeH": "the estimated average vitreous elimination half-life was approximately 9 days",
+    "pk.cmax": "mean (±SD) maximum ranibizumab serum concentrations were 1.7 (± 1.1) ng/mL",
+    "pill": "Colorless to pale yellow solution in a single-dose prefilled syringe",
+    "biologic": "a recombinant humanized IgG1 kappa isotype monoclonal antibody fragment",
+    "clues.kinetics": [
+      "approximately 90,000-fold lower than vitreal concentrations",
+      "No dosage adjustment is needed based on renal impairment status"
+    ],
+    "clues.substance": [
+      "recombinant humanized",
+      "produced by an E. coli expression system",
+      "has a molecular weight of approximately 48 kilodaltons",
+      "supplied as a preservative-free, sterile solution"
+    ],
+    "clues.product": [
+      "Application: BLA 125156",
+      "Single-dose prefilled syringe designed to provide 0.05 mL for intravitreal injection",
+      "Colorless to pale yellow 6 mg/mL solution (LUCENTIS 0.3 mg)",
+      "once a month (approximately 28 days)"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with ocular or periocular infections",
+      "Hypersensitivity ( 4.2 )",
+      "Conjunctival hemorrhage",
+      "Eye pain"
+    ],
+    "clues.indication": [
+      "Neovascular (Wet) Age-Related Macular Degeneration (AMD)",
+      "Macular Edema Following Retinal Vein Occlusion (RVO)",
+      "Diabetic Macular Edema (DME)",
+      "Diabetic Retinopathy (DR)",
+      "Myopic Choroidal Neovascularization (mCNV)"
+    ],
+    "clues.mechanism": [
+      "The binding of ranibizumab to VEGF-A prevents the interaction of VEGF-A with its receptors (VEGFR1 and VEGFR2) on the surface of endothelial cells, reducing endothelial cell proliferation, vascular leakage, and new blood vessel formation"
+    ]
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "id": "bosentan",
+  "generic": "Bosentan",
+  "brand": "Tracleer",
+  "aliases": [],
+  "application": "NDA 021290",
+  "approved": 2001,
+  "sponsor": "Johnson & Johnson",
+  "area": "Pulmonology",
+  "class": "Endothelin antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "125 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 4,
+    "halfLifeH": 5
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F5D0A9",
+    "desc": "orange-white, film-coated, biconvex tablet"
+  },
+  "structure": {
+    "cid": 104865,
+    "formula": "C27H29N5O6S",
+    "atoms": [
+      [
+        0.43,
+        1.57,
+        "S"
+      ],
+      [
+        -0.07,
+        2.43,
+        "O"
+      ],
+      [
+        0.93,
+        0.7,
+        "O"
+      ],
+      [
+        -2.17,
+        0.07,
+        "O"
+      ],
+      [
+        -2.17,
+        -1.93,
+        "O"
+      ],
+      [
+        -3.9,
+        1.07,
+        "O"
+      ],
+      [
+        -3.03,
+        -4.43,
+        "O"
+      ],
+      [
+        -0.43,
+        1.07,
+        "N"
+      ],
+      [
+        0.43,
+        -0.43,
+        "N"
+      ],
+      [
+        -0.43,
+        -1.93,
+        "N"
+      ],
+      [
+        2.17,
+        -1.43,
+        "N"
+      ],
+      [
+        1.3,
+        -2.93,
+        "N"
+      ],
+      [
+        3.9,
+        3.57,
+        "C"
+      ],
+      [
+        3.03,
+        3.07,
+        "C"
+      ],
+      [
+        4.76,
+        4.07,
+        "C"
+      ],
+      [
+        3.4,
+        4.43,
+        "C"
+      ],
+      [
+        4.4,
+        2.7,
+        "C"
+      ],
+      [
+        3.03,
+        2.07,
+        "C"
+      ],
+      [
+        2.17,
+        3.57,
+        "C"
+      ],
+      [
+        1.3,
+        2.07,
+        "C"
+      ],
+      [
+        2.17,
+        1.57,
+        "C"
+      ],
+      [
+        1.3,
+        3.07,
+        "C"
+      ],
+      [
+        -0.43,
+        0.07,
+        "C"
+      ],
+      [
+        -1.3,
+        -0.43,
+        "C"
+      ],
+      [
+        -1.3,
+        -1.43,
+        "C"
+      ],
+      [
+        0.43,
+        -1.43,
+        "C"
+      ],
+      [
+        -3.03,
+        -0.43,
+        "C"
+      ],
+      [
+        1.3,
+        -1.93,
+        "C"
+      ],
+      [
+        -2.17,
+        -2.93,
+        "C"
+      ],
+      [
+        -3.9,
+        0.07,
+        "C"
+      ],
+      [
+        -3.03,
+        -1.43,
+        "C"
+      ],
+      [
+        -4.76,
+        -0.43,
+        "C"
+      ],
+      [
+        -3.03,
+        -3.43,
+        "C"
+      ],
+      [
+        -3.9,
+        -1.93,
+        "C"
+      ],
+      [
+        -4.76,
+        -1.43,
+        "C"
+      ],
+      [
+        3.03,
+        -1.93,
+        "C"
+      ],
+      [
+        2.17,
+        -3.43,
+        "C"
+      ],
+      [
+        3.03,
+        -2.93,
+        "C"
+      ],
+      [
+        -4.76,
+        1.57,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        0,
+        19,
+        1
+      ],
+      [
+        3,
+        23,
+        1
+      ],
+      [
+        3,
+        26,
+        1
+      ],
+      [
+        4,
+        24,
+        1
+      ],
+      [
+        4,
+        28,
+        1
+      ],
+      [
+        5,
+        29,
+        1
+      ],
+      [
+        5,
+        38,
+        1
+      ],
+      [
+        6,
+        32,
+        1
+      ],
+      [
+        7,
+        22,
+        1
+      ],
+      [
+        8,
+        22,
+        1
+      ],
+      [
+        8,
+        25,
+        2
+      ],
+      [
+        9,
+        24,
+        2
+      ],
+      [
+        9,
+        25,
+        1
+      ],
+      [
+        10,
+        27,
+        2
+      ],
+      [
+        10,
+        35,
+        1
+      ],
+      [
+        11,
+        27,
+        1
+      ],
+      [
+        11,
+        36,
+        2
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        12,
+        15,
+        1
+      ],
+      [
+        12,
+        16,
+        1
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        13,
+        18,
+        1
+      ],
+      [
+        17,
+        20,
+        1
+      ],
+      [
+        18,
+        21,
+        2
+      ],
+      [
+        19,
+        20,
+        2
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        22,
+        23,
+        2
+      ],
+      [
+        23,
+        24,
+        1
+      ],
+      [
+        25,
+        27,
+        1
+      ],
+      [
+        26,
+        29,
+        1
+      ],
+      [
+        26,
+        30,
+        2
+      ],
+      [
+        28,
+        32,
+        1
+      ],
+      [
+        29,
+        31,
+        2
+      ],
+      [
+        30,
+        33,
+        1
+      ],
+      [
+        31,
+        34,
+        1
+      ],
+      [
+        33,
+        34,
+        2
+      ],
+      [
+        35,
+        37,
+        2
+      ],
+      [
+        36,
+        37,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 50% and unaffected by food. Over 98% is bound to plasma proteins, mainly albumin, and it is cleared by biliary excretion after hepatic metabolism.",
+    "substance": "Molecular weight 551.6. A white to yellowish powder that is poorly soluble in water, and very stable in the solid state.",
+    "product": "Approved under an NDA as 62.5 mg and 125 mg film-coated tablets, plus 32 mg tablets for oral suspension. Dosed twice daily.",
+    "safety": "Boxed warning for hepatotoxicity and embryo-fetal toxicity under a REMS program. Contraindicated in pregnancy and with cyclosporine A or glyburide; upper respiratory tract infections and pyrexia are most common.",
+    "indication": "Pulmonary arterial hypertension (WHO Group 1): in adults, to improve exercise ability and reduce clinical worsening; in children aged 3 and older, to improve pulmonary vascular resistance.",
+    "mechanism": "A specific, competitive antagonist of endothelin receptors ETA and ETB, with slightly higher affinity for ETA than for ETB."
+  },
+  "tell": "Its boxed warning for liver injury and embryo-fetal harm, under a restricted REMS program, sets this PAH endothelin blocker apart.",
+  "source": {
+    "setId": "749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=749e42fb-2fe0-45dd-9268-b43bb3f4081c",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "maximum plasma concentrations of bosentan are attained within 3–5 hours",
+    "pk.halfLifeH": "the terminal elimination half-life is about 5 hours in healthy adult subjects",
+    "pill": "125 mg tablets: oval, biconvex, orange-white tablets",
+    "clues.kinetics": [
+      "The absolute bioavailability of bosentan in normal volunteers is about 50% and is unaffected by food",
+      "Bosentan is highly bound (>98%) to plasma proteins, mainly albumin",
+      "Bosentan is eliminated by biliary excretion following metabolism in the liver"
+    ],
+    "clues.substance": [
+      "molecular weight 551.6",
+      "Bosentan is a white to yellowish powder",
+      "It is poorly soluble in water",
+      "In the solid state, bosentan is very stable"
+    ],
+    "clues.product": [
+      "Application: NDA 021290",
+      "Film-coated tablet: 62.5 mg and 125 mg",
+      "Tablet for oral suspension: 32 mg",
+      "Co-administration of bosentan 125 mg twice daily"
+    ],
+    "clues.safety": [
+      "WARNING: RISKS OF HEPATOTOXICITY and EMBRYO-FETAL TOXICITY",
+      "Use of TRACLEER is contraindicated in females who are pregnant",
+      "concomitant use of TRACLEER and cyclosporine A is contraindicated",
+      "co-administration of glyburide and TRACLEER is contraindicated",
+      "Common adverse reactions (≥15%) for the dispersible tablet are upper respiratory tract infections and pyrexia"
+    ],
+    "clues.indication": [
+      "pulmonary arterial hypertension (PAH) (WHO Group 1)",
+      "in adults to improve exercise ability and to decrease clinical worsening",
+      "in pediatric patients aged 3 years and older with idiopathic or congenital PAH to improve pulmonary vascular resistance"
+    ],
+    "clues.mechanism": [
+      "Bosentan is a specific and competitive antagonist at endothelin receptor types ET A and ET B",
+      "Bosentan has a slightly higher affinity for ET A receptors than for ET B receptors"
+    ]
+  }
+}

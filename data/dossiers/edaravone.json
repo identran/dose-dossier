@@ -1,0 +1,211 @@
+{
+  "id": "edaravone",
+  "generic": "Edaravone",
+  "brand": "Radicava",
+  "aliases": [],
+  "application": "NDA 215446",
+  "approved": 2017,
+  "sponsor": "Tanabe Pharma",
+  "area": "Neurology",
+  "class": "Free radical scavenger",
+  "route": "oral",
+  "form": "suspension",
+  "pk": {
+    "context": "105 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 0.5,
+    "halfLifeH": 6.75
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#FAF9F4",
+    "desc": "white to off-white, opaque suspension in an amber glass bottle"
+  },
+  "structure": {
+    "cid": 4021,
+    "formula": "C10H10N2O",
+    "atoms": [
+      [
+        1.42,
+        0.6,
+        "O"
+      ],
+      [
+        -0.34,
+        0.33,
+        "N"
+      ],
+      [
+        -1.15,
+        0.91,
+        "N"
+      ],
+      [
+        0.16,
+        1.86,
+        "C"
+      ],
+      [
+        -0.84,
+        1.86,
+        "C"
+      ],
+      [
+        0.47,
+        0.91,
+        "C"
+      ],
+      [
+        -0.34,
+        -0.67,
+        "C"
+      ],
+      [
+        -1.42,
+        2.67,
+        "C"
+      ],
+      [
+        -1.2,
+        -1.17,
+        "C"
+      ],
+      [
+        0.53,
+        -1.17,
+        "C"
+      ],
+      [
+        -1.2,
+        -2.17,
+        "C"
+      ],
+      [
+        0.53,
+        -2.17,
+        "C"
+      ],
+      [
+        -0.34,
+        -2.67,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        5,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        2,
+        4,
+        2
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        2
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        9,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        2
+      ],
+      [
+        11,
+        12,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Oral bioavailability is about 57% because of first-pass effect; a high-fat meal cuts Cmax by 82% and AUC by 61%. It is 92% bound to serum protein and leaves mainly in urine as a glucuronide conjugate.",
+    "substance": "A white crystalline powder with a molecular weight of 174.20.",
+    "product": "Under an NDA, an oral suspension of 105 mg per 5 mL in a multi-dose amber glass bottle. It does not accumulate with once-daily dosing.",
+    "safety": "No boxed warning. Contraindicated in prior hypersensitivity to the drug or its inactive ingredients; contusion and gait disturbance are the commonest reactions.",
+    "indication": "Treatment of amyotrophic lateral sclerosis.",
+    "mechanism": "The mechanism by which it works in ALS is not known."
+  },
+  "tell": "An oral suspension giving AUC equivalent to the IV infusion, for an ALS drug whose mechanism is still unknown.",
+  "source": {
+    "setId": "0ce2c1c4-2a40-485c-b7cb-96a9b85d9d11",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ce2c1c4-2a40-485c-b7cb-96a9b85d9d11",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "median time to maximum concentration (T max ) occurring at approximately 0.5 hour",
+    "pk.halfLifeH": "The mean terminal elimination half-life of edaravone is approximately 4.5 to 9 hours",
+    "pill": "white to off-white color, opaque, homogenous suspension",
+    "clues.kinetics": [
+      "The absolute oral bioavailability is about 57% because of first-pass effect",
+      "the C max decreased by 82%, and the AUC decreased by 61% with a high-fat meal",
+      "Edaravone is bound to human serum proteins (92%)",
+      "excreted mainly in the urine as its glucuronide conjugate"
+    ],
+    "clues.substance": [
+      "Edaravone is a white crystalline powder",
+      "the molecular weight is 174.20"
+    ],
+    "clues.product": [
+      "Application: NDA 215446",
+      "Oral suspension: 105 mg/5 mL in a multi-dose amber glass bottle",
+      "does not accumulate with once-daily administration"
+    ],
+    "clues.safety": [
+      "Hypersensitivity reactions and anaphylactic reactions have occurred",
+      "contusion, gait disturbance, and headache"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of amyotrophic lateral sclerosis (ALS)"
+    ],
+    "clues.mechanism": [
+      "The mechanism by which RADICAVA and RADICAVA ORS exert their therapeutic effect in patients with ALS is unknown"
+    ]
+  }
+}

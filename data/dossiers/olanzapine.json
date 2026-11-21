@@ -1,0 +1,315 @@
+{
+  "id": "olanzapine",
+  "generic": "Olanzapine",
+  "brand": "Zyprexa",
+  "aliases": [],
+  "application": "NDA 020592",
+  "approved": 1996,
+  "sponsor": "Eli Lilly",
+  "area": "Psychiatry",
+  "class": "Atypical antipsychotic",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 6,
+    "halfLifeH": 30
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F5F5F2",
+    "desc": "white, round, unscored tablet"
+  },
+  "structure": {
+    "cid": 135398745,
+    "formula": "C17H20N4S",
+    "atoms": [
+      [
+        -1.45,
+        -2.81,
+        "S"
+      ],
+      [
+        -0.63,
+        0.34,
+        "N"
+      ],
+      [
+        -1.49,
+        2.12,
+        "N"
+      ],
+      [
+        0.79,
+        -0.56,
+        "N"
+      ],
+      [
+        0.3,
+        -2.73,
+        "N"
+      ],
+      [
+        -0.07,
+        1.16,
+        "C"
+      ],
+      [
+        -1.62,
+        0.41,
+        "C"
+      ],
+      [
+        -0.5,
+        2.05,
+        "C"
+      ],
+      [
+        -2.05,
+        1.3,
+        "C"
+      ],
+      [
+        -0.2,
+        -0.56,
+        "C"
+      ],
+      [
+        -0.82,
+        -1.34,
+        "C"
+      ],
+      [
+        -1.92,
+        3.02,
+        "C"
+      ],
+      [
+        -0.6,
+        -2.3,
+        "C"
+      ],
+      [
+        -1.8,
+        -1.25,
+        "C"
+      ],
+      [
+        1.41,
+        -1.34,
+        "C"
+      ],
+      [
+        1.19,
+        -2.3,
+        "C"
+      ],
+      [
+        -2.19,
+        -2.16,
+        "C"
+      ],
+      [
+        2.39,
+        -1.02,
+        "C"
+      ],
+      [
+        1.94,
+        -3.02,
+        "C"
+      ],
+      [
+        -3.16,
+        -2.38,
+        "C"
+      ],
+      [
+        3.16,
+        -1.71,
+        "C"
+      ],
+      [
+        2.93,
+        -2.72,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        12,
+        1
+      ],
+      [
+        0,
+        16,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        9,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        3,
+        9,
+        2
+      ],
+      [
+        3,
+        14,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        4,
+        15,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        10,
+        12,
+        2
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        13,
+        16,
+        2
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        15,
+        18,
+        2
+      ],
+      [
+        16,
+        19,
+        1
+      ],
+      [
+        17,
+        20,
+        1
+      ],
+      [
+        18,
+        21,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Well absorbed, and food does not affect absorption. It is 93% bound to plasma proteins and cleared mainly by direct glucuronidation and cytochrome P450 oxidation.",
+    "substance": "Molecular weight 312.44. It is a crystalline solid that is practically insoluble in water.",
+    "product": "An NDA product in 2.5 to 20 mg tablets, with doses adjusted in 5 mg steps once daily.",
+    "safety": "Boxed warning for increased mortality in elderly patients with dementia-related psychosis. No contraindications with monotherapy; postural hypotension and weight gain are common.",
+    "indication": "Treatment of schizophrenia in adults and adolescents, and agitation with schizophrenia or bipolar I mania when given by injection.",
+    "mechanism": "Its action is unclear, but efficacy may come from combined dopamine and serotonin type 2 antagonism."
+  },
+  "tell": "An atypical antipsychotic with a long, variable half-life (21 to 54 hours) and no contraindications with monotherapy.",
+  "source": {
+    "setId": "b418946a-1ab4-4d89-a012-d94fc361a3c4",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b418946a-1ab4-4d89-a012-d94fc361a3c4",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "reaches peak concentrations in approximately 6 hours following an oral dose",
+    "pk.halfLifeH": "Its half-life ranges from 21 to 54 hours (5th to 95th percentile; mean of 30 hours)",
+    "pill": "The ZYPREXA 2.5 mg, 5 mg, 7.5 mg, and 10 mg tablets are white, round",
+    "clues.kinetics": [
+      "Olanzapine is well absorbed",
+      "Food does not affect the rate or extent of olanzapine absorption",
+      "It is 93% bound to plasma proteins",
+      "Direct glucuronidation and cytochrome P450 (CYP) mediated oxidation are the primary metabolic pathways"
+    ],
+    "clues.substance": [
+      "a molecular weight of 312.44",
+      "is a yellow crystalline solid, which is practically insoluble in water"
+    ],
+    "clues.product": [
+      "NDA 020592",
+      "TABLET (oral): 20MG; 10MG; 5MG; 15MG; 7.5MG; 2.5MG",
+      "dose increments/decrements of 5 mg once daily are recommended"
+    ],
+    "clues.safety": [
+      "WARNING: INCREASED MORTALITY IN ELDERLY PATIENTS WITH DEMENTIA-RELATED PSYCHOSIS",
+      "None with ZYPREXA monotherapy",
+      "postural hypotension, constipation, weight gain, dizziness"
+    ],
+    "clues.indication": [
+      "Treatment of schizophrenia.",
+      "Adolescents (ages 13-17): Efficacy was established in one 6-week trial in patients with schizophrenia",
+      "Agitation Associated with Schizophrenia and Bipolar I Mania"
+    ],
+    "clues.mechanism": [
+      "The mechanism of action of olanzapine, in the listed indications is unclear",
+      "could be mediated through a combination of dopamine and serotonin type 2 (5HT 2 ) antagonism"
+    ]
+  }
+}

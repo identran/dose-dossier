@@ -84,11 +84,20 @@ npm run verify -- <id>
 ```
 
 ```bash
+npm run schedule
+```
+
+```bash
 npm run build
 ```
 
+To correct a dossier that already exists, edit its draft and pass `--force` to `assemble`. A new
+`class` or `sponsor` goes into `data/vocab.json` first; `npm run check -- --strict` insists on it.
+
 The schedule is append-only: published days keep their answer, and ids are never renamed.
-Corrections to text and numbers can ship at any time.
+`npm run schedule` leaves every scheduled day alone and places only new dossiers after them
+(`-- --rebuild` reorders everything and is for use before launch only; `-- --check` reports on
+the current order). Corrections to text and numbers can ship at any time.
 
 ## Notes
 

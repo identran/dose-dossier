@@ -1,0 +1,368 @@
+{
+  "id": "quetiapine",
+  "generic": "Quetiapine",
+  "brand": "Seroquel",
+  "aliases": [
+    "Quetiapine fumarate",
+    "Seroquel XR"
+  ],
+  "salt": "Quetiapine fumarate",
+  "application": "NDA 020639",
+  "approved": 1997,
+  "sponsor": "AstraZeneca",
+  "area": "Psychiatry",
+  "class": "Atypical antipsychotic",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "300 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 6
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F4C7A1",
+    "desc": "round, film-coated tablet, colour varies by strength"
+  },
+  "structure": {
+    "cid": 5002,
+    "formula": "C21H25N3O2S",
+    "atoms": [
+      [
+        0,
+        -4.83,
+        "S"
+      ],
+      [
+        -2.08,
+        2.59,
+        "O"
+      ],
+      [
+        -1.39,
+        5.11,
+        "O"
+      ],
+      [
+        -1.78,
+        0,
+        "N"
+      ],
+      [
+        -0.92,
+        -1.78,
+        "N"
+      ],
+      [
+        0.49,
+        -2.67,
+        "N"
+      ],
+      [
+        -2.33,
+        -0.82,
+        "C"
+      ],
+      [
+        -0.79,
+        -0.07,
+        "C"
+      ],
+      [
+        -1.9,
+        -1.7,
+        "C"
+      ],
+      [
+        -0.37,
+        -0.96,
+        "C"
+      ],
+      [
+        -2.2,
+        0.89,
+        "C"
+      ],
+      [
+        -0.49,
+        -2.67,
+        "C"
+      ],
+      [
+        -1.65,
+        1.7,
+        "C"
+      ],
+      [
+        -1.11,
+        -3.44,
+        "C"
+      ],
+      [
+        -0.89,
+        -4.4,
+        "C"
+      ],
+      [
+        -2.09,
+        -3.12,
+        "C"
+      ],
+      [
+        1.11,
+        -3.44,
+        "C"
+      ],
+      [
+        0.89,
+        -4.4,
+        "C"
+      ],
+      [
+        -1.63,
+        -5.11,
+        "C"
+      ],
+      [
+        -1.52,
+        3.41,
+        "C"
+      ],
+      [
+        -2.84,
+        -3.81,
+        "C"
+      ],
+      [
+        -2.61,
+        -4.81,
+        "C"
+      ],
+      [
+        2.09,
+        -3.12,
+        "C"
+      ],
+      [
+        1.63,
+        -5.11,
+        "C"
+      ],
+      [
+        -1.95,
+        4.29,
+        "C"
+      ],
+      [
+        2.84,
+        -3.81,
+        "C"
+      ],
+      [
+        2.61,
+        -4.81,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        0,
+        17,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        1,
+        19,
+        1
+      ],
+      [
+        2,
+        24,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        10,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        5,
+        11,
+        2
+      ],
+      [
+        5,
+        16,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        14,
+        18,
+        2
+      ],
+      [
+        15,
+        20,
+        1
+      ],
+      [
+        16,
+        17,
+        1
+      ],
+      [
+        16,
+        22,
+        2
+      ],
+      [
+        17,
+        23,
+        2
+      ],
+      [
+        18,
+        21,
+        1
+      ],
+      [
+        19,
+        24,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ],
+      [
+        22,
+        25,
+        1
+      ],
+      [
+        23,
+        26,
+        1
+      ],
+      [
+        25,
+        26,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Tablets are 100% bioavailable relative to solution, and food only marginally affects absorption. It is 83% protein bound and eliminated mainly by hepatic metabolism; about 73% of a dose is recovered in urine.",
+    "substance": "A fumarate salt whose active moiety has a molecular weight of 383.5. It is moderately soluble in water.",
+    "product": "An NDA tablet in strengths from 25 mg to 400 mg.",
+    "safety": "Boxed warning for increased mortality in elderly patients with dementia-related psychosis, and for suicidal thoughts. Contraindicated with known hypersensitivity to the drug or its excipients.",
+    "indication": "Schizophrenia, manic episodes of bipolar I disorder, and depressive episodes of bipolar disorder.",
+    "mechanism": "Its action is unclear, but may come from combined dopamine type 2 and serotonin type 2 antagonism."
+  },
+  "tell": "Its active metabolite, norquetiapine, matches it at D2 receptors but is more active at 5HT2A receptors.",
+  "source": {
+    "setId": "8ae62aaf-f8c5-417f-baac-0098369ca322",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ae62aaf-f8c5-417f-baac-0098369ca322",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "reaching peak plasma concentrations in 1.5 hours",
+    "pk.halfLifeH": "with a mean terminal half-life of about 6 hours",
+    "pill": "25 mg tablets are peach, round, biconvex, film-coated tablets",
+    "clues.kinetics": [
+      "The tablet formulation is 100% bioavailable relative to solution",
+      "The bioavailability of quetiapine is marginally affected by administration with food",
+      "It is 83% bound to plasma proteins at therapeutic concentrations",
+      "Elimination of quetiapine is mainly via hepatic metabolism",
+      "Approximately 73% and 20% of the dose was recovered in the urine and feces"
+    ],
+    "clues.substance": [
+      "molecular weight 383.5",
+      "Quetiapine fumarate is a white to off-white crystalline powder which is moderately soluble in water"
+    ],
+    "clues.product": [
+      "NDA 020639",
+      "TABLET (oral): EQ 50MG BASE; EQ 300MG BASE; EQ 200MG BASE; EQ 25MG BASE; EQ 400MG BASE; EQ 150MG BASE; EQ 100MG BASE"
+    ],
+    "clues.safety": [
+      "WARNING: INCREASED MORTALITY IN ELDERLY PATIENTS WITH DEMENTIA-RELATED PSYCHOSIS; and SUICIDAL THOUGHTS AND BEHAVIORS",
+      "Hypersensitivity to quetiapine or to any excipients in the SEROQUEL formulation"
+    ],
+    "clues.indication": [
+      "Schizophrenia ( 1.1 )",
+      "Bipolar I disorder manic episodes (1.2)",
+      "Bipolar disorder, depressive episodes (1.2)"
+    ],
+    "clues.mechanism": [
+      "could be mediated through a combination of dopamine type 2 (D 2 ) and serotonin type 2 (5HT 2 ) antagonism",
+      "The mechanism of action of quetiapine in the listed indications is unclear"
+    ]
+  }
+}

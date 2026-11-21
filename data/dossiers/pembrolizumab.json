@@ -1,0 +1,74 @@
+{
+  "id": "pembrolizumab",
+  "generic": "Pembrolizumab",
+  "brand": "Keytruda",
+  "aliases": [],
+  "application": "BLA 125514",
+  "approved": 2014,
+  "sponsor": "Merck",
+  "area": "Oncology",
+  "class": "PD-1 blocking antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "200 mg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 0.5,
+    "halfLifeH": 528
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear to slightly opalescent, colorless to slightly yellow solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG4 κ",
+    "massKDa": 149
+  },
+  "clues": {
+    "kinetics": "Volume of distribution at steady state is only 6.0 L. Clearance falls about 23% from the first dose to steady state, to 195 mL/day, and accumulation is 2.1-fold.",
+    "substance": "A humanized immunoglobulin of about 149 kDa, produced in recombinant Chinese hamster ovary cells.",
+    "product": "A BLA product: a 100 mg/4 mL single-dose vial, given as 200 mg every 3 weeks or 400 mg every 6 weeks.",
+    "safety": "No boxed warning and no contraindications. Fatigue, musculoskeletal pain and rash are among the most common adverse reactions.",
+    "indication": "Many cancers, starting with unresectable or metastatic melanoma, and including non-small cell lung cancer.",
+    "mechanism": "Binds the PD-1 receptor on T cells and blocks PD-L1 and PD-L2, releasing inhibition of the anti-tumor immune response."
+  },
+  "tell": "A PD-1 blocking antibody with a 22-day terminal half-life, given as a 30-minute infusion every 3 or 6 weeks.",
+  "source": {
+    "setId": "9333c79b-d487-4538-a9f0-71b91a02b287",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer KEYTRUDA as a 30-minute intravenous infusion",
+    "pk.halfLifeH": "The terminal half-life (t 1/2 ) is 22 days",
+    "pill": "clear to slightly opalescent, colorless to slightly yellow solution in a single-dose vial",
+    "biologic": "humanized monoclonal IgG4 kappa antibody with an approximate molecular weight of 149 kDa",
+    "clues.kinetics": [
+      "volume of distribution at steady state is 6.0 L",
+      "approximately 23% lower [geometric mean, 195 mL/day (40%)] at steady state",
+      "the systemic accumulation was 2.1-fold"
+    ],
+    "clues.substance": [
+      "humanized monoclonal IgG4 kappa antibody with an approximate molecular weight of 149 kDa",
+      "produced in recombinant Chinese hamster ovary (CHO) cells"
+    ],
+    "clues.product": [
+      "Application: BLA 125514",
+      "100 mg/4 mL (25 mg/mL) solution in a single-dose vial",
+      "200 mg every 3 weeks or 400 mg every 6 weeks"
+    ],
+    "clues.safety": [
+      "None. None. ( 4 )",
+      "fatigue, musculoskeletal pain, rash"
+    ],
+    "clues.indication": [
+      "unresectable or metastatic melanoma",
+      "Non-Small Cell Lung Cancer (NSCLC)"
+    ],
+    "clues.mechanism": [
+      "binds to the PD-1 receptor and blocks its interaction with PD-L1 and PD-L2",
+      "releasing PD-1 pathway-mediated inhibition of the immune response, including the anti-tumor immune response"
+    ]
+  }
+}

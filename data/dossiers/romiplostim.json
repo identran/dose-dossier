@@ -1,0 +1,74 @@
+{
+  "id": "romiplostim",
+  "generic": "Romiplostim",
+  "brand": "Nplate",
+  "aliases": [],
+  "application": "BLA 125268",
+  "approved": 2008,
+  "sponsor": "Amgen",
+  "area": "Hematology",
+  "class": "TPO receptor agonist",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "3 mcg/kg subcutaneous, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 14,
+    "halfLifeH": 84
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F8F8F4",
+    "desc": "white lyophilized powder in a single-dose vial"
+  },
+  "biologic": {
+    "format": "fc-fusion",
+    "isotype": "IgG1",
+    "massKDa": null
+  },
+  "clues": {
+    "kinetics": "Its elimination is partly dependent on its receptor on platelets, so patients with high platelet counts have low serum concentrations.",
+    "substance": "Supplied as a sterile lyophilized powder, reconstituted with sterile water to a concentration of 500 mcg/mL.",
+    "product": "Approved under a BLA in 125, 250 and 500 mcg single-dose vials, given once weekly.",
+    "safety": "No boxed warning and no contraindications. Headache is the most commonly reported adverse reaction versus placebo; in children, contusion is among the most common.",
+    "indication": "Immune thrombocytopenia that has not responded to corticosteroids, immunoglobulins or splenectomy, and survival after acute exposure to myelosuppressive radiation.",
+    "mechanism": "Binds and activates the TPO receptor, increasing platelet production by a mechanism analogous to endogenous TPO."
+  },
+  "tell": "A peptibody that activates the TPO receptor; its serum levels fall when platelet counts are high.",
+  "source": {
+    "setId": "c45f9a58-37c1-4f76-8e36-97d38c577037",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c45f9a58-37c1-4f76-8e36-97d38c577037",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak serum concentrations of romiplostim were observed about 7 to 50 hours post dose (median: 14 hours)",
+    "pk.halfLifeH": "half-life values ranging from 1 to 34 days (median: 3.5 days)",
+    "pill": "For injection: 125 mcg, 250 mcg or 500 mcg of Nplate as a sterile, lyophilized, solid white powder in single-dose vials",
+    "biologic": "The peptibody molecule contains two identical single-chain subunits, each consisting of human immunoglobulin IgG1 Fc domain",
+    "clues.kinetics": [
+      "The elimination of serum romiplostim is in part dependent on the TPO receptor on platelets",
+      "patients with high platelet counts are associated with low serum concentrations"
+    ],
+    "clues.substance": [
+      "Nplate (romiplostim) for injection is supplied as a sterile, preservative-free, lyophilized, solid white powder",
+      "requires reconstitution with Sterile Water for Injection to obtain a concentration of 500 mcg/mL"
+    ],
+    "clues.product": [
+      "Application: BLA 125268",
+      "For injection: 125 mcg, 250 mcg or 500 mcg of Nplate as a sterile, lyophilized, solid white powder in single-dose vials",
+      "Administer Nplate as a weekly subcutaneous injection"
+    ],
+    "clues.safety": [
+      "None. None ( 4 )",
+      "Headache was the most commonly reported adverse reaction",
+      "In pediatric patients, the most common adverse reactions (≥ 25%) are: contusion"
+    ],
+    "clues.indication": [
+      "Adult patients with immune thrombocytopenia (ITP) who have had an insufficient response to corticosteroids, immunoglobulins, or splenectomy",
+      "to increase survival in adults and in pediatric patients (including term neonates) acutely exposed to myelosuppressive doses of radiation"
+    ],
+    "clues.mechanism": [
+      "through binding and activation of the TPO receptor, a mechanism analogous to endogenous TPO"
+    ]
+  }
+}

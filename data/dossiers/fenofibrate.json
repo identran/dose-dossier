@@ -1,0 +1,335 @@
+{
+  "id": "fenofibrate",
+  "generic": "Fenofibrate",
+  "brand": "Tricor",
+  "aliases": [
+    "Antara",
+    "Lipofen"
+  ],
+  "application": "NDA 021203",
+  "approved": 1993,
+  "sponsor": "AbbVie",
+  "area": "Cardiology",
+  "class": "Fibrate",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "145 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 7,
+    "halfLifeH": 20
+  },
+  "structure": {
+    "cid": 3339,
+    "formula": "C20H21ClO4",
+    "atoms": [
+      [
+        3.46,
+        4.75,
+        "Cl"
+      ],
+      [
+        0,
+        -1.25,
+        "O"
+      ],
+      [
+        -1.73,
+        -3.25,
+        "O"
+      ],
+      [
+        -2.6,
+        -1.75,
+        "O"
+      ],
+      [
+        -0.87,
+        3.25,
+        "O"
+      ],
+      [
+        -0.87,
+        -1.75,
+        "C"
+      ],
+      [
+        -0.37,
+        -2.62,
+        "C"
+      ],
+      [
+        -1.37,
+        -0.88,
+        "C"
+      ],
+      [
+        -1.73,
+        -2.25,
+        "C"
+      ],
+      [
+        -2.6,
+        -3.75,
+        "C"
+      ],
+      [
+        0,
+        -0.25,
+        "C"
+      ],
+      [
+        -0.87,
+        0.25,
+        "C"
+      ],
+      [
+        0.87,
+        0.25,
+        "C"
+      ],
+      [
+        0,
+        1.75,
+        "C"
+      ],
+      [
+        -2.6,
+        -4.75,
+        "C"
+      ],
+      [
+        -3.46,
+        -3.25,
+        "C"
+      ],
+      [
+        -0.87,
+        1.25,
+        "C"
+      ],
+      [
+        0.87,
+        1.25,
+        "C"
+      ],
+      [
+        0,
+        2.75,
+        "C"
+      ],
+      [
+        0.87,
+        3.25,
+        "C"
+      ],
+      [
+        1.73,
+        2.75,
+        "C"
+      ],
+      [
+        0.87,
+        4.25,
+        "C"
+      ],
+      [
+        2.6,
+        3.25,
+        "C"
+      ],
+      [
+        1.73,
+        4.75,
+        "C"
+      ],
+      [
+        2.6,
+        4.25,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        24,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        2,
+        9,
+        1
+      ],
+      [
+        3,
+        8,
+        2
+      ],
+      [
+        4,
+        18,
+        2
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        9,
+        14,
+        1
+      ],
+      [
+        9,
+        15,
+        1
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        16,
+        1
+      ],
+      [
+        12,
+        17,
+        2
+      ],
+      [
+        13,
+        16,
+        2
+      ],
+      [
+        13,
+        17,
+        1
+      ],
+      [
+        13,
+        18,
+        1
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        19,
+        20,
+        2
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        20,
+        22,
+        1
+      ],
+      [
+        21,
+        23,
+        2
+      ],
+      [
+        22,
+        24,
+        2
+      ],
+      [
+        23,
+        24,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Well absorbed, and exposure is not significantly different fasting or nonfasting. About 99% binds serum protein, and most is excreted in urine as metabolites.",
+    "substance": "An ester pro-drug with molecular weight 360.83, insoluble in water.",
+    "product": "Approved under an NDA, as 48 mg and 145 mg tablets, dosed once daily.",
+    "safety": "No boxed warning. Contraindicated in severe renal impairment, active liver disease and gallbladder disease; liver test abnormalities and raised CPK are common reactions.",
+    "indication": "Adjunct to diet in adults with primary hypercholesterolemia or mixed dyslipidemia, and for severe hypertriglyceridemia.",
+    "mechanism": "Activates PPAR alpha, raising lipolysis and clearance of triglyceride-rich particles by activating lipoprotein lipase and reducing apoprotein C-III production."
+  },
+  "tell": "This ester pro-drug is hydrolysed to fenofibric acid, the active moiety whose exposure the label reports.",
+  "source": {
+    "setId": "70275d9c-a321-4561-adbf-60b555718ce2",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70275d9c-a321-4561-adbf-60b555718ce2",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Peak plasma levels of fenofibric acid occur within 6 to 8 hours after administration",
+    "pk.halfLifeH": "Fenofibric acid is eliminated with a half-life of 20 hours",
+    "clues.kinetics": [
+      "fenofibrate is well absorbed from the gastrointestinal tract",
+      "is not significantly different when a single 145 mg dose of fenofibrate is administered under fasting or nonfasting conditions",
+      "Serum protein binding was approximately 99%",
+      "fenofibrate is mainly excreted in the urine in the form of metabolites"
+    ],
+    "clues.substance": [
+      "Fenofibrate is a pro-drug of the active chemical moiety",
+      "Fenofibrate is converted by ester hydrolysis",
+      "the molecular weight is 360.83",
+      "fenofibrate is insoluble in water"
+    ],
+    "clues.product": [
+      "NDA 021203",
+      "Each tablet contains 48 mg or 145 mg of fenofibrate",
+      "allowing once daily dosing"
+    ],
+    "clues.safety": [
+      "contraindicated in: patients with severe renal impairment",
+      "patients with active liver disease",
+      "patients with preexisting gallbladder disease",
+      "The most common adverse reactions (> 2% and at least 1% greater than placebo) are abnormal liver tests, increased AST, increased ALT, increased CPK"
+    ],
+    "clues.indication": [
+      "indicated as an adjunct to diet",
+      "in adult patients with primary hypercholesterolemia or mixed dyslipidemia",
+      "For treatment of adult patients with severe hypertriglyceridemia"
+    ],
+    "clues.mechanism": [
+      "activation of peroxisome proliferator activated receptor α (PPARα)",
+      "fenofibrate increases lipolysis and elimination of triglyceride-rich particles from plasma by activating lipoprotein lipase and reducing production of apoprotein C-III"
+    ]
+  }
+}

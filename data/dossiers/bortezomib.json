@@ -1,0 +1,368 @@
+{
+  "id": "bortezomib",
+  "generic": "Bortezomib",
+  "brand": "Velcade",
+  "aliases": [],
+  "application": "NDA 021602",
+  "approved": 2003,
+  "sponsor": "Takeda",
+  "area": "Oncology",
+  "class": "Proteasome inhibitor",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "1.3 mg/m2 intravenous, steady state, patients",
+    "model": "bolus",
+    "tmaxH": 0,
+    "halfLifeH": 92,
+    "cmax": 223,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F2F1EB",
+    "desc": "white, lyophilized powder in a single-dose vial"
+  },
+  "structure": {
+    "cid": 387447,
+    "formula": "C19H25BN4O4",
+    "atoms": [
+      [
+        -1.73,
+        -0.25,
+        "O"
+      ],
+      [
+        -2.6,
+        3.25,
+        "O"
+      ],
+      [
+        -0.87,
+        3.25,
+        "O"
+      ],
+      [
+        1.73,
+        -1.25,
+        "O"
+      ],
+      [
+        -0.87,
+        1.25,
+        "N"
+      ],
+      [
+        0.87,
+        0.25,
+        "N"
+      ],
+      [
+        3.46,
+        -0.25,
+        "N"
+      ],
+      [
+        3.46,
+        1.75,
+        "N"
+      ],
+      [
+        -2.6,
+        1.25,
+        "C"
+      ],
+      [
+        -3.46,
+        1.75,
+        "C"
+      ],
+      [
+        -1.73,
+        1.75,
+        "C"
+      ],
+      [
+        0,
+        -0.25,
+        "C"
+      ],
+      [
+        -0.87,
+        0.25,
+        "C"
+      ],
+      [
+        0,
+        -1.25,
+        "C"
+      ],
+      [
+        -4.33,
+        1.25,
+        "C"
+      ],
+      [
+        -3.46,
+        2.75,
+        "C"
+      ],
+      [
+        -0.87,
+        -1.75,
+        "C"
+      ],
+      [
+        -0.87,
+        -2.75,
+        "C"
+      ],
+      [
+        -1.73,
+        -1.25,
+        "C"
+      ],
+      [
+        1.73,
+        -0.25,
+        "C"
+      ],
+      [
+        -1.73,
+        -3.25,
+        "C"
+      ],
+      [
+        -2.6,
+        -1.75,
+        "C"
+      ],
+      [
+        -2.6,
+        -2.75,
+        "C"
+      ],
+      [
+        2.6,
+        0.25,
+        "C"
+      ],
+      [
+        2.6,
+        1.25,
+        "C"
+      ],
+      [
+        4.33,
+        0.25,
+        "C"
+      ],
+      [
+        4.33,
+        1.25,
+        "C"
+      ],
+      [
+        -1.73,
+        2.75,
+        "B"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        12,
+        2
+      ],
+      [
+        1,
+        27,
+        1
+      ],
+      [
+        2,
+        27,
+        1
+      ],
+      [
+        3,
+        19,
+        2
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        5,
+        11,
+        1
+      ],
+      [
+        5,
+        19,
+        1
+      ],
+      [
+        6,
+        23,
+        2
+      ],
+      [
+        6,
+        25,
+        1
+      ],
+      [
+        7,
+        24,
+        2
+      ],
+      [
+        7,
+        26,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        9,
+        14,
+        1
+      ],
+      [
+        9,
+        15,
+        1
+      ],
+      [
+        10,
+        27,
+        1
+      ],
+      [
+        11,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        16,
+        17,
+        2
+      ],
+      [
+        16,
+        18,
+        1
+      ],
+      [
+        17,
+        20,
+        1
+      ],
+      [
+        18,
+        21,
+        2
+      ],
+      [
+        19,
+        23,
+        1
+      ],
+      [
+        20,
+        22,
+        2
+      ],
+      [
+        21,
+        22,
+        1
+      ],
+      [
+        23,
+        24,
+        1
+      ],
+      [
+        25,
+        26,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "It is 83% bound to plasma proteins, and oxidative metabolism by several cytochrome P450 enzymes is its main clearance path.",
+    "substance": "Supplied as a mannitol boronic ester of a modified dipeptidyl boronic acid, with a molecular weight of 384.24.",
+    "product": "Approved under an NDA, as 3.5 mg single-dose vials. Given once weekly in cycles 5 to 9.",
+    "safety": "No boxed warning; contraindicated in hypersensitivity to the drug, boron or mannitol, and for intrathecal use. Thrombocytopenia and neutropenia are the most common reactions, at 10% or more.",
+    "indication": "Adult multiple myeloma, and adult mantle cell lymphoma.",
+    "mechanism": "A reversible inhibitor of the chymotrypsin-like activity of the 26S proteasome, the complex that degrades ubiquitinated proteins."
+  },
+  "tell": "Subcutaneous dosing matches intravenous exposure (AUC) but with a roughly tenfold lower peak concentration.",
+  "source": {
+    "setId": "1521d321-e724-4ffc-adad-34bf4f44fac7",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1521d321-e724-4ffc-adad-34bf4f44fac7",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "When administered intravenously, administer VELCADE as a 3 to 5 second bolus intravenous injection",
+    "pk.halfLifeH": "76 to 108 hours after the 1.3 mg/m 2 dose",
+    "pk.cmax": "lower than after intravenous administration (223 ng/mL) with repeat dose administration",
+    "pill": "as a sterile lyophilized white to off-white powder for reconstitution",
+    "clues.kinetics": [
+      "The binding of bortezomib to human plasma proteins averaged 83%",
+      "Bortezomib is primarily oxidatively metabolized to several inactive metabolites in vitro via cytochrome P450 (CYP) enzymes"
+    ],
+    "clues.substance": [
+      "The product is provided as a mannitol boronic ester",
+      "Bortezomib is a modified dipeptidyl boronic acid",
+      "The molecular weight is 384.24"
+    ],
+    "clues.product": [
+      "Application: NDA 021602",
+      "Single-dose vial contains 3.5 mg of bortezomib as lyophilized powder",
+      "In Cycles 5 to 9, VELCADE is administered once weekly"
+    ],
+    "clues.safety": [
+      "VELCADE is contraindicated in patients with hypersensitivity (not including local reactions) to bortezomib, boron, or mannitol",
+      "VELCADE is contraindicated for intrathecal administration",
+      "Most Commonly Reported Adverse Reactions (≥10% in the VELCADE, Melphalan and Prednisone Arm)",
+      "Thrombocytopenia 164 (48) 60 (18) 57 (17)",
+      "Neutropenia 160 (47)"
+    ],
+    "clues.indication": [
+      "treatment of adult patients with multiple myeloma",
+      "treatment of adult patients with mantle cell lymphoma"
+    ],
+    "clues.mechanism": [
+      "Bortezomib is a reversible inhibitor of the chymotrypsin-like activity of the 26S proteasome in mammalian cells",
+      "The 26S proteasome is a large protein complex that degrades ubiquitinated proteins"
+    ]
+  }
+}

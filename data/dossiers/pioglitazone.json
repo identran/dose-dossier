@@ -1,0 +1,345 @@
+{
+  "id": "pioglitazone",
+  "generic": "Pioglitazone",
+  "brand": "Actos",
+  "aliases": [
+    "Pioglitazone hydrochloride"
+  ],
+  "salt": "Pioglitazone hydrochloride",
+  "application": "NDA 021073",
+  "approved": 1999,
+  "sponsor": "Takeda",
+  "area": "Endocrinology",
+  "class": "Thiazolidinedione",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "30 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 5
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F5F3EE",
+    "desc": "white to off-white, round, flat, nonscored tablet"
+  },
+  "structure": {
+    "cid": 4829,
+    "formula": "C19H20N2O3S",
+    "atoms": [
+      [
+        2.22,
+        3.26,
+        "S"
+      ],
+      [
+        0.44,
+        -0.83,
+        "O"
+      ],
+      [
+        0.67,
+        5.33,
+        "O"
+      ],
+      [
+        3.89,
+        3.9,
+        "O"
+      ],
+      [
+        2.39,
+        4.87,
+        "N"
+      ],
+      [
+        -2.15,
+        -2.33,
+        "N"
+      ],
+      [
+        1.31,
+        3.67,
+        "C"
+      ],
+      [
+        0.44,
+        3.17,
+        "C"
+      ],
+      [
+        0.44,
+        2.17,
+        "C"
+      ],
+      [
+        1.41,
+        4.66,
+        "C"
+      ],
+      [
+        1.31,
+        1.67,
+        "C"
+      ],
+      [
+        -0.42,
+        1.67,
+        "C"
+      ],
+      [
+        -0.42,
+        -2.33,
+        "C"
+      ],
+      [
+        0.44,
+        0.17,
+        "C"
+      ],
+      [
+        -0.42,
+        -1.33,
+        "C"
+      ],
+      [
+        1.31,
+        0.67,
+        "C"
+      ],
+      [
+        -0.42,
+        0.67,
+        "C"
+      ],
+      [
+        -1.29,
+        -2.83,
+        "C"
+      ],
+      [
+        2.89,
+        4,
+        "C"
+      ],
+      [
+        -3.02,
+        -3.83,
+        "C"
+      ],
+      [
+        -1.29,
+        -3.83,
+        "C"
+      ],
+      [
+        -3.89,
+        -4.33,
+        "C"
+      ],
+      [
+        -2.15,
+        -4.33,
+        "C"
+      ],
+      [
+        -3.02,
+        -2.83,
+        "C"
+      ],
+      [
+        -3.89,
+        -5.33,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        0,
+        18,
+        1
+      ],
+      [
+        1,
+        13,
+        1
+      ],
+      [
+        1,
+        14,
+        1
+      ],
+      [
+        2,
+        9,
+        2
+      ],
+      [
+        3,
+        18,
+        2
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        4,
+        18,
+        1
+      ],
+      [
+        5,
+        17,
+        2
+      ],
+      [
+        5,
+        23,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        8,
+        10,
+        2
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        10,
+        15,
+        1
+      ],
+      [
+        11,
+        16,
+        2
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        12,
+        17,
+        1
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        17,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        19,
+        22,
+        1
+      ],
+      [
+        19,
+        23,
+        2
+      ],
+      [
+        20,
+        22,
+        2
+      ],
+      [
+        21,
+        24,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food delays absorption without changing its extent. It is over 99% protein bound, mainly to serum albumin, and extensively metabolized, with 15% to 30% of the dose recovered in urine.",
+    "substance": "A hydrochloride salt whose active moiety has a molecular weight of 356.4, and it is practically insoluble in water.",
+    "product": "Approved under an NDA in 15, 30 and 45 mg tablets, dosed once daily.",
+    "safety": "Boxed warning: it can cause or worsen congestive heart failure. Contraindicated to start in NYHA class III or IV heart failure, and in hypersensitivity to any component.",
+    "indication": "Adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes, but not for type 1 diabetes or diabetic ketoacidosis.",
+    "mechanism": "It is a PPAR gamma agonist that reduces insulin resistance in peripheral tissues and the liver, and it is not an insulin secretagogue."
+  },
+  "tell": "A boxed warning for congestive heart failure and a mechanism that depends on endogenous insulin set this thiazolidinedione apart.",
+  "source": {
+    "setId": "d2ddc491-88a9-4063-9150-443b4fa4330c",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2ddc491-88a9-4063-9150-443b4fa4330c",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "T max of pioglitazone was within two hours",
+    "pk.halfLifeH": "of pioglitazone and its metabolites (M-III and M-IV) range from three to seven hours",
+    "pill": "White to off-white, round, flat, nonscored tablet",
+    "clues.kinetics": [
+      "Food delays the T max to three to four hours but does not alter the extent of absorption (AUC)",
+      "Pioglitazone is extensively protein bound (>99%) in human serum, principally to serum albumin",
+      "extensively metabolized by hydroxylation and oxidation",
+      "approximately 15% to 30% of the pioglitazone dose is recovered in the urine"
+    ],
+    "clues.substance": [
+      "molecular weight 356.4",
+      "practically insoluble in water",
+      "Pioglitazone hydrochloride"
+    ],
+    "clues.product": [
+      "NDA 021073",
+      "Tablets: 15 mg, 30 mg, and 45 mg",
+      "Following once-daily administration of ACTOS"
+    ],
+    "clues.safety": [
+      "WARNING: CONGESTIVE HEART FAILURE",
+      "Thiazolidinediones, including ACTOS ®, cause or exacerbate congestive heart failure in some patients",
+      "Initiation in patients with established NYHA Class III or IV heart failure.",
+      "Use in patients with known hypersensitivity to pioglitazone or any other component of ACTOS."
+    ],
+    "clues.indication": [
+      "an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus",
+      "should not be used to treat type 1 diabetes or diabetic ketoacidosis"
+    ],
+    "clues.mechanism": [
+      "Pioglitazone is an agonist for peroxisome proliferator-activated receptor-gamma (PPARγ)",
+      "ACTOS decreases insulin resistance in the periphery and in the liver",
+      "Pioglitazone is not an insulin secretagogue"
+    ]
+  }
+}

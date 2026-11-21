@@ -1,0 +1,83 @@
+{
+  "id": "infliximab",
+  "generic": "Infliximab",
+  "brand": "Remicade",
+  "aliases": [],
+  "application": "BLA 103772",
+  "approved": 1998,
+  "sponsor": "Johnson & Johnson",
+  "area": "Gastroenterology",
+  "class": "TNF blocker",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "5 mg/kg intravenous, single dose, patients",
+    "model": "infusion",
+    "tmaxH": 2,
+    "halfLifeH": 206.4
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F4F4EF",
+    "desc": "white lyophilized powder in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1 κ",
+    "massKDa": 149.1
+  },
+  "clues": {
+    "kinetics": "The drug is distributed primarily within the vascular compartment. Clearance rises once antibodies to it develop.",
+    "substance": "Expressed in a recombinant murine myeloma cell line, SP2/0, with a molecular weight of about 149.1 kilodaltons; supplied as a sterile, preservative-free lyophilized powder.",
+    "product": "A BLA product in 100 mg single-dose vials, dosed at weeks 0, 2 and 6 and then every 8 weeks.",
+    "safety": "Boxed warning for serious infections, including tuberculosis, and malignancy. Contraindicated after a severe hypersensitivity reaction to the drug or murine proteins; infusion reactions and headache are common.",
+    "indication": "Listed first is Crohn's disease in adults and in children from 6 years of age, including fistulizing disease in adults.",
+    "mechanism": "Binds TNF-alpha in soluble and transmembrane forms with high affinity, blocking its receptor binding. It does not neutralize lymphotoxin-alpha."
+  },
+  "tell": "A chimeric antibody with murine variable regions, so a previous severe reaction to any murine protein is a contraindication.",
+  "source": {
+    "setId": "a0a046c1-056d-45a9-bfd9-13b47c24f257",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0a046c1-056d-45a9-bfd9-13b47c24f257",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "REMICADE is administered by intravenous infusion for at least 2 hours",
+    "pk.halfLifeH": "the median terminal half-life of infliximab is 7.7 to 9.5 days",
+    "pill": "white lyophilized powder in a single-dose vial for reconstitution and dilution",
+    "biologic": [
+      "is a chimeric IgG1κ monoclonal antibody",
+      "molecular weight of approximately 149.1 kilodaltons"
+    ],
+    "clues.kinetics": [
+      "infliximab was distributed primarily within the vascular compartment",
+      "Development of antibodies to infliximab increased infliximab clearance"
+    ],
+    "clues.substance": [
+      "produced by a recombinant murine myeloma cell line, SP2/0",
+      "molecular weight of approximately 149.1 kilodaltons",
+      "supplied as a sterile, preservative-free",
+      "lyophilized powder for intravenous infusion"
+    ],
+    "clues.product": [
+      "Application: BLA 103772",
+      "100 mg of infliximab as a white lyophilized powder in a single-dose vial",
+      "5 mg/kg at 0, 2 and 6 weeks, then every 8 weeks"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS INFECTIONS and MALIGNANCY",
+      "including tuberculosis (TB)",
+      "a previous severe hypersensitivity reaction to infliximab",
+      "or any murine proteins",
+      "infusion-related reactions, headache"
+    ],
+    "clues.indication": [
+      "Crohn's Disease: reducing signs and symptoms",
+      "adult patients with fistulizing disease",
+      "pediatric patients 6 years of age and older"
+    ],
+    "clues.mechanism": [
+      "binding with high affinity to the soluble and transmembrane forms of TNFα",
+      "Infliximab does not neutralize TNFβ (lymphotoxin-α)"
+    ]
+  }
+}

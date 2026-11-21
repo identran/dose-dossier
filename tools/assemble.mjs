@@ -2,7 +2,7 @@
 // Usage: node tools/assemble.mjs [ids...] [--all] --drafts <dir> [--out data/dossiers] [--force] [--candidates data/candidates.json]
 // Merges each agent-written draft <dir>/<id>.json (aliases, salt, approved, sponsor, area, class, route, form, pk, pill,
 // biologic, clues, tell, evidence) with the deterministic parts: id, generic, brand, application and source from
-// data/candidates.json, and `structure` from tools/.cache/structures/<id>.json when present and at most 70 heavy atoms
+// data/candidates.json, and `structure` from tools/.cache/structures/<id>.json when present and at most 110 heavy atoms
 // (the draft's `biologic` is then dropped). Writes the dossier with a stable key order and 2-space JSON.
 // Refuses to overwrite an existing dossier unless --force. Run `npm run verify` afterwards.
 import { readFile, readdir, writeFile, mkdir, access, rm } from 'node:fs/promises';
@@ -18,7 +18,7 @@ const drafts = opt('--drafts') && path.resolve(opt('--drafts'));
 const outDir = path.resolve(opt('--out', path.join(ROOT, 'data', 'dossiers')));
 const candFile = path.resolve(opt('--candidates', path.join(ROOT, 'data', 'candidates.json')));
 const force = args.includes('--force');
-const MAX_HEAVY_ATOMS = 70;
+const MAX_HEAVY_ATOMS = 110;
 if (!drafts || (!wanted.length && !args.includes('--all'))) { console.error('usage: assemble.mjs [ids...] [--all] --drafts <dir> [--out data/dossiers] [--force]'); process.exit(2); }
 
 const ORDER = ['id', 'generic', 'brand', 'aliases', 'salt', 'application', 'approved', 'sponsor', 'area', 'class', 'route', 'form', 'pk', 'pill', 'structure', 'biologic', 'clues', 'tell', 'source', 'evidence', 'revised', 'revisionNote'];

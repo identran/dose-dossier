@@ -9,6 +9,7 @@
 //     "[...]", "..." or an ellipsis inside a quote splits it into fragments that must each occur)
 //   - every number in a clue must appear in the clue's quote or somewhere in the digest (warning)
 //   - pk.tmaxH / pk.halfLifeH / pk.cmax must agree with their quote where a number can be parsed (hours, minutes, days;
+//     a stated range, "3 to 5 hours", "3 hours to 5 hours", "one to two hours" or "1-3 days", also accepts its midpoint;
 //     mass or molar concentrations; table rows such as "C max (ng/mL) | 440" read the unit from the row)
 // --strict makes a class or sponsor missing from data/vocab.json an error instead of a warning.
 // Exit status 1 when any dossier fails.
@@ -47,9 +48,15 @@ function numbersIn(text) {
 
 // "7 ± 1", "4.7 (1.6)", "4.7 [range 2-9]", "1.0 (0.5-3.0)" mean the first number; drop the spread. Spelled-out numbers become digits.
 const WORDS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, sixteen: 16, twenty: 20, 'twenty-four': 24, thirty: 30, 'thirty-six': 36, forty: 40, 'forty-eight': 48, sixty: 60, 'seventy-two': 72 };
-const WORD_RE = new RegExp(`\\b(${Object.keys(WORDS).sort((a, b) => b.length - a.length).join('|')})(?=[ -](?:hours?|hrs?|minutes?|mins?|days?|weeks?)\\b)`, 'g');
+const WORD_ALT = Object.keys(WORDS).sort((a, b) => b.length - a.length).join('|');
+const UNIT_ALT = '(?:hours?|hrs?|minutes?|mins?|days?|weeks?)';
+// A spelled-out number counts when a time unit follows it, or when it opens a range that ends in one ("one to two hours").
+const WORD_RE = new RegExp(`\\b(${WORD_ALT})(?=[ -]${UNIT_ALT}\\b|\\s*(?:-|to)\\s*(?:${WORD_ALT}|\\d+(?:\\.\\d+)?)[ -]${UNIT_ALT}\\b)`, 'g');
+// "1½" is one and a half, not the digits 1, 1 and 2 that Unicode normalisation would leave behind.
+const FRACTIONS = { '½': 0.5, '¼': 0.25, '¾': 0.75, '⅓': 1 / 3, '⅔': 2 / 3 };
+const fractions = s => String(s).replace(/(\d+)?\s?([½¼¾⅓⅔])/g, (m, whole, f) => String(+(Number(whole || 0) + FRACTIONS[f]).toFixed(3)));
 function cleanQuote(q) {
-  return normalize(q)
+  return normalize(fractions(q))
     .replace(/\s*(?:±|\+\/-|\+-)\s*\d+(?:\.\d+)?%?/g, '')
     .replace(/(\d)\s*[(\[]\s*(?:(?:range|cv|sd|se|ci|95% ci|min-max)\s*[:=]?\s*)?[\d.,\s\-%]+(?:\s*to\s*[\d.,\s%]+)?[)\]]/g, '$1')
     .replace(WORD_RE, w => String(WORDS[w]));
@@ -58,8 +65,15 @@ function cleanQuote(q) {
 const TIME = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*-?\s*(hours?|hrs?|h|minutes?|mins?|days?|weeks?)(?![a-z])/g;
 const toHours = (v, unit) => (/^h/.test(unit) ? v : /^m/.test(unit) ? v / 60 : /^d/.test(unit) ? v * 24 : v * 168);
 
+// A range with the unit on both ends: "3 hours to 5 hours", "30 minutes to 2 hours".
+const TIME_RANGE = /(\d+(?:\.\d+)?)\s*-?\s*(hours?|hrs?|h|minutes?|mins?|days?|weeks?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)\s*-?\s*(hours?|hrs?|h|minutes?|mins?|days?|weeks?)(?![a-z])/g;
+
 function timesIn(quote) {
   const out = [];
+  for (const m of cleanQuote(quote).matchAll(TIME_RANGE)) {
+    const a = toHours(Number(m[1]), m[2]), b = toHours(Number(m[3]), m[4]);
+    if (b > a) out.push({ h: (a + b) / 2, text: `${m[0]} (midpoint)` });
+  }
   for (const m of cleanQuote(quote).matchAll(TIME)) {
     const a = toHours(Number(m[1]), m[3]);
     out.push({ h: a, text: m[0] });

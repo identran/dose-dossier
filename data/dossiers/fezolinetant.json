@@ -1,0 +1,348 @@
+{
+  "id": "fezolinetant",
+  "generic": "Fezolinetant",
+  "brand": "Veozah",
+  "aliases": [],
+  "application": "NDA 216578",
+  "approved": 2023,
+  "sponsor": "Astellas",
+  "area": "Women's health",
+  "class": "NK3 receptor antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "45 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 9.6
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F0A8A0",
+    "desc": "light red, film-coated, round tablet"
+  },
+  "structure": {
+    "cid": 117604931,
+    "formula": "C16H15FN6OS",
+    "atoms": [
+      [
+        2.19,
+        1.74,
+        "S"
+      ],
+      [
+        -4.55,
+        0.18,
+        "F"
+      ],
+      [
+        -1.08,
+        -2.83,
+        "O"
+      ],
+      [
+        -0.21,
+        -1.33,
+        "N"
+      ],
+      [
+        1.52,
+        -0.32,
+        "N"
+      ],
+      [
+        2.47,
+        -1.63,
+        "N"
+      ],
+      [
+        3.05,
+        -0.83,
+        "N"
+      ],
+      [
+        3.73,
+        1.24,
+        "N"
+      ],
+      [
+        2.78,
+        2.55,
+        "N"
+      ],
+      [
+        0.66,
+        -1.83,
+        "C"
+      ],
+      [
+        -0.21,
+        -0.32,
+        "C"
+      ],
+      [
+        0.66,
+        0.18,
+        "C"
+      ],
+      [
+        1.52,
+        -1.33,
+        "C"
+      ],
+      [
+        0.66,
+        -2.83,
+        "C"
+      ],
+      [
+        2.47,
+        -0.02,
+        "C"
+      ],
+      [
+        -1.08,
+        -1.83,
+        "C"
+      ],
+      [
+        -1.94,
+        -1.33,
+        "C"
+      ],
+      [
+        2.78,
+        0.93,
+        "C"
+      ],
+      [
+        -2.81,
+        -1.83,
+        "C"
+      ],
+      [
+        -1.94,
+        -0.32,
+        "C"
+      ],
+      [
+        -3.68,
+        -1.33,
+        "C"
+      ],
+      [
+        -2.81,
+        0.18,
+        "C"
+      ],
+      [
+        3.73,
+        2.24,
+        "C"
+      ],
+      [
+        -3.68,
+        -0.32,
+        "C"
+      ],
+      [
+        4.55,
+        2.83,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        17,
+        1
+      ],
+      [
+        1,
+        23,
+        1
+      ],
+      [
+        2,
+        15,
+        2
+      ],
+      [
+        3,
+        9,
+        1
+      ],
+      [
+        3,
+        10,
+        1
+      ],
+      [
+        3,
+        15,
+        1
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        4,
+        14,
+        1
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        5,
+        12,
+        2
+      ],
+      [
+        6,
+        14,
+        2
+      ],
+      [
+        7,
+        17,
+        2
+      ],
+      [
+        7,
+        22,
+        1
+      ],
+      [
+        8,
+        22,
+        2
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        9,
+        13,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        15,
+        16,
+        1
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        16,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        2
+      ],
+      [
+        20,
+        23,
+        2
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        22,
+        24,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "No clinically significant food effect was seen with a high-calorie, high-fat meal. It is 51% bound to plasma proteins and primarily metabolized by CYP1A2, with 76.9% of the dose excreted in urine.",
+    "substance": "A small molecule that is a white powder, very slightly soluble in water at 0.29 mg/mL, with a molecular weight of 358.39.",
+    "product": "Approved under an NDA in one strength only, dosed once daily.",
+    "safety": "Boxed warning for hepatotoxicity; contraindicated with known cirrhosis, severe renal impairment or end-stage renal disease, and CYP1A2 inhibitors. Abdominal pain and diarrhea are the most common reactions.",
+    "indication": "Treats moderate to severe vasomotor symptoms due to menopause.",
+    "mechanism": "Blocks the neurokinin 3 (NK3) receptor, so neurokinin B cannot act in the thermoregulatory center. Affinity for NK3 is more than 450-fold higher than for NK1 or NK2."
+  },
+  "tell": "A boxed hepatotoxicity warning and CYP1A2-dependent clearance set this NK3 receptor antagonist apart.",
+  "source": {
+    "setId": "cae9f798-24f9-4580-a4fc-e6c710cbda3c",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cae9f798-24f9-4580-a4fc-e6c710cbda3c",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The median (range) time to reach fezolinetant C max is 1.5 (1 to 4) hours",
+    "pk.halfLifeH": "The effective half-life (t 1/2 ) of fezolinetant is 9.6 hours",
+    "pill": "round, light red, film-coated tablets",
+    "clues.kinetics": [
+      "No clinically significant differences in fezolinetant pharmacokinetics were observed following administration with a high-calorie, high-fat meal",
+      "The plasma protein binding of fezolinetant is 51%",
+      "Fezolinetant is primarily metabolized by CYP1A2",
+      "76.9% of the dose was excreted in urine"
+    ],
+    "clues.substance": [
+      "is a small-molecule",
+      "Fezolinetant is a white powder",
+      "It is very slightly soluble in water (0.29 mg/mL)",
+      "a molecular weight of 358.39"
+    ],
+    "clues.product": [
+      "Application: NDA 216578",
+      "TABLET (oral): 45MG",
+      "20 to 60 mg once daily (0.44 to 1.33 times the approved recommended dosage)"
+    ],
+    "clues.safety": [
+      "WARNING: RISKS OF HEPATOTOXICITY",
+      "Known cirrhosis",
+      "Severe renal impairment or end-stage renal disease",
+      "Concomitant use with CYP1A2 inhibitors",
+      "abdominal pain, diarrhea"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of moderate to severe vasomotor symptoms due to menopause"
+    ],
+    "clues.mechanism": [
+      "blocks neurokinin B (NKB) binding on the kisspeptin/neurokinin B/dynorphin (KNDy) neuron to modulate neuronal activity in the thermoregulatory center",
+      "neurokinin 3 (NK3) receptor antagonist",
+      "which is more than 450-fold higher than binding affinity to NK1 or NK2 receptors"
+    ]
+  }
+}

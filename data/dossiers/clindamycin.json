@@ -1,0 +1,354 @@
+{
+  "id": "clindamycin",
+  "generic": "Clindamycin",
+  "brand": "Cleocin",
+  "aliases": [
+    "Clindamycin phosphate"
+  ],
+  "salt": "Clindamycin phosphate",
+  "application": "NDA 050680",
+  "approved": 1970,
+  "sponsor": "Pfizer",
+  "area": "Infectious disease",
+  "class": "Lincosamide antibiotic",
+  "route": "topical",
+  "form": "cream",
+  "pk": {
+    "context": "100 mg topical, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 10,
+    "halfLifeH": 2.05,
+    "cmax": 25,
+    "unit": "ng/mL"
+  },
+  "structure": {
+    "cid": 446598,
+    "formula": "C18H33ClN2O5S",
+    "atoms": [
+      [
+        -2.15,
+        -1.79,
+        "Cl"
+      ],
+      [
+        3.05,
+        -1.79,
+        "S"
+      ],
+      [
+        1.31,
+        -1.79,
+        "O"
+      ],
+      [
+        -0.42,
+        -3.79,
+        "O"
+      ],
+      [
+        1.31,
+        -4.79,
+        "O"
+      ],
+      [
+        3.05,
+        -3.79,
+        "O"
+      ],
+      [
+        -2.15,
+        -0.79,
+        "O"
+      ],
+      [
+        -2.09,
+        1.3,
+        "N"
+      ],
+      [
+        -0.42,
+        -0.79,
+        "N"
+      ],
+      [
+        -0.79,
+        2.25,
+        "C"
+      ],
+      [
+        -1.29,
+        0.71,
+        "C"
+      ],
+      [
+        -0.48,
+        1.3,
+        "C"
+      ],
+      [
+        -1.79,
+        2.25,
+        "C"
+      ],
+      [
+        0.45,
+        -2.29,
+        "C"
+      ],
+      [
+        -0.42,
+        -1.79,
+        "C"
+      ],
+      [
+        0.45,
+        -3.29,
+        "C"
+      ],
+      [
+        -0.2,
+        3.06,
+        "C"
+      ],
+      [
+        1.31,
+        -3.79,
+        "C"
+      ],
+      [
+        -1.29,
+        -0.29,
+        "C"
+      ],
+      [
+        2.18,
+        -3.29,
+        "C"
+      ],
+      [
+        2.18,
+        -2.29,
+        "C"
+      ],
+      [
+        -1.29,
+        -2.29,
+        "C"
+      ],
+      [
+        -3.05,
+        0.99,
+        "C"
+      ],
+      [
+        -0.6,
+        3.98,
+        "C"
+      ],
+      [
+        -1.29,
+        -3.29,
+        "C"
+      ],
+      [
+        -0.02,
+        4.79,
+        "C"
+      ],
+      [
+        3.05,
+        -0.79,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        21,
+        1
+      ],
+      [
+        1,
+        20,
+        1
+      ],
+      [
+        1,
+        26,
+        1
+      ],
+      [
+        2,
+        13,
+        1
+      ],
+      [
+        2,
+        20,
+        1
+      ],
+      [
+        3,
+        15,
+        1
+      ],
+      [
+        4,
+        17,
+        1
+      ],
+      [
+        5,
+        19,
+        1
+      ],
+      [
+        6,
+        18,
+        2
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        7,
+        12,
+        1
+      ],
+      [
+        7,
+        22,
+        1
+      ],
+      [
+        8,
+        14,
+        1
+      ],
+      [
+        8,
+        18,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        9,
+        16,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        18,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        14,
+        21,
+        1
+      ],
+      [
+        15,
+        17,
+        1
+      ],
+      [
+        16,
+        23,
+        1
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        19,
+        20,
+        1
+      ],
+      [
+        21,
+        24,
+        1
+      ],
+      [
+        23,
+        25,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Only about 5% of a vaginal dose is absorbed systemically. There is little or no systemic accumulation after repeated dosing.",
+    "substance": "A water-soluble phosphate ester with a molecular weight of 504.96, inactive on its own until rapid hydrolysis in the body converts it to the active form.",
+    "product": "Approved under an NDA as a 2% cream, one 5 gram applicatorful containing about 100 mg, given once a day.",
+    "safety": "No boxed warning. Contraindicated after hypersensitivity to any component or with a history of regional enteritis, ulcerative colitis or antibiotic-associated colitis; skin rashes are the most frequent reaction.",
+    "indication": "Bacterial vaginosis in non-pregnant women, and in pregnant women during the second and third trimester.",
+    "mechanism": "It inhibits bacterial protein synthesis by binding the 23S RNA of the 50S ribosomal subunit, and is predominantly bacteriostatic."
+  },
+  "tell": "Only about 5% of each dose reaches the blood, with a 1.5 to 2.6 hour half-life, setting this vaginal cream apart.",
+  "source": {
+    "setId": "f9be442d-0782-4b93-828f-9ebbf67dbced",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9be442d-0782-4b93-828f-9ebbf67dbced",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "These peak concentrations were attained approximately 10 hours post-dosing",
+    "pk.halfLifeH": "The systemic half-life was 1.5 to 2.6 hours",
+    "pk.cmax": "on day 7 it averaged 25 ng/mL (range 6 to 61 ng/mL)",
+    "clues.kinetics": [
+      "approximately 5% (range 0.6% to 11%) of the administered dose was absorbed systemically",
+      "There was little or no systemic accumulation of clindamycin after repeated vaginal dosing"
+    ],
+    "clues.substance": [
+      "Clindamycin phosphate is a water soluble ester",
+      "It has a molecular weight of 504.96",
+      "clindamycin phosphate is inactive in vitro, rapid in vivo hydrolysis converts it to active clindamycin"
+    ],
+    "clues.product": [
+      "Application: NDA 050680",
+      "CREAM (vaginal): EQ 2% BASE",
+      "Each applicatorful of 5 grams of vaginal cream contains approximately 100 mg of clindamycin phosphate",
+      "Following a once a day intravaginal dose of 100 mg"
+    ],
+    "clues.safety": [
+      "contraindicated in individuals with a history of hypersensitivity to clindamycin, lincomycin, or any of the components of this vaginal cream",
+      "history of regional enteritis, ulcerative colitis, or a history of \"antibiotic-associated\" colitis",
+      "Generalized mild to moderate morbilliform-like skin rashes are the most frequently reported of all adverse reactions"
+    ],
+    "clues.indication": [
+      "indicated in the treatment of bacterial vaginosis",
+      "can be used to treat non-pregnant women and pregnant women during the second and third trimester"
+    ],
+    "clues.mechanism": [
+      "Clindamycin inhibits bacterial protein synthesis by binding to the 23S RNA of the 50S subunit of the ribosome",
+      "Clindamycin is predominantly bacteriostatic"
+    ]
+  }
+}

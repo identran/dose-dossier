@@ -429,7 +429,7 @@
     "substance": "A mesylate salt of molecular weight 589.7, against 493.6 for the free base. Soluble in acidic aqueous buffers but very slightly soluble to insoluble at neutral or alkaline pH.",
     "product": "Film-coated tablets of 100 and 400 mg, marketed under an NDA and dosed once daily.",
     "safety": "No boxed warning and no contraindications. Edema, often periorbital, and nausea with vomiting are the most frequently reported drug-related reactions.",
-    "indication": "Philadelphia chromosome positive chronic myeloid and acute lymphoblastic leukemias, and myelodysplastic or myeloproliferative diseases with PDGFR gene re-arrangements.",
+    "indication": "Chronic myeloid and acute lymphoblastic leukemias carrying a specific chromosomal translocation, and myelodysplastic or myeloproliferative diseases with certain gene re-arrangements.",
     "mechanism": "Inhibits the BCR-ABL tyrosine kinase created by the Philadelphia chromosome, and also the receptor kinases for PDGF and stem cell factor (c-Kit)."
   },
   "tell": "The Philadelphia chromosome target, BCR-ABL, identifies the CML kinase inhibitor imatinib.",

@@ -1,0 +1,331 @@
+{
+  "id": "citalopram",
+  "generic": "Citalopram",
+  "brand": "Celexa",
+  "aliases": [
+    "Citalopram hydrobromide"
+  ],
+  "salt": "Citalopram hydrobromide",
+  "application": "NDA 020822",
+  "approved": 1998,
+  "sponsor": "AbbVie",
+  "area": "Psychiatry",
+  "class": "SSRI",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "40 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 4,
+    "halfLifeH": 35
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F4F4F0",
+    "desc": "white, oval, scored tablet"
+  },
+  "structure": {
+    "cid": 2771,
+    "formula": "C20H21FN2O",
+    "atoms": [
+      [
+        3.83,
+        1.86,
+        "F"
+      ],
+      [
+        1.17,
+        -1.29,
+        "O"
+      ],
+      [
+        -1.99,
+        1.84,
+        "N"
+      ],
+      [
+        -3.83,
+        -2.79,
+        "N"
+      ],
+      [
+        0.59,
+        -0.49,
+        "C"
+      ],
+      [
+        0.28,
+        0.47,
+        "C"
+      ],
+      [
+        -0.36,
+        -0.79,
+        "C"
+      ],
+      [
+        -0.36,
+        -1.79,
+        "C"
+      ],
+      [
+        -0.7,
+        0.68,
+        "C"
+      ],
+      [
+        1.4,
+        0.1,
+        "C"
+      ],
+      [
+        0.59,
+        -2.1,
+        "C"
+      ],
+      [
+        -1.01,
+        1.63,
+        "C"
+      ],
+      [
+        -1.23,
+        -0.29,
+        "C"
+      ],
+      [
+        -1.23,
+        -2.29,
+        "C"
+      ],
+      [
+        2.31,
+        -0.31,
+        "C"
+      ],
+      [
+        1.29,
+        1.1,
+        "C"
+      ],
+      [
+        -2.1,
+        -0.79,
+        "C"
+      ],
+      [
+        -2.1,
+        -1.79,
+        "C"
+      ],
+      [
+        3.12,
+        0.28,
+        "C"
+      ],
+      [
+        2.1,
+        1.68,
+        "C"
+      ],
+      [
+        3.02,
+        1.28,
+        "C"
+      ],
+      [
+        -2.29,
+        2.79,
+        "C"
+      ],
+      [
+        -2.66,
+        1.1,
+        "C"
+      ],
+      [
+        -2.96,
+        -2.29,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        20,
+        1
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        2,
+        21,
+        1
+      ],
+      [
+        2,
+        22,
+        1
+      ],
+      [
+        3,
+        23,
+        3
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        6,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        6,
+        7,
+        2
+      ],
+      [
+        6,
+        12,
+        1
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        7,
+        13,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        9,
+        14,
+        2
+      ],
+      [
+        9,
+        15,
+        1
+      ],
+      [
+        12,
+        16,
+        2
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        14,
+        18,
+        1
+      ],
+      [
+        15,
+        19,
+        2
+      ],
+      [
+        16,
+        17,
+        1
+      ],
+      [
+        17,
+        23,
+        1
+      ],
+      [
+        18,
+        20,
+        2
+      ],
+      [
+        19,
+        20,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 80%, and food does not affect absorption. About 80% is bound to plasma proteins, and biotransformation is mainly hepatic.",
+    "substance": "A hydrobromide salt that is a fine, white to off-white powder. The active moiety has a molecular weight of 324.4.",
+    "product": "Under an NDA, tablets of 10, 20 and 40 mg, dosed once daily.",
+    "safety": "Boxed warning for suicidal thoughts in young patients. Contraindicated with MAOIs within 14 days, with pimozide, and in hypersensitivity; ejaculatory delay in men is the most common reaction.",
+    "indication": "Treatment of major depressive disorder in adults.",
+    "mechanism": "Presumed to inhibit neuronal serotonin reuptake in the CNS, potentiating serotonergic activity."
+  },
+  "tell": "Its metabolites are at least eight times less potent than citalopram at blocking serotonin reuptake, so they likely add little.",
+  "source": {
+    "setId": "4259d9b1-de34-43a4-85a8-41dd214e9177",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4259d9b1-de34-43a4-85a8-41dd214e9177",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak blood levels occur at about 4 hours",
+    "pk.halfLifeH": "with a mean terminal half-life of about 35 hours",
+    "pill": "40 mg: white, oval, scored",
+    "clues.kinetics": [
+      "The absolute bioavailability of citalopram was about 80% relative to an intravenous dose, and absorption is not affected by food",
+      "the binding of citalopram (CT), demethylcitalopram (DCT) and didemethylcitalopram (DDCT) to human plasma proteins is about 80%",
+      "Biotransformation of citalopram is mainly hepatic"
+    ],
+    "clues.substance": [
+      "Citalopram hydrobromide occurs as a fine, white to off-white powder",
+      "molecular weight 324.4"
+    ],
+    "clues.product": [
+      "Application: NDA 020822",
+      "Tablets: 10 mg; 20 mg, scored; and 40 mg, scored",
+      "With once daily dosing, steady state plasma concentrations are achieved within approximately one week"
+    ],
+    "clues.safety": [
+      "Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric and young adult patients",
+      "taking, or within 14 days of stopping, MAOIs",
+      "taking pimozide because of risk of QT prolongation",
+      "with known hypersensitivity to citalopram",
+      "ejaculation disorder (primarily ejaculatory delay) in male patients"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of major depressive disorder (MDD) in adults"
+    ],
+    "clues.mechanism": [
+      "The mechanism of action of citalopram is unclear, but is presumed to be related to potentiation of serotonergic activity in the central nervous system (CNS) resulting from its inhibition of CNS neuronal reuptake of serotonin (5-HT)"
+    ]
+  }
+}

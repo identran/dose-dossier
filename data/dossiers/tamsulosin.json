@@ -1,0 +1,367 @@
+{
+  "id": "tamsulosin",
+  "generic": "Tamsulosin",
+  "brand": "Flomax",
+  "aliases": [
+    "Tamsulosin hydrochloride"
+  ],
+  "application": "NDA 020579",
+  "approved": 1997,
+  "sponsor": "Boehringer Ingelheim",
+  "area": "Urology",
+  "class": "Alpha-1 blocker",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "0.4 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 4.5,
+    "halfLifeH": 11
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#6B7D3A",
+    "color2": "#E8832A",
+    "desc": "olive green and orange hard gelatin capsule"
+  },
+  "structure": {
+    "cid": 129211,
+    "formula": "C20H28N2O5S",
+    "atoms": [
+      [
+        -1.73,
+        4.75,
+        "S"
+      ],
+      [
+        1.73,
+        -2.25,
+        "O"
+      ],
+      [
+        -3.46,
+        3.75,
+        "O"
+      ],
+      [
+        -0.73,
+        4.75,
+        "O"
+      ],
+      [
+        -2.73,
+        4.75,
+        "O"
+      ],
+      [
+        1.73,
+        -4.25,
+        "O"
+      ],
+      [
+        0.87,
+        0.25,
+        "N"
+      ],
+      [
+        -1.73,
+        5.75,
+        "N"
+      ],
+      [
+        0,
+        0.75,
+        "C"
+      ],
+      [
+        0,
+        1.75,
+        "C"
+      ],
+      [
+        -0.87,
+        2.25,
+        "C"
+      ],
+      [
+        -0.87,
+        0.25,
+        "C"
+      ],
+      [
+        0.87,
+        -0.75,
+        "C"
+      ],
+      [
+        -0.87,
+        3.25,
+        "C"
+      ],
+      [
+        -1.73,
+        3.75,
+        "C"
+      ],
+      [
+        -1.73,
+        1.75,
+        "C"
+      ],
+      [
+        1.73,
+        -1.25,
+        "C"
+      ],
+      [
+        -2.6,
+        3.25,
+        "C"
+      ],
+      [
+        -2.6,
+        2.25,
+        "C"
+      ],
+      [
+        2.6,
+        -2.75,
+        "C"
+      ],
+      [
+        2.6,
+        -3.75,
+        "C"
+      ],
+      [
+        3.46,
+        -2.25,
+        "C"
+      ],
+      [
+        -4.33,
+        3.25,
+        "C"
+      ],
+      [
+        3.46,
+        -4.25,
+        "C"
+      ],
+      [
+        4.33,
+        -2.75,
+        "C"
+      ],
+      [
+        4.33,
+        -3.75,
+        "C"
+      ],
+      [
+        1.73,
+        -5.25,
+        "C"
+      ],
+      [
+        0.87,
+        -5.75,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        1,
+        16,
+        1
+      ],
+      [
+        1,
+        19,
+        1
+      ],
+      [
+        2,
+        17,
+        1
+      ],
+      [
+        2,
+        22,
+        1
+      ],
+      [
+        5,
+        20,
+        1
+      ],
+      [
+        5,
+        26,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        12,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        10,
+        13,
+        2
+      ],
+      [
+        10,
+        15,
+        1
+      ],
+      [
+        12,
+        16,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        15,
+        18,
+        2
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        19,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        2
+      ],
+      [
+        20,
+        23,
+        2
+      ],
+      [
+        21,
+        24,
+        1
+      ],
+      [
+        23,
+        25,
+        1
+      ],
+      [
+        24,
+        25,
+        2
+      ],
+      [
+        26,
+        27,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absorption exceeds 90% when fasting, and fasting raises exposure 30% over fed. It is 94% to 99% bound to plasma proteins and mainly cleared by CYP3A4 and CYP2D6, with under 10% excreted unchanged.",
+    "substance": "Molecular weight 408.5 for the active moiety. A white crystalline powder that melts with decomposition near 230°C.",
+    "product": "Approved under an NDA as 0.4 mg capsules, taken once a day.",
+    "safety": "No boxed warning. Contraindicated in hypersensitivity to it or any capsule component; headache and dizziness are the most common reactions.",
+    "indication": "Signs and symptoms of benign prostatic hyperplasia, but not for the treatment of hypertension.",
+    "mechanism": "Blocks alpha 1A adrenoceptors in the prostate, so smooth muscle relaxes and urine flow improves."
+  },
+  "tell": "Absorption-controlled kinetics stretch this alpha-1 blocker's half-life to 9 to 13 hours, versus 5 to 7 hours for immediate release.",
+  "source": {
+    "setId": "6771ad8e-ac92-4aec-b484-5d8350a353f8",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6771ad8e-ac92-4aec-b484-5d8350a353f8",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "reached by 4 to 5 hours under fasting conditions",
+    "pk.halfLifeH": "the apparent half-life of tamsulosin hydrochloride is approximately 9 to 13 hours in healthy volunteers",
+    "pill": "Capsule: 0.4 mg, olive green and orange hard gelatin",
+    "clues.kinetics": [
+      "Absorption of tamsulosin hydrochloride from FLOMAX capsules 0.4 mg is essentially complete (>90%) following oral administration under fasting conditions",
+      "Taking FLOMAX capsules under fasted conditions results in a 30% increase in bioavailability (AUC)",
+      "Tamsulosin hydrochloride is extensively bound to human plasma proteins (94% to 99%)",
+      "Tamsulosin is extensively metabolized, mainly by CYP3A4 and CYP2D6",
+      "less than 10% of the dose is excreted in urine unchanged"
+    ],
+    "clues.substance": [
+      "molecular weight 408.5",
+      "Tamsulosin hydrochloride is a white crystalline powder that melts with decomposition at approximately 230°C"
+    ],
+    "clues.product": [
+      "Application: NDA 020579",
+      "Capsule: 0.4 mg",
+      "once-a-day dosing"
+    ],
+    "clues.safety": [
+      "FLOMAX capsules are contraindicated in patients known to be hypersensitive to tamsulosin hydrochloride or any component of FLOMAX capsules",
+      "The most common adverse events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of the signs and symptoms of benign prostatic hyperplasia (BPH)",
+      "FLOMAX capsules are not indicated for the treatment of hypertension"
+    ],
+    "clues.mechanism": [
+      "Tamsulosin hydrochloride is an antagonist of alpha 1A adrenoceptors in the prostate",
+      "Blockade of these adrenoceptors can cause smooth muscles in the bladder neck and prostate to relax, resulting in an improvement in urine flow rate"
+    ]
+  }
+}

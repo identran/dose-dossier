@@ -1,0 +1,72 @@
+{
+  "id": "sugammadex",
+  "generic": "Sugammadex",
+  "brand": "Bridion",
+  "aliases": [
+    "Sugammadex sodium"
+  ],
+  "application": "NDA 022225",
+  "approved": 2015,
+  "sponsor": "Merck",
+  "area": "Pain",
+  "class": "Selective relaxant binder",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "2 mg/kg intravenous, single dose, patients",
+    "model": "bolus",
+    "tmaxH": 0,
+    "halfLifeH": 2
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colorless to slightly yellow-brown solution in a single-dose vial"
+  },
+  "clues": {
+    "kinetics": "It binds neither plasma proteins nor erythrocytes, and about 96% of the dose leaves the body in urine, mostly unchanged.",
+    "substance": "The sodium salt of a modified gamma cyclodextrin, with a molecular weight of 2178.01. It is a sterile aqueous solution.",
+    "product": "Approved under an NDA as single-dose vials of 200 mg/2 mL and 500 mg/5 mL, each at 100 mg/mL, given as one bolus injection.",
+    "safety": "No boxed warning; contraindicated in known hypersensitivity to the drug or its components. Pain and vomiting are among the most frequent adverse reactions in pediatric patients.",
+    "indication": "Reversal of neuromuscular blockade induced by rocuronium or vecuronium in adult and pediatric patients undergoing surgery.",
+    "mechanism": "Forms a complex with rocuronium and vecuronium, reducing the amount of blocker free to bind nicotinic receptors at the neuromuscular junction."
+  },
+  "tell": "A modified gamma cyclodextrin that binds the blocker itself rather than the receptor, and leaves the body unchanged in urine.",
+  "source": {
+    "setId": "5171d883-fe8f-482c-97ab-40b00975b64a",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5171d883-fe8f-482c-97ab-40b00975b64a",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer as a single bolus injection",
+    "pk.halfLifeH": "the elimination half-life (t 1/2 ) of sugammadex is about 2 hours",
+    "pill": [
+      "clear, colorless to slightly yellow-brown, non-pyrogenic aqueous solution",
+      "in a single-dose vial for bolus injection"
+    ],
+    "clues.kinetics": [
+      "Neither sugammadex nor the complex of sugammadex and rocuronium binds to plasma proteins or erythrocytes",
+      "Ninety-six percent (96%) of the dose was excreted in urine, of which at least 95% could be attributed to unchanged sugammadex"
+    ],
+    "clues.substance": [
+      "contains sugammadex sodium, a modified gamma cyclodextrin",
+      "with a molecular weight of 2178.01",
+      "is supplied as a sterile, non-pyrogenic aqueous solution"
+    ],
+    "clues.product": [
+      "Application: NDA 022225",
+      "200 mg/2 mL (100 mg/mL) in a single-dose vial",
+      "500 mg/5 mL (100 mg/mL) in a single-dose vial",
+      "Administer as a single bolus injection"
+    ],
+    "clues.safety": [
+      "Known hypersensitivity to sugammadex or any of its components",
+      "Most common adverse reactions (reported in ≥10% of pediatric patients 2 to <17 years of age at BRIDION doses of 2 or 4 mg/kg) were pain, vomiting, and nausea"
+    ],
+    "clues.indication": [
+      "reversal of neuromuscular blockade induced by rocuronium bromide and vecuronium bromide in adult and pediatric patients undergoing surgery"
+    ],
+    "clues.mechanism": [
+      "It forms a complex with the neuromuscular blocking agents rocuronium and vecuronium, and it reduces the amount of neuromuscular blocking agent available to bind to nicotinic cholinergic receptors in the neuromuscular junction"
+    ]
+  }
+}

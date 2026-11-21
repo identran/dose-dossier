@@ -1,0 +1,348 @@
+{
+  "id": "dexlansoprazole",
+  "generic": "Dexlansoprazole",
+  "brand": "Dexilant",
+  "aliases": [],
+  "application": "NDA 022287",
+  "approved": 2009,
+  "sponsor": "Takeda",
+  "area": "Gastroenterology",
+  "class": "Proton pump inhibitor",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "60 mg oral, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 1.5,
+    "cmax": 1397,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#2E5C9A",
+    "desc": "opaque blue delayed-release capsule"
+  },
+  "structure": {
+    "cid": 9578005,
+    "formula": "C16H14F3N3O2S",
+    "atoms": [
+      [
+        -0.8,
+        -0.43,
+        "S"
+      ],
+      [
+        4.7,
+        2.17,
+        "F"
+      ],
+      [
+        5.07,
+        0.8,
+        "F"
+      ],
+      [
+        3.33,
+        1.8,
+        "F"
+      ],
+      [
+        2.7,
+        0.43,
+        "O"
+      ],
+      [
+        -0.3,
+        0.43,
+        "O"
+      ],
+      [
+        -2.39,
+        0.37,
+        "N"
+      ],
+      [
+        -2.39,
+        -1.24,
+        "N"
+      ],
+      [
+        1.2,
+        -2.17,
+        "N"
+      ],
+      [
+        -0.3,
+        -1.3,
+        "C"
+      ],
+      [
+        0.7,
+        -1.3,
+        "C"
+      ],
+      [
+        1.2,
+        -0.43,
+        "C"
+      ],
+      [
+        -1.8,
+        -0.43,
+        "C"
+      ],
+      [
+        -3.33,
+        0.07,
+        "C"
+      ],
+      [
+        -3.33,
+        -0.93,
+        "C"
+      ],
+      [
+        2.2,
+        -0.43,
+        "C"
+      ],
+      [
+        0.7,
+        0.43,
+        "C"
+      ],
+      [
+        -4.2,
+        0.57,
+        "C"
+      ],
+      [
+        2.7,
+        -1.3,
+        "C"
+      ],
+      [
+        -4.2,
+        -1.43,
+        "C"
+      ],
+      [
+        2.2,
+        -2.17,
+        "C"
+      ],
+      [
+        -5.07,
+        0.07,
+        "C"
+      ],
+      [
+        -5.07,
+        -0.93,
+        "C"
+      ],
+      [
+        3.7,
+        0.43,
+        "C"
+      ],
+      [
+        4.2,
+        1.3,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        5,
+        2
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        12,
+        1
+      ],
+      [
+        1,
+        24,
+        1
+      ],
+      [
+        2,
+        24,
+        1
+      ],
+      [
+        3,
+        24,
+        1
+      ],
+      [
+        4,
+        15,
+        1
+      ],
+      [
+        4,
+        23,
+        1
+      ],
+      [
+        6,
+        12,
+        1
+      ],
+      [
+        6,
+        13,
+        1
+      ],
+      [
+        7,
+        12,
+        2
+      ],
+      [
+        7,
+        14,
+        1
+      ],
+      [
+        8,
+        10,
+        2
+      ],
+      [
+        8,
+        20,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        11,
+        15,
+        2
+      ],
+      [
+        11,
+        16,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        14,
+        19,
+        2
+      ],
+      [
+        15,
+        18,
+        1
+      ],
+      [
+        17,
+        21,
+        1
+      ],
+      [
+        18,
+        20,
+        2
+      ],
+      [
+        19,
+        22,
+        1
+      ],
+      [
+        21,
+        22,
+        2
+      ],
+      [
+        23,
+        24,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food increases Cmax by 12% to 55% and AUC by 9% to 37%. Protein binding is 96% to 99%, and the drug is extensively metabolized in the liver.",
+    "substance": "The active moiety has a molecular weight of 369.4. It is a crystalline powder that melts with decomposition at 140°C.",
+    "product": "Approved under an NDA as 30 mg and 60 mg delayed-release capsules, dosed once daily.",
+    "safety": "No boxed warning. Contraindicated with hypersensitivity to any component and with rilpivirine-containing products; diarrhea and abdominal pain are common.",
+    "indication": "Healing of erosive esophagitis of all grades, maintenance of healing with relief of heartburn, and symptomatic non-erosive reflux disease, in patients 12 years and older.",
+    "mechanism": "Specifically inhibits the (H+, K+)-ATPase at the secretory surface of the gastric parietal cell, blocking the final step of acid production."
+  },
+  "tell": "A proton pump inhibitor whose dual delayed-release granules give two separate plasma concentration peaks.",
+  "source": {
+    "setId": "9819f033-3bbe-442e-8e92-45fec77b237d",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9819f033-3bbe-442e-8e92-45fec77b237d",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the first peak occurs one to two hours after administration",
+    "pk.halfLifeH": "eliminated with a half-life of approximately one to two hours in healthy subjects",
+    "pk.cmax": [
+      "C max (ng/mL) | AUC 24 (ng∙h/mL) | CL/F (L/h)",
+      "60 | 1,397 (51%) (N=79)"
+    ],
+    "pill": "60 mg: strength is an opaque, blue capsule",
+    "clues.kinetics": [
+      "increases in C max ranged from 12 to 55%",
+      "increases in AUC ranged from 9 to 37%",
+      "Plasma protein binding of dexlansoprazole ranged from 96 to 99% in healthy subjects",
+      "Dexlansoprazole is extensively metabolized in the liver"
+    ],
+    "clues.substance": [
+      "molecular weight 369.4",
+      "melts with decomposition at 140°C"
+    ],
+    "clues.product": [
+      "NDA 022287",
+      "Delayed-release capsules: 30 mg and 60 mg",
+      "after multiple, once daily doses of DEXILANT 30 or 60 mg"
+    ],
+    "clues.safety": [
+      "known hypersensitivity to any component of the formulation",
+      "Patients receiving rilpivirine-containing products",
+      "Diarrhea",
+      "Abdominal Pain"
+    ],
+    "clues.indication": [
+      "healing of all grades of erosive esophagitis",
+      "to maintain healing of EE and relief of heartburn",
+      "Treatment of symptomatic non-erosive gastroesophageal reflux disease (GERD)",
+      "patients 12 years of age and older"
+    ],
+    "clues.mechanism": [
+      "specific inhibition of the (H +, K + )-ATPase at the secretory surface of the gastric parietal cell",
+      "it blocks the final step of acid production"
+    ]
+  }
+}

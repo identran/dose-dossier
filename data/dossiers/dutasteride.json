@@ -1,0 +1,472 @@
+{
+  "id": "dutasteride",
+  "generic": "Dutasteride",
+  "brand": "Avodart",
+  "aliases": [],
+  "application": "NDA 021319",
+  "approved": 2001,
+  "sponsor": "GSK",
+  "area": "Urology",
+  "class": "5-alpha reductase inhibitor",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "0.5 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2.5,
+    "halfLifeH": 840
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#D8B84A",
+    "desc": "dull yellow, opaque, soft gelatin capsule"
+  },
+  "structure": {
+    "cid": 6918296,
+    "formula": "C27H30F6N2O2",
+    "atoms": [
+      [
+        5.01,
+        -0.12,
+        "F"
+      ],
+      [
+        5.09,
+        1.27,
+        "F"
+      ],
+      [
+        3.62,
+        -0.04,
+        "F"
+      ],
+      [
+        1.07,
+        4.28,
+        "F"
+      ],
+      [
+        2.46,
+        4.21,
+        "F"
+      ],
+      [
+        0.99,
+        2.89,
+        "F"
+      ],
+      [
+        0.81,
+        0.74,
+        "O"
+      ],
+      [
+        -5.09,
+        -4.24,
+        "O"
+      ],
+      [
+        -3.31,
+        -4.28,
+        "N"
+      ],
+      [
+        2.43,
+        0.21,
+        "N"
+      ],
+      [
+        0.22,
+        -2.22,
+        "C"
+      ],
+      [
+        0.22,
+        -1.23,
+        "C"
+      ],
+      [
+        -0.63,
+        -2.71,
+        "C"
+      ],
+      [
+        -1.48,
+        -2.22,
+        "C"
+      ],
+      [
+        -2.38,
+        -2.72,
+        "C"
+      ],
+      [
+        -0.63,
+        -0.74,
+        "C"
+      ],
+      [
+        1.16,
+        -0.93,
+        "C"
+      ],
+      [
+        -1.48,
+        -1.23,
+        "C"
+      ],
+      [
+        1.16,
+        -2.52,
+        "C"
+      ],
+      [
+        -0.61,
+        -3.73,
+        "C"
+      ],
+      [
+        1.73,
+        -1.72,
+        "C"
+      ],
+      [
+        -2.39,
+        -3.74,
+        "C"
+      ],
+      [
+        -1.5,
+        -4.25,
+        "C"
+      ],
+      [
+        0.22,
+        -0.24,
+        "C"
+      ],
+      [
+        -2.37,
+        -1.73,
+        "C"
+      ],
+      [
+        -3.29,
+        -2.16,
+        "C"
+      ],
+      [
+        1.46,
+        0.01,
+        "C"
+      ],
+      [
+        -4.23,
+        -2.68,
+        "C"
+      ],
+      [
+        -4.23,
+        -3.75,
+        "C"
+      ],
+      [
+        2.73,
+        1.15,
+        "C"
+      ],
+      [
+        3.7,
+        1.35,
+        "C"
+      ],
+      [
+        2.08,
+        1.88,
+        "C"
+      ],
+      [
+        2.38,
+        2.82,
+        "C"
+      ],
+      [
+        4,
+        2.29,
+        "C"
+      ],
+      [
+        4.36,
+        0.62,
+        "C"
+      ],
+      [
+        3.35,
+        3.02,
+        "C"
+      ],
+      [
+        1.72,
+        3.55,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        34,
+        1
+      ],
+      [
+        1,
+        34,
+        1
+      ],
+      [
+        2,
+        34,
+        1
+      ],
+      [
+        3,
+        36,
+        1
+      ],
+      [
+        4,
+        36,
+        1
+      ],
+      [
+        5,
+        36,
+        1
+      ],
+      [
+        6,
+        26,
+        2
+      ],
+      [
+        7,
+        28,
+        2
+      ],
+      [
+        8,
+        21,
+        1
+      ],
+      [
+        8,
+        28,
+        1
+      ],
+      [
+        9,
+        26,
+        1
+      ],
+      [
+        9,
+        29,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        10,
+        18,
+        1
+      ],
+      [
+        11,
+        15,
+        1
+      ],
+      [
+        11,
+        16,
+        1
+      ],
+      [
+        11,
+        23,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        12,
+        19,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        17,
+        1
+      ],
+      [
+        14,
+        21,
+        1
+      ],
+      [
+        14,
+        24,
+        1
+      ],
+      [
+        14,
+        25,
+        1
+      ],
+      [
+        15,
+        17,
+        1
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        16,
+        26,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        19,
+        22,
+        1
+      ],
+      [
+        21,
+        22,
+        1
+      ],
+      [
+        25,
+        27,
+        2
+      ],
+      [
+        27,
+        28,
+        1
+      ],
+      [
+        29,
+        30,
+        2
+      ],
+      [
+        29,
+        31,
+        1
+      ],
+      [
+        30,
+        33,
+        1
+      ],
+      [
+        30,
+        34,
+        1
+      ],
+      [
+        31,
+        32,
+        2
+      ],
+      [
+        32,
+        35,
+        1
+      ],
+      [
+        32,
+        36,
+        1
+      ],
+      [
+        33,
+        35,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 60%, and food lowers peak serum levels by only 10% to 15%. It is highly bound to plasma albumin (99.0%) and extensively metabolized by CYP3A4 and CYP3A5, mainly excreted in feces.",
+    "substance": "Molecular weight 528.5. A white to pale yellow powder with a melting point of 242° to 250°C, insoluble in water.",
+    "product": "Approved under an NDA as 0.5 mg soft gelatin capsules, dosed once daily.",
+    "safety": "No boxed warning. Contraindicated in pregnancy and in serious skin or angioedema hypersensitivity to it; impotence and decreased libido are the most common reactions.",
+    "indication": "Symptomatic benign prostatic hyperplasia in men with an enlarged prostate, to improve symptoms, reduce acute urinary retention and reduce the need for BPH-related surgery.",
+    "mechanism": "A competitive, specific inhibitor of both type 1 and type 2 5-alpha-reductase isoenzymes, blocking conversion of testosterone to DHT; it does not bind the androgen receptor."
+  },
+  "tell": "A terminal half-life of about five weeks sets this 5-alpha reductase inhibitor apart; levels linger for months after stopping.",
+  "source": {
+    "setId": "960797b3-09b1-4d6a-8ece-8b5d918e93e4",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=960797b3-09b1-4d6a-8ece-8b5d918e93e4",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "time to peak serum concentrations (T max ) of dutasteride occurs within 2 to 3 hours",
+    "pk.halfLifeH": "The terminal elimination half-life of dutasteride is approximately 5 weeks at steady state",
+    "pill": "0.5-mg, opaque, dull yellow, gelatin capsules",
+    "clues.kinetics": [
+      "Absolute bioavailability in 5 healthy subjects is approximately 60%",
+      "the maximum serum concentrations were reduced by 10% to 15%",
+      "Dutasteride is highly bound to plasma albumin (99.0%)",
+      "metabolized by the CYP3A4 and CYP3A5 isoenzymes",
+      "Dutasteride and its metabolites were excreted mainly in feces"
+    ],
+    "clues.substance": [
+      "representing a molecular weight of 528.5",
+      "Dutasteride is a white to pale yellow powder with a melting point of 242° to 250°C",
+      "but it is insoluble in water"
+    ],
+    "clues.product": [
+      "Application: NDA 021319",
+      "0.5-mg soft gelatin capsules ( 3 )",
+      "receiving dutasteride 0.5 mg/day for 12 months"
+    ],
+    "clues.safety": [
+      "Pregnancy. Dutasteride use is contraindicated in women who are pregnant.",
+      "Patients with previously demonstrated clinically significant hypersensitivity (e.g., serious skin reactions, angioedema) to AVODART",
+      "are impotence, decreased libido, ejaculation disorders, and breast disorders"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of symptomatic benign prostatic hyperplasia (BPH) in men with an enlarged prostate",
+      "reduce the risk of the need for BPH-related surgery"
+    ],
+    "clues.mechanism": [
+      "Dutasteride is a competitive and specific inhibitor of both type 1 and type 2 5 alpha-reductase isoenzymes",
+      "Dutasteride inhibits the conversion of testosterone to DHT",
+      "Dutasteride does not bind to the human androgen receptor"
+    ]
+  }
+}

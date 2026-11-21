@@ -29,7 +29,7 @@ export const FIELDS = {
   // pharmacokinetic fields: required fields must be positive numbers inside [lo, hi]
   pk: {
     tmaxH: { required: true, lo: 0.01, hi: 2200, what: 'h' },
-    halfLifeH: { required: true, lo: 0.05, hi: 2000, what: 'h' },
+    halfLifeH: { required: true, lo: 0.05, hi: 6000, what: 'h' },
     cmax: { required: false, lo: 1e-3, hi: 1e6, needs: 'unit' },
     spanH: { required: false },
     periodH: { required: false },

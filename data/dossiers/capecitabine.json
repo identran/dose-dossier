@@ -1,0 +1,337 @@
+{
+  "id": "capecitabine",
+  "generic": "Capecitabine",
+  "brand": "Xeloda",
+  "aliases": [],
+  "application": "NDA 020896",
+  "approved": 1998,
+  "sponsor": "Roche",
+  "area": "Oncology",
+  "class": "Fluoropyrimidine",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1255 mg/m2 oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 0.75
+  },
+  "pill": {
+    "shape": "oblong",
+    "color": "#F4B183",
+    "desc": "peach, film-coated, biconvex, oblong tablet"
+  },
+  "structure": {
+    "cid": 60953,
+    "formula": "C15H22FN3O6",
+    "atoms": [
+      [
+        -2.58,
+        -0.33,
+        "F"
+      ],
+      [
+        -0.04,
+        -3.91,
+        "O"
+      ],
+      [
+        -2.61,
+        -3.6,
+        "O"
+      ],
+      [
+        -1.94,
+        -5.67,
+        "O"
+      ],
+      [
+        0.88,
+        -2.33,
+        "O"
+      ],
+      [
+        0.01,
+        2.17,
+        "O"
+      ],
+      [
+        0.88,
+        0.67,
+        "O"
+      ],
+      [
+        -0.85,
+        -2.33,
+        "N"
+      ],
+      [
+        0.01,
+        -0.83,
+        "N"
+      ],
+      [
+        -0.85,
+        0.67,
+        "N"
+      ],
+      [
+        -1.66,
+        -3.91,
+        "C"
+      ],
+      [
+        -1.35,
+        -4.86,
+        "C"
+      ],
+      [
+        -0.85,
+        -3.33,
+        "C"
+      ],
+      [
+        -0.35,
+        -4.86,
+        "C"
+      ],
+      [
+        0.24,
+        -5.67,
+        "C"
+      ],
+      [
+        -1.72,
+        -1.83,
+        "C"
+      ],
+      [
+        0.01,
+        -1.83,
+        "C"
+      ],
+      [
+        -1.72,
+        -0.83,
+        "C"
+      ],
+      [
+        -0.85,
+        -0.33,
+        "C"
+      ],
+      [
+        1.75,
+        4.17,
+        "C"
+      ],
+      [
+        0.88,
+        3.67,
+        "C"
+      ],
+      [
+        1.75,
+        5.17,
+        "C"
+      ],
+      [
+        0.88,
+        2.67,
+        "C"
+      ],
+      [
+        0.01,
+        1.17,
+        "C"
+      ],
+      [
+        2.61,
+        5.67,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        17,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        1,
+        13,
+        1
+      ],
+      [
+        2,
+        10,
+        1
+      ],
+      [
+        3,
+        11,
+        1
+      ],
+      [
+        4,
+        16,
+        2
+      ],
+      [
+        5,
+        22,
+        1
+      ],
+      [
+        5,
+        23,
+        1
+      ],
+      [
+        6,
+        23,
+        2
+      ],
+      [
+        7,
+        12,
+        1
+      ],
+      [
+        7,
+        15,
+        1
+      ],
+      [
+        7,
+        16,
+        1
+      ],
+      [
+        8,
+        16,
+        1
+      ],
+      [
+        8,
+        18,
+        2
+      ],
+      [
+        9,
+        18,
+        1
+      ],
+      [
+        9,
+        23,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        15,
+        17,
+        2
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        19,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        20,
+        22,
+        1
+      ],
+      [
+        21,
+        24,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food cuts peak concentration by 60% and exposure by 34%. Plasma protein binding is under 60%, and urine carries 96% of the radiolabelled dose.",
+    "substance": "A crystalline powder with a molecular weight of 359.35 and an aqueous solubility of 26 mg/mL at 20°C.",
+    "product": "Approved under an NDA as 150 mg and 500 mg tablets, dosed twice daily.",
+    "safety": "Boxed warning for death in complete DPD deficiency and for bleeding with vitamin K antagonists. Contraindicated after severe hypersensitivity to the drug or a close relative; anemia and diarrhea are common.",
+    "indication": "Adjuvant treatment of stage III colon cancer, perioperative treatment of locally advanced rectal cancer, unresectable or metastatic colorectal cancer, and metastatic breast cancer with docetaxel.",
+    "mechanism": "Converted to fluorouracil in vivo; its metabolites form a covalent ternary complex with thymidylate synthase, blocking thymidylate and so DNA synthesis."
+  },
+  "tell": "An oral prodrug of fluorouracil, with 96% of its dose recovered in urine.",
+  "source": {
+    "setId": "e702d84d-7162-4751-bf37-d724cc7e45a5",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e702d84d-7162-4751-bf37-d724cc7e45a5",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the median T max of capecitabine and its metabolite fluorouracil was approximately 1.5 hours",
+    "pk.halfLifeH": "The elimination half-lives of capecitabine and fluorouracil were approximately 0.75 hour",
+    "pill": "500 mg: biconvex, oblong, peach colored",
+    "clues.kinetics": [
+      "the mean C max and AUC 0-INF of capecitabine was decreased by 60% and 34%, respectively",
+      "Plasma protein binding of capecitabine and its metabolites is less than 60%",
+      "96% of the administered capecitabine dose was recovered in urine"
+    ],
+    "clues.substance": [
+      "is a white to off-white crystalline powder with an aqueous solubility of 26 mg/mL at 20°C",
+      "a molecular weight of 359.35"
+    ],
+    "clues.product": [
+      "Application: NDA 020896",
+      "Tablets: 150 mg and 500 mg",
+      "orally twice daily (the recommended dosage when used as single agent)"
+    ],
+    "clues.safety": [
+      "XELODA is contraindicated in patients with history of severe hypersensitivity reaction to fluorouracil or capecitabine",
+      "Most common adverse reactions (≥30%) in patients with metastatic colorectal cancer who received XELODA as a single agent were anemia, diarrhea",
+      "WARNING: SERIOUS ADVERSE REACTIONS OR DEATH IN PATIENTS WITH COMPLETE DPD DEFICIENCY",
+      "INCREASED RISK OF BLEEDING WITH CONCOMITANT USE OF VITAMIN K ANTAGONISTS"
+    ],
+    "clues.indication": [
+      "adjuvant treatment of patients with Stage III colon cancer",
+      "perioperative treatment of adults with locally advanced rectal cancer",
+      "treatment of patients with unresectable or metastatic colorectal cancer",
+      "in patients with metastatic breast cancer who received XELODA with docetaxel"
+    ],
+    "clues.mechanism": [
+      "Capecitabine is metabolized to fluorouracil in vivo",
+      "FdUMP and the folate cofactor, N 5-10 -methylenetetrahydrofolate, bind to thymidylate synthase (TS) to form a covalently bound ternary complex",
+      "Thymidylate is the necessary precursor of thymidine triphosphate, which is essential for the synthesis of DNA"
+    ]
+  }
+}

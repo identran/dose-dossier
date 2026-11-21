@@ -1,0 +1,304 @@
+{
+  "id": "efavirenz",
+  "generic": "Efavirenz",
+  "brand": "Sustiva",
+  "aliases": [],
+  "application": "NDA 020972",
+  "approved": 1998,
+  "sponsor": "Bristol Myers Squibb",
+  "area": "Infectious disease",
+  "class": "NNRTI",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "600 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 4,
+    "halfLifeH": 47.5,
+    "cmax": 4072,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#E6C23A",
+    "desc": "yellow, film-coated, capsular-shaped tablet"
+  },
+  "structure": {
+    "cid": 64139,
+    "formula": "C14H9ClF3NO2",
+    "atoms": [
+      [
+        -2.61,
+        0.75,
+        "Cl"
+      ],
+      [
+        1.88,
+        -0.94,
+        "F"
+      ],
+      [
+        2.24,
+        0.41,
+        "F"
+      ],
+      [
+        0.89,
+        -0.94,
+        "F"
+      ],
+      [
+        1.75,
+        1.27,
+        "O"
+      ],
+      [
+        2.61,
+        2.76,
+        "O"
+      ],
+      [
+        0.89,
+        2.76,
+        "N"
+      ],
+      [
+        -0.6,
+        -1.8,
+        "C"
+      ],
+      [
+        -1.45,
+        -2.3,
+        "C"
+      ],
+      [
+        -0.6,
+        -2.79,
+        "C"
+      ],
+      [
+        0.89,
+        0.77,
+        "C"
+      ],
+      [
+        -0.1,
+        -0.94,
+        "C"
+      ],
+      [
+        0.03,
+        1.27,
+        "C"
+      ],
+      [
+        0.4,
+        -0.08,
+        "C"
+      ],
+      [
+        0.03,
+        2.26,
+        "C"
+      ],
+      [
+        1.39,
+        -0.08,
+        "C"
+      ],
+      [
+        -0.85,
+        0.74,
+        "C"
+      ],
+      [
+        -0.85,
+        2.79,
+        "C"
+      ],
+      [
+        1.75,
+        2.26,
+        "C"
+      ],
+      [
+        -1.75,
+        1.25,
+        "C"
+      ],
+      [
+        -1.75,
+        2.28,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        19,
+        1
+      ],
+      [
+        1,
+        15,
+        1
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        3,
+        15,
+        1
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        4,
+        18,
+        1
+      ],
+      [
+        5,
+        18,
+        2
+      ],
+      [
+        6,
+        14,
+        1
+      ],
+      [
+        6,
+        18,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        10,
+        15,
+        1
+      ],
+      [
+        11,
+        13,
+        3
+      ],
+      [
+        12,
+        14,
+        2
+      ],
+      [
+        12,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        16,
+        19,
+        2
+      ],
+      [
+        17,
+        20,
+        2
+      ],
+      [
+        19,
+        20,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "A high-fat meal raises exposure, and for the tablet Cmax rises 79%. It is 99.5-99.75% bound to plasma proteins and principally metabolized by cytochrome P450.",
+    "substance": "The active moiety has a molecular weight of 315.67. It is a crystalline powder that is practically insoluble in water.",
+    "product": "Approved under an NDA in 50 mg and 200 mg capsules and 600 mg tablets, dosed once daily.",
+    "safety": "No boxed warning; contraindicated with hypersensitivity to any component and with elbasvir/grazoprevir. Impaired concentration and abnormal dreams are common.",
+    "indication": "Treatment of HIV-1 infection in combination with other antiretrovirals, in adults and in children weighing at least 3.5 kg.",
+    "mechanism": "A non-nucleoside reverse transcriptase inhibitor of HIV-1."
+  },
+  "tell": "It induces its own metabolism: half-life is 52 to 76 hours after single doses but 40 to 55 hours after multiple doses.",
+  "source": {
+    "setId": "32d6371e-ba56-4294-b732-6d43627c5c47",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32d6371e-ba56-4294-b732-6d43627c5c47",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Time-to-peak plasma concentrations were approximately 3-5 hours",
+    "pk.halfLifeH": "40-55 hours after multiple doses",
+    "pk.cmax": "steady-state C max was 12.9 ± 3.7 μM (mean ± SD)",
+    "pill": "yellow, capsular-shaped, film-coated tablets",
+    "clues.kinetics": [
+      "Administration of a single 600 mg dose of efavirenz capsules with a high-fat/high-caloric meal",
+      "a 79% increase in mean C max of efavirenz",
+      "approximately 99.5-99.75%) to human plasma proteins",
+      "principally metabolized by the cytochrome P450 system"
+    ],
+    "clues.substance": [
+      "molecular weight 315.67",
+      "is a white to slightly pink crystalline powder",
+      "It is practically insoluble in water"
+    ],
+    "clues.product": [
+      "NDA 020972",
+      "CAPSULE (oral): 100MG; 200MG; 50MG",
+      "Tablets: 600 mg (3)",
+      "receiving SUSTIVA 600 mg once daily"
+    ],
+    "clues.safety": [
+      "Patients with previously demonstrated hypersensitivity",
+      "to any of the components of this product",
+      "Coadministration of efavirenz with elbasvir/grazoprevir",
+      "Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash"
+    ],
+    "clues.indication": [
+      "in combination with other antiretroviral agents is indicated for the treatment of human immunodeficiency virus type 1 (HIV-1) infection in adults and in pediatric patients at least 3 months old and weighing at least 3.5 kg"
+    ],
+    "clues.mechanism": [
+      "SUSTIVA is a non-nucleoside reverse transcriptase inhibitor",
+      "Efavirenz has been shown to induce CYP enzymes, resulting in the induction of its own metabolism"
+    ]
+  }
+}

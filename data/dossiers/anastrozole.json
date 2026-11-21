@@ -1,0 +1,305 @@
+{
+  "id": "anastrozole",
+  "generic": "Anastrozole",
+  "brand": "Arimidex",
+  "aliases": [],
+  "application": "NDA 020541",
+  "approved": 1995,
+  "sponsor": "AstraZeneca",
+  "area": "Oncology",
+  "class": "Aromatase inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 50
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F5F5F2",
+    "desc": "white, biconvex, film-coated tablet"
+  },
+  "structure": {
+    "cid": 2187,
+    "formula": "C17H19N5",
+    "atoms": [
+      [
+        2.19,
+        -2.23,
+        "N"
+      ],
+      [
+        3,
+        -2.82,
+        "N"
+      ],
+      [
+        -3,
+        -2.23,
+        "N"
+      ],
+      [
+        0.46,
+        3.77,
+        "N"
+      ],
+      [
+        1.69,
+        -3.77,
+        "N"
+      ],
+      [
+        -1.27,
+        -1.23,
+        "C"
+      ],
+      [
+        0.46,
+        1.77,
+        "C"
+      ],
+      [
+        -0.4,
+        -0.73,
+        "C"
+      ],
+      [
+        0.46,
+        0.77,
+        "C"
+      ],
+      [
+        -0.4,
+        0.27,
+        "C"
+      ],
+      [
+        1.33,
+        -0.73,
+        "C"
+      ],
+      [
+        0.46,
+        -1.23,
+        "C"
+      ],
+      [
+        1.33,
+        0.27,
+        "C"
+      ],
+      [
+        2.19,
+        -1.23,
+        "C"
+      ],
+      [
+        -1.77,
+        -0.36,
+        "C"
+      ],
+      [
+        -0.77,
+        -2.1,
+        "C"
+      ],
+      [
+        1.46,
+        1.77,
+        "C"
+      ],
+      [
+        -0.54,
+        1.77,
+        "C"
+      ],
+      [
+        -2.14,
+        -1.73,
+        "C"
+      ],
+      [
+        0.46,
+        2.77,
+        "C"
+      ],
+      [
+        1.38,
+        -2.82,
+        "C"
+      ],
+      [
+        2.69,
+        -3.77,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        0,
+        20,
+        1
+      ],
+      [
+        1,
+        21,
+        2
+      ],
+      [
+        2,
+        18,
+        3
+      ],
+      [
+        3,
+        19,
+        3
+      ],
+      [
+        4,
+        20,
+        2
+      ],
+      [
+        4,
+        21,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ],
+      [
+        5,
+        14,
+        1
+      ],
+      [
+        5,
+        15,
+        1
+      ],
+      [
+        5,
+        18,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        16,
+        1
+      ],
+      [
+        6,
+        17,
+        1
+      ],
+      [
+        6,
+        19,
+        1
+      ],
+      [
+        7,
+        9,
+        2
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        12,
+        2
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Orally administered drug is well absorbed, and food slows absorption without reducing its extent. It is 40% bound to plasma proteins, and hepatic metabolism accounts for approximately 85% of elimination.",
+    "substance": "Molecular weight 293.4. It has moderate aqueous solubility, independent of pH in the physiological range.",
+    "product": "Approved under an NDA, supplied in bottles of 30 and taken once daily.",
+    "safety": "No boxed warning. Contraindicated with hypersensitivity to the drug or its excipients; hot flashes and arthralgia are among the common reactions, at 10% or more.",
+    "indication": "Adjuvant treatment of early hormone receptor-positive breast cancer, first-line treatment of locally advanced or metastatic disease, and advanced disease after tamoxifen, all in postmenopausal women.",
+    "mechanism": "A selective non-steroidal aromatase inhibitor that blocks conversion of androgens to estrone and estradiol, lowering serum estradiol without affecting adrenal corticosteroids or aldosterone."
+  },
+  "tell": "Hepatic metabolism accounts for about 85% of elimination, and its main circulating metabolite, triazole, is inactive.",
+  "source": {
+    "setId": "acbfaaa9-503c-4691-9828-76a7146ed6de",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=acbfaaa9-503c-4691-9828-76a7146ed6de",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "maximum plasma concentrations typically occur within 2 hours of dosing under fasted conditions",
+    "pk.halfLifeH": "The mean elimination half-life of anastrozole is 50 hours",
+    "clues.kinetics": [
+      "orally administered anastrozole is well absorbed into the systemic circulation",
+      "Food reduces the rate but not the overall extent of anastrozole absorption",
+      "Anastrozole is 40% bound to plasma proteins in the therapeutic range",
+      "Hepatic metabolism accounts for approximately 85% of anastrozole elimination"
+    ],
+    "clues.substance": [
+      "with a molecular weight of 293.4",
+      "moderate aqueous solubility (0.5 mg/mL at 25°C); solubility is independent of pH in the physiological range"
+    ],
+    "clues.product": [
+      "Application: NDA 020541",
+      "supplied in bottles of 30 tablets",
+      "approach steady-state levels at about 7 days of once daily dosing"
+    ],
+    "clues.safety": [
+      "contraindicated in any patient who has shown a hypersensitivity reaction to the drug or to any of the excipients",
+      "hot flashes, asthenia, arthritis, pain, arthralgia"
+    ],
+    "clues.indication": [
+      "Adjuvant treatment of postmenopausal women with hormone receptor-positive early breast cancer",
+      "First-line treatment of postmenopausal women with hormone receptor-positive or hormone receptor-unknown locally advanced or metastatic breast cancer",
+      "Treatment of advanced breast cancer in postmenopausal women with disease progression following tamoxifen therapy"
+    ],
+    "clues.mechanism": [
+      "Anastrozole is a selective non-steroidal aromatase inhibitor",
+      "which converts adrenal androgens (primarily androstenedione and testosterone) to estrone and estradiol",
+      "It significantly lowers serum estradiol concentrations and has no detectable effect on formation of adrenal corticosteroids or aldosterone"
+    ],
+    "pill": "The tablets are white, biconvex, film-coated"
+  }
+}

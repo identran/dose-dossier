@@ -1,0 +1,255 @@
+{
+  "id": "carisoprodol",
+  "generic": "Carisoprodol",
+  "brand": "Soma",
+  "aliases": [],
+  "application": "NDA 011792",
+  "approved": 1959,
+  "sponsor": "Viatris",
+  "area": "Pain",
+  "class": "Carbamate muscle relaxant",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "350 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.75,
+    "halfLifeH": 2,
+    "cmax": 1.8,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F8F8F5",
+    "desc": "white, round, convex tablet"
+  },
+  "structure": {
+    "cid": 2576,
+    "formula": "C12H24N2O4",
+    "atoms": [
+      [
+        0.87,
+        -0.55,
+        "O"
+      ],
+      [
+        -2.6,
+        -0.55,
+        "O"
+      ],
+      [
+        1.73,
+        0.95,
+        "O"
+      ],
+      [
+        -3.46,
+        -2.05,
+        "O"
+      ],
+      [
+        2.6,
+        -0.55,
+        "N"
+      ],
+      [
+        -4.33,
+        -0.55,
+        "N"
+      ],
+      [
+        -0.87,
+        -0.55,
+        "C"
+      ],
+      [
+        -1.37,
+        0.32,
+        "C"
+      ],
+      [
+        0,
+        -0.05,
+        "C"
+      ],
+      [
+        -1.73,
+        -1.05,
+        "C"
+      ],
+      [
+        -0.37,
+        -1.42,
+        "C"
+      ],
+      [
+        -0.87,
+        1.18,
+        "C"
+      ],
+      [
+        -1.37,
+        2.05,
+        "C"
+      ],
+      [
+        1.73,
+        -0.05,
+        "C"
+      ],
+      [
+        3.46,
+        -0.05,
+        "C"
+      ],
+      [
+        -3.46,
+        -1.05,
+        "C"
+      ],
+      [
+        4.33,
+        -0.55,
+        "C"
+      ],
+      [
+        3.46,
+        0.95,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        1,
+        9,
+        1
+      ],
+      [
+        1,
+        15,
+        1
+      ],
+      [
+        2,
+        13,
+        2
+      ],
+      [
+        3,
+        15,
+        2
+      ],
+      [
+        4,
+        13,
+        1
+      ],
+      [
+        4,
+        14,
+        1
+      ],
+      [
+        5,
+        15,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        6,
+        10,
+        1
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        11,
+        12,
+        1
+      ],
+      [
+        14,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability has not been determined, and a high-fat meal has no effect. It is converted in the liver by CYP2C19, and eliminated by both renal and non-renal routes.",
+    "substance": "A crystalline powder with a mild odor and a molecular weight of 260.33.",
+    "product": "Approved under an NDA in 250 mg and 350 mg strengths; courses are limited to two or three weeks.",
+    "safety": "No boxed warning. Contraindicated in acute intermittent porphyria and in hypersensitivity to related compounds; drowsiness, dizziness and headache are the most common reactions.",
+    "indication": "Relief of discomfort from acute, painful musculoskeletal conditions in adults.",
+    "mechanism": "Its mechanism has not been clearly identified; in animals it alters interneuronal activity in the spinal cord and brain."
+  },
+  "tell": "Its 2-hour terminal half-life, and a 10-hour half-life for its CYP2C19-made metabolite, set this muscle relaxant apart.",
+  "source": {
+    "setId": "6297cf20-830a-11dc-94c8-0002a5d5c51b",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6297cf20-830a-11dc-94c8-0002a5d5c51b",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The mean time to peak plasma concentrations (Tmax) of carisoprodol was approximately 1.5 to 2 hours",
+    "pk.halfLifeH": "with a terminal elimination half-life of approximately 2 hours",
+    "pk.cmax": "1.8 ± 1.0",
+    "pill": "350 mg Tablets: round, convex, white tablets",
+    "clues.kinetics": [
+      "Absolute bioavailability of carisoprodol has not been determined",
+      "Co-administration of a high-fat meal with SOMA (350 mg tablet) had no effect on the pharmacokinetics of carisoprodol",
+      "The major pathway of carisoprodol metabolism is via the liver by cytochrome enzyme CYP2C19",
+      "eliminated by both renal and non-renal routes"
+    ],
+    "clues.substance": [
+      "Carisoprodol is a white, crystalline powder, having a mild, characteristic odor",
+      "with a molecular weight of 260.33"
+    ],
+    "clues.product": [
+      "NDA 011792",
+      "Tablets: 250 mg, 350 mg",
+      "should only be used for short periods (up to two or three weeks)"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with a history of acute intermittent porphyria or a hypersensitivity reaction to a carbamate",
+      "Most common adverse reactions (incidence > 2%) are drowsiness, dizziness, and headache"
+    ],
+    "clues.indication": [
+      "relief of discomfort associated with acute, painful musculoskeletal conditions in adults"
+    ],
+    "clues.mechanism": [
+      "has not been clearly identified",
+      "altered interneuronal activity in the spinal cord and in the descending reticular formation of the brain"
+    ]
+  }
+}

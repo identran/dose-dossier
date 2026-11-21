@@ -51,7 +51,8 @@ append-only: once a day has been published its id never changes, and ids are nev
     "atoms": [[x, y, "C"], [x, y, "N", 1]],   // heavy atoms, y up, mean bond length 1; 4th entry = formal charge when non-zero
     "bonds": [[i, j, order]]                   // 0-based atom indices, order 1 | 2 | 3
   },
-  "biologic": {                       // instead of "structure" for biologics and large peptides
+  "biologic": {                       // instead of "structure" for biologics and large peptides, never for a large
+                                      // small molecule (which has its structure, or neither when PubChem has no layout)
     "format": "antibody",             // antibody | bispecific | fragment | fc-fusion | conjugate | peptide | protein | oligonucleotide
     "isotype": "IgG1 κ",              // or null
     "massKDa": 148

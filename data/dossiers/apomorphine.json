@@ -1,0 +1,302 @@
+{
+  "id": "apomorphine",
+  "generic": "Apomorphine",
+  "brand": "Apokyn",
+  "aliases": [
+    "Apomorphine hydrochloride",
+    "Kynmobi"
+  ],
+  "salt": "Apomorphine hydrochloride",
+  "application": "NDA 021264",
+  "approved": 2004,
+  "sponsor": "Viatris",
+  "area": "Neurology",
+  "class": "Dopamine agonist",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "4 mg subcutaneous, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 0.583,
+    "halfLifeH": 0.667
+  },
+  "pill": {
+    "shape": "pen",
+    "desc": "clear, colorless solution in a cartridge for a pen injector"
+  },
+  "structure": {
+    "cid": 6005,
+    "formula": "C17H17NO2",
+    "atoms": [
+      [
+        -1.27,
+        1.72,
+        "O"
+      ],
+      [
+        -3.02,
+        0.73,
+        "O"
+      ],
+      [
+        2.15,
+        -1.26,
+        "N"
+      ],
+      [
+        1.3,
+        -0.77,
+        "C"
+      ],
+      [
+        1.3,
+        0.21,
+        "C"
+      ],
+      [
+        0.45,
+        -1.27,
+        "C"
+      ],
+      [
+        2.2,
+        0.71,
+        "C"
+      ],
+      [
+        3,
+        -0.79,
+        "C"
+      ],
+      [
+        3.02,
+        0.19,
+        "C"
+      ],
+      [
+        0.45,
+        0.7,
+        "C"
+      ],
+      [
+        -0.4,
+        -0.77,
+        "C"
+      ],
+      [
+        -0.4,
+        0.21,
+        "C"
+      ],
+      [
+        2.14,
+        -2.25,
+        "C"
+      ],
+      [
+        2.2,
+        1.73,
+        "C"
+      ],
+      [
+        0.43,
+        1.73,
+        "C"
+      ],
+      [
+        -1.28,
+        -1.3,
+        "C"
+      ],
+      [
+        -1.28,
+        0.74,
+        "C"
+      ],
+      [
+        1.32,
+        2.25,
+        "C"
+      ],
+      [
+        -2.17,
+        0.23,
+        "C"
+      ],
+      [
+        -2.17,
+        -0.79,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        16,
+        1
+      ],
+      [
+        1,
+        18,
+        1
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        2,
+        12,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        4,
+        6,
+        2
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        13,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        9,
+        14,
+        2
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        15,
+        1
+      ],
+      [
+        11,
+        16,
+        1
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        15,
+        19,
+        2
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        18,
+        19,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Bioavailability after subcutaneous injection appears equal to that of an intravenous dose. Apparent clearance is about 223 L/hr, and the route of metabolism in humans is not known.",
+    "substance": "Supplied as the hydrochloride hemihydrate, with 10 mg of salt per mL equivalent to 8.55 mg of free base. The salt dissolves in water at 80°C.",
+    "product": "Approved under an NDA as 30 mg/3 mL (10 mg/mL) multi-dose cartridges for a manual reusable pen injector.",
+    "safety": "No boxed warning. Contraindicated with 5-HT3 antagonist antiemetics such as ondansetron, which caused profound hypotension, and in hypersensitivity, including to a sulfite excipient.",
+    "indication": "Acute, intermittent treatment of \"off\" episodes in advanced Parkinson's disease.",
+    "mechanism": "A non-ergoline dopamine agonist with high affinity for D4 and moderate affinity for D2, D3, D5 and adrenergic receptors; its effect is thought to come from D2-type stimulation in the caudate-putamen."
+  },
+  "tell": "A rescue dopamine agonist injected subcutaneously, peaking within an hour and cleared with a half-life of about 40 minutes.",
+  "source": {
+    "setId": "3235535d-9ef9-4657-8b2a-176a807d091c",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3235535d-9ef9-4657-8b2a-176a807d091c",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": [
+      "time to peak concentration ranges from 10",
+      "to 60 minutes"
+    ],
+    "pk.halfLifeH": "the mean terminal elimination half-life is about 40 minutes",
+    "pill": "clear, colorless, sterile solution in cartridges",
+    "clues.kinetics": [
+      "apomorphine appears to have bioavailability equal to that of an intravenous administration",
+      "The mean apparent clearance (range) is 223 L/hr",
+      "The route of metabolism in humans is not known"
+    ],
+    "clues.substance": [
+      "apomorphine hydrochloride hemihydrate",
+      "equivalent to 8.55 mg apomorphine",
+      "soluble in water at 80°C"
+    ],
+    "clues.product": [
+      "Application: NDA 021264",
+      "30 mg/3 mL (10 mg/mL)",
+      "manual reusable pen injector"
+    ],
+    "clues.safety": [
+      "contraindicated in patients",
+      "5HT 3 antagonist class including antiemetics (e.g., ondansetron",
+      "profound hypotension and loss of consciousness",
+      "hypersensitivity/allergic reaction to apomorphine or to any of the excipients of APOKYN, including a sulfite"
+    ],
+    "clues.indication": [
+      "acute, intermittent treatment of hypomobility, \"off\" episodes",
+      "advanced Parkinson's disease"
+    ],
+    "clues.mechanism": [
+      "non-ergoline dopamine agonist with high in vitro binding affinity for the dopamine D 4 receptor",
+      "moderate affinity for the dopamine D 2, D 3, and D 5, and adrenergic",
+      "stimulation of post-synaptic dopamine D 2 -type receptors within the caudate-putamen"
+    ]
+  }
+}

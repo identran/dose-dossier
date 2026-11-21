@@ -1,0 +1,82 @@
+{
+  "id": "evolocumab",
+  "generic": "Evolocumab",
+  "brand": "Repatha",
+  "aliases": [],
+  "application": "BLA 125522",
+  "approved": 2015,
+  "sponsor": "Amgen",
+  "area": "Cardiology",
+  "class": "PCSK9 blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "140 mg subcutaneous, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 84,
+    "halfLifeH": 336,
+    "cmax": 18.6,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "pen",
+    "color": "#F5EDB8",
+    "desc": "clear, pale yellow solution in a prefilled single-dose pen"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG2",
+    "massKDa": 144
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability after subcutaneous dosing is about 72%. Clearance runs through saturable binding to its target at low concentrations and a non-saturable proteolytic pathway at higher ones.",
+    "substance": "Made in genetically engineered Chinese hamster ovary cells, at about 144 kDa, and supplied as a sterile, preservative-free solution.",
+    "product": "Approved under BLA 125522 as 140 mg/mL prefilled pens, autoinjectors and syringes, dosed every 2 weeks or as 420 mg monthly.",
+    "safety": "No boxed warning. Contraindicated after serious hypersensitivity to it or its excipients, including angioedema; myalgia is the most common reaction leading to stopping treatment.",
+    "indication": "Reducing major cardiovascular events in adults at increased risk, and lowering LDL cholesterol in hypercholesterolemia, including familial forms from age 10.",
+    "mechanism": "Binds PCSK9 and prevents it from binding LDL receptors, so more receptors remain to clear LDL from the blood."
+  },
+  "tell": "An effective half-life of 11 to 17 days and a monthly 420 mg option set this PCSK9-directed antibody apart.",
+  "source": {
+    "setId": "cd61e902-166d-4aa6-9f3c-a18c1008d07e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd61e902-166d-4aa6-9f3c-a18c1008d07e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "median peak serum concentrations were attained in 3 to 4 days",
+    "pk.halfLifeH": "REPATHA was estimated to have an effective half-life of 11 to 17 days",
+    "pk.cmax": "Administration of the 140 mg dose in healthy volunteers resulted in a C max mean of 18.6 µg/mL",
+    "pill": "clear to opalescent, colorless to pale yellow solution available as follows: 140 mg/mL solution in a prefilled single-dose pen",
+    "biologic": [
+      "Evolocumab is a human monoclonal immunoglobulin G2 (IgG2)",
+      "Evolocumab has an approximate molecular weight (MW) of 144 kDa"
+    ],
+    "clues.kinetics": [
+      "estimated absolute bioavailability was 72%",
+      "At low concentrations, the elimination is predominately through saturable binding to target (PCSK9), while at higher concentrations the elimination of REPATHA is largely through a non-saturable proteolytic pathway"
+    ],
+    "clues.substance": [
+      "produced in genetically engineered mammalian (Chinese hamster ovary) cells",
+      "Evolocumab has an approximate molecular weight (MW) of 144 kDa",
+      "REPATHA is a sterile, preservative-free, clear to opalescent, colorless to pale yellow solution"
+    ],
+    "clues.product": [
+      "BLA 125522",
+      "140 mg/mL solution in a prefilled single-dose pen",
+      "The recommended dosage of REPATHA is either 140 mg every 2 weeks OR 420 mg once monthly administered subcutaneously"
+    ],
+    "clues.safety": [
+      "Serious hypersensitivity reactions including angioedema have occurred",
+      "REPATHA is contraindicated in patients with a history of a serious hypersensitivity reaction to evolocumab or any of the excipients in REPATHA",
+      "The most common adverse reaction that led to REPATHA treatment discontinuation and occurred at a rate greater than placebo was myalgia"
+    ],
+    "clues.indication": [
+      "To reduce the risk of major adverse cardiovascular (CV) events",
+      "adults with hypercholesterolemia",
+      "adults and pediatric patients aged 10 years and older with heterozygous familial hypercholesterolemia (HeFH)"
+    ],
+    "clues.mechanism": [
+      "By inhibiting the binding of PCSK9 to LDLR, evolocumab increases the number of LDLRs available to clear LDL from the blood"
+    ]
+  }
+}

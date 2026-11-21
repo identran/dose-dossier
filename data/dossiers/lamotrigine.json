@@ -1,0 +1,260 @@
+{
+  "id": "lamotrigine",
+  "generic": "Lamotrigine",
+  "brand": "Lamictal",
+  "aliases": [
+    "Lamictal XR"
+  ],
+  "application": "NDA 020241",
+  "approved": 1994,
+  "sponsor": "GSK",
+  "area": "Neurology",
+  "class": "Sodium channel blocker",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "200 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2.2,
+    "halfLifeH": 32.8
+  },
+  "pill": {
+    "shape": "pentagon",
+    "color": "#8DB1E0",
+    "desc": "blue, scored, shield-shaped tablet"
+  },
+  "structure": {
+    "cid": 3878,
+    "formula": "C9H7Cl2N5",
+    "atoms": [
+      [
+        1.73,
+        1,
+        "Cl"
+      ],
+      [
+        1.73,
+        3,
+        "Cl"
+      ],
+      [
+        0.87,
+        -0.5,
+        "N"
+      ],
+      [
+        -0.87,
+        -1.5,
+        "N"
+      ],
+      [
+        -1.73,
+        0,
+        "N"
+      ],
+      [
+        0.87,
+        -1.5,
+        "N"
+      ],
+      [
+        0,
+        -3,
+        "N"
+      ],
+      [
+        0,
+        1,
+        "C"
+      ],
+      [
+        0,
+        0,
+        "C"
+      ],
+      [
+        0.87,
+        1.5,
+        "C"
+      ],
+      [
+        -0.87,
+        1.5,
+        "C"
+      ],
+      [
+        -0.87,
+        -0.5,
+        "C"
+      ],
+      [
+        0.87,
+        2.5,
+        "C"
+      ],
+      [
+        -0.87,
+        2.5,
+        "C"
+      ],
+      [
+        0,
+        3,
+        "C"
+      ],
+      [
+        0,
+        -2,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        2,
+        5,
+        2
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        3,
+        11,
+        1
+      ],
+      [
+        3,
+        15,
+        2
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        5,
+        15,
+        1
+      ],
+      [
+        6,
+        15,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        2
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        8,
+        11,
+        2
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        2
+      ],
+      [
+        12,
+        14,
+        2
+      ],
+      [
+        13,
+        14,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is 98%, with negligible first-pass metabolism, and food has no effect. About 55% is bound to plasma proteins, and it is cleared mainly by glucuronic acid conjugation.",
+    "substance": "Molecular weight 256.09. Very slightly soluble in water, 0.17 mg/mL at 25°C, with a pKa of 5.7.",
+    "product": "Approved under an NDA as scored tablets of 25, 100, 150 and 200 mg, and also as tablets for oral suspension and orally disintegrating tablets.",
+    "safety": "Boxed warning for serious skin rashes, including Stevens-Johnson syndrome, that can need hospitalization. Contraindicated in hypersensitivity; nausea, insomnia and somnolence are common.",
+    "indication": "Epilepsy: adjunctive therapy for partial-onset, generalized tonic-clonic and Lennox-Gastaut seizures from age 2, and conversion to monotherapy from age 16.",
+    "mechanism": "Its precise mechanism is unknown. A phenyltriazine chemically unrelated to other antiepileptics, it prevented seizure spread in maximal electroshock tests in animals."
+  },
+  "tell": "A phenyltriazine antiepileptic whose half-life runs from about 13 to 70 hours depending on co-medication, with a boxed rash warning.",
+  "source": {
+    "setId": "d7e3572d-56fe-4727-2bb4-013ccca22678",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7e3572d-56fe-4727-2bb4-013ccca22678",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": [
+      "Time of Maximum Plasma Concentration (h)",
+      "Single-dose LAMICTAL 179 2.2 (0.25-12.0) 32.8 (14.0-103.0)"
+    ],
+    "pk.halfLifeH": [
+      "Elimination Half-life (h)",
+      "Single-dose LAMICTAL 179 2.2 (0.25-12.0) 32.8 (14.0-103.0)"
+    ],
+    "pill": "200-mg, blue, scored, shield-shaped tablets",
+    "clues.kinetics": [
+      "rapidly and completely absorbed after oral administration with negligible first-pass metabolism (absolute bioavailability is 98%)",
+      "The bioavailability is not affected by food",
+      "approximately 55% bound to human plasma proteins",
+      "metabolized predominantly by glucuronic acid conjugation"
+    ],
+    "clues.substance": [
+      "its molecular weight is 256.09",
+      "very slightly soluble in water (0.17 mg/mL at 25°C)",
+      "has a pK a of 5.7"
+    ],
+    "clues.product": [
+      "Application: NDA 020241",
+      "Tablets: 25 mg, 100 mg, 150 mg, and 200 mg; scored",
+      "Tablets for oral suspension",
+      "Orally disintegrating tablets"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS SKIN RASHES",
+      "which have included Stevens-Johnson syndrome",
+      "requiring hospitalization",
+      "contraindicated in patients who have demonstrated hypersensitivity",
+      "most common adverse reactions (incidence >5%) in adults were nausea, insomnia, somnolence"
+    ],
+    "clues.indication": [
+      "adjunctive therapy in patients aged 2 years and older",
+      "partial-onset seizures",
+      "primary generalized tonic-clonic (PGTC) seizures",
+      "generalized seizures of Lennox-Gastaut syndrome",
+      "monotherapy in patients aged 16 years and older"
+    ],
+    "clues.mechanism": [
+      "The precise mechanism(s) by which lamotrigine exerts its anticonvulsant action are unknown",
+      "an AED of the phenyltriazine class, is chemically unrelated to existing AEDs",
+      "effective in preventing seizure spread in the maximum electroshock (MES)"
+    ]
+  }
+}

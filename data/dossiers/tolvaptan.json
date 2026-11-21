@@ -1,0 +1,420 @@
+{
+  "id": "tolvaptan",
+  "generic": "Tolvaptan",
+  "brand": "Jynarque",
+  "aliases": [
+    "Samsca"
+  ],
+  "application": "NDA 204441",
+  "approved": 2009,
+  "sponsor": "Otsuka",
+  "area": "Nephrology",
+  "class": "Vasopressin V2 antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "15 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 3,
+    "halfLifeH": 3
+  },
+  "pill": {
+    "shape": "triangle",
+    "color": "#3E6FB0",
+    "desc": "blue, shallow-convex, triangular tablet"
+  },
+  "structure": {
+    "cid": 216237,
+    "formula": "C26H25ClN2O3",
+    "atoms": [
+      [
+        4.15,
+        4.02,
+        "Cl"
+      ],
+      [
+        0.95,
+        5.08,
+        "O"
+      ],
+      [
+        1.9,
+        0.62,
+        "O"
+      ],
+      [
+        -0.8,
+        -3.06,
+        "O"
+      ],
+      [
+        0.73,
+        1.88,
+        "N"
+      ],
+      [
+        -1.97,
+        -1.79,
+        "N"
+      ],
+      [
+        -0.24,
+        3.89,
+        "C"
+      ],
+      [
+        -0.67,
+        3,
+        "C"
+      ],
+      [
+        0.73,
+        4.11,
+        "C"
+      ],
+      [
+        -0.24,
+        2.1,
+        "C"
+      ],
+      [
+        1.5,
+        3.49,
+        "C"
+      ],
+      [
+        1.5,
+        2.5,
+        "C"
+      ],
+      [
+        0.95,
+        0.91,
+        "C"
+      ],
+      [
+        2.39,
+        4.03,
+        "C"
+      ],
+      [
+        2.39,
+        1.97,
+        "C"
+      ],
+      [
+        0.22,
+        0.24,
+        "C"
+      ],
+      [
+        3.29,
+        3.52,
+        "C"
+      ],
+      [
+        3.29,
+        2.48,
+        "C"
+      ],
+      [
+        -0.73,
+        0.53,
+        "C"
+      ],
+      [
+        0.44,
+        -0.73,
+        "C"
+      ],
+      [
+        -1.46,
+        -0.15,
+        "C"
+      ],
+      [
+        -1.24,
+        -1.12,
+        "C"
+      ],
+      [
+        -0.29,
+        -1.41,
+        "C"
+      ],
+      [
+        -0.95,
+        1.5,
+        "C"
+      ],
+      [
+        -1.75,
+        -2.76,
+        "C"
+      ],
+      [
+        -2.47,
+        -3.44,
+        "C"
+      ],
+      [
+        -3.42,
+        -3.15,
+        "C"
+      ],
+      [
+        -2.25,
+        -4.41,
+        "C"
+      ],
+      [
+        -4.15,
+        -3.82,
+        "C"
+      ],
+      [
+        -3.65,
+        -2.18,
+        "C"
+      ],
+      [
+        -2.98,
+        -5.08,
+        "C"
+      ],
+      [
+        -3.93,
+        -4.79,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        16,
+        1
+      ],
+      [
+        1,
+        8,
+        1
+      ],
+      [
+        2,
+        12,
+        2
+      ],
+      [
+        3,
+        24,
+        2
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        5,
+        21,
+        1
+      ],
+      [
+        5,
+        24,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        11,
+        14,
+        1
+      ],
+      [
+        12,
+        15,
+        1
+      ],
+      [
+        13,
+        16,
+        2
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        15,
+        18,
+        2
+      ],
+      [
+        15,
+        19,
+        1
+      ],
+      [
+        16,
+        17,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        18,
+        23,
+        1
+      ],
+      [
+        19,
+        22,
+        2
+      ],
+      [
+        20,
+        21,
+        2
+      ],
+      [
+        21,
+        22,
+        1
+      ],
+      [
+        24,
+        25,
+        1
+      ],
+      [
+        25,
+        26,
+        1
+      ],
+      [
+        25,
+        27,
+        2
+      ],
+      [
+        26,
+        28,
+        2
+      ],
+      [
+        26,
+        29,
+        1
+      ],
+      [
+        27,
+        30,
+        1
+      ],
+      [
+        28,
+        31,
+        1
+      ],
+      [
+        30,
+        31,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 56% at 30 mg and falls with higher doses. It is over 98% protein bound and metabolised almost exclusively by CYP3A.",
+    "substance": "A racemic mixture with a molecular weight of 448.94.",
+    "product": "Approved under an NDA as 15, 30, 45, 60 and 90 mg tablets, used in split-dose regimens.",
+    "safety": "Boxed warning for serious liver injury; contraindicated with significant liver impairment and with strong CYP3A inhibitors. Aquaretic effects are the most common reason for stopping.",
+    "indication": "Slowing kidney function decline in adults at risk of rapidly progressing autosomal dominant polycystic kidney disease.",
+    "mechanism": "Selectively blocks the V2 vasopressin receptor in the kidney, lowering cAMP and increasing free water excretion; its affinity for V2 is 29 times that for V1a."
+  },
+  "tell": "Its affinity for the V2 receptor is 1.8 times that of native vasopressin and 29 times its affinity for the V1a receptor.",
+  "source": {
+    "setId": "3febc0a1-9e5a-4ce0-843d-210f21d862c4",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3febc0a1-9e5a-4ce0-843d-210f21d862c4",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak concentrations of tolvaptan are observed between 2 and 4 hours post-dose",
+    "pk.halfLifeH": "the estimated half-life of tolvaptan increases from 3 hours for a 15 mg dose",
+    "pill": [
+      "non-scored, blue, shallow-convex, immediate release tablets",
+      "15 mg triangular"
+    ],
+    "clues.kinetics": [
+      "The absolute bioavailability of tolvaptan following an oral dose of 30 mg is 56% (range 42% to 80%)",
+      "The absolute bioavailability of tolvaptan decreases with increasing doses",
+      "the overall protein binding is >98%",
+      "Tolvaptan is metabolized almost exclusively by CYP3A"
+    ],
+    "clues.substance": [
+      "Tolvaptan is (±)",
+      "Molecular weight is 448.94"
+    ],
+    "clues.product": [
+      "Application: NDA 204441",
+      "Tablets: 15 mg, 30 mg, 45 mg, 60 mg and 90 mg",
+      "split-dose regimens to patients with ADPKD"
+    ],
+    "clues.safety": [
+      "WARNING: RISK OF SERIOUS LIVER INJURY",
+      "With a history, signs or symptoms of significant liver impairment or injury",
+      "Concomitant use of strong CYP3A inhibitors is contraindicated",
+      "Aquaretic effects were the most common reasons for discontinuation"
+    ],
+    "clues.indication": [
+      "to slow kidney function decline in adults at risk of rapidly progressing autosomal dominant polycystic kidney disease (ADPKD)"
+    ],
+    "clues.mechanism": [
+      "Tolvaptan is a selective vasopressin V 2 -receptor antagonist",
+      "Decreased binding of vasopressin to the V 2 -receptor in the kidney lowers adenylate cyclase activity",
+      "Tolvaptan affinity for the V 2 -receptor is 29 times that for the V 1a -receptor"
+    ]
+  }
+}

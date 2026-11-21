@@ -1,0 +1,379 @@
+{
+  "id": "deferasirox",
+  "generic": "Deferasirox",
+  "brand": "Jadenu",
+  "aliases": [
+    "Exjade"
+  ],
+  "application": "NDA 206910",
+  "approved": 2005,
+  "sponsor": "Novartis",
+  "area": "Hematology",
+  "class": "Iron chelator",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "360 mg oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 2.75,
+    "halfLifeH": 12
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#4F86C6",
+    "desc": "blue, film-coated, oval biconvex tablet with beveled edges"
+  },
+  "structure": {
+    "cid": 214348,
+    "formula": "C21H15N3O4",
+    "atoms": [
+      [
+        1.8,
+        2.14,
+        "O"
+      ],
+      [
+        -0.18,
+        3.58,
+        "O"
+      ],
+      [
+        -1.36,
+        -4.29,
+        "O"
+      ],
+      [
+        0.37,
+        -4.29,
+        "O"
+      ],
+      [
+        -0.5,
+        0.21,
+        "N"
+      ],
+      [
+        -1.31,
+        0.8,
+        "N"
+      ],
+      [
+        0,
+        1.75,
+        "N"
+      ],
+      [
+        0.31,
+        0.8,
+        "C"
+      ],
+      [
+        -0.5,
+        -0.79,
+        "C"
+      ],
+      [
+        1.26,
+        0.49,
+        "C"
+      ],
+      [
+        -1,
+        1.75,
+        "C"
+      ],
+      [
+        -1.58,
+        2.56,
+        "C"
+      ],
+      [
+        -1.36,
+        -1.29,
+        "C"
+      ],
+      [
+        0.37,
+        -1.29,
+        "C"
+      ],
+      [
+        2.01,
+        1.16,
+        "C"
+      ],
+      [
+        1.47,
+        -0.48,
+        "C"
+      ],
+      [
+        -1.18,
+        3.48,
+        "C"
+      ],
+      [
+        -1.36,
+        -2.29,
+        "C"
+      ],
+      [
+        0.37,
+        -2.29,
+        "C"
+      ],
+      [
+        -0.5,
+        -2.79,
+        "C"
+      ],
+      [
+        -2.58,
+        2.46,
+        "C"
+      ],
+      [
+        2.96,
+        0.85,
+        "C"
+      ],
+      [
+        2.42,
+        -0.79,
+        "C"
+      ],
+      [
+        3.17,
+        -0.12,
+        "C"
+      ],
+      [
+        -1.76,
+        4.29,
+        "C"
+      ],
+      [
+        -3.17,
+        3.27,
+        "C"
+      ],
+      [
+        -2.76,
+        4.18,
+        "C"
+      ],
+      [
+        -0.5,
+        -3.79,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        1,
+        16,
+        1
+      ],
+      [
+        2,
+        27,
+        1
+      ],
+      [
+        3,
+        27,
+        2
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        5,
+        10,
+        2
+      ],
+      [
+        6,
+        7,
+        2
+      ],
+      [
+        6,
+        10,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        12,
+        2
+      ],
+      [
+        8,
+        13,
+        1
+      ],
+      [
+        9,
+        14,
+        1
+      ],
+      [
+        9,
+        15,
+        2
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        11,
+        16,
+        1
+      ],
+      [
+        11,
+        20,
+        2
+      ],
+      [
+        12,
+        17,
+        1
+      ],
+      [
+        13,
+        18,
+        2
+      ],
+      [
+        14,
+        21,
+        2
+      ],
+      [
+        15,
+        22,
+        1
+      ],
+      [
+        16,
+        24,
+        2
+      ],
+      [
+        17,
+        19,
+        2
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        19,
+        27,
+        1
+      ],
+      [
+        20,
+        25,
+        1
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        22,
+        23,
+        2
+      ],
+      [
+        24,
+        26,
+        1
+      ],
+      [
+        25,
+        26,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 70% for the oral suspension tablet, and a high-fat meal raises exposure by 18%. About 99% is bound to plasma proteins, and glucuronidation is the main metabolic route.",
+    "substance": "The active moiety is a white to slightly yellow powder, insoluble in water, with a molecular weight of 373.4.",
+    "product": "Approved under NDA 206910 in 90, 180 and 360 mg tablets, with sprinkle granules of the same strengths.",
+    "safety": "Boxed warning for renal failure, hepatic failure and gastrointestinal bleeding. Contraindicated with an estimated GFR below 40 or platelet counts under 50; diarrhea and rash are the most common reactions.",
+    "indication": "Chronic iron overload from transfusions in patients 2 years and older, and from non-transfusion-dependent thalassemia in patients 10 years and older.",
+    "mechanism": "An orally active chelator selective for iron, binding it tridentately in a 2:1 ratio, with very low affinity for zinc and copper."
+  },
+  "tell": "An oral iron chelator whose boxed warning covers renal failure, hepatic failure and gastrointestinal bleeding.",
+  "source": {
+    "setId": "fee89140-fff1-4443-9f42-24ac004fcda1",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fee89140-fff1-4443-9f42-24ac004fcda1",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "median times to maximum plasma concentration (T max ) of about 1.5 to 4 hours",
+    "pk.halfLifeH": "The mean elimination half-life (t 1/2 ) ranged from 8 to 16 hours",
+    "pill": "Medium blue oval biconvex film-coated tablet with beveled edges",
+    "clues.kinetics": [
+      "of deferasirox tablets for oral suspension is 70% compared to an intravenous dose",
+      "a high-fat meal (approximately 1,000 calories with fat content greater than 50% of total calories), increased AUC inf by 18%",
+      "highly (~99%) protein bound",
+      "Glucuronidation is the main metabolic pathway for deferasirox"
+    ],
+    "clues.substance": [
+      "Deferasirox is a white to slightly yellow powder",
+      "It is insoluble in water",
+      "molecular weight of 373.4 g/mol"
+    ],
+    "clues.product": [
+      "Application: NDA 206910",
+      "JADENU tablets contain 90 mg, 180 mg, or 360 mg deferasirox",
+      "JADENU Sprinkle granules contain 90 mg, 180 mg, or 360 mg deferasirox"
+    ],
+    "clues.safety": [
+      "WARNING: RENAL FAILURE, HEPATIC FAILURE, and GASTROINTESTINAL HEMORRHAGE",
+      "Estimated GFR less than 40 mL/min/1.73 m 2",
+      "Patients with platelet counts less than 50",
+      "the most frequently occurring (greater than 5%) adverse reactions are diarrhea, rash, and nausea"
+    ],
+    "clues.indication": [
+      "treatment of chronic iron overload due to blood transfusions in patients 2 years of age and older",
+      "chronic iron overload in patients 10 years of age and older with non-transfusion-dependent thalassemia (NTDT) syndromes"
+    ],
+    "clues.mechanism": [
+      "is an orally active chelator that is selective for iron",
+      "It is a tridentate ligand that binds iron with high affinity in a 2:1 ratio",
+      "very low affinity for zinc and copper"
+    ]
+  }
+}

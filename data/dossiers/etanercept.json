@@ -1,0 +1,88 @@
+{
+  "id": "etanercept",
+  "generic": "Etanercept",
+  "brand": "Enbrel",
+  "aliases": [],
+  "application": "BLA 103795",
+  "approved": 1998,
+  "sponsor": "Amgen",
+  "area": "Immunology",
+  "class": "TNF blocker",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "25 mg subcutaneous, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 69,
+    "halfLifeH": 102,
+    "cmax": 1.1,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "syringe",
+    "desc": "clear, colourless solution in a single-dose prefilled syringe"
+  },
+  "biologic": {
+    "format": "fc-fusion",
+    "isotype": "IgG1",
+    "massKDa": 150
+  },
+  "clues": {
+    "kinetics": "Clearance is about 160 mL/hr after a single subcutaneous dose, and its pharmacokinetics are unaltered by concomitant methotrexate.",
+    "substance": "A protein of 934 amino acids with an apparent molecular weight of about 150 kilodaltons, supplied as a sterile, preservative-free solution.",
+    "product": "A BLA product in 25 mg and 50 mg strengths, given as prefilled syringes, autoinjectors or vials; dosing is weekly or twice weekly.",
+    "safety": "Boxed warning for serious infections, including tuberculosis, and malignancies. Contraindicated in sepsis; infections and injection site reactions are the most common adverse reactions.",
+    "indication": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis and plaque psoriasis in adults, plus polyarticular juvenile idiopathic arthritis and juvenile psoriatic arthritis in children.",
+    "mechanism": "A dimeric soluble p75 TNF receptor that binds TNF and lymphotoxin, rendering TNF biologically inactive."
+  },
+  "tell": "A receptor-Fc fusion, not an antibody, it neutralises both TNF-alpha and lymphotoxin-alpha and does not lyse TNF-expressing cells.",
+  "source": {
+    "setId": "a002b40c-097d-47a5-957f-7a7b1807af7f",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a002b40c-097d-47a5-957f-7a7b1807af7f",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "time to C max of 69 ± 34 hours",
+    "pk.halfLifeH": "a mean ± standard deviation half-life of 102 ± 30 hours",
+    "pk.cmax": "of 1.1 ± 0.6 mcg/mL",
+    "pill": "clear, colorless solution in a single-dose prefilled syringe",
+    "biologic": [
+      "The Fc component of etanercept contains the C H 2 domain",
+      "apparent molecular weight of approximately 150 kilodaltons"
+    ],
+    "clues.kinetics": [
+      "with a clearance of 160 ± 80 mL/hr",
+      "The pharmacokinetics of etanercept were unaltered by concomitant MTX in RA patients"
+    ],
+    "clues.substance": [
+      "It consists of 934 amino acids and has an apparent molecular weight of approximately 150 kilodaltons",
+      "sterile, preservative-free solution"
+    ],
+    "clues.product": [
+      "Application: BLA 103795",
+      "Injection: 25 mg/0.5 mL and 50 mg/mL",
+      "50 mg weekly",
+      "50 mg twice weekly"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS INFECTIONS and MALIGNANCIES",
+      "including tuberculosis (TB)",
+      "Enbrel is contraindicated in patients with sepsis",
+      "The most common adverse reactions with Enbrel were infections and injection site reactions"
+    ],
+    "clues.indication": [
+      "Adult patients with:",
+      "Rheumatoid Arthritis (RA)",
+      "Psoriatic Arthritis (PsA)",
+      "Ankylosing Spondylitis (AS)",
+      "Plaque Psoriasis (PsO)",
+      "Pediatric patients with:",
+      "Polyarticular Juvenile Idiopathic Arthritis (pJIA)",
+      "Juvenile Psoriatic Arthritis"
+    ],
+    "clues.mechanism": [
+      "Etanercept is a dimeric soluble form of the p75 TNF receptor that can bind TNF molecules",
+      "rendering TNF biologically inactive"
+    ]
+  }
+}

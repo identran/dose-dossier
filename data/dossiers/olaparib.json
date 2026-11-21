@@ -1,0 +1,421 @@
+{
+  "id": "olaparib",
+  "generic": "Olaparib",
+  "brand": "Lynparza",
+  "aliases": [],
+  "application": "NDA 208558",
+  "approved": 2014,
+  "sponsor": "AstraZeneca",
+  "area": "Oncology",
+  "class": "PARP inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "300 mg oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 14.9,
+    "cmax": 5.4,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#6E9E7B",
+    "desc": "green to green/grey, film-coated, oval tablet"
+  },
+  "structure": {
+    "cid": 23725625,
+    "formula": "C24H23FN4O3",
+    "atoms": [
+      [
+        3.05,
+        -0.56,
+        "F"
+      ],
+      [
+        -2.98,
+        -3.05,
+        "O"
+      ],
+      [
+        2.19,
+        -2.06,
+        "O"
+      ],
+      [
+        -0.4,
+        5.4,
+        "O"
+      ],
+      [
+        -1.26,
+        -3.05,
+        "N"
+      ],
+      [
+        0.46,
+        -2.06,
+        "N"
+      ],
+      [
+        0.46,
+        2.92,
+        "N"
+      ],
+      [
+        0.46,
+        3.91,
+        "N"
+      ],
+      [
+        -2.12,
+        -4.54,
+        "C"
+      ],
+      [
+        -2.62,
+        -5.4,
+        "C"
+      ],
+      [
+        -1.62,
+        -5.4,
+        "C"
+      ],
+      [
+        -2.12,
+        -3.55,
+        "C"
+      ],
+      [
+        -0.4,
+        -3.55,
+        "C"
+      ],
+      [
+        -1.26,
+        -2.06,
+        "C"
+      ],
+      [
+        0.46,
+        -3.05,
+        "C"
+      ],
+      [
+        -0.4,
+        -1.56,
+        "C"
+      ],
+      [
+        1.33,
+        -1.56,
+        "C"
+      ],
+      [
+        1.33,
+        -0.56,
+        "C"
+      ],
+      [
+        0.46,
+        -0.07,
+        "C"
+      ],
+      [
+        0.46,
+        0.93,
+        "C"
+      ],
+      [
+        2.19,
+        -0.07,
+        "C"
+      ],
+      [
+        -0.4,
+        1.42,
+        "C"
+      ],
+      [
+        1.33,
+        1.42,
+        "C"
+      ],
+      [
+        2.19,
+        0.93,
+        "C"
+      ],
+      [
+        -0.4,
+        2.42,
+        "C"
+      ],
+      [
+        -1.26,
+        2.92,
+        "C"
+      ],
+      [
+        -1.26,
+        3.91,
+        "C"
+      ],
+      [
+        -2.15,
+        2.38,
+        "C"
+      ],
+      [
+        -0.4,
+        4.41,
+        "C"
+      ],
+      [
+        -2.15,
+        4.44,
+        "C"
+      ],
+      [
+        -3.05,
+        2.9,
+        "C"
+      ],
+      [
+        -3.05,
+        3.93,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        20,
+        1
+      ],
+      [
+        1,
+        11,
+        2
+      ],
+      [
+        2,
+        16,
+        2
+      ],
+      [
+        3,
+        28,
+        2
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        4,
+        13,
+        1
+      ],
+      [
+        5,
+        14,
+        1
+      ],
+      [
+        5,
+        15,
+        1
+      ],
+      [
+        5,
+        16,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        24,
+        2
+      ],
+      [
+        7,
+        28,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        16,
+        17,
+        1
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        17,
+        20,
+        2
+      ],
+      [
+        18,
+        19,
+        2
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        19,
+        22,
+        1
+      ],
+      [
+        20,
+        23,
+        1
+      ],
+      [
+        21,
+        24,
+        1
+      ],
+      [
+        22,
+        23,
+        2
+      ],
+      [
+        24,
+        25,
+        1
+      ],
+      [
+        25,
+        26,
+        1
+      ],
+      [
+        25,
+        27,
+        2
+      ],
+      [
+        26,
+        28,
+        1
+      ],
+      [
+        26,
+        29,
+        2
+      ],
+      [
+        27,
+        30,
+        1
+      ],
+      [
+        29,
+        31,
+        1
+      ],
+      [
+        30,
+        31,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "A high-fat meal barely changes total exposure, with AUC up about 8%. About 82% is protein bound, and the drug is metabolized by CYP3A.",
+    "substance": "A crystalline, non-chiral solid with a molecular weight of 434.5 and low solubility across the physiological pH range.",
+    "product": "Approved under an NDA as 100 mg and 150 mg tablets, dosed twice daily.",
+    "safety": "No boxed warning. Nausea and fatigue are the most common adverse reactions.",
+    "indication": "Maintenance treatment of advanced ovarian, fallopian tube or peritoneal cancer after platinum chemotherapy, including with bevacizumab in biomarker-selected disease.",
+    "mechanism": "Inhibits PARP enzymes, trapping them on DNA; cytotoxicity is greatest where BRCA1/2 or homologous recombination repair is deficient."
+  },
+  "tell": "Itraconazole, a strong CYP3A inhibitor, raises this PARP inhibitor's AUC by 170%.",
+  "source": {
+    "setId": "741ff3e3-dc1a-45a6-84e5-2481b27131aa",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=741ff3e3-dc1a-45a6-84e5-2481b27131aa",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the median time to peak plasma concentration is 1.5 hours",
+    "pk.halfLifeH": "terminal plasma half-life of olaparib is 14.9 ± 8.2 hours",
+    "pk.cmax": "The mean (CV%) olaparib C max is 5.4 μg/mL (32%)",
+    "pill": "green to green/grey, oval, bi-convex, film-coated",
+    "clues.kinetics": [
+      "mean AUC increased by approximately 8%",
+      "protein binding of olaparib is approximately 82%",
+      "metabolized by cytochrome P450 (CYP) 3A"
+    ],
+    "clues.substance": [
+      "Olaparib is a crystalline solid, is non-chiral and shows pH-independent low solubility across the physiological pH range",
+      "molecular weight 434.5"
+    ],
+    "clues.product": [
+      "NDA 208558",
+      "Tablets: 150 mg, 100 mg (3)",
+      "following a dose of 300 mg twice daily"
+    ],
+    "clues.safety": [
+      "the most common adverse reactions in ≥10% of patients were nausea (60%), fatigue (55%)"
+    ],
+    "clues.indication": [
+      "maintenance treatment of adult patients with deleterious or suspected deleterious germline or somatic BRCA -mutated advanced epithelial ovarian, fallopian tube or primary peritoneal cancer",
+      "in combination with bevacizumab for the maintenance treatment of adult patients with advanced epithelial ovarian",
+      "homologous recombination deficiency (HRD)-positive status"
+    ],
+    "clues.mechanism": [
+      "is an inhibitor of poly (ADP-ribose) polymerase (PARP) enzymes",
+      "increased formation of PARP-DNA complexes",
+      "with deficiencies in BRCA1/2, ATM, or other genes involved in the homologous recombination repair"
+    ]
+  }
+}

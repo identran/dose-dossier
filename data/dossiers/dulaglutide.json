@@ -1,0 +1,76 @@
+{
+  "id": "dulaglutide",
+  "generic": "Dulaglutide",
+  "brand": "Trulicity",
+  "aliases": [],
+  "application": "BLA 125469",
+  "approved": 2014,
+  "sponsor": "Eli Lilly",
+  "area": "Endocrinology",
+  "class": "GLP-1 receptor agonist",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "0.75 mg subcutaneous, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 48,
+    "halfLifeH": 120
+  },
+  "pill": {
+    "shape": "pen",
+    "desc": "clear, colorless solution in a single-dose pen"
+  },
+  "biologic": {
+    "format": "fc-fusion",
+    "isotype": "IgG4",
+    "massKDa": 63
+  },
+  "clues": {
+    "kinetics": "Absolute subcutaneous bioavailability is 65% for 0.75 mg and 47% for 1.5 mg. The molecule is presumed to be broken down into amino acids by general protein catabolism.",
+    "substance": "Made by mammalian cell culture in Chinese hamster ovary cells, with an overall molecular weight of about 63 kilodaltons.",
+    "product": "Approved under a BLA in single-dose pens, dosed once weekly.",
+    "safety": "Boxed warning for thyroid C-cell tumors. Contraindicated with a personal or family history of medullary thyroid carcinoma, MEN 2, or serious hypersensitivity; anaphylaxis and angioedema have been reported.",
+    "indication": "Glycemic control in type 2 diabetes for adults and patients 10 years and older, and reducing major cardiovascular events in adults with established disease.",
+    "mechanism": "Activates the GLP-1 receptor, raising cAMP in beta cells for glucose-dependent insulin release, and also slows gastric emptying."
+  },
+  "tell": "Fused to a modified IgG4 Fc chain, its roughly five-day elimination half-life sets it apart.",
+  "source": {
+    "setId": "463050bd-2b1c-40f5-b3c3-0a04bb433309",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=463050bd-2b1c-40f5-b3c3-0a04bb433309",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the time to maximum plasma concentration of dulaglutide at steady state ranges from 24 to 72 hours, with a median of 48 hours",
+    "pk.halfLifeH": "The elimination half-life of dulaglutide was approximately 5 days",
+    "pill": "TRULICITY (dulaglutide) injection is a clear and colorless solution supplied in single-dose pens",
+    "biologic": "The overall molecular weight of dulaglutide is approximately 63 kilodaltons",
+    "clues.kinetics": [
+      "The mean absolute bioavailability of dulaglutide following subcutaneous administration of single 0.75 mg and 1.5 mg doses was 65% and 47%, respectively",
+      "Dulaglutide is presumed to be degraded into its component amino acids by general protein catabolism pathways"
+    ],
+    "clues.substance": [
+      "produced using mammalian cell (Chinese hamster ovary) culture",
+      "The overall molecular weight of dulaglutide is approximately 63 kilodaltons"
+    ],
+    "clues.product": [
+      "Application: BLA 125469",
+      "single-dose pen",
+      "Recommended starting dosage is 0.75 mg injected subcutaneously once weekly"
+    ],
+    "clues.safety": [
+      "WARNING: RISK OF THYROID C-CELL TUMORS",
+      "Patients with a personal or family history of medullary thyroid carcinoma or in patients with Multiple Endocrine Neoplasia syndrome type 2",
+      "Serious hypersensitivity reactions including anaphylactic reactions and angioedema have been reported with TRULICITY"
+    ],
+    "clues.indication": [
+      "to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus",
+      "To reduce the risk of major adverse cardiovascular events",
+      "in adults with type 2 diabetes mellitus who have established cardiovascular disease"
+    ],
+    "clues.mechanism": [
+      "Dulaglutide activates the GLP-1 receptor",
+      "Dulaglutide increases intracellular cyclic AMP (cAMP) in beta cells leading to glucose-dependent insulin release",
+      "Dulaglutide also decreases glucagon secretion and slows gastric emptying"
+    ]
+  }
+}

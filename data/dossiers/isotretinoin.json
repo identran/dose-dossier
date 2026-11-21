@@ -1,0 +1,305 @@
+{
+  "id": "isotretinoin",
+  "generic": "Isotretinoin",
+  "brand": "Absorica",
+  "aliases": [
+    "Accutane",
+    "Claravis",
+    "Amnesteem"
+  ],
+  "application": "NDA 021951",
+  "approved": 1982,
+  "sponsor": "Roche",
+  "area": "Dermatology",
+  "class": "Retinoid",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "40 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 6.4,
+    "halfLifeH": 18,
+    "cmax": 369,
+    "unit": "ng/mL"
+  },
+  "structure": {
+    "cid": 5282379,
+    "formula": "C20H28O2",
+    "atoms": [
+      [
+        3.53,
+        4,
+        "O"
+      ],
+      [
+        2.67,
+        2.5,
+        "O"
+      ],
+      [
+        -2.53,
+        -2.5,
+        "C"
+      ],
+      [
+        -2.53,
+        -3.5,
+        "C"
+      ],
+      [
+        -1.67,
+        -4,
+        "C"
+      ],
+      [
+        -1.67,
+        -2,
+        "C"
+      ],
+      [
+        -0.8,
+        -3.5,
+        "C"
+      ],
+      [
+        -0.8,
+        -2.5,
+        "C"
+      ],
+      [
+        -3.53,
+        -2.5,
+        "C"
+      ],
+      [
+        -3.03,
+        -1.63,
+        "C"
+      ],
+      [
+        -1.67,
+        -1,
+        "C"
+      ],
+      [
+        0.07,
+        -2,
+        "C"
+      ],
+      [
+        -0.8,
+        -0.5,
+        "C"
+      ],
+      [
+        -0.8,
+        0.5,
+        "C"
+      ],
+      [
+        -1.67,
+        1,
+        "C"
+      ],
+      [
+        0.07,
+        1,
+        "C"
+      ],
+      [
+        0.07,
+        2,
+        "C"
+      ],
+      [
+        0.93,
+        2.5,
+        "C"
+      ],
+      [
+        0.93,
+        3.5,
+        "C"
+      ],
+      [
+        0.07,
+        4,
+        "C"
+      ],
+      [
+        1.8,
+        4,
+        "C"
+      ],
+      [
+        2.67,
+        3.5,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        21,
+        1
+      ],
+      [
+        1,
+        21,
+        2
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        2,
+        9,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        4,
+        6,
+        1
+      ],
+      [
+        5,
+        7,
+        2
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        2
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        15,
+        16,
+        1
+      ],
+      [
+        16,
+        17,
+        2
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        2
+      ],
+      [
+        20,
+        21,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food raises AUC by about 50%, though it may be taken with or without meals. More than 99.9% is bound to plasma proteins, mainly albumin, and excretion is roughly equal in feces and urine.",
+    "substance": "A crystalline powder with a molecular weight of 300.44. It is practically insoluble in water but soluble in chloroform.",
+    "product": "Capsules under an NDA, in 10, 20, 25, 30, 35 and 40 mg strengths; the two products have different dosage regimens.",
+    "safety": "Boxed warning for embryo-fetal toxicity, and contraindicated in pregnancy. Also contraindicated in hypersensitivity to it; dry lips and dry skin are the most common reactions.",
+    "indication": "Severe recalcitrant nodular acne in non-pregnant patients aged 12 and older with inflammatory nodules of 5 mm or greater, unresponsive to conventional therapy.",
+    "mechanism": "It inhibits sebaceous gland function and keratinization, reducing sebum secretion. The exact mechanism is unknown."
+  },
+  "tell": "A retinoid for severe nodular acne whose boxed warning concerns life-threatening birth defects.",
+  "source": {
+    "setId": "3ef0cff8-19c1-4441-b780-fca6c7ee1615",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ef0cff8-19c1-4441-b780-fca6c7ee1615",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The ABSORICA mean T max was 6.4 hours under fed conditions",
+    "pk.halfLifeH": [
+      "The mean elimination half-lives of isotretinoin and its 4-oxo-isotretinoin metabolite were",
+      "18 hours and 38 hours, respectively, after a single oral ABSORICA 40 mg dose"
+    ],
+    "pk.cmax": "and 369 ng/mL, respectively, following administration of a single 40 mg ABSORICA dose under fed conditions",
+    "clues.kinetics": [
+      "which were approximately 50% and 26% higher, respectively, compared to fasting conditions",
+      "However, ABSORICA may be given with or without meals",
+      "Isotretinoin is more than 99.9% bound to plasma proteins, primarily albumin",
+      "the metabolites of isotretinoin were excreted in feces and urine in relatively equal amounts"
+    ],
+    "clues.substance": [
+      "It is a yellow to orange crystalline powder with a molecular weight of 300.44",
+      "It is practically insoluble in water, soluble in chloroform"
+    ],
+    "clues.product": [
+      "Application: NDA 021951",
+      "ABSORICA is available in 10 mg, 20 mg, 25 mg, 30 mg, 35 mg and 40 mg capsules",
+      "ABSORICA and ABSORICA LD have different dosage regimens"
+    ],
+    "clues.safety": [
+      "WARNING: EMBRYO-FETAL TOXICITY – CONTRAINDICATED IN PREGNANCY",
+      "ABSORICA/ABSORICA LD is contraindicated in: Pregnancy",
+      "Patients with hypersensitivity to isotretinoin",
+      "Most common adverse reactions (incidence ≥5%) are: dry lips, dry skin"
+    ],
+    "clues.indication": [
+      "for the treatment of severe recalcitrant nodular acne in non-pregnant patients 12 years of age and older with multiple inflammatory nodules with a diameter of 5 mm or greater",
+      "who are unresponsive to conventional therapy, including systemic antibiotics"
+    ],
+    "clues.mechanism": [
+      "The exact mechanism of action of ABSORICA/ABSORICA LD in the treatment of severe recalcitrant nodular acne in non-pregnant patients 12 years of age and older with multiple inflammatory nodules with a diameter of 5 mm or greater who are unresponsive to conventional therapy, including systemic antibiotics is unknown",
+      "ABSORICA/ABSORICA LD is a retinoid, which inhibits sebaceous gland function and keratinization",
+      "Clinical improvement in nodular acne patients occurs in association with a reduction in sebum secretion"
+    ]
+  }
+}

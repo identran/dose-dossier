@@ -1,0 +1,79 @@
+{
+  "id": "fitusiran",
+  "generic": "Fitusiran",
+  "brand": "Qfitlia",
+  "aliases": [],
+  "application": "NDA 219019",
+  "approved": 2025,
+  "sponsor": "Sanofi",
+  "area": "Hematology",
+  "class": "Antithrombin-directed siRNA",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "50 mg subcutaneous, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 3.78,
+    "halfLifeH": 7.98,
+    "cmax": 84.1,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "pen",
+    "desc": "clear, colorless to pale yellow solution in a single-dose prefilled pen"
+  },
+  "biologic": {
+    "format": "oligonucleotide",
+    "isotype": null,
+    "massKDa": 17.2
+  },
+  "clues": {
+    "kinetics": "In vitro, about 96.6% is bound to plasma proteins. It is broken down by endo- and exonucleases rather than CYP450 enzymes, with 14.6% of the dose recovered unchanged in urine.",
+    "substance": "A double-stranded nucleic acid carrying a triantennary N-acetylgalactosamine ligand. It is freely soluble in water, with a molecular weight of 17,193 daltons.",
+    "product": "Approved under NDA 219019 as 20 mg/0.2 mL vials and 50 mg/0.5 mL prefilled pens, dosed once a month or once every two months.",
+    "safety": "Boxed warning for thrombotic events and acute and recurrent gallbladder disease. No contraindications; viral infection and nasopharyngitis are the most common reactions.",
+    "indication": "Routine prophylaxis against bleeding episodes in patients aged 12 years and older with hemophilia A or B, with or without inhibitors.",
+    "mechanism": "A double-stranded siRNA that degrades antithrombin messenger RNA through RNA interference, lowering plasma antithrombin levels."
+  },
+  "tell": "An siRNA that lowers antithrombin, given every one or two months and carrying a boxed warning on thrombosis.",
+  "source": {
+    "setId": "6dd2f8ac-6f90-4cbf-b197-97d74964135c",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6dd2f8ac-6f90-4cbf-b197-97d74964135c",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "t max (h) 2.88 (0.5 – 4.33) 3.78 (0.42 – 11.9)",
+    "pk.halfLifeH": "t 1/2 (h) 5.57 (2.36) [42%] 7.98 (4.74) [59%]",
+    "pk.cmax": "C max (ng/mL) 34.4 (10.1) [29%] 84.1 (58.7) [70%]",
+    "pill": "clear, colorless to pale yellow solution supplied in a single-dose prefilled pen or a single-dose vial",
+    "biologic": "the molecular weight is 17,193 Da",
+    "clues.kinetics": [
+      "In vitro data 96.6% at clinically relevant exposure",
+      "QFITLIA is metabolized by endo- and exo-nucleases",
+      "QFITLIA is not a substrate for CYP450 or transporters",
+      "14.6% (mean) of the administered 50 mg dose of QFITLIA is recovered unchanged in 0–24 hour urine"
+    ],
+    "clues.substance": [
+      "double-stranded",
+      "which is covalently linked to a ligand containing a triantennary N-acetylgalactosamine (GalNAc) moiety",
+      "freely soluble in water",
+      "the molecular weight is 17,193 Da"
+    ],
+    "clues.product": [
+      "Application: NDA 219019",
+      "Injection: 50 mg/0.5 mL prefilled pen Injection: 20 mg/0.2 mL vial",
+      "resume the patient's usual dosing schedule of either once every month or once every two months"
+    ],
+    "clues.safety": [
+      "WARNING: THROMBOTIC EVENTS AND ACUTE AND RECURRENT GALLBLADDER DISEASE",
+      "None. None",
+      "viral infection, nasopharyngitis, and bacterial infection"
+    ],
+    "clues.indication": [
+      "routine prophylaxis to prevent or reduce the frequency of bleeding episodes in adult and pediatric patients aged 12 years and older with hemophilia A or B with or without factor VIII or IX inhibitors"
+    ],
+    "clues.mechanism": [
+      "QFITLIA is a double-stranded siRNA that causes degradation of AT messenger RNA (mRNA) through RNA interference, reducing plasma AT levels"
+    ]
+  }
+}

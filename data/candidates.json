@@ -731,7 +731,7 @@
   },
   {
     "id": "ado-trastuzumab-emtansine",
-    "generic": "Ado-trastuzumab emtansine",
+    "generic": "Trastuzumab emtansine",
     "brand": "Kadcyla",
     "area": "Oncology",
     "class": "HER2-directed antibody-drug conjugate",
@@ -1638,7 +1638,8 @@
     "notes": [
       "no separate pharmacokinetics field; PK is inside clinical_pharmacology"
     ],
-    "_sig": "amoxicillin|"
+    "_sig": "amoxicillin|",
+    "brand": "Amoxil"
   },
   {
     "id": "amphotericin-b",
@@ -1908,7 +1909,7 @@
   },
   {
     "id": "anti-thymocyte-globulin",
-    "generic": "Anti-thymocyte globulin (rabbit)",
+    "generic": "Anti-thymocyte globulin",
     "brand": "Thymoglobulin",
     "area": "Nephrology",
     "class": "Polyclonal T-cell antibody",
@@ -4087,7 +4088,7 @@
   },
   {
     "id": "bimekizumab-bkzx",
-    "generic": "Bimekizumab-bkzx",
+    "generic": "Bimekizumab",
     "brand": "Bimzelx",
     "area": "Immunology",
     "class": "IL-17A/IL-17F inhibitor",
@@ -12374,7 +12375,7 @@
   },
   {
     "id": "fam-trastuzumab-deruxtecan-nxki",
-    "generic": "Fam-trastuzumab deruxtecan-nxki",
+    "generic": "Trastuzumab deruxtecan",
     "brand": "Enhertu",
     "area": "Oncology",
     "class": "HER2-directed antibody-drug conjugate",
@@ -25964,7 +25965,7 @@
   },
   {
     "id": "risankizumab-rzaa",
-    "generic": "Risankizumab-rzaa",
+    "generic": "Risankizumab",
     "brand": "Skyrizi",
     "area": "Immunology",
     "class": "IL-23 inhibitor",
@@ -28503,7 +28504,7 @@
   },
   {
     "id": "spesolimab-sbzo",
-    "generic": "Spesolimab-sbzo",
+    "generic": "Spesolimab",
     "brand": "Spevigo",
     "area": "Immunology",
     "class": "IL-36 receptor antagonist",
@@ -30410,7 +30411,7 @@
   },
   {
     "id": "tezepelumab-ekko",
-    "generic": "Tezepelumab-ekko",
+    "generic": "Tezepelumab",
     "brand": "Tezspire",
     "area": "Immunology",
     "class": "TSLP blocking antibody",
@@ -31257,7 +31258,7 @@
   },
   {
     "id": "tralokinumab-ldrm",
-    "generic": "Tralokinumab-ldrm",
+    "generic": "Tralokinumab",
     "brand": "Adbry",
     "area": "Immunology",
     "class": "IL-13 inhibitor",

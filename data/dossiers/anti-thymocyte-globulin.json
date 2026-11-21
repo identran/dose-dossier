@@ -1,0 +1,77 @@
+{
+  "id": "anti-thymocyte-globulin",
+  "generic": "Anti-thymocyte globulin",
+  "brand": "Thymoglobulin",
+  "aliases": [
+    "Antithymocyte globulin",
+    "Anti-thymocyte globulin (rabbit)"
+  ],
+  "application": "BLA 103869",
+  "approved": 1998,
+  "sponsor": "Sanofi",
+  "area": "Immunology",
+  "class": "T-cell depleting antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "1.5 mg/kg intravenous, single dose, patients",
+    "model": "infusion",
+    "tmaxH": 4,
+    "halfLifeH": 60
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "lyophilized powder in a single-dose clear glass vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG",
+    "massKDa": null
+  },
+  "clues": {
+    "kinetics": "Given only as an intravenous infusion.",
+    "substance": "An animal-derived polyclonal preparation supplied as a sterile lyophilized powder for reconstitution in water.",
+    "product": "Licensed under a BLA as 25 mg single-dose vials, with one dose given on each of several subsequent days.",
+    "safety": "Contraindicated after allergy to animal proteins or excipients, or with active infections. Urinary tract infection and abdominal pain are the most common reactions.",
+    "indication": "Prophylaxis and treatment of acute rejection in adult and pediatric patients receiving kidney transplants.",
+    "mechanism": "Includes polyclonal antibodies against T-cell markers such as CD2, CD3, CD4 and CD8, which clear T cells from the circulation and modulate their activation."
+  },
+  "tell": "A polyclonal preparation that depletes T cells within a day, and anti-rabbit antibodies develop in 68% of treated patients.",
+  "source": {
+    "setId": "bbd8ab99-552e-4b81-aca4-6b0c7af8b9ae",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbd8ab99-552e-4b81-aca4-6b0c7af8b9ae",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "(over 4 hours for 7–11 days)",
+    "pk.halfLifeH": "with a half-life of 2–3 days after the first dose",
+    "pill": "25 mg anti-thymocyte globulin (rabbit) as a sterile lyophilized powder, in single-dose 10 mL vials for reconstitution",
+    "biologic": [
+      "contains cytotoxic antibodies directed against antigens expressed on human T-lymphocytes",
+      "rabbit gamma immune globulin (IgG)"
+    ],
+    "clues.kinetics": "THYMOGLOBULIN is a sterile, lyophilized powder for intravenous administration after reconstitution",
+    "clues.substance": [
+      "anti-thymocyte globulin (rabbit)",
+      "polyclonal antilymphocyte preparations",
+      "a sterile, lyophilized powder for intravenous administration after reconstitution with sterile Water for Injection"
+    ],
+    "clues.product": [
+      "Application: BLA 103869",
+      "25 mg anti-thymocyte globulin (rabbit) as a sterile lyophilized powder, in single-dose 10 mL vials",
+      "doses on subsequent days should be infused over at least 4 hours"
+    ],
+    "clues.safety": [
+      "Allergy or anaphylactic reaction to rabbit proteins or to any product excipients",
+      "active acute or chronic infections that contraindicate any additional immunosuppression",
+      "urinary tract infection, abdominal pain, hypertension"
+    ],
+    "clues.indication": [
+      "prophylaxis and treatment of acute rejection in adult and pediatric patients receiving a kidney transplant"
+    ],
+    "clues.mechanism": [
+      "THYMOGLOBULIN includes antibodies against T-cell markers such as CD2, CD3, CD4, CD8",
+      "T-cell clearance from the circulation and modulation of T-cell activation"
+    ]
+  }
+}

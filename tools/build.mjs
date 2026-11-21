@@ -85,7 +85,7 @@ async function main() {
   }
   const names = new Map();
   for (const g of byId.values()) {
-    for (const n of [g.generic, g.brand, ...g.aliases]) {
+    for (const n of [g.generic, g.brand, ...g.aliases].filter(isStr)) { // brand is null when a drug has no US brand
       const k = n.toLowerCase();
       if (names.has(k) && names.get(k) !== g.id) err('guessable names', `"${n}" names both "${names.get(k)}" and "${g.id}"`);
       names.set(k, g.id);
