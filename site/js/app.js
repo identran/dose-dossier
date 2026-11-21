@@ -176,6 +176,15 @@ function play({ index, today, day, dossier }) {
 
   el.input.addEventListener('input', () => say(turnText()));
 
+  // On a phone the on-screen keyboard covers the lower half: bring the field to the top
+  // so the suggestions under it stay in view.
+  const handheld = window.matchMedia('(pointer: coarse) and (max-width: 959px)');
+  el.input.addEventListener('focus', () => {
+    if (!handheld.matches) return;
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    requestAnimationFrame(() => el.form.scrollIntoView({ block: 'start', behavior: calm ? 'auto' : 'smooth' }));
+  });
+
   el.form.addEventListener('submit', event => {
     event.preventDefault();
     if (state.status !== 'playing') return;

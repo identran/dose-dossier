@@ -81,9 +81,12 @@ export function createSVGRenderer() {
 
     const rc = GEOM.R0 + GEOM.H;
     const { turn, half: gap } = scene.gap;
+    const around = TAU * rc * box.s;
+    const pitch = around / Math.round(around / STYLE.cmaxPitch);
+    const dotted = line(STYLE.cmax, { 'stroke-dasharray': `${STYLE.cmaxDash} ${(pitch - STYLE.cmaxDash).toFixed(3)}` });
     const cmax = gap > 0
-      ? make('path', { d: `M${xy(turn + gap, rc)}A${rc * box.s} ${rc * box.s} 0 1 1 ${xy(turn - gap, rc)}`, ...line(STYLE.cmax) })
-      : make('circle', { cx, cy, r: rc * box.s, ...line(STYLE.cmax) });
+      ? make('path', { d: `M${xy(turn + gap, rc)}A${rc * box.s} ${rc * box.s} 0 1 1 ${xy(turn - gap, rc)}`, ...dotted })
+      : make('circle', { cx, cy, r: rc * box.s, ...dotted });
 
     let ticks = '';
     for (let i = 0; i < scene.tick.minor; i++) {

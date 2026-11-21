@@ -156,6 +156,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 .guess-form {
   position: relative;
   display: grid;
+  scroll-margin-top: var(--space-3);
   grid-template-columns: minmax(0, 1fr) auto;
   column-gap: var(--space-2);
 }
