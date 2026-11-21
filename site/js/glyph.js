@@ -1,39 +1,22 @@
-// Flat, single-colour silhouette of a dosage form.
-// renderDoseForm(el, pill, form): `pill` is the dossier's optional { shape, color, color2, desc };
-// without it the shape follows `form`. The fill is pill.color, or the day's accent.
+// Flat silhouette of a dosage form in the day's one colour.
+// renderDoseForm(el, pill, form): `pill` is the dossier's optional { shape, color, desc }; without
+// it the shape follows `form`. The fill is pill.color, or the day's accent. A second colour in the
+// data (a two-tone capsule) is not drawn: the palette has one accent, and the gap between the
+// halves already says capsule. Corners are sharp or true arcs, never eased.
 
 const NS = 'http://www.w3.org/2000/svg';
 
-// Closed polygon with circular corners, as a path. `r` is one radius or one per vertex.
-function rounded(points, r) {
-  const n = points.length;
-  let d = '';
-  for (let i = 0; i < n; i++) {
-    const [x, y] = points[i], p = points[(i + n - 1) % n], q = points[(i + 1) % n];
-    const ax = p[0] - x, ay = p[1] - y, bx = q[0] - x, by = q[1] - y;
-    const la = Math.hypot(ax, ay), lb = Math.hypot(bx, by);
-    const radius = Array.isArray(r) ? r[i] : r;
-    const half = Math.acos((ax * bx + ay * by) / (la * lb)) / 2;
-    const t = Math.min(radius / Math.tan(half), la / 2, lb / 2);
-    const rr = t * Math.tan(half);
-    const f = v => Math.round(v * 100) / 100;
-    const sweep = ax * by - ay * bx < 0 ? 1 : 0;
-    d += `${i ? 'L' : 'M'}${f(x + (ax / la) * t)} ${f(y + (ay / la) * t)}A${f(rr)} ${f(rr)} 0 0 ${sweep} ${f(x + (bx / lb) * t)} ${f(y + (by / lb) * t)}`;
-  }
-  return d + 'Z';
-}
-
-// Each shape is a list of parts in a 100 × 100 box; a part marked `second` takes pill.color2.
+// Each shape is a list of parts in a 100 × 100 box.
 const SHAPES = {
   round: () => [{ d: 'M50 11A39 39 0 1 1 50 89A39 39 0 1 1 50 11Z' }],
   oval: () => [{ d: 'M4 50A46 29 0 1 1 96 50A46 29 0 1 1 4 50Z' }],
   oblong: () => [{ d: 'M22 32H78A18 18 0 0 1 78 68H22A18 18 0 0 1 22 32Z' }],
   capsule: () => [
     { d: 'M48.5 31H23A19 19 0 0 0 23 69H48.5Z', turn: -35 },
-    { d: 'M51.5 33H79A17 17 0 0 1 79 67H51.5Z', turn: -35, second: true },
+    { d: 'M51.5 33H79A17 17 0 0 1 79 67H51.5Z', turn: -35 },
   ],
-  diamond: () => [{ d: rounded([[50, 15], [96, 50], [50, 85], [4, 50]], [16, 9, 16, 9]) }],
-  triangle: () => [{ d: rounded([[50, 9], [94, 84], [6, 84]], 10) }],
+  diamond: () => [{ d: 'M50 15L96 50L50 85L4 50Z' }],
+  triangle: () => [{ d: 'M50 9L94 84H6Z' }],
   shield: () => [{ d: 'M15 13H85V47C85 70 69 86 50 95C31 86 15 70 15 47Z' }],
   vial: () => [
     { d: 'M34 6H66V20H34Z' },
@@ -91,8 +74,7 @@ export function renderDoseForm(el, pill, form) {
     path.setAttribute('d', part.d);
     if (part.turn) path.setAttribute('transform', `rotate(${part.turn} 50 50)`);
     // An unparsable colour is ignored by the browser, leaving the accent.
-    const color = (part.second && pill?.color2) || pill?.color;
-    if (color) path.style.fill = color;
+    if (pill?.color) path.style.fill = pill.color;
     svg.appendChild(path);
   }
   el.replaceChildren(svg);

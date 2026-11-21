@@ -49,9 +49,10 @@ export async function getJSON(url, { retries = 4, slim } = {}) {
   } catch {}
   for (let attempt = 0; ; attempt++) {
     if (stats.network >= budget) throw new BudgetError(`request budget of ${budget} live requests reached`);
-    const wait = last + GAP_MS - Date.now();
-    if (wait > 0) await sleep(wait);
-    last = Date.now();
+    // reserve the next free slot synchronously so concurrent callers queue up behind each other
+    const slot = Math.max(Date.now(), last + GAP_MS);
+    last = slot;
+    if (slot > Date.now()) await sleep(slot - Date.now());
     stats.network++;
     let res;
     try {

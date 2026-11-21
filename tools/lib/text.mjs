@@ -12,7 +12,7 @@ const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' }
 // and collapse whitespace. Never rewrites words.
 export function cleanLabelText(s) {
   return flat(s)
-    .replace(/<[^>]*>/g, ' ')
+    .replace(/<\/?[a-z][a-z0-9]*(?:\s[^<>]*)?\/?>/gi, ' ') // real tags only: labels use < and > as comparison signs
     .replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (m, e) => {
       if (e[0] === '#') {
         const code = e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : Number(e.slice(1));
@@ -20,6 +20,8 @@ export function cleanLabelText(s) {
       }
       return ENTITIES[e.toLowerCase()] ?? ' ';
     })
+    .replace(/\u00ad/g, '')
+    .replace(/[\u2010\u2011]/g, '-')
     .replace(/\[\s*see [^\]]*\]/gi, ' ')
     .replace(/[|]+/g, ' ')
     .replace(/[-_=─—]{4,}/g, ' ')

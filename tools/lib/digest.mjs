@@ -3,7 +3,7 @@
 import { cleanLabelText, trimAt, sentences } from './text.mjs';
 
 export const HARD_MAX = 12000;
-const TARGET_MAX = 11500;
+const TARGET_MAX = 10400;
 
 const TITLES = {
   boxed_warning: null,
@@ -34,7 +34,7 @@ const SPECIAL = new RegExp([
   String.raw`(?:^|[.)]\s)(?:Geriatric|Pediatric|Renal Impairment|Hepatic Impairment|Patients with (?:Renal|Hepatic) Impairment|Gender|Sex|Race)\b`,
 ].join('|'));
 
-const HALF_LIFE = /half-?\s?lives?|t\s?1\/2|t½|t ½/i;
+const HALF_LIFE = /half-?\s?li(?:fe|ves)|t\s?1\/2|t½|t ½/i;
 
 function pharmacokinetics(label) {
   const own = get(label, 'pharmacokinetics');
@@ -53,7 +53,10 @@ function pharmacokinetics(label) {
     const end = /\b(?:PHARMACODYNAMICS|Pharmacodynamics|MICROBIOLOGY|Microbiology|CLINICAL STUDIES|Clinical Studies|Pharmacogenomics|ANIMAL PHARMACOLOGY|Animal Pharmacology)\b/.exec(rest.slice(200));
     return { text: end ? rest.slice(0, end.index + 200) : rest, source: 'cut from clinical_pharmacology (heading)' };
   }
-  return { text: cp, source: 'whole clinical_pharmacology (no PK heading found)' };
+  // Old-format label with PK mixed into the general text: keep the sentences that talk about PK, in label order.
+  const pkWords = /absorb|bioavailab|peak|half-?\s?life|t\s?1\/2|plasma|serum|protein.bound|bound to|metaboli|excret|eliminat|clearance|urine|urinary|feces|fecal|C\s?max|T\s?max|AUC|steady.state|volume of distribution|concentrations? (?:of|in|was|were|reach)/i;
+  const kept = cp.length > 3000 ? sentences(cp).filter(x => pkWords.test(x)).join(' ') : cp;
+  return { text: kept || cp, source: 'clinical_pharmacology, PK sentences only (no PK heading found)' };
 }
 
 function trimPk(text, cap) {
@@ -111,7 +114,7 @@ function productLines(rec) {
   return [...groups].map(([k, s]) => `${k}: ${[...s].join('; ') || 'strength not listed'}`);
 }
 
-export function buildDigest(rec, label) {
+export function buildDigest(rec, label, structure = null) {
   const caps = { boxed: 600, ind: 900, forms: 600, contra: 700, desc: 1500, moa: 1400, pk: 6500, ae: 500, nonclin: 500, supplied: 700 };
   const pk = pharmacokinetics(label);
   const raw = {
@@ -145,6 +148,7 @@ export function buildDigest(rec, label) {
   header.push(`Current manufacturer: ${rec.manufacturer || ''}`, `Label effective: ${rec.effective || ''}`, `Routes: ${(rec.routes || []).join(', ')}`);
   const pl = productLines(rec);
   if (pl.length) header.push('Dosage forms and strengths (Drugs@FDA):', ...pl.map(l => `  ${l}`));
+  if (structure?.formula) header.push(`Parent compound (PubChem CID ${structure.cid}): formula ${structure.formula}${structure.molecularWeight ? `, molecular weight ${structure.molecularWeight}` : ''}`);
   header.push(`PK text source: ${pk.source}`);
 
   const render = parts => {

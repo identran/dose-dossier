@@ -46,11 +46,11 @@ export function createGLRenderer({ onLost, onRestored }) {
   let lost = false;
   let dead = false;
   let lostTimer = 0;
-  let scene = null;         // { curve, nodes, echoN, tick, gap, colors }
+  let scene = null;         // { curve, nodes, tick, colors }
   let knots = null;         // polyline currently in the texture
   let knotsFor = null;      // [curve, M] it was built for
   let size = { css: 0, px: 1 };
-  const nodeData = new Float32Array(NODE_MAX * 4);
+  const nodeData = new Float32Array(NODE_MAX * 3);
 
   function init() {
     ({ program, loc } = compile(gl));
@@ -139,24 +139,19 @@ export function createGLRenderer({ onLost, onRestored }) {
       gl.uniform1f(loc.uM, knots.M);
       gl.uniform1f(loc.uLaps, knots.laps);
       gl.uniform1f(loc.uFront, frame.front / curve.period);
-      gl.uniform1f(loc.uHalf, curve.halfLife / curve.period);
-      gl.uniform1i(loc.uEchoN, scene.echoN);
       nodes.forEach((n, i) => {
-        nodeData[4 * i] = n.x;
-        nodeData[4 * i + 1] = n.y;
-        nodeData[4 * i + 2] = frame.resolve[i];
-        nodeData[4 * i + 3] = frame.emphasis[i];
+        nodeData[3 * i] = n.x;
+        nodeData[3 * i + 1] = n.y;
+        nodeData[3 * i + 2] = frame.resolve[i];
       });
-      gl.uniform4fv(loc.uNode, nodeData);
+      gl.uniform3fv(loc.uNode, nodeData);
       gl.uniform1i(loc.uNodeN, nodes.length);
       gl.uniform3fv(loc.uPaper, toLinear(colors.paper));
       gl.uniform3fv(loc.uInk, toLinear(colors.ink));
       gl.uniform3fv(loc.uAccent, toLinear(colors.accent));
       gl.uniform2f(loc.uTick, scene.tick.minor, scene.tick.every);
-      gl.uniform3f(loc.uGap, scene.gap.turn, scene.gap.half, scene.gap.half > 0 ? 1 : 0);
-      gl.uniform1f(loc.uHand, frame.hand);
       const p = frame.probe;
-      gl.uniform4f(loc.uProbe, p ? p.x : 0, p ? p.y : 0, p && p.snapped ? 1 : 0, p ? 1 : 0);
+      gl.uniform3f(loc.uProbe, p ? p.x : 0, p ? p.y : 0, p ? 1 : 0);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       return true;
     },

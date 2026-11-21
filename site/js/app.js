@@ -132,7 +132,7 @@ function play({ index, today, day, dossier }) {
 
   function showProbe(probe) {
     el.probe.textContent = probe
-      ? `${formatHours(probe.t)}  ·  ${number(probe.c)} ${unit}  ·  AUC ${number(probe.auc)} ${aucUnit(unit)}`
+      ? `${formatHours(probe.t)} · ${number(probe.c)} ${unit} · AUC ${number(probe.auc)} ${aucUnit(unit)}`
       : '';
   }
 
@@ -156,7 +156,10 @@ function play({ index, today, day, dossier }) {
     }
     safely('renderMolecule', () => renderMolecule(centre, dossier.structure, { reveal: v.reveal }));
 
-    renderGuesses(el.guesses, state.guesses.map(id => ({ drug: byId.get(id), facts: game.compare(byId.get(id), answer) })), { fresh });
+    // The list is of misses; a correct guess is the answer set above it, not a row to repeat.
+    const misses = state.guesses.filter(id => id !== answer.id);
+    renderGuesses(el.guesses, misses.map(id => ({ drug: byId.get(id), facts: game.compare(byId.get(id), answer) })),
+      { fresh: fresh && state.status !== 'won' });
     renderDossier(el.dossier, clues, v.clues, RULES.modules, { fresh: fresh && !v.over });
 
     el.form.hidden = el.status.hidden = v.over;

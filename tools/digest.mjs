@@ -2,7 +2,8 @@
 // Usage: node tools/digest.mjs [ids...] [--all] [--candidates data/candidates.json]
 // Writes tools/.cache/digests/<id>.txt (6-10 KB, never above 12 KB) for each ok candidate, plus
 // tools/.cache/digests/_index.json (bytes, PK source, empty sections per id). Reads the labels that resolve.mjs saved in
-// tools/.cache/labels/; fetches a label (cached) only when its file is missing.
+// tools/.cache/labels/ (and, when present, the parent formula and molecular weight from tools/.cache/structures/, so run
+// structures first for the full header); fetches a label (cached) only when its file is missing.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,7 +30,9 @@ for (const c of todo) {
   try { label = JSON.parse(await readFile(path.join(ROOT, 'tools', '.cache', 'labels', `${c.id}.json`), 'utf8')); }
   catch { label = await fetchLabelBySetId(c.setId); }
   if (!label) { console.error(`${c.id}: label ${c.setId} not available`); continue; }
-  const d = buildDigest(c, label);
+  let structure = null;
+  try { structure = JSON.parse(await readFile(path.join(ROOT, 'tools', '.cache', 'structures', `${c.id}.json`), 'utf8')); } catch {}
+  const d = buildDigest(c, label, structure);
   await writeFile(path.join(OUT, `${c.id}.txt`), d.text);
   index[c.id] = { bytes: d.bytes, pkSource: d.pkSource, empty: d.missing };
   if (d.bytes > HARD_MAX) console.error(`${c.id}: digest is ${d.bytes} bytes, above ${HARD_MAX}`);

@@ -25,15 +25,6 @@
 </head>
 <body>
   <main class="page">
-    <figure class="figure">
-      <div id="dial" class="dial"></div>
-      <figcaption class="caption">
-        <span id="glyph" class="glyph"></span>
-        <span id="context"></span>
-        <span id="probe" class="probe" aria-live="off"></span>
-      </figcaption>
-    </figure>
-
     <header class="masthead">
       <h1>Dose Dossier</h1>
       <nav class="masthead-nav" aria-label="About">
@@ -47,16 +38,22 @@
       </p>
     </header>
 
+    <figure class="figure">
+      <div id="dial" class="dial"></div>
+      <figcaption class="caption">
+        <p><span id="glyph" class="glyph"></span><span id="context"></span></p>
+        <p id="probe" class="probe" aria-live="off"></p>
+      </figcaption>
+    </figure>
+
     <section class="play" aria-label="Your guess">
       <form id="guess-form" class="guess-form" autocomplete="off" novalidate>
-        <div class="combo">
-          <input id="guess" class="field" type="text" role="combobox" aria-label="Drug name"
-            aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-describedby="status"
-            placeholder="Generic or brand name" autocapitalize="none" autocorrect="off" spellcheck="false"
-            enterkeyhint="go" disabled>
-          <ul id="suggestions" class="suggestions" role="listbox" aria-label="Drugs" hidden></ul>
-        </div>
+        <input id="guess" class="field" type="text" role="combobox" aria-label="Drug name"
+          aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-describedby="status"
+          placeholder="Generic or brand name" autocapitalize="none" autocorrect="off" spellcheck="false"
+          enterkeyhint="go" disabled>
         <button type="submit" class="button" disabled>Guess</button>
+        <ul id="suggestions" class="suggestions" role="listbox" aria-label="Drugs" hidden></ul>
       </form>
       <p id="status" class="status"></p>
 

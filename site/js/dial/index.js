@@ -10,13 +10,15 @@
 //   dial.resize()
 //   dial.destroy()
 //
-// Nothing here runs a permanent animation loop: a frame is drawn when something changed, and
-// the only motion is the fill front sweeping to the next sampling time.
+// The figure is a ring (zero concentration, with time ticks inside it), the profile, the area
+// under it up to the current sampling time in the accent, and a dot for each sampling time
+// reached. Nothing here runs a permanent animation loop: a frame is drawn when something
+// changed, and the only motion is the fill front sweeping to the next sampling time.
 
 import { formatHours } from '../pk.js';
 import {
   GEOM, STYLE, TAU, NODE_MAX,
-  buildNodes, echoCount, tickSpec, cmaxLabelTurn, radiusAt, polar, easeInOut,
+  buildNodes, tickSpec, peakTurn, radiusAt, polar, easeInOut,
 } from './model.js';
 import { createGLRenderer } from './gl.js';
 import { createSVGRenderer } from './svg.js';
@@ -37,7 +39,7 @@ const CSS = `
 .dial-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .dial-labels{position:absolute;inset:0;pointer-events:none;font-family:var(--font-data,Georgia,'Times New Roman',serif);font-size:var(--size-s,0.8rem);line-height:1;font-variant-numeric:lining-nums;color:var(--mute,#6B6A66)}
 .dial-label{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:auto;-webkit-user-select:text;user-select:text}
-.dial-label sub{font-size:0.8em;line-height:0}
+.dial-label sub{font-size:0.75em}
 .dial-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 `;
 
@@ -104,9 +106,8 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   let theme = null;
   let front = 0;               // hours
   let sweep = null;            // { from, to, t0 }
-  let resolve = [];
-  let emphasis = [];
-  let probe = null;            // { t, index, x, y, snapped }
+  let resolve = [];            // per node, 0 hidden .. 1 drawn
+  let probe = null;            // { t, index, x, y }
   let latched = false;         // a touch probe stays until the next touch elsewhere
   let raf = 0;
   let lastTick = 0;
@@ -114,7 +115,6 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   let dead = false;
   let tickLabels = [];
   let cmaxLabel = null;
-  let gap = { turn: 0.625, half: 0 };
 
   const forceSVG = wanted === 'svg' || new URLSearchParams(location.search).get('dial') === 'svg';
 
@@ -188,12 +188,11 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       const extent = (Math.abs(Math.sin(a)) * el.offsetWidth + Math.abs(Math.cos(a)) * el.offsetHeight) / 2;
       put(el, turn, GEOM.R0 * box.s - STYLE.tickMajor - 4 - extent);
     }
-    const turn = cmaxLabelTurn(challenge.curve);
+    // Cmax stands just outside the peak, clear of the probe ring.
+    const turn = peakTurn(challenge.curve);
     const a = TAU * turn;
-    const radius = (GEOM.R0 + GEOM.H) * box.s;
-    const along = (Math.abs(Math.cos(a)) * cmaxLabel.offsetWidth + Math.abs(Math.sin(a)) * cmaxLabel.offsetHeight) / 2 + 5;
-    put(cmaxLabel, turn, radius);
-    gap = { turn, half: along / (TAU * radius) };
+    const extent = (Math.abs(Math.sin(a)) * cmaxLabel.offsetWidth + Math.abs(Math.cos(a)) * cmaxLabel.offsetHeight) / 2;
+    put(cmaxLabel, turn, (GEOM.R0 + GEOM.H) * box.s + STYLE.probe + 4 + extent);
   }
 
   function layout() {
@@ -204,11 +203,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     const side = 2 * GEOM.CENTER * GEOM.R0 * box.s;
     center.style.width = center.style.height = `${side}px`;
     placeLabels();
-    if (scene) {
-      scene.echoN = echoCount(scene.curve, box.s);
-      scene.gap = gap;
-      renderer.setScene(scene);
-    }
+    if (scene) renderer.setScene(scene);
     invalidate();
   }
 
@@ -234,17 +229,17 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     invalidate();
   }
 
+  // A node is drawn once the fill front has passed it.
   function nodeTargets(arriving) {
     const count = reached();
     return nodes.map((n, i) => {
       const passed = front >= n.t - 1e-9 || (arriving && i === count - 1);
-      const res = i < count && (!sweep || passed) ? 1 : 0;
-      return [res, res && !solved && i === count - 1 ? 1 : 0];
+      return i < count && (!sweep || passed) ? 1 : 0;
     });
   }
 
   function settle() {
-    nodeTargets(true).forEach(([res, emp], i) => { resolve[i] = res; emphasis[i] = emp; });
+    resolve = nodeTargets(true);
   }
 
   function step(now) {
@@ -259,11 +254,9 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       if (u >= 1) { front = sweep.to; sweep = null; } else busy = true;
     }
     const k = 1 - Math.exp(-dt / SETTLE_MS);
-    nodeTargets(arriving).forEach(([res, emp], i) => {
+    nodeTargets(arriving).forEach((res, i) => {
       resolve[i] += (res - resolve[i]) * k;
-      emphasis[i] += (emp - emphasis[i]) * k;
       if (Math.abs(res - resolve[i]) < 0.01) resolve[i] = res; else busy = true;
-      if (Math.abs(emp - emphasis[i]) < 0.01) emphasis[i] = emp; else busy = true;
     });
     return busy;
   }
@@ -272,13 +265,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     raf = 0;
     if (dead || !scene || !box.s) return;
     const busy = still() ? (sweep = null, front = frontTarget(), settle(), false) : step(now);
-    const ok = renderer.draw({
-      front,
-      resolve,
-      emphasis,
-      hand: solved && !sweep ? 0 : 1,
-      probe: probe && { x: probe.x, y: probe.y, snapped: probe.index >= 0 },
-    });
+    const ok = renderer.draw({ front, resolve, probe: probe && { x: probe.x, y: probe.y } });
     if (ok) drawn = true;
     if (busy) invalidate(); else lastTick = 0;
   }
@@ -308,7 +295,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     const y = -(clientY - rect.top - rect.height / 2) / box.s;
     let best = -1;
     let bestD = reach / box.s;
-    nodes.forEach((n, i) => {
+    nodes.slice(0, reached()).forEach((n, i) => {
       const d = Math.hypot(x - n.x, y - n.y);
       if (d <= bestD) { bestD = d; best = i; }
     });
@@ -387,7 +374,6 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       challenge = { ...next, times };
       nodes = buildNodes(next.curve, times);
       resolve = nodes.map(() => 0);
-      emphasis = nodes.map(() => 0);
       progress = clamp(progress, 1, nodes.length);
       emit(null);
       latched = false;
@@ -396,9 +382,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
       scene = {
         curve: next.curve,
         nodes,
-        echoN: echoCount(next.curve, box.s),
         tick: tickSpec(next.curve.period),
-        gap,
         colors: colors(),
       };
       renderer.setScene(scene);
@@ -437,6 +421,6 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     },
 
     // Not part of the contract: state for the test page.
-    debug: () => ({ renderer: renderer.kind, front, progress, solved, box, echoes: scene?.echoN, busy: !!raf, simulateLoss: ms => renderer.simulateLoss?.(ms) }),
+    debug: () => ({ renderer: renderer.kind, front, progress, solved, box, busy: !!raf, simulateLoss: ms => renderer.simulateLoss?.(ms) }),
   };
 }

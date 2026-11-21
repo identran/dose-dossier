@@ -6,23 +6,24 @@
 <title>Molecule and dose form test page</title>
 <!-- Dev only. Serve the repo root and open /dev/molecule.html
      ?only=azithromycin,fluoxetine limits the molecules, ?theme=dark limits the theme. -->
+<!-- ?bounds=1 outlines the circle each molecule is fitted to. -->
+<link rel="stylesheet" href="../site/css/tokens.css">
+<link rel="stylesheet" href="../site/assets/fonts/fonts.css">
 <style>
-  :root {
-    --font-display: Georgia, 'Times New Roman', serif;
-    --font-text: Georgia, 'Times New Roman', serif;
-    --font-data: Georgia, 'Times New Roman', serif;
-  }
-  .theme, body { --paper: #ECEAE5; --ink: #111111; --mute: #6B6A66; --accent: #4F7CC4; }
+  /* The two themes side by side, so the dark tokens are repeated here from tokens.css. */
+  .theme, body { --accent: #4F7CC4; }
+  .theme[data-theme='light'] { --paper: #ECEAE5; --ink: #111111; --mute: #6B6A66; }
   .theme[data-theme='dark'] { --paper: #0D0D0D; --ink: #DEDCD6; --mute: #8F8E8A; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 var(--font-text); }
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; }
-  h1 { font-size: 1.5625rem; padding: 24px 24px 0; }
+  h1, h2, h3 { font: inherit; margin: 0; }
+  h1 { font-family: var(--font-display); font-size: 1.5625rem; padding: 24px 24px 0; }
   h2 { font-size: 1.25rem; padding-bottom: 12px; }
-  h3 { font-size: 1rem; color: var(--mute); padding: 24px 0 8px; }
+  h3 { color: var(--mute); padding: 24px 0 8px; }
   .theme { background: var(--paper); color: var(--ink); padding: 24px; }
   .row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
-  .cell { border-radius: 50%; outline: 1px solid var(--mute); flex: none; }
+  .cell { flex: none; }
+  .bounds .cell { border-radius: 50%; outline: 1px solid var(--mute); }
   .large .cell { width: 320px; height: 320px; }
   .small .cell { width: 140px; height: 140px; }
   .small { padding-top: 12px; }
@@ -31,7 +32,8 @@
   .glyphs.tiny .item { width: 60px; }
   .glyphs.tiny .g { width: 28px; height: 28px; margin: 0 auto; }
   .stepper { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 24px; }
-  .stepper .cell { width: 320px; height: 320px; max-width: 100%; resize: both; overflow: hidden; border-radius: 0; }
+  .stepper .cell { width: 320px; height: 320px; max-width: 100%; resize: both; overflow: hidden; }
+  .bounds .stepper .cell { border-radius: 0; }
   button, select { font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px solid var(--ink); padding: 4px 0; cursor: pointer; }
 </style>
 </head>
@@ -55,6 +57,7 @@ import { renderMolecule } from '../site/js/molecule.js';
 import { renderDoseForm } from '../site/js/glyph.js';
 
 const params = new URLSearchParams(location.search);
+if (params.get('bounds')) document.body.classList.add('bounds');
 const structures = await (await fetch('fixtures/structures.json')).json();
 
 // Synthetic cases the real molecules do not cover.
@@ -94,9 +97,6 @@ for (const theme of themes) {
       renderDoseForm(make('div', 'g', item), { shape, desc: `${shape} test glyph` }, 'tablet');
       make('div', '', item, shape);
     }
-    const two = make('div', 'item', row);
-    renderDoseForm(make('div', 'g', two), { shape: 'capsule', color: '#4F7CC4', color2: '#C9A227', desc: 'two-tone capsule' }, 'capsule');
-    make('div', '', two, 'two-tone');
   }
   make('h3', '', sec, 'Dose forms, from the form alone');
   const forms = make('div', 'row glyphs', sec);

@@ -62,7 +62,7 @@ const dial = createDial($('stage'), {
   onProbe: p => {
     const { pk } = PROFILES[select.value];
     $('probe').textContent = p
-      ? `${formatHours(p.t)}, ${+p.c.toPrecision(3)} ${pk.unit}, AUC ${+p.auc.toPrecision(3)} ${pk.unit}·h${p.index >= 0 ? `, sample ${p.index + 1}` : ''}`
+      ? `${formatHours(p.t)} · ${+p.c.toPrecision(3)} ${pk.unit} · AUC ${+p.auc.toPrecision(3)} ${pk.unit}·h${p.index >= 0 ? ` · sample ${p.index + 1}` : ''}`
       : '';
   },
 });

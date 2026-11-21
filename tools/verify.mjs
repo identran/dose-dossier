@@ -82,8 +82,16 @@ function concentrationsIn(quote) {
       else out.push({ text: m[0], nmolMl: (v * MOLE_NMOL[unit]) / den });
     }
   }
+  for (const m of normalize(quote).matchAll(MOLAR)) {
+    const vals = [Number(m[1])];
+    if (m[2] !== undefined) vals.push(Number(m[2]), (Number(m[1]) + Number(m[2])) / 2);
+    for (const v of vals) out.push({ text: m[0], nmolMl: (v * M_NMOL_L[m[3]]) / 1000 });
+  }
   return out;
 }
+
+const MOLAR = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*(nm|µm|μm|um|mm)(?![a-z\/])/g; // nM, µM: mol per litre
+const M_NMOL_L = { nm: 1, µm: 1e3, μm: 1e3, um: 1e3, mm: 1e6 };
 
 const close = (a, b, rel = 0.06) => Math.abs(a - b) <= Math.max(1e-6, rel * Math.max(Math.abs(a), Math.abs(b)));
 

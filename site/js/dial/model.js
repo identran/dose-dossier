@@ -7,37 +7,23 @@
 export const TAU = Math.PI * 2;
 
 export const GEOM = Object.freeze({
-  R0: 0.64,       // base ring, zero concentration
-  H: 0.26,        // displacement at Cmax
+  R0: 0.68,       // base ring, zero concentration
+  H: 0.27,        // displacement at Cmax
   CENTER: 0.54,   // half-side of the reserved centre square, as a fraction of R0
 });
 
-// Line weights and node sizes in CSS pixels. "Quiet" is always a lighter weight or a smaller
-// scale, never a tint.
+// Line weights and mark sizes in CSS pixels. There are two weights and nothing thinner than a
+// pixel, so no line is ever a blend of ink and paper: quiet is the lighter weight, never a tint.
 export const STYLE = Object.freeze({
-  ring: 1.0,
-  bold: 1.7,        // profile behind the fill front
-  fine: 0.8,        // profile ahead of it
-  echo: 0.6,        // half-life echoes
-  cmax: 0.9,        // Cmax circle, dotted
-  cmaxDash: 1.2,
-  cmaxPitch: 5,
-  tick: 0.8,
+  line: 1,          // ring, ticks, probe ring and the profile ahead of the fill front
+  bold: 2,          // the profile behind the fill front
   tickMinor: 3.5,
   tickMajor: 7,
-  hand: 0.8,
-  nodeQuiet: 2.6,   // radius of an unreached node
-  nodeFull: 4.2,    // radius of a resolved node
-  nodeNow: 1.4,     // extra radius of the node under the hand
-  nodeQuietW: 0.8,
-  nodeFullW: 1.3,
-  nodeDot: 1.3,
+  node: 2.6,        // radius of a sampling time that has been reached
   probe: 8,         // radius of the probe ring
-  probeW: 0.8,
 });
 
 export const NODE_MAX = 24;
-export const ECHO_MAX = 6;
 export const KNOT_ROW = 1024;
 
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
@@ -93,21 +79,6 @@ export function buildNodes(curve, times) {
   });
 }
 
-// Half-life echoes. First-order elimination has one symmetry: wait one half-life and halve the
-// scale, and the tail lands on itself. Applying that map to the whole profile gives copies that
-// leave the ring one half-life apart, each half the height of the last, and each joins the tail
-// of the one before. They are culled once the copy would be under a few pixels tall.
-export function echoCount(curve, sCss) {
-  const hPx = GEOM.H * sCss;
-  let n = 0;
-  for (let k = 1; k <= ECHO_MAX; k++) {
-    if (k * curve.halfLife >= curve.span) break;
-    if (hPx / 2 ** k < 3.5) break;
-    n = k;
-  }
-  return n;
-}
-
 // Tick marks on the inside of the ring, and the few that carry a label.
 export function tickSpec(period) {
   if (period === 24) return { minor: 24, every: 6, labels: [6, 12, 18] };
@@ -117,20 +88,11 @@ export function tickSpec(period) {
   return { minor: 12, every: 3, labels: [period / 4, period / 2, (3 * period) / 4] };
 }
 
-// The Cmax label sits in a gap of the Cmax circle on the diagonal where the profile is lowest.
-export function cmaxLabelTurn(curve) {
-  const cn = normalised(curve);
-  const laps = curve.span / curve.period;
-  let best = 0.625;
-  let bestC = Infinity;
-  for (const a of [0.625, 0.375, 0.875, 0.125]) {
-    let c = 0;
-    for (let l = 0; l + a <= laps + 1e-9; l++) c = Math.max(c, cn((l + a) * curve.period));
-    // Leave the neighbourhood of the peak alone as well.
-    for (const d of [-0.04, 0.04]) for (let l = 0; l + a + d <= laps; l++) c = Math.max(c, cn((l + a + d) * curve.period));
-    if (c < bestC - 1e-6) { bestC = c; best = a; }
-  }
-  return best;
+// Where the peak sits on the dial, in turns: the one place the Cmax label can stand clear of
+// every lap of the profile.
+export function peakTurn(curve) {
+  const t = curve.model === 'bolus' ? 0 : curve.tmax;
+  return (t / curve.period) % 1;
 }
 
 export const easeInOut = x => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);

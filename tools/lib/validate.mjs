@@ -62,7 +62,7 @@ export function checkVocab(ctx, where, field, value, list) {
 
 export function formulaCounts(formula) {
   const counts = {};
-  for (const [, el, k] of formula.matchAll(/([A-Z][a-z]?)(\d*)/g)) counts[el] = (counts[el] || 0) + (k ? Number(k) : 1);
+  for (const [, el, k] of formula.replace(/[+-]\d*$/, '').matchAll(/([A-Z][a-z]?)(\d*)/g)) counts[el] = (counts[el] || 0) + (k ? Number(k) : 1);
   return counts;
 }
 
@@ -72,7 +72,7 @@ export function validateStructure(ctx, where, s) {
   const before = ctx.errors.length;
   if (!s || typeof s !== 'object') return ctx.err(where, '"structure" must be an object');
   if (!Number.isInteger(s.cid) || s.cid <= 0) ctx.err(where, '"structure.cid" must be a positive integer');
-  if (!isStr(s.formula) || !/^([A-Z][a-z]?\d*)+$/.test(s.formula)) ctx.err(where, '"structure.formula" must be a molecular formula such as C22H30N6O4S');
+  if (!isStr(s.formula) || !/^([A-Z][a-z]?\d*)+([+-]\d*)?$/.test(s.formula)) ctx.err(where, '"structure.formula" must be a molecular formula such as C22H30N6O4S (a trailing charge such as + is allowed)');
   if (!Array.isArray(s.atoms) || !s.atoms.length) return ctx.err(where, '"structure.atoms" must be a non-empty array');
   if (!Array.isArray(s.bonds) || !s.bonds.length) return ctx.err(where, '"structure.bonds" must be a non-empty array');
   const n = s.atoms.length;
