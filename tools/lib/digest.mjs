@@ -182,10 +182,12 @@ function administration(rec, label, cap) {
     const k = x.toLowerCase().replace(/\W+/g, ' ');
     if (seen.has(k)) continue;
     seen.add(k);
-    if (DURATION.some(r => r.test(x))) first.push(x); else if (key.test(x)) rest.push(x);
+    if (DURATION.some(r => r.test(x))) first.push(x); else if (key.test(x) && x.length < 400) rest.push(x);
   }
-  const picked = [...first, ...rest];
-  return picked.length ? trimAt(picked.join(' '), cap) : '';
+  // how and how fast it is given first (up to `cap`), then the first dose-listing sentences (up to 500 more)
+  const head = first.length ? trimAt(first.join(' '), cap) : '';
+  const tail = rest.length ? trimAt(rest.slice(0, 4).join(' '), 500) : '';
+  return [head, tail].filter(Boolean).join(' ');
 }
 
 export function buildDigest(rec, label, structure = null) {

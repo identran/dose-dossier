@@ -5,7 +5,7 @@
 // data/candidates.json, and `structure` from tools/.cache/structures/<id>.json when present and at most 70 heavy atoms
 // (the draft's `biologic` is then dropped). Writes the dossier with a stable key order and 2-space JSON.
 // Refuses to overwrite an existing dossier unless --force. Run `npm run verify` afterwards.
-import { readFile, readdir, writeFile, mkdir, access } from 'node:fs/promises';
+import { readFile, readdir, writeFile, mkdir, access, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -26,12 +26,28 @@ const DRAFT_FIELDS = ['aliases', 'salt', 'approved', 'sponsor', 'area', 'class',
 const cands = new Map(JSON.parse(await readFile(candFile, 'utf8')).map(c => [c.id, c]));
 const exists = async f => { try { await access(f); return true; } catch { return false; } };
 
-const ids = args.includes('--all') ? (await readdir(drafts)).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5)).sort() : wanted;
+// <id>.skip.json ({ "reason": "..." }) in the drafts dir or tools/.cache/drafts marks an id as skipped: reported, not an error.
+const SKIP_DIRS = [...new Set([drafts, path.join(ROOT, 'tools', '.cache', 'drafts')])];
+async function findSkip(id) {
+  for (const dir of SKIP_DIRS) {
+    try {
+      const raw = await readFile(path.join(dir, `${id}.skip.json`), 'utf8');
+      let reason = raw.trim();
+      try { const j = JSON.parse(raw); reason = typeof j === 'string' ? j : j.reason || JSON.stringify(j); } catch {}
+      return { dir, reason };
+    } catch {}
+  }
+  return null;
+}
+const ids = args.includes('--all') ? (await readdir(drafts)).filter(f => f.endsWith('.json') && !f.endsWith('.skip.json')).map(f => f.slice(0, -5)).sort() : wanted;
+if (args.includes('--all')) for (const f of await readdir(drafts)) if (f.endsWith('.skip.json') && !ids.includes(f.slice(0, -10))) ids.push(f.slice(0, -10));
 const today = new Date().toISOString().slice(0, 10);
-let wrote = 0, problems = 0;
+let wrote = 0, problems = 0, skipped = 0;
 await mkdir(outDir, { recursive: true });
 for (const id of ids) {
   const say = (kind, msg) => { console.error(`${kind}  ${id}: ${msg}`); if (kind === 'error') problems++; };
+  const skip = await findSkip(id);
+  if (skip) { console.log(`SKIP  ${id}: ${skip.reason}`); skipped++; try { await rm(path.join(skip.dir, `${id}.json`)); } catch {} continue; }
   const c = cands.get(id);
   if (!c) { say('error', 'not in data/candidates.json'); continue; }
   if (c.status !== 'ok') { say('error', `candidate is ${c.status} (${c.reject || ''}); no label to build from`); continue; }
@@ -62,5 +78,5 @@ for (const id of ids) {
   wrote++;
   console.log(`wrote ${path.relative(ROOT, target)}`);
 }
-console.log(`\n${wrote} written, ${problems} problem${problems === 1 ? '' : 's'}`);
+console.log(`\n${wrote} written, ${skipped} skipped, ${problems} problem${problems === 1 ? '' : 's'}`);
 process.exit(problems ? 1 : 0);

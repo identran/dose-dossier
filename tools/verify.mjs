@@ -12,7 +12,7 @@
 //     mass or molar concentrations; table rows such as "C max (ng/mL) | 440" read the unit from the row)
 // --strict makes a class or sponsor missing from data/vocab.json an error instead of a warning.
 // Exit status 1 when any dossier fails.
-import { readFile, readdir, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, readdir, writeFile, mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createContext, validateDossier, validateVocab, isStr, KNOWN_TOP, FIELDS } from './lib/validate.mjs';
@@ -45,12 +45,22 @@ function numbersIn(text) {
   return out;
 }
 
+// "7 ± 1", "4.7 (1.6)", "4.7 [range 2-9]", "1.0 (0.5-3.0)" mean the first number; drop the spread. Spelled-out numbers become digits.
+const WORDS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, sixteen: 16, twenty: 20, 'twenty-four': 24, thirty: 30, 'thirty-six': 36, forty: 40, 'forty-eight': 48, sixty: 60, 'seventy-two': 72 };
+const WORD_RE = new RegExp(`\\b(${Object.keys(WORDS).sort((a, b) => b.length - a.length).join('|')})(?=[ -](?:hours?|hrs?|minutes?|mins?|days?|weeks?)\\b)`, 'g');
+function cleanQuote(q) {
+  return normalize(q)
+    .replace(/\s*(?:±|\+\/-|\+-)\s*\d+(?:\.\d+)?%?/g, '')
+    .replace(/(\d)\s*[(\[]\s*(?:(?:range|cv|sd|se|ci|95% ci|min-max)\s*[:=]?\s*)?[\d.,\s\-%]+(?:\s*to\s*[\d.,\s%]+)?[)\]]/g, '$1')
+    .replace(WORD_RE, w => String(WORDS[w]));
+}
+
 const TIME = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*-?\s*(hours?|hrs?|h|minutes?|mins?|days?|weeks?)(?![a-z])/g;
 const toHours = (v, unit) => (/^h/.test(unit) ? v : /^m/.test(unit) ? v / 60 : /^d/.test(unit) ? v * 24 : v * 168);
 
 function timesIn(quote) {
   const out = [];
-  for (const m of normalize(quote).matchAll(TIME)) {
+  for (const m of cleanQuote(quote).matchAll(TIME)) {
     const a = toHours(Number(m[1]), m[3]);
     out.push({ h: a, text: m[0] });
     if (m[2] !== undefined) {
@@ -70,7 +80,7 @@ const CONC = /(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*(pg|ng|µg
 // Concentrations in the quote as { ngPerMl (or null when a molecular weight is needed), molar: nmol/mL }
 function concentrationsIn(quote) {
   const out = [];
-  for (const m of normalize(quote).matchAll(CONC)) {
+  for (const m of cleanQuote(quote).matchAll(CONC)) {
     const unit = m[3];
     const den = PER_ML[m[4]];
     const vals = [Number(m[1])];
@@ -80,7 +90,7 @@ function concentrationsIn(quote) {
       else out.push({ text: m[0], nmolMl: (v * MOLE_NMOL[unit]) / den });
     }
   }
-  for (const m of normalize(quote).matchAll(MOLAR)) {
+  for (const m of cleanQuote(quote).matchAll(MOLAR)) {
     const vals = [Number(m[1])];
     if (m[2] !== undefined) vals.push(Number(m[2]), (Number(m[1]) + Number(m[2])) / 2);
     for (const v of vals) out.push({ text: m[0], nmolMl: (v * M_NMOL_L[m[3]]) / 1000 });
@@ -100,6 +110,7 @@ function parseMwFromDigest(digest) {
   return m ? Number(m[1]) : null;
 }
 
+const sentenceCountOf = t => t.trim().split(/(?<=[.!?])\s+(?=[A-Z0-9(])/).filter(Boolean).length;
 function evidenceList(v) { return Array.isArray(v) ? v : [v]; }
 
 function checkQuote(quote, digestNorm) {
@@ -161,7 +172,7 @@ async function verifyOne(label, file, vocab) {
     const quotes = evidenceList(evidence[`pk.${k}`]).filter(isStr);
     if (!quotes.length) { res.warnings.push(`pk.${k} has no evidence quote`); continue; }
     res.checked.pkQuotes++;
-    const joined = quotes.join(' ');
+    const joined = cleanQuote(quotes.join(' '));
     if (k === 'cmax') {
       const found = concentrationsIn(joined);
       if (!found.length) {
@@ -200,7 +211,12 @@ async function verifyOne(label, file, vocab) {
     if (!isStr(text)) continue;
     const w = `clue ${slot}`;
     const quotes = clueQuote.get(slot);
-    if (!quotes) res.warnings.push(`${w} has no evidence quote`);
+    if (slot === 'safety') {
+      const saysNone = /\b(?:no|without a?|carries no|has no)\s+(?:boxed|black[- ]box)\s+warning/i.test(text);
+      if (saysNone && /^## Boxed warning/m.test(digest)) res.errors.push('clue safety says there is no boxed warning, but the digest has a ## Boxed warning section');
+      if (!saysNone && /^## Boxed warning/m.test(digest) && !/boxed|black[- ]box|\bWARNING\b/i.test(text)) res.warnings.push('the label has a boxed warning (see the digest) but the safety clue does not mention it');
+    }
+    if (!quotes && !(slot === 'safety' && /\b(?:no|without a?|carries no|has no)\s+(?:boxed|black[- ]box)\s+warning/i.test(text) && sentenceCountOf(text) <= 1)) res.warnings.push(`${w} has no evidence quote`);
     const quoteNums = new Set(numbersIn((quotes || []).join(' ')).map(n => n.canon));
     for (const n of numbersIn(text)) {
       res.checked.numbers++;
@@ -222,22 +238,49 @@ const vctx = createContext();
 validateVocab(vctx, vocab);
 if (vctx.errors.length) { console.error(vctx.errors.join('\n')); process.exit(2); }
 
+// <id>.skip.json ({ "reason": "..." }) in the dossier dir or tools/.cache/drafts marks an id as deliberately skipped.
+const SKIP_DIRS = [...new Set([DIR, path.join(ROOT, 'tools', '.cache', 'drafts')])];
+async function findSkip(id) {
+  for (const dir of SKIP_DIRS) {
+    try {
+      const raw = await readFile(path.join(dir, `${id}.skip.json`), 'utf8');
+      let reason = raw.trim();
+      try { const j = JSON.parse(raw); reason = typeof j === 'string' ? j : j.reason || JSON.stringify(j); } catch {}
+      return { dir, reason };
+    } catch {}
+  }
+  return null;
+}
+
 let files = [];
-if (args.includes('--all')) files = (await readdir(DIR)).filter(f => f.endsWith('.json')).sort().map(f => [f.replace(/\.json$/, ''), path.join(DIR, f)]);
+const skipIds = new Set();
+if (args.includes('--all')) {
+  for (const dir of SKIP_DIRS) { try { for (const f of await readdir(dir)) if (f.endsWith('.skip.json')) skipIds.add(f.slice(0, -10)); } catch {} }
+  files = (await readdir(DIR)).filter(f => f.endsWith('.json') && !f.endsWith('.skip.json')).sort().map(f => [f.replace(/\.json$/, ''), path.join(DIR, f)]);
+}
 for (const t of targets) files.push(t.endsWith('.json') ? [path.basename(t, '.json'), path.resolve(t)] : [t, path.join(DIR, `${t}.json`)]);
+for (const [label] of files) skipIds.add(label);
+
+const skipped = new Map();
+for (const id of skipIds) { const k = await findSkip(id); if (k) skipped.set(id, k); }
+for (const [id, k] of skipped) { try { await rm(path.join(k.dir, `${id}.json`)); } catch {} } // the skip wins over any staged file
 
 const results = [];
-for (const [label, file] of files) results.push(await verifyOne(label, file, vocab));
+for (const [label, file] of files) if (!skipped.has(label)) results.push(await verifyOne(label, file, vocab));
 
 let fails = 0;
+for (const [id, k] of skipped) console.log(`SKIP  ${id}: ${k.reason}`);
 for (const r of results) {
   if (r.status === 'fail') fails++;
   console.log(`${r.status === 'pass' ? 'PASS' : 'FAIL'}  ${r.id}${r.warnings.length ? `  (${r.warnings.length} warning${r.warnings.length === 1 ? '' : 's'})` : ''}`);
   for (const e of r.errors) console.log(`    error    ${e}`);
   for (const w of r.warnings) console.log(`    warning  ${w}`);
 }
-console.log(`\n${results.length - fails} of ${results.length} pass`);
-await mkdir(path.dirname(REPORT), { recursive: true });
-await writeFile(REPORT, JSON.stringify({ summary: { total: results.length, pass: results.length - fails, fail: fails, strict }, results }, null, 2) + '\n');
-console.log(`report: ${path.relative(process.cwd(), REPORT)}`);
+console.log(`\n${results.length - fails} of ${results.length} pass${skipped.size ? `, ${skipped.size} skipped` : ''}`);
+// Only a full run writes the report; parallel agents verifying single ids must not clobber it.
+if (args.includes('--all')) {
+  await mkdir(path.dirname(REPORT), { recursive: true });
+  await writeFile(REPORT, JSON.stringify({ summary: { total: results.length, pass: results.length - fails, fail: fails, skipped: skipped.size, strict }, results, skipped: [...skipped].map(([id, k]) => ({ id, reason: k.reason })) }, null, 2) + '\n');
+  console.log(`report: ${path.relative(process.cwd(), REPORT)}`);
+}
 process.exit(fails ? 1 : 0);

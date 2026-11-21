@@ -165,7 +165,8 @@ function play({ index, today, day, dossier }) {
     safely('dial.setDetails', () => dial.setDetails?.('profile-table'));
   }
   el.context.textContent = context;
-  el.profile.textContent = profile;
+  // Each of its three statements keeps to one line.
+  el.profile.replaceChildren(...profile.split(' · ').flatMap((part, i) => [i ? ' · ' : '', h('span', null, part)]));
   el.table.hidden = false;
   // The glyph takes the day's accent, not the product's raw colour: one accent on the page.
   const pill = dossier.pill ? { shape: dossier.pill.shape, desc: dossier.pill.desc } : null;
