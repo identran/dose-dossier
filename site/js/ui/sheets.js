@@ -38,9 +38,12 @@ export function renderStatistics(dialog, stats) {
 export function renderProfile(dialog, { line, unit, rows }) {
   $('#profile-line', dialog).textContent = line;
   // Under the sheet's title the unit is head enough for the eye; a screen reader gets the word.
-  const heads = ['Time', unit && [sr('Concentration, '), unit], '% of peak'].filter(Boolean);
-  $('#profile-table', dialog).replaceChildren(
-    h('thead', null, h('tr', null, heads.map(head => h('th', { scope: 'col' }, head)))),
+  const heads = () => ['Time', unit && [sr('Concentration, '), unit], '% of peak'].filter(Boolean);
+  const fill = table => table?.replaceChildren(
+    h('thead', null, h('tr', null, heads().map(head => h('th', { scope: 'col' }, head)))),
     h('tbody', null, rows.map(row =>
       h('tr', null, h('td', null, row.time), unit && h('td', null, row.concentration), h('td', null, row.ofPeak)))));
+  fill($('#profile-table', dialog));
+  // The figure points at this copy, which a closed sheet does not hide from a screen reader.
+  fill($('#figure-data'));
 }

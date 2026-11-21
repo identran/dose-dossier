@@ -112,14 +112,15 @@ export function contourCount(sCss) {
   return n;
 }
 
-// Contours are ink. Over the accent fill they stay ink unless ink would all but vanish there
-// (a dark accent on light paper, a pale one on dark), in which case they are cut in paper.
+// Contours are ink. Over the accent fill they stay ink unless ink falls short of 3:1 there
+// (a dark accent on light paper, a mid one on dark), in which case they are cut in paper
+// when that reads better.
 export function contourOnFill({ paper, ink, accent }) {
   const lum = c => toLinear(c).reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
   const ratio = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
   const la = lum(accent);
   const withInk = ratio(lum(ink), la);
-  return withInk < 2.2 && ratio(lum(paper), la) > withInk ? paper : ink;
+  return withInk < 3 && ratio(lum(paper), la) > withInk ? paper : ink;
 }
 
 // Where the peak sits on the dial, in turns.

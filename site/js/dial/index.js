@@ -9,6 +9,7 @@
 //   dial.setTheme('light' | 'dark')
 //   dial.setLabel(text)                      aria-label of the figure (role="img")
 //   dial.setDetails(id)                      aria-details: id of the element that describes it
+//   dial.setDescription(id)                  aria-describedby: id of a hint on how to use the keyboard
 //   dial.resize()
 //   dial.destroy()
 //
@@ -62,6 +63,8 @@ function ensureStyles() {
 function colorReader(host) {
   const probe = document.createElement('i');
   probe.hidden = true;
+  // Forced colours would otherwise turn every colour read here into the one system text colour.
+  probe.style.forcedColorAdjust = 'none';
   host.append(probe);
   const ctx = document.createElement('canvas').getContext('2d', { willReadFrequently: true });
   return expr => {
@@ -100,6 +103,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   const on = (target, type, fn, extra = {}) => target.addEventListener(type, fn, { signal: listeners.signal, ...extra });
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const darkScheme = matchMedia('(prefers-color-scheme: dark)');
+  const forcedScheme = matchMedia('(forced-colors: active)');
 
   let renderer = null;
   let box = { w: 0, h: 0, s: 0 };
@@ -144,7 +148,12 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
     const explicit = document.documentElement.dataset.theme;
     const name = theme || (explicit === 'dark' || explicit === 'light' ? explicit : darkScheme.matches ? 'dark' : 'light');
     const base = FALLBACK[name];
-    const set = {
+    // Windows high contrast: the figure is drawn in the system's own colours.
+    const set = forcedScheme.matches ? {
+      paper: readColor('Canvas'),
+      ink: readColor('CanvasText'),
+      accent: readColor('Highlight'),
+    } : {
       paper: readColor(`var(--paper, ${base.paper})`),
       ink: readColor(`var(--ink, ${base.ink})`),
       accent: readColor(challenge?.accent || `var(--accent, var(--mute, ${base.mute}))`),
@@ -384,6 +393,7 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
   const themeObserver = new MutationObserver(queueRecolor);
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class', 'style'] });
   on(darkScheme, 'change', queueRecolor);
+  on(forcedScheme, 'change', queueRecolor);
   on(document, 'visibilitychange', () => {
     if (document.hidden) { cancelAnimationFrame(raf); raf = 0; lastTick = 0; } else invalidate();
   });
@@ -441,6 +451,10 @@ export function createDial(container, { onProbe, renderer: wanted } = {}) {
 
     setDetails(id) {
       if (id) root.setAttribute('aria-details', id); else root.removeAttribute('aria-details');
+    },
+
+    setDescription(id) {
+      if (id) root.setAttribute('aria-describedby', id); else root.removeAttribute('aria-describedby');
     },
 
     resize: layout,

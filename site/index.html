@@ -38,8 +38,10 @@
       </p>
     </header>
 
-    <figure class="figure">
+    <figure class="figure" aria-label="Plasma concentration after a dose">
       <div id="dial" class="dial"></div>
+      <p id="dial-hint" class="sr">With the figure focused, the arrow keys step through the sampling times and Escape clears the reading.</p>
+      <div class="sr"><table id="figure-data" aria-label="Plasma concentration"></table></div>
       <figcaption class="caption">
         <p><span id="glyph" class="glyph"></span><span id="context"></span></p>
         <p><span id="profile"></span> <button type="button" class="text-button" data-sheet="table" hidden>Table</button></p>
@@ -50,7 +52,7 @@
 
     <section class="play" aria-label="Your guess">
       <form id="guess-form" class="guess-form" autocomplete="off" novalidate>
-        <input id="guess" class="field" type="text" role="combobox" aria-label="Drug name"
+        <input id="guess" class="field" type="text" role="combobox" aria-label="Generic or brand name"
           aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-describedby="status"
           placeholder="Generic or brand name" autocapitalize="none" autocorrect="off" spellcheck="false"
           enterkeyhint="go" disabled>

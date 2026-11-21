@@ -145,6 +145,7 @@ function play({ index, today, day, dossier }) {
 
   // Masthead
   el.day.textContent = `Day ${day}`;
+  document.title = `Dose Dossier, day ${day}`;
   if (day > 1) { el.earlier.href = dayHref(day - 1, today); el.earlier.hidden = false; }
   if (day < today) { el.later.href = dayHref(day + 1, today); el.later.hidden = false; }
 
@@ -162,7 +163,8 @@ function play({ index, today, day, dossier }) {
     safely('dial.setTheme', () => dial.setTheme(currentTheme()));
     safely('dial.setChallenge', () => dial.setChallenge({ curve, times, seed: day }));
     safely('dial.setLabel', () => dial.setLabel(profile));
-    safely('dial.setDetails', () => dial.setDetails('profile-table'));
+    safely('dial.setDetails', () => dial.setDetails('figure-data'));
+    safely('dial.setDescription', () => dial.setDescription('dial-hint'));
   }
   el.context.textContent = context;
   // Each of its three statements keeps to one line.
@@ -269,6 +271,7 @@ function play({ index, today, day, dossier }) {
   el.input.addEventListener('input', () => {
     greet = false;
     note = '';
+    el.input.removeAttribute('aria-invalid');
     renderStatus();
   });
 
@@ -288,14 +291,19 @@ function play({ index, today, day, dossier }) {
     if (!text) return el.input.focus();
 
     const drug = combo.chosen() || game.resolve(drugs, text);
+    el.input.removeAttribute('aria-invalid');
     if (!drug) {
       // Text that names no drug yet: Enter fills in the first suggestion, and a second Enter guesses it.
-      if (!combo.completeFirst()) say('No such drug in the list');
+      if (!combo.completeFirst()) {
+        el.input.setAttribute('aria-invalid', 'true');
+        say('No such drug in the list');
+      }
       return el.input.focus();
     }
 
     const { game: next, outcome } = game.guess(state, drug.id, nowToday());
     if (outcome === 'duplicate') {
+      el.input.setAttribute('aria-invalid', 'true');
       say(`${drug.generic} already guessed`);
       return el.input.select();
     }

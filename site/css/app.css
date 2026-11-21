@@ -75,6 +75,8 @@ a { color: inherit; }
   text-decoration: none;
 }
 
+.status a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+
 .text-button:hover, .day a:hover, .actions a:hover, .status a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -154,13 +156,13 @@ button:focus-visible, a:focus-visible {
   display: block;
   width: 100%;
   padding: var(--space-1) 0;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--mute);
   font-size: var(--size-l);
   text-overflow: ellipsis;
 }
 
 .field::placeholder { color: var(--mute); opacity: 1; }
-.field:focus { outline: none; padding-bottom: calc(var(--space-1) - 1px); border-bottom-width: 2px; }
+.field:focus { outline: none; padding-bottom: calc(var(--space-1) - 1px); border-bottom-color: var(--ink); border-bottom-width: 2px; }
 .field:disabled { border-bottom-color: var(--mute); }
 
 /* Suggestions are part of the page, under the field: they move the text below, they do not cover it.
@@ -425,6 +427,19 @@ button:focus-visible, a:focus-visible {
   }
 
   .sheet-body { margin: 0; }
+}
+
+/* The readout under the figure is the keyboard's current place on it, so it takes the focus underline. */
+.figure:has(.dial-root:focus-visible) .probe {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+/* Windows high contrast: system colours replace the tokens, and a button without its fill needs an edge. */
+@media (forced-colors: active) {
+  .button { border: 1px solid ButtonText; }
+  .field { border-bottom-color: CanvasText; }
 }
 
 /* Motion: a new line is written in from the left. */
