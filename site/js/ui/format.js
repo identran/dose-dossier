@@ -1,5 +1,6 @@
-// Number and unit formatting for the readouts, and the small typesetting of clue text.
+// Number formatting, the profile put into words, and the small typesetting of clue text.
 
+import { formatHours } from '../pk.js';
 import { h } from './dom.js';
 
 export const THIN = ' ';
@@ -43,16 +44,30 @@ export function number(value) {
   return value.toLocaleString('en-US', { maximumSignificantDigits: 3 });
 }
 
-export function halfLife(hours) {
-  if (!Number.isFinite(hours)) return '';
-  if (hours < 1) return `${Math.round(hours * 60)} min`;
-  if (hours < 96) return `${+hours.toPrecision(3)} h`;
-  return `${+(hours / 24).toPrecision(3)} d`;
+export const percent = fraction => `${Math.round(fraction * 100)}%`;
+
+// A generic name as it stands inside a sentence.
+export const inSentence = name => name.charAt(0).toLowerCase() + name.slice(1);
+
+/* The profile in words. `curve` is from pk.js; a relative curve has no label Cmax. */
+
+// "Peak 440 ng/mL at 1 h · half-life 4 h · one turn is 24 h"
+export function profileLine(curve) {
+  const peak = curve.relative ? 'Peak' : `Peak ${number(curve.cmax)} ${curve.unit}`;
+  const at = curve.model === 'bolus' ? 0 : curve.tmax;
+  return `${peak} at ${formatHours(at)} · half-life ${formatHours(curve.halfLife)} · one turn is ${formatHours(curve.period)}`;
 }
 
-// 'ng/mL' -> 'ng·h/mL'
-export function aucUnit(unit) {
-  if (!unit) return '';
-  const cut = unit.indexOf('/');
-  return cut < 0 ? `${unit}·h` : `${unit.slice(0, cut)}·h${unit.slice(cut)}`;
+// "2.5 h · 310 ng/mL", or "2.5 h · 62% of peak"
+export function probeLine(curve, t) {
+  const c = curve.c(t);
+  return `${formatHours(t)} · ${curve.relative ? `${percent(c / curve.cmax)} of peak` : `${number(c)} ${curve.unit}`}`;
+}
+
+// One row per sampling time: { time, concentration, ofPeak }, concentration null on a relative curve.
+export function profileRows(curve, times) {
+  return times.map(t => {
+    const c = curve.c(t);
+    return { time: formatHours(t), concentration: curve.relative ? null : number(c), ofPeak: percent(c / curve.cmax) };
+  });
 }

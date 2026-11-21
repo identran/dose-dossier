@@ -28,7 +28,7 @@ export const FIELDS = {
   reviewOnly: ['evidence', 'notes', 'review', 'scratch'],
   // pharmacokinetic fields: required fields must be positive numbers inside [lo, hi]
   pk: {
-    tmaxH: { required: true, lo: 0.01, hi: 168, what: 'h' },
+    tmaxH: { required: true, lo: 0.01, hi: 2200, what: 'h' },
     halfLifeH: { required: true, lo: 0.05, hi: 2000, what: 'h' },
     cmax: { required: false, lo: 1e-3, hi: 1e6, needs: 'unit' },
     spanH: { required: false },
@@ -226,7 +226,7 @@ export function validateDossier(ctx, file, d, vocab, { strict = false } = {}) {
     if (!p || typeof p !== 'object') ctx.err(where, '"pill" must be an object');
     else {
       checkVocab(ctx, where, 'pill.shape', p.shape, vocab.pillShapes);
-      if (!isHex(p.color)) ctx.err(where, `"pill.color" must be a hex colour like #4C86C6 (got ${JSON.stringify(p.color)})`);
+      if (p.color !== undefined && !isHex(p.color)) ctx.err(where, `"pill.color" must be a hex colour like #4C86C6 (got ${JSON.stringify(p.color)})`);
       if (p.color2 !== undefined && !isHex(p.color2)) ctx.err(where, `"pill.color2" must be a hex colour (got ${JSON.stringify(p.color2)})`);
       if (!isStr(p.desc)) ctx.err(where, '"pill.desc" is required');
     }
@@ -240,7 +240,7 @@ export function validateDossier(ctx, file, d, vocab, { strict = false } = {}) {
     else {
       if (!FIELDS.biologicFormats.includes(b.format)) ctx.err(where, `"biologic.format" is ${JSON.stringify(b.format)}; use one of ${FIELDS.biologicFormats.join(', ')}`);
       if (b.isotype !== null && !isStr(b.isotype)) ctx.err(where, '"biologic.isotype" must be a string or null');
-      if (!isNum(b.massKDa) || b.massKDa <= 0) ctx.err(where, '"biologic.massKDa" must be a positive number');
+      if (b.massKDa !== null && (!isNum(b.massKDa) || b.massKDa <= 0)) ctx.err(where, '"biologic.massKDa" must be a positive number or null');
     }
   }
   validateClues(ctx, where, d);

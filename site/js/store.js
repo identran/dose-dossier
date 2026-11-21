@@ -20,7 +20,7 @@ const MIGRATIONS = {
     const games = {};
     for (const [day, g] of Object.entries(data.games || {})) {
       const n = Array.isArray(g?.guesses) ? g.guesses.length : Infinity;
-      if ((g.status === 'won' && n <= 8) || (g.status === 'playing' && n < 8)) games[day] = { ...g, live: false };
+      if ((g?.status === 'won' && n <= 8) || (g?.status === 'playing' && n < 8)) games[day] = { ...g, live: false };
     }
     return { v: 2, games, theme: data.theme ?? null, explain: false };
   },

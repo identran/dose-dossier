@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Molecule and dose form test page</title>
+<title>Molecule, biologic and dose form test page</title>
 <!-- Dev only. Serve the repo root and open /dev/molecule.html
-     ?only=azithromycin,fluoxetine limits the molecules, ?theme=dark limits the theme. -->
+     ?only=azithromycin,fluoxetine,antibody limits the molecules and biologic formats, ?theme=dark limits the theme. -->
 <!-- ?bounds=1 outlines the circle each molecule is fitted to. -->
 <link rel="stylesheet" href="../site/css/tokens.css">
 <link rel="stylesheet" href="../site/assets/fonts/fonts.css">
@@ -38,14 +38,14 @@
 </style>
 </head>
 <body>
-<h1>Molecule and dose form test page</h1>
+<h1>Molecule, biologic and dose form test page</h1>
 
 <div class="stepper">
   <div class="cell" id="live"></div>
   <div>
     <p><select id="pick" aria-label="Molecule"></select></p>
     <p><button id="less" type="button">Less</button> &nbsp; <span id="level"></span> &nbsp; <button id="more" type="button">More</button></p>
-    <p><button id="none" type="button">Clear (biologic)</button></p>
+    <p><button id="none" type="button">Clear</button></p>
     <p>Drag the corner of the square to resize it</p>
   </div>
 </div>
@@ -54,10 +54,12 @@
 
 <script type="module">
 import { renderMolecule } from '../site/js/molecule.js';
+import { renderBiologic } from '../site/js/biologic.js';
 import { renderDoseForm } from '../site/js/glyph.js';
 
 const params = new URLSearchParams(location.search);
 if (params.get('bounds')) document.body.classList.add('bounds');
+const only = params.get('only')?.split(',');
 const structures = await (await fetch('fixtures/structures.json')).json();
 
 // Synthetic cases the real molecules do not cover.
@@ -69,7 +71,6 @@ structures['glycine zwitterion'] = {
   bonds: [[0, 1, 1], [1, 2, 1], [2, 3, 1], [2, 4, 2]],
 };
 
-const only = params.get('only')?.split(',');
 const names = Object.keys(structures).filter(n => !only || only.includes(n));
 const themes = params.get('theme') ? [params.get('theme')] : ['light', 'dark'];
 const make = (tag, cls, parent, text) => {
@@ -80,8 +81,24 @@ const make = (tag, cls, parent, text) => {
   return n;
 };
 
-const SHAPES = ['round', 'oval', 'oblong', 'capsule', 'diamond', 'triangle', 'shield', 'vial', 'pen', 'inhaler', 'patch', 'drop'];
-const FORMS = ['tablet', 'capsule', 'solution', 'injection', 'prefilled pen', 'inhalation aerosol', 'transdermal patch'];
+// Every pillShapes and forms entry of data/vocab.json, then the two extra shape names still accepted.
+const SHAPES = ['round', 'oval', 'oblong', 'capsule', 'diamond', 'triangle', 'square', 'rectangle', 'pentagon', 'hexagon', 'octagon',
+  'vial', 'pen', 'inhaler', 'syringe', 'patch', 'dropper', 'shield', 'drop'];
+const FORMS = ['tablet', 'capsule', 'solution', 'suspension', 'powder', 'injection', 'inhalation', 'cream', 'ointment', 'gel',
+  'patch', 'drops', 'spray', 'suppository', 'lozenge', 'implant'];
+
+// One biologic per format; isotype null falls back to the format name, a missing mass leaves level 4 as level 3.
+const biologics = {
+  antibody: { format: 'antibody', isotype: 'IgG1 κ', massKDa: 148 },
+  bispecific: { format: 'bispecific', isotype: 'IgG4', massKDa: 146 },
+  fragment: { format: 'fragment', isotype: 'IgG1 κ Fab', massKDa: 48 },
+  'fc-fusion': { format: 'fc-fusion', isotype: null, massKDa: 150 },
+  conjugate: { format: 'conjugate', isotype: 'IgG1 κ', massKDa: 153 },
+  peptide: { format: 'peptide', isotype: null, massKDa: 4.1 },
+  protein: { format: 'protein', isotype: null, massKDa: 30.4 },
+  oligonucleotide: { format: 'oligonucleotide', isotype: null, massKDa: 7.5 },
+};
+const kinds = Object.keys(biologics).filter(n => !only || only.includes(n));
 
 const out = document.getElementById('out');
 for (const theme of themes) {
@@ -106,6 +123,13 @@ for (const theme of themes) {
     make('div', '', item, form);
   }
 
+  for (const name of kinds) {
+    make('h3', '', sec, name);
+    for (const size of ['large', 'small']) {
+      const row = make('div', 'row ' + size, sec);
+      for (let reveal = 0; reveal <= 4; reveal++) renderBiologic(make('div', 'cell', row), biologics[name], { reveal });
+    }
+  }
   for (const name of names) {
     make('h3', '', sec, name);
     for (const size of ['large', 'small']) {
@@ -117,14 +141,19 @@ for (const theme of themes) {
 
 // In-place updates.
 const live = document.getElementById('live'), pick = document.getElementById('pick'), label = document.getElementById('level');
-for (const n of Object.keys(structures)) make('option', '', pick, n);
+for (const n of [...Object.keys(structures), ...Object.keys(biologics)]) make('option', '', pick, n);
 let reveal = Number(params.get('reveal') ?? 0);
 pick.value = params.get('live') || 'sildenafil';
-const show = () => { label.textContent = `Reveal ${reveal}`; renderMolecule(live, structures[pick.value], { reveal }); };
-pick.onchange = show;
+const show = () => {
+  label.textContent = `Reveal ${reveal}`;
+  if (biologics[pick.value]) renderBiologic(live, biologics[pick.value], { reveal });
+  else renderMolecule(live, structures[pick.value], { reveal });
+};
+// Each renderer owns the element it draws in, so hand it over empty when the kind of answer changes.
+pick.onchange = () => { renderMolecule(live, null); renderBiologic(live, null); show(); };
 document.getElementById('less').onclick = () => { reveal = Math.max(0, reveal - 1); show(); };
 document.getElementById('more').onclick = () => { reveal = Math.min(4, reveal + 1); show(); };
-document.getElementById('none').onclick = () => { label.textContent = String(renderMolecule(live, null)); };
+document.getElementById('none').onclick = () => { renderBiologic(live, null); label.textContent = String(renderMolecule(live, null)); };
 show();
 window.ready = true;
 </script>
