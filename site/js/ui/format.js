@@ -54,11 +54,17 @@ export const inSentence = name => name.charAt(0).toLowerCase() + name.slice(1);
 
 /* The profile in words. `curve` is from pk.js; a relative curve has no label Cmax. */
 
+// One turn of the dial, in the unit its ticks are labelled in (see tickSpec in dial/model.js).
+function turnLength(period) {
+  if (period <= 48) return `${period} h`;
+  return period < 1344 ? `${+(period / 24).toFixed(1)} d` : `${+(period / 168).toFixed(1)} wk`;
+}
+
 // "Peak 440 ng/mL at 1 h · half-life 4 h · one turn is 24 h"
 export function profileLine(curve) {
   const peak = curve.relative ? 'Peak' : `Peak ${number(curve.cmax)} ${curve.unit}`;
   const at = curve.model === 'bolus' ? 0 : curve.tmax;
-  return `${peak} at ${formatHours(at)} · half-life ${formatHours(curve.halfLife)} · one turn is ${formatHours(curve.period)}`;
+  return `${peak} at ${formatHours(at)} · half-life ${formatHours(curve.halfLife)} · one turn is ${turnLength(curve.period)}`;
 }
 
 // "2.5 h · 310 ng/mL", or "2.5 h · 62% of peak"

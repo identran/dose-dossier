@@ -37,9 +37,10 @@ export function renderStatistics(dialog, stats) {
 // unit is null when the label gives no Cmax, and the concentration column is then left out.
 export function renderProfile(dialog, { line, unit, rows }) {
   $('#profile-line', dialog).textContent = line;
-  const heads = ['Time', unit && `Concentration, ${unit}`, 'Per cent of peak'].filter(Boolean);
+  // Under the sheet's title the unit is head enough for the eye; a screen reader gets the word.
+  const heads = ['Time', unit && [sr('Concentration, '), unit], '% of peak'].filter(Boolean);
   $('#profile-table', dialog).replaceChildren(
-    h('thead', null, h('tr', null, heads.map(text => h('th', { scope: 'col' }, text)))),
+    h('thead', null, h('tr', null, heads.map(head => h('th', { scope: 'col' }, head)))),
     h('tbody', null, rows.map(row =>
       h('tr', null, h('td', null, row.time), unit && h('td', null, row.concentration), h('td', null, row.ofPeak)))));
 }

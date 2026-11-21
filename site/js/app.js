@@ -106,7 +106,7 @@ async function start() {
   const file = String(game.dossierNumber(day, index.days)).padStart(3, '0');
   const dossier = await load(`day/${file}.json`);
   play({ index, today, day, dossier });
-  explain();
+  applyExplain();
 }
 
 /* Explain terms: off by default, remembered. The glossary is fetched when first wanted. */
@@ -114,7 +114,7 @@ async function start() {
 let glossary = null;
 let redraw = () => {};
 
-async function explain() {
+async function applyExplain() {
   const on = store.explain();
   el.explain.textContent = on ? 'Hide explanations' : 'Explain terms';
   if (on && !glossary) glossary = await load('glossary.json').catch(error => { console.error(error); return []; });
@@ -123,7 +123,7 @@ async function explain() {
 
 el.explain.addEventListener('click', () => {
   store.setExplain(!store.explain());
-  explain();
+  applyExplain();
 });
 
 /* The day */
@@ -161,8 +161,8 @@ function play({ index, today, day, dossier }) {
   if (dial) {
     safely('dial.setTheme', () => dial.setTheme(currentTheme()));
     safely('dial.setChallenge', () => dial.setChallenge({ curve, times, seed: day }));
-    safely('dial.setLabel', () => dial.setLabel?.(profile));
-    safely('dial.setDetails', () => dial.setDetails?.('profile-table'));
+    safely('dial.setLabel', () => dial.setLabel(profile));
+    safely('dial.setDetails', () => dial.setDetails('profile-table'));
   }
   el.context.textContent = context;
   // Each of its three statements keeps to one line.
@@ -211,9 +211,9 @@ function play({ index, today, day, dossier }) {
 
   function renderStatus() {
     const v = game.view(state, clues.length);
-    if (note) el.status.textContent = note;
-    else if (stale) el.status.replaceChildren(h('a', { href: dayHref(today, today) }, 'New dossier'));
-    else el.status.textContent = v.over ? '' : greet ? GREETING : game.guessesLeft(v.left);
+    const left = v.over ? '' : greet ? GREETING : game.guessesLeft(v.left);
+    if (note || !stale) el.status.textContent = note || left;
+    else el.status.replaceChildren(left && `${left} · `, h('a', { href: dayHref(today, today) }, 'New dossier'));
     el.status.hidden = !el.status.hasChildNodes();
   }
 

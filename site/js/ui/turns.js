@@ -20,10 +20,10 @@ export function renderTurns(list, turns, { fresh = false, describe, gloss = null
     const { drug, facts, clue } = turn;
     return h('li', { class: fresh && i === turns.length - 1 ? 'turn is-new' : 'turn' },
       sr(describe(turn)),
-      h('p', { class: 'turn-name', 'aria-hidden': 'true' }, drug.generic, drug.brand && h('span', { class: 'aka' }, drug.brand)),
+      h('p', { class: 'turn-name', 'aria-hidden': 'true' }, drug.generic, drug.brand && [' ', h('span', { class: 'aka' }, drug.brand)]),
       h('ul', { class: 'facts', 'aria-hidden': 'true' }, facts.map(fact)),
       clue && [
-        h('p', { class: 'clue' }, h('span', { class: 'clue-module' }, clue.module), typeset(clue.text)),
+        h('p', { class: 'clue' }, h('span', { class: 'clue-module' }, clue.module), ' ', typeset(clue.text)),
         glossLine(gloss?.(clue.module)),
         glossLine(gloss?.(clue.text)),
       ]);

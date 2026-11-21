@@ -46,14 +46,6 @@ a { color: inherit; }
 [hidden] { display: none !important; }
 ::selection { background: var(--ink); color: var(--paper); }
 
-/* Focus is a heavy underline on the control's own text, never a ring round its box. */
-button:focus-visible, a:focus-visible {
-  outline: none;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.25em;
-}
-
 .sr {
   position: absolute;
   width: 1px;
@@ -87,6 +79,14 @@ button:focus-visible, a:focus-visible {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
+}
+
+/* Focus is a heavy underline on the control's own text, never a ring round its box. */
+button:focus-visible, a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
 }
 
 .button {
@@ -216,18 +216,18 @@ button:focus-visible, a:focus-visible {
 .dossier { margin-top: var(--space-4); }
 .module + .module { margin-top: var(--space-3); }
 .clue { margin-top: var(--space-1); }
-.clue-module { margin-right: 0.4em; color: var(--mute); }
+.clue-module { margin-right: 0.15em; color: var(--mute); }
 
 /* Turns: one list, newest first. The comparison is a table without rules: its columns are as wide
-   as their longest entry, on two lines in a narrow column and on one from 30rem. The last track
-   takes the rest of the line, so a clue runs the full width without stretching the columns. */
+   as their longest entry, on two lines in a narrow column and on one from 30rem. A last, empty
+   track takes the rest of the line, so a clue runs the full width without stretching the columns;
+   the space between columns is padding, so that track costs nothing. */
 
 .turns { container-type: inline-size; }
 
 .turns ol {
   display: grid;
   grid-template-columns: repeat(2, auto) minmax(0, 1fr);
-  column-gap: var(--space-3);
   row-gap: var(--space-3);
   margin-top: var(--space-3);
 }
@@ -237,7 +237,8 @@ button:focus-visible, a:focus-visible {
 .turn, .facts { display: grid; grid-template-columns: subgrid; }
 .turn, .turn > * { grid-column: 1 / -1; }
 .turn .facts { grid-column: 1 / span 2; }
-.turn-name .aka { margin-left: 0.4em; color: var(--mute); }
+.fact:nth-child(odd) { padding-right: var(--space-3); }
+.turn-name .aka { margin-left: 0.15em; color: var(--mute); }
 .facts { color: var(--mute); }
 .fact:last-child { white-space: nowrap; }
 .fact[data-state] { color: var(--ink); }
@@ -246,17 +247,20 @@ button:focus-visible, a:focus-visible {
 @container (min-width: 30rem) {
   .turns ol { grid-template-columns: repeat(4, auto) minmax(0, 1fr); }
   .turn .facts { grid-column: 1 / span 4; }
+  .fact:not(:last-child) { padding-right: var(--space-3); }
 }
 
 @container (max-width: 15rem) {
   .turns ol { grid-template-columns: minmax(0, 1fr); }
   .turn .facts { grid-column: 1; }
+  .fact:nth-child(odd) { padding-right: 0; }
 }
 
 @supports not (grid-template-columns: subgrid) {
   .turns ol, .turn { display: block; }
   .turn + .turn { margin-top: var(--space-3); }
-  .facts { display: flex; flex-wrap: wrap; column-gap: var(--space-3); }
+  .facts { display: flex; flex-wrap: wrap; }
+  .fact:not(:last-child) { padding-right: var(--space-3); }
 }
 
 .colophon {
@@ -270,7 +274,7 @@ button:focus-visible, a:focus-visible {
 }
 
 .colophon > :first-child { flex: 1 1 11rem; text-wrap: balance; }
-.colophon-controls { display: flex; flex: none; gap: var(--space-3); }
+.colophon-controls { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); }
 
 /* Sheets: how to play, statistics, the profile as a table */
 
@@ -329,7 +333,7 @@ button:focus-visible, a:focus-visible {
 
 .profile-table { margin-top: var(--space-3); }
 .profile-table th { padding-bottom: var(--space-1); color: var(--mute); vertical-align: bottom; }
-.profile-table :is(th, td) + :is(th, td) { padding-left: var(--space-3); text-align: right; }
+.profile-table :is(th, td) + :is(th, td) { padding-left: var(--space-2); text-align: right; }
 
 /* Under a finger every control is at least 44px high. Text controls gain the height without
    taking more of the page: the extra reaches into the space around them. */
@@ -355,6 +359,7 @@ button:focus-visible, a:focus-visible {
   .masthead { display: flex; flex-wrap: wrap; justify-content: space-between; }
   .masthead h1 { flex: 1 0 100%; }
   .day, .masthead-nav { flex-wrap: wrap; row-gap: 0; }
+  .masthead-nav { order: 1; }
   .button { padding-inline: var(--space-2); }
 }
 
