@@ -10,7 +10,7 @@ const APP_FILTER = '(openfda.application_number:NDA*+OR+openfda.application_numb
 export const KEEP = new Set(['id', 'set_id', 'version', 'effective_time', 'openfda', 'boxed_warning', 'indications_and_usage',
   'dosage_forms_and_strengths', 'contraindications', 'description', 'mechanism_of_action', 'pharmacokinetics',
   'clinical_pharmacology', 'adverse_reactions', 'nonclinical_toxicology', 'carcinogenesis_and_mutagenesis_and_impairment_of_fertility',
-  'how_supplied', 'dosage_and_administration']);
+  'how_supplied', 'dosage_and_administration', 'pharmacokinetics_table', 'clinical_pharmacology_table']);
 export const KEY_SECTIONS = ['boxed_warning', 'indications_and_usage', 'dosage_forms_and_strengths', 'contraindications', 'description',
   'mechanism_of_action', 'pharmacokinetics', 'clinical_pharmacology', 'adverse_reactions', 'nonclinical_toxicology', 'how_supplied'];
 

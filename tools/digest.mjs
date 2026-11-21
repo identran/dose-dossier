@@ -30,6 +30,17 @@ for (const c of todo) {
   try { label = JSON.parse(await readFile(path.join(ROOT, 'tools', '.cache', 'labels', `${c.id}.json`), 'utf8')); }
   catch { label = await fetchLabelBySetId(c.setId); }
   if (!label) { console.error(`${c.id}: label ${c.setId} not available`); continue; }
+  if (!label._tablesChecked) {
+    // the first resolve runs kept no tables; fetch them once (cached) and save them into the label file
+    const full = await fetchLabelBySetId(c.setId).catch(e => { console.error(`${c.id}: could not fetch tables (${e.message})`); return null; });
+    if (full) {
+      label.pharmacokinetics_table = full.pharmacokinetics_table;
+      label.clinical_pharmacology_table = full.clinical_pharmacology_table;
+      label.dosage_and_administration ??= full.dosage_and_administration;
+      label._tablesChecked = true;
+      await writeFile(path.join(ROOT, 'tools', '.cache', 'labels', `${c.id}.json`), JSON.stringify(label));
+    }
+  }
   let structure = null;
   try { structure = JSON.parse(await readFile(path.join(ROOT, 'tools', '.cache', 'structures', `${c.id}.json`), 'utf8')); } catch {}
   const d = buildDigest(c, label, structure);

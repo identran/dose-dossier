@@ -3,7 +3,7 @@
 import { cleanLabelText, trimAt, sentences } from './text.mjs';
 
 export const HARD_MAX = 12000;
-const TARGET_MAX = 10400;
+const TARGET_MAX = 11500;
 
 const TITLES = {
   boxed_warning: null,
@@ -114,8 +114,60 @@ function productLines(rec) {
   return [...groups].map(([k, s]) => `${k}: ${[...s].join('; ') || 'strength not listed'}`);
 }
 
+// ---- tables: openFDA gives them as HTML strings; render rows as "cell | cell" lines
+
+const PK_WORDS = /C\s?max|T\s?max|AUC|half-?\s?li(?:fe|ves)|t\s?1\/2|clearance|bioavailab|steady.state/gi;
+const OFF_TOPIC = /co-?administ|drug interaction|interaction|effect of .{0,40} on|impair|renal|hepatic|pediatric|paediatric|geriatric|elderly|age group|gender|race/i;
+
+export function tableToText(html) {
+  const cap = /<caption[^>]*>([\s\S]*?)<\/caption>/i.exec(html);
+  const lines = [];
+  if (cap) lines.push(cleanLabelText(cap[1]));
+  for (const row of String(html).split(/<\/tr>/i)) {
+    const cells = [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(m => cleanLabelText(m[1])).filter(Boolean);
+    if (cells.length) lines.push(cells.join(' | '));
+  }
+  return lines.filter(Boolean);
+}
+
+function pkTables(label, cap) {
+  const raw = [...[].concat(label.pharmacokinetics_table || []), ...[].concat(label.clinical_pharmacology_table || [])];
+  const seen = new Set();
+  const scored = [];
+  raw.forEach((html, i) => {
+    const lines = tableToText(html);
+    const text = lines.join('\n');
+    if (!text || seen.has(text)) return;
+    seen.add(text);
+    const hits = (text.match(PK_WORDS) || []).length;
+    if (!hits) return;
+    const head = lines.slice(0, 2).join(' ').slice(0, 250);
+    scored.push({ lines, score: Math.min(hits, 8) - (OFF_TOPIC.test(head) ? 5 : 0) - i * 0.01 });
+  });
+  scored.sort((a, b) => b.score - a.score);
+  const out = [];
+  let used = 0;
+  for (const t of scored) {
+    const keep = [];
+    for (const l of t.lines) { if (used + l.length + 1 > cap || keep.join('\n').length + l.length > 1300) break; keep.push(l); used += l.length + 1; }
+    if (keep.length > 1) out.push(keep.join('\n'));
+    if (used >= cap - 60) break;
+  }
+  return out.join('\n\n');
+}
+
+const INJECTED = /intravenous|subcutaneous|intramuscular|intrathecal|intravitreal|intra-?articular|epidural|infus|inject/i;
+function administration(rec, label, cap) {
+  const given = [...(rec.routes || []), ...(rec.products || []).map(p => `${p.form} ${p.route}`)].join(' ');
+  if (!INJECTED.test(given)) return '';
+  const text = cleanLabelText(label.dosage_and_administration);
+  const key = /infus|over (?:\d|a |approximately|at least|no less)|bolus|inject|once (?:weekly|every|monthly|daily)|every \d+ (?:weeks?|days?|hours?|months?)|per (?:minute|hour)/i;
+  const picked = sentences(text).filter(x => key.test(x) && x.length < 400);
+  return picked.length ? trimAt(picked.slice(0, 4).join(' '), cap) : '';
+}
+
 export function buildDigest(rec, label, structure = null) {
-  const caps = { boxed: 600, ind: 900, forms: 600, contra: 700, desc: 1500, moa: 1400, pk: 6500, ae: 500, nonclin: 500, supplied: 700 };
+  const caps = { tables: 2000, admin: 500, boxed: 600, ind: 900, forms: 600, contra: 700, desc: 1500, moa: 1400, pk: 6500, ae: 500, nonclin: 500, supplied: 700 };
   const pk = pharmacokinetics(label);
   const raw = {
     boxed: get(label, 'boxed_warning'),
@@ -139,6 +191,8 @@ export function buildDigest(rec, label, structure = null) {
     ae: raw.ae && commonAdverse(raw.ae, c.ae),
     nonclin: raw.nonclin && trimAt(raw.nonclin, c.nonclin),
     supplied: raw.supplied && trimAt(raw.supplied, c.supplied),
+    tables: pkTables(label, c.tables),
+    admin: administration(rec, label, c.admin),
   });
 
   const header = [`DIGEST ${rec.id}`, `Generic: ${rec.generic}`, `Brand: ${rec.labelBrand || rec.brand || ''}`, `Application: ${rec.application}`];
@@ -157,10 +211,12 @@ export function buildDigest(rec, label, structure = null) {
     add('Boxed warning', parts.boxed);
     add('Indications and usage', parts.ind);
     add('Dosage forms and strengths', parts.forms);
+    add('Administration', parts.admin);
     add('Contraindications', parts.contra);
     add('Description', parts.desc);
     add('Mechanism of action', parts.moa);
     out.push(`## Pharmacokinetics\n${parts.pk || '(this label has no pharmacokinetics text)'}`);
+    add('Pharmacokinetic tables', parts.tables);
     add('Most common adverse reactions', parts.ae);
     add('Nonclinical toxicology', parts.nonclin);
     add('How supplied', parts.supplied);
@@ -169,12 +225,12 @@ export function buildDigest(rec, label, structure = null) {
 
   let text = render(make(caps));
   // Keep under budget: shrink the long sections in turn, PK last and never below 3500.
-  const order = [['desc', 1000], ['ind', 600], ['moa', 700], ['contra', 450], ['supplied', 450], ['pk', 3500], ['nonclin', 350], ['ae', 350], ['forms', 350]];
+  const order = [['desc', 1000], ['tables', 1200], ['ind', 600], ['moa', 700], ['contra', 450], ['supplied', 450], ['pk', 3500], ['nonclin', 350], ['ae', 350], ['forms', 350]];
   for (const [k, floor] of order) {
     while (Buffer.byteLength(text) > TARGET_MAX && caps[k] > floor) { caps[k] = Math.max(floor, Math.floor(caps[k] * 0.85)); text = render(make(caps)); }
   }
   if (Buffer.byteLength(text) > HARD_MAX) {
-    caps.pk = 2500; caps.desc = 700; caps.ind = 400; text = render(make(caps));
+    caps.pk = 2500; caps.desc = 700; caps.ind = 400; caps.tables = 900; text = render(make(caps));
   }
   return { text, bytes: Buffer.byteLength(text), pkSource: pk.source, missing: Object.entries(make(caps)).filter(([, v]) => !v).map(([k]) => k) };
 }

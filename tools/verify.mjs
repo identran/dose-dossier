@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 // Usage: node tools/verify.mjs [ids-or-files...] [--all] [--dir data/dossiers] [--digests tools/.cache/digests] [--strict]
-//                              [--report tools/.cache/verify-report.json] [--one-based]
-// Mechanical verification of dossiers written by agents. Beyond every schema and vocab check build.mjs makes
+//                              [--report tools/.cache/verify-report.json]
+// Mechanical verification of dossiers written by agents. Beyond every schema, vocab and leak check build.mjs makes
 // (tools/lib/validate.mjs), it uses the dossier's optional `evidence` object, which maps field paths to verbatim quotes
-// from that drug's digest, for example { "pk.tmaxH": "median Tmax of 60 minutes", "clues.3": "..." }:
+// from that drug's digest, for example { "pk.tmaxH": "median Tmax of 60 minutes", "clues.safety": "..." }.
+// Evidence paths: clues.kinetics ... clues.mechanism, pk.tmaxH, pk.halfLifeH, pk.cmax, pill, biologic (and other fields):
 //   - every quote must occur in the digest (whitespace, Unicode dashes and quotes, and case are normalised;
 //     "[...]", "..." or an ellipsis inside a quote splits it into fragments that must each occur)
 //   - every number in a clue must appear in the clue's quote or somewhere in the digest (warning)
 //   - pk.tmaxH / pk.halfLifeH / pk.cmax must agree with their quote where a number can be parsed (hours, minutes, days;
-//     mass or molar concentrations)
-//   - no clue contains the generic name, brand, aliases, salt, or the stem (first 5 letters) of a name word
-// `clues.N` is 0-based by default (like "pk.tmaxH" it is a path into the JSON); the base is detected as 1 when the
-// evidence has "clues.10" and no "clues.0", or forced with --one-based.
-// Exit status 1 when any dossier fails (or has warnings with --strict).
+//     mass or molar concentrations; table rows such as "C max (ng/mL) | 440" read the unit from the row)
+// --strict makes a class or sponsor missing from data/vocab.json an error instead of a warning.
+// Exit status 1 when any dossier fails.
 import { readFile, readdir, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -29,8 +28,7 @@ const DIGESTS = path.resolve(opt('--digests', path.join(ROOT, 'tools', '.cache',
 const STRUCT = path.join(ROOT, 'tools', '.cache', 'structures');
 const REPORT = path.resolve(opt('--report', path.join(ROOT, 'tools', '.cache', 'verify-report.json')));
 const strict = args.includes('--strict');
-const forceOneBased = args.includes('--one-based');
-if (!targets.length && !args.includes('--all')) { console.error('usage: verify.mjs [ids-or-files...] [--all] [--dir dir] [--strict] [--one-based]'); process.exit(2); }
+if (!targets.length && !args.includes('--all')) { console.error('usage: verify.mjs [ids-or-files...] [--all] [--dir dir] [--strict]'); process.exit(2); }
 
 // ------------------------------------------------------------------ number and quantity parsing
 
@@ -95,22 +93,6 @@ const M_NMOL_L = { nm: 1, µm: 1e3, μm: 1e3, um: 1e3, mm: 1e6 };
 
 const close = (a, b, rel = 0.06) => Math.abs(a - b) <= Math.max(1e-6, rel * Math.max(Math.abs(a), Math.abs(b)));
 
-// ------------------------------------------------------------------ name leaks
-
-const STEM_STOP = new Set(['acid', 'sodium', 'potassium', 'calcium', 'human', 'recombinant', 'factor', 'vitamin', 'hydrochloride', 'chloride', 'sulfate', 'phosphate', 'acetate', 'injection', 'tablets', 'capsules']);
-function stems(d) {
-  const out = new Map();
-  const add = (word, why) => {
-    const w = word.toLowerCase();
-    if (w.length < 4 || STEM_STOP.has(w) || out.has(w.slice(0, 5))) return;
-    const stem = w.slice(0, 5);
-    out.set(stem, { stem, why, re: new RegExp(w.length <= 5 ? `\\b${w}\\b` : stem, 'i') });
-  };
-  for (const w of String(d.generic || '').split(/[^A-Za-z]+/)) add(w, 'generic name');
-  for (const w of String(d.brand || '').split(/[^A-Za-z]+/)) add(w, 'brand name');
-  return [...out.values()];
-}
-
 // ------------------------------------------------------------------ per dossier
 
 function parseMwFromDigest(digest) {
@@ -137,7 +119,7 @@ async function verifyOne(label, file, vocab) {
   const id = d?.id || label;
   res.id = id;
   const ctx = createContext();
-  validateDossier(ctx, path.basename(file), d, vocab);
+  validateDossier(ctx, path.basename(file), d, vocab, { strict });
   res.errors.push(...ctx.errors);
   res.warnings.push(...ctx.warnings);
   if (!d || typeof d !== 'object') { res.status = 'fail'; return res; }
@@ -153,21 +135,15 @@ async function verifyOne(label, file, vocab) {
   const evidence = d.evidence && typeof d.evidence === 'object' && !Array.isArray(d.evidence) ? d.evidence : {};
   if (!Object.keys(evidence).length) res.warnings.push('no evidence object: nothing to check quotes against');
 
-  // clue index base
-  const keys = Object.keys(evidence);
-  const oneBased = forceOneBased || (keys.includes('clues.10') && !keys.includes('clues.0'));
   const clueQuote = new Map();
+  const validPath = k => /^clues\./.test(k) ? FIELDS.slots.includes(k.slice(6))
+    : k.startsWith('pk.') ? Object.keys(FIELDS.pk).concat(['context', 'model', 'unit']).includes(k.slice(3))
+    : ['pill', 'biologic', 'structure', 'tell'].includes(k) || k.startsWith('pill.') || k.startsWith('biologic.') || (KNOWN_TOP.has(k) && !FIELDS.reviewOnly.includes(k));
 
   for (const [pathKey, value] of Object.entries(evidence)) {
     const quotes = evidenceList(value).filter(isStr);
-    const m = /^clues\.(\d+)$/.exec(pathKey);
-    if (m) {
-      const i = Number(m[1]) - (oneBased ? 1 : 0);
-      if (!(i >= 0 && i < (d.clues || []).length)) res.errors.push(`evidence["${pathKey}"] points at a clue that does not exist (${oneBased ? '1' : '0'}-based, ${(d.clues || []).length} clues)`);
-      else clueQuote.set(i, quotes);
-    } else if (!(pathKey.startsWith('pk.') ? Object.keys(FIELDS.pk).concat(['context', 'model', 'unit']).includes(pathKey.slice(3)) : pathKey === 'pill.desc' || (KNOWN_TOP.has(pathKey) && !FIELDS.reviewOnly.includes(pathKey)))) {
-      res.warnings.push(`evidence["${pathKey}"]: unknown field path`);
-    }
+    if (!validPath(pathKey)) res.errors.push(`evidence["${pathKey}"]: unknown field path (use clues.<slot>, pk.<field>, pill, biologic ...)`);
+    else if (pathKey.startsWith('clues.')) clueQuote.set(pathKey.slice(6), quotes);
     for (const q of quotes) {
       res.checked.quotes++;
       const bad = checkQuote(q, digestNorm);
@@ -188,6 +164,11 @@ async function verifyOne(label, file, vocab) {
     const joined = quotes.join(' ');
     if (k === 'cmax') {
       const found = concentrationsIn(joined);
+      if (!found.length) {
+        // table row: "C max (ng/mL) | 440 | 12": the unit sits in the label cell, the numbers follow
+        const u = /(pg|ng|µg|μg|ug|mcg|mg)\s*\/\s*(ml|l)(?![a-z])/.exec(normalize(joined));
+        if (u) for (const n of numbersIn(joined.replace(/\([^)]*\)/, ' '))) found.push({ text: `${n.raw} ${u[0]}`, ngMl: (Number(n.canon) * MASS_NG[u[1]]) / PER_ML[u[2]] });
+      }
       if (!found.length) { res.warnings.push(`pk.cmax: no concentration could be parsed from its quote, so it was not cross-checked`); continue; }
       const target = pk.cmax * (TARGET_NG_ML[pk.unit] ?? NaN);
       const ok = found.some(f => (f.ngMl !== undefined ? close(f.ngMl, target) : mws.some(w => close(f.nmolMl * w, target, 0.1))));
@@ -199,33 +180,34 @@ async function verifyOne(label, file, vocab) {
       }
     } else {
       const found = timesIn(joined);
+      if (!found.length) {
+        // table row: "T max (h) | 1.0 | 0.5-3.0": the unit sits in the label cell
+        const hint = /\(\s*(h|hr|hrs|hours?|min|mins|minutes?|days?)\s*\)|\b(hours?|minutes?|days?)\b/i.exec(joined);
+        if (hint) { const unit = (hint[1] || hint[2]).toLowerCase(); for (const n of numbersIn(joined.replace(/\([^)]*\)/g, ' '))) found.push({ h: toHours(Number(n.canon), unit), text: `${n.raw} ${unit}` }); }
+      }
       if (!found.length) { res.warnings.push(`pk.${k}: no time could be parsed from its quote, so it was not cross-checked`); continue; }
       const ok = found.some(f => close(f.h, pk[k], 0.06)) || (k === 'tmaxH' && pk[k] === 0 && found.some(f => f.h === 0));
       if (!ok) res.errors.push(`pk.${k} is ${pk[k]} h but its quote says ${found.map(f => `${f.text} (= ${Number(f.h.toFixed(3))} h)`).filter((x, i, a) => a.indexOf(x) === i).join('; ')}`);
     }
   }
 
-  // clue figures and name stems
-  const stemList = stems(d);
-  (d.clues || []).forEach((c, i) => {
-    if (!c || typeof c !== 'object') return;
-    const w = `clue ${i + 1}`;
-    const quotes = clueQuote.get(i);
+  // clue figures
+  for (const slot of FIELDS.slots) {
+    const text = d.clues && d.clues[slot];
+    if (!isStr(text)) continue;
+    const w = `clue ${slot}`;
+    const quotes = clueQuote.get(slot);
     if (!quotes) res.warnings.push(`${w} has no evidence quote`);
     const quoteNums = new Set(numbersIn((quotes || []).join(' ')).map(n => n.canon));
-    for (const n of numbersIn(`${c.title || ''} ${c.text || ''}`)) {
+    for (const n of numbersIn(text)) {
       res.checked.numbers++;
       if (!quoteNums.has(n.canon) && !digestNums.has(n.canon)) res.warnings.push(`${w}: the number ${n.raw} appears in neither its quote nor the digest`);
     }
-    const full = [d.generic, d.brand, ...(d.aliases || []), d.salt].filter(isStr).map(s => s.toLowerCase());
-    for (const [field, text] of [['title', c.title], ['text', c.text]]) {
-      if (!isStr(text)) continue;
-      if (full.some(f => text.toLowerCase().includes(f))) continue; // already reported by the schema check
-      for (const s of stemList) if (s.re.test(text)) res.errors.push(`${w} ${field} contains "${s.stem}", the stem of the ${s.why}: "${text}"`);
-    }
-  });
+  }
+  if (d.pill && !evidence.pill) res.warnings.push('pill has no evidence quote');
+  if (d.biologic && !evidence.biologic) res.warnings.push('biologic has no evidence quote');
 
-  res.status = res.errors.length || (strict && res.warnings.length) ? 'fail' : 'pass';
+  res.status = res.errors.length ? 'fail' : 'pass';
   return res;
 }
 

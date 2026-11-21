@@ -5,12 +5,14 @@
 import { readFile, readdir, writeFile, mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { compileClues, accent } from './lib/compile.mjs';
 import { createContext, isDate, isStr, validateDossier, validateDictionary, validateVocab, checkVocab, guessable, stripReviewFields } from './lib/validate.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'data');
 const OUT = path.join(ROOT, 'site', 'data');
 const CHECK_ONLY = process.argv.includes('--check');
+const STRICT = process.argv.includes('--strict'); // class and sponsor must be in data/vocab.json
 
 const ctx = createContext();
 const { errors, warnings, err, warn } = ctx;
@@ -30,7 +32,7 @@ async function main() {
   const schedule = await readJSON(path.join(DATA, 'schedule.json'));
   validateVocab(ctx, vocab);
   if (!vocab) return finish();
-  validateDictionary(ctx, dictionary, vocab);
+  validateDictionary(ctx, dictionary, vocab, { strict: STRICT });
 
   let files = [];
   try {
@@ -43,7 +45,7 @@ async function main() {
     const rel = `data/dossiers/${f}`;
     const d = await readJSON(path.join(DATA, 'dossiers', f));
     const before = errors.length;
-    validateDossier(ctx, rel, d, vocab);
+    validateDossier(ctx, rel, d, vocab, { strict: STRICT });
     if (d && d.id) dossiers.set(d.id, { d, ok: errors.length === before });
   }
 
@@ -72,7 +74,7 @@ async function main() {
     const g = guessable(d);
     const dict = byId.get(id);
     if (dict) {
-      for (const k of ['generic', 'brand', 'area', 'form', 'sponsor', 'halfLifeH']) {
+      for (const k of ['generic', 'brand', 'area', 'class', 'sponsor', 'approved']) {
         if (dict[k] !== g[k]) err('data/dictionary.json', `"${id}" ${k} is ${JSON.stringify(dict[k])} but the dossier says ${JSON.stringify(g[k])}`);
       }
     }
@@ -95,8 +97,9 @@ async function main() {
   for (const f of await readdir(path.join(OUT, 'day'))) if (/^\d{3}\.json$/.test(f)) await rm(path.join(OUT, 'day', f));
   await writeFile(path.join(OUT, 'index.json'), JSON.stringify(index));
   for (const [i, id] of days.entries()) {
-    const { source, ...rest } = stripReviewFields(dossiers.get(id).d); // evidence and other review-only fields never reach the site
-    const compiled = { ...rest, source: { setId: source.setId, label: source.label } };
+    const { source, clues, ...rest } = stripReviewFields(dossiers.get(id).d); // evidence and other review-only fields never reach the site
+    delete rest.salt;
+    const compiled = { ...rest, clues: compileClues(clues, rest.generic), ...(rest.pill?.color ? { accent: accent(rest.pill.color) } : {}), source: { setId: source.setId, label: source.label } };
     await writeFile(path.join(OUT, 'day', `${String(i + 1).padStart(3, '0')}.json`), JSON.stringify(compiled));
   }
   finish({ drugs: byId.size, days: days.length, dossiers: dossiers.size, wrote: true });
