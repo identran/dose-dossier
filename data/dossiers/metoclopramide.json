@@ -1,0 +1,287 @@
+{
+  "id": "metoclopramide",
+  "generic": "Metoclopramide",
+  "brand": "Reglan",
+  "aliases": [
+    "Metoclopramide hydrochloride"
+  ],
+  "salt": "Metoclopramide hydrochloride",
+  "application": "NDA 017854",
+  "approved": 1979,
+  "sponsor": "Pfizer",
+  "area": "Gastroenterology",
+  "class": "Dopamine D2 antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "20 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 5.5,
+    "cmax": 44,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#3E9B4F",
+    "desc": "green, elliptical tablet"
+  },
+  "structure": {
+    "cid": 4168,
+    "formula": "C14H22ClN3O2",
+    "atoms": [
+      [
+        1.73,
+        -3.25,
+        "Cl"
+      ],
+      [
+        -1.73,
+        -1.25,
+        "O"
+      ],
+      [
+        -0.87,
+        0.25,
+        "O"
+      ],
+      [
+        1.73,
+        2.75,
+        "N"
+      ],
+      [
+        0.87,
+        0.25,
+        "N"
+      ],
+      [
+        0,
+        -4.25,
+        "N"
+      ],
+      [
+        1.73,
+        1.75,
+        "C"
+      ],
+      [
+        2.6,
+        3.25,
+        "C"
+      ],
+      [
+        0.87,
+        3.25,
+        "C"
+      ],
+      [
+        0.87,
+        1.25,
+        "C"
+      ],
+      [
+        2.6,
+        4.25,
+        "C"
+      ],
+      [
+        0.87,
+        4.25,
+        "C"
+      ],
+      [
+        0,
+        -0.25,
+        "C"
+      ],
+      [
+        0,
+        -1.25,
+        "C"
+      ],
+      [
+        -0.87,
+        -1.75,
+        "C"
+      ],
+      [
+        0.87,
+        -1.75,
+        "C"
+      ],
+      [
+        -0.87,
+        -2.75,
+        "C"
+      ],
+      [
+        0,
+        -3.25,
+        "C"
+      ],
+      [
+        0.87,
+        -2.75,
+        "C"
+      ],
+      [
+        -2.6,
+        -1.75,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        18,
+        1
+      ],
+      [
+        1,
+        14,
+        1
+      ],
+      [
+        1,
+        19,
+        1
+      ],
+      [
+        2,
+        12,
+        2
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        5,
+        17,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        14,
+        16,
+        2
+      ],
+      [
+        15,
+        18,
+        1
+      ],
+      [
+        16,
+        17,
+        1
+      ],
+      [
+        17,
+        18,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Oral bioavailability is 80% ± 15.5% relative to an intravenous dose, and about 30% is bound to plasma proteins. Most of the dose leaves in the urine, after hepatic oxidation and conjugation.",
+    "substance": "A monohydrochloride monohydrate salt whose active moiety has a molecular weight of 299.79. It is a crystalline, odorless substance that is freely soluble in water.",
+    "product": "An NDA product supplied as 5 mg and 10 mg tablets. The label's example dose is 10 mg taken four times daily.",
+    "safety": "A boxed warning covers tardive dyskinesia, a potentially irreversible movement disorder, and the drug is contraindicated in anyone with a history of it. Restlessness and drowsiness are the most common adverse reactions.",
+    "indication": "Treatment for 4 to 12 weeks of symptomatic gastroesophageal reflux in adults who fail conventional therapy, and symptom relief in adults with diabetic gastroparesis.",
+    "mechanism": "A dopamine-2 receptor antagonist that stimulates upper gastrointestinal motility without stimulating gastric, biliary or pancreatic secretions, speeding gastric emptying and intestinal transit."
+  },
+  "tell": "A boxed warning for tardive dyskinesia, a potentially irreversible movement disorder, sets this dopamine-2 antagonist apart.",
+  "source": {
+    "setId": "de55c133-eb08-4a35-91a2-5dc093027397",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de55c133-eb08-4a35-91a2-5dc093027397",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Peak plasma concentrations occurred at about 1 to 2 hours after a single oral dose",
+    "pk.halfLifeH": "The mean elimination half-life in subjects with normal renal function was 5 to 6 hours",
+    "pk.cmax": "C max (ng/mL) | 44 ±15",
+    "pill": "Each green, elliptical-shaped Reglan tablet contains 5 mg metoclopramide",
+    "clues.kinetics": [
+      "the absolute bioavailability of oral metoclopramide is 80% ± 15.5%",
+      "not extensively bound to plasma proteins (about 30%)",
+      "undergoes enzymatic metabolism via oxidation as well as glucuronide and sulfate conjugation reactions in the liver",
+      "Approximately 85% of the radioactivity of an orally administered dose appeared in the urine within 72 hours"
+    ],
+    "clues.substance": [
+      "metoclopramide monohydrochloride monohydrate",
+      "molecular weight 299.79",
+      "crystalline, odorless substance, freely soluble in water"
+    ],
+    "clues.product": [
+      "Application: NDA 017854",
+      "Tablets: 5 mg and 10 mg metoclopramide",
+      "10 mg of metoclopramide four times daily"
+    ],
+    "clues.safety": [
+      "can cause tardive dyskinesia (TD), a potentially irreversible serious movement disorder",
+      "In patients with a history of tardive dyskinesia (TD) or a dystonic reaction to metoclopramide",
+      "restlessness, drowsiness, fatigue, and lassitude"
+    ],
+    "clues.indication": [
+      "Treatment for 4 to 12 weeks of symptomatic, documented gastroesophageal reflux in adults who fail to respond to conventional therapy",
+      "Relief of symptoms in adults with acute and recurrent diabetic gastroparesis"
+    ],
+    "clues.mechanism": [
+      "is a dopamine-2 receptor antagonist",
+      "stimulates motility of the upper gastrointestinal tract without stimulating gastric, biliary, or pancreatic secretions",
+      "resulting in accelerated gastric emptying and intestinal transit"
+    ]
+  }
+}

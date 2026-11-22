@@ -1,0 +1,332 @@
+{
+  "id": "tofacitinib",
+  "generic": "Tofacitinib",
+  "brand": "Xeljanz",
+  "aliases": [
+    "Xeljanz XR"
+  ],
+  "salt": "Tofacitinib citrate",
+  "application": "NDA 203214",
+  "approved": 2012,
+  "sponsor": "Pfizer",
+  "area": "Immunology",
+  "class": "JAK inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "5 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 3,
+    "cmax": 42.7,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#FAFAFA",
+    "desc": "white, round, immediate-release film-coated tablet"
+  },
+  "structure": {
+    "cid": 9926791,
+    "formula": "C16H20N6O",
+    "atoms": [
+      [
+        -1.63,
+        -0.5,
+        "O"
+      ],
+      [
+        -0.77,
+        1,
+        "N"
+      ],
+      [
+        1.83,
+        0.5,
+        "N"
+      ],
+      [
+        0.97,
+        -1,
+        "N"
+      ],
+      [
+        3.65,
+        -2.31,
+        "N"
+      ],
+      [
+        1.83,
+        -2.5,
+        "N"
+      ],
+      [
+        -4.23,
+        0,
+        "N"
+      ],
+      [
+        0.97,
+        1,
+        "C"
+      ],
+      [
+        0.97,
+        2,
+        "C"
+      ],
+      [
+        0.1,
+        2.5,
+        "C"
+      ],
+      [
+        0.1,
+        0.5,
+        "C"
+      ],
+      [
+        -0.77,
+        2,
+        "C"
+      ],
+      [
+        1.83,
+        2.5,
+        "C"
+      ],
+      [
+        1.83,
+        -0.5,
+        "C"
+      ],
+      [
+        -1.63,
+        0.5,
+        "C"
+      ],
+      [
+        2.7,
+        1,
+        "C"
+      ],
+      [
+        2.7,
+        -1,
+        "C"
+      ],
+      [
+        -2.5,
+        1,
+        "C"
+      ],
+      [
+        2.7,
+        -2,
+        "C"
+      ],
+      [
+        3.65,
+        -0.7,
+        "C"
+      ],
+      [
+        0.97,
+        -2,
+        "C"
+      ],
+      [
+        4.23,
+        -1.5,
+        "C"
+      ],
+      [
+        -3.37,
+        0.5,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        14,
+        2
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        1,
+        11,
+        1
+      ],
+      [
+        1,
+        14,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        2,
+        13,
+        1
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        3,
+        13,
+        2
+      ],
+      [
+        3,
+        20,
+        1
+      ],
+      [
+        4,
+        18,
+        1
+      ],
+      [
+        4,
+        21,
+        1
+      ],
+      [
+        5,
+        18,
+        1
+      ],
+      [
+        5,
+        20,
+        2
+      ],
+      [
+        6,
+        22,
+        3
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        12,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        16,
+        19,
+        1
+      ],
+      [
+        17,
+        22,
+        1
+      ],
+      [
+        19,
+        21,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute oral bioavailability is 74%, and a high-fat meal leaves exposure unchanged though peak concentration falls by 32%. About 40% is protein bound, and roughly 70% is cleared by the liver with 30% by the kidney.",
+    "substance": "Formulated as a citrate salt, and the parent compound has a molecular weight of 312.37.",
+    "product": "Approved under an NDA in 5 and 10 mg tablets, 11 and 22 mg extended-release tablets and a 1 mg/mL solution, dosed once or twice daily.",
+    "safety": "Boxed warning for serious infections, mortality, malignancy, cardiovascular events and thrombosis. There are no contraindications, and serious infections are the most common serious reactions.",
+    "indication": "Moderately to severely active rheumatoid arthritis, active psoriatic arthritis, active ankylosing spondylitis and ulcerative colitis in adults who had an inadequate response or intolerance to TNF blockers.",
+    "mechanism": "It blocks intracellular enzymes that relay cytokine signals, preventing STAT phosphorylation and activation. Its most potent in vitro combination was JAK1/JAK3, with an IC50 of 56 nM."
+  },
+  "tell": "A 3-hour half-life for the immediate-release tablet, alongside a once-daily extended-release version, sets this JAK inhibitor apart.",
+  "source": {
+    "setId": "cf74ba2f-afc5-4baa-8594-979c889a5831",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cf74ba2f-afc5-4baa-8594-979c889a5831",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "T max (hours) 1.0 (0.5 to14.0",
+    "pk.halfLifeH": "elimination half-life was about 3 hours",
+    "pk.cmax": "C max (ng/mL) 42.7 (26) 84.7 (18)",
+    "pill": "White, round, immediate-release film-coated tablets",
+    "clues.kinetics": [
+      "The absolute oral bioavailability of XELJANZ is 74%",
+      "Coadministration of XELJANZ with a high-fat meal resulted in no changes in AUC while C max was reduced by 32%",
+      "The protein binding of tofacitinib is approximately 40%",
+      "approximately 70% hepatic metabolism and 30% renal excretion of the parent drug"
+    ],
+    "clues.substance": [
+      "formulated with the citrate salt of tofacitinib",
+      "molecular weight 312.37"
+    ],
+    "clues.product": [
+      "Application: NDA 203214",
+      "XELJANZ tablets: 5 mg, 10 mg",
+      "XELJANZ XR extended-release tablets: 11 mg, 22 mg",
+      "XELJANZ oral solution: 1 mg/mL",
+      "5 mg Twice Daily",
+      "11 mg Once Daily"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS INFECTIONS, MORTALITY, MALIGNANCY, MAJOR ADVERSE CARDIOVASCULAR EVENTS, and THROMBOSIS",
+      "None. None.",
+      "The most common serious adverse reactions were serious infections"
+    ],
+    "clues.indication": [
+      "Moderately to severely active rheumatoid arthritis (RA)",
+      "Active psoriatic arthritis (PsA)",
+      "Active ankylosing spondylitis (AS)",
+      "Moderately to severely active ulcerative colitis (UC)",
+      "inadequate response or intolerance to one or more TNF blockers"
+    ],
+    "clues.mechanism": [
+      "JAKs are intracellular enzymes which transmit signals arising from cytokine or growth factor-receptor interactions",
+      "preventing the phosphorylation and activation of STATs",
+      "JAK1/JAK2, JAK1/JAK3, and JAK2/JAK2 combinations with IC 50 of 406, 56, and 1377 nM, respectively"
+    ]
+  }
+}

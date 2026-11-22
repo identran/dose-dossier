@@ -1,0 +1,79 @@
+{
+  "id": "teriparatide",
+  "generic": "Teriparatide",
+  "brand": "Forteo",
+  "aliases": [],
+  "application": "NDA 021318",
+  "approved": 2002,
+  "sponsor": "Eli Lilly",
+  "area": "Endocrinology",
+  "class": "PTH1 receptor agonist",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "20 mcg subcutaneous, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 0.5,
+    "halfLifeH": 1
+  },
+  "pill": {
+    "shape": "pen",
+    "desc": "clear, colorless solution in a single-patient prefilled pen"
+  },
+  "biologic": {
+    "format": "peptide",
+    "isotype": null,
+    "massKDa": 4.1178
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability after subcutaneous injection is approximately 95%. Clearance exceeds normal liver plasma flow, which fits both hepatic and extra-hepatic clearance.",
+    "substance": "Made in Escherichia coli by recombinant DNA technology, with a molecular weight of 4117.8 daltons. It is a free base, not a salt.",
+    "product": "Supplied under an NDA as a 560 mcg/2.24 mL solution in a single-patient prefilled pen, delivering 20 mcg per dose for up to 28 days. Dosed once daily.",
+    "safety": "No boxed warning. Contraindicated after severe hypersensitivity to it or its inactive ingredients; reactions have included anaphylaxis and angioedema.",
+    "indication": "Postmenopausal osteoporosis at high fracture risk, osteoporosis in men with primary or hypogonadal disease, and glucocorticoid-induced osteoporosis.",
+    "mechanism": "Binds the same high-affinity receptors as the N-terminal region of parathyroid hormone, with equal affinity. Once-daily dosing favors bone formation through preferential stimulation of osteoblasts over osteoclasts."
+  },
+  "tell": "A recombinant fragment of parathyroid hormone that builds bone by favoring osteoblast over osteoclast activity.",
+  "source": {
+    "setId": "aae667c5-381f-4f92-93df-2ed6158d07b0",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aae667c5-381f-4f92-93df-2ed6158d07b0",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak serum concentrations about 30 minutes after subcutaneous injection of a 20-mcg dose",
+    "pk.halfLifeH": "The half-life of teriparatide in serum was approximately 1 hour when administered by subcutaneous injection",
+    "pill": "a clear and colorless solution, available as single-patient-use prefilled delivery device (pen)",
+    "biologic": "molecular weight is 4117.8 daltons",
+    "clues.kinetics": [
+      "the absolute bioavailability is approximately 95%",
+      "exceeds the rate of normal liver plasma flow, consistent with both hepatic and extra-hepatic clearance"
+    ],
+    "clues.substance": [
+      "Teriparatide is manufactured using a strain of Escherichia coli modified by recombinant DNA technology",
+      "molecular weight is 4117.8 daltons",
+      "250 mcg of teriparatide (as a free base)"
+    ],
+    "clues.product": [
+      "NDA 021318",
+      "560 mcg/2.24 mL (250 mcg/mL)",
+      "intended to deliver 28 daily doses of 20 mcg",
+      "delivers 20 mcg of teriparatide per dose for up to 28 days",
+      "Once-daily administration of teriparatide"
+    ],
+    "clues.safety": [
+      "history of severe hypersensitivity to teriparatide or any of the inactive ingredients of FORTEO",
+      "Reactions have included anaphylaxis and angioedema"
+    ],
+    "clues.indication": [
+      "postmenopausal women with osteoporosis at high risk for fracture",
+      "To increase bone mass in men with primary or hypogonadal osteoporosis",
+      "osteoporosis associated with sustained systemic glucocorticoid therapy",
+      "In postmenopausal women with osteoporosis, FORTEO reduces the risk of vertebral and nonvertebral fractures"
+    ],
+    "clues.mechanism": [
+      "Teriparatide and the 34 N-terminal amino acids of PTH bind to these receptors with the same affinity",
+      "Once-daily administration of teriparatide stimulates new bone formation",
+      "by preferential stimulation of osteoblastic activity over osteoclastic activity"
+    ]
+  }
+}

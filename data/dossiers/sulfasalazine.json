@@ -1,0 +1,375 @@
+{
+  "id": "sulfasalazine",
+  "generic": "Sulfasalazine",
+  "brand": "Azulfidine",
+  "aliases": [
+    "Azulfidine EN-tabs"
+  ],
+  "application": "NDA 007073",
+  "approved": 1950,
+  "sponsor": "Pfizer",
+  "area": "Gastroenterology",
+  "class": "Aminosalicylate",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1000 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 6,
+    "halfLifeH": 7.6,
+    "cmax": 6,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#D4A017",
+    "desc": "gold-colored, scored, round tablet"
+  },
+  "structure": {
+    "cid": 5339,
+    "formula": "C18H14N4O5S",
+    "atoms": [
+      [
+        2.6,
+        -1.5,
+        "S"
+      ],
+      [
+        2.1,
+        -2.37,
+        "O"
+      ],
+      [
+        3.1,
+        -0.63,
+        "O"
+      ],
+      [
+        -4.33,
+        3.5,
+        "O"
+      ],
+      [
+        -1.73,
+        5,
+        "O"
+      ],
+      [
+        -3.46,
+        5,
+        "O"
+      ],
+      [
+        3.46,
+        -2,
+        "N"
+      ],
+      [
+        -0.87,
+        0.5,
+        "N"
+      ],
+      [
+        4.33,
+        -3.5,
+        "N"
+      ],
+      [
+        -0.87,
+        1.5,
+        "N"
+      ],
+      [
+        1.73,
+        -1,
+        "C"
+      ],
+      [
+        1.73,
+        0,
+        "C"
+      ],
+      [
+        0.87,
+        -1.5,
+        "C"
+      ],
+      [
+        0,
+        0,
+        "C"
+      ],
+      [
+        0.87,
+        0.5,
+        "C"
+      ],
+      [
+        0,
+        -1,
+        "C"
+      ],
+      [
+        3.46,
+        -3,
+        "C"
+      ],
+      [
+        -1.73,
+        2,
+        "C"
+      ],
+      [
+        2.6,
+        -3.5,
+        "C"
+      ],
+      [
+        -2.6,
+        3.5,
+        "C"
+      ],
+      [
+        -1.73,
+        3,
+        "C"
+      ],
+      [
+        -3.46,
+        3,
+        "C"
+      ],
+      [
+        -2.6,
+        1.5,
+        "C"
+      ],
+      [
+        -3.46,
+        2,
+        "C"
+      ],
+      [
+        2.6,
+        -4.5,
+        "C"
+      ],
+      [
+        4.33,
+        -4.5,
+        "C"
+      ],
+      [
+        3.46,
+        -5,
+        "C"
+      ],
+      [
+        -2.6,
+        4.5,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        0,
+        10,
+        1
+      ],
+      [
+        3,
+        21,
+        1
+      ],
+      [
+        4,
+        27,
+        1
+      ],
+      [
+        5,
+        27,
+        2
+      ],
+      [
+        6,
+        16,
+        1
+      ],
+      [
+        7,
+        9,
+        2
+      ],
+      [
+        7,
+        13,
+        1
+      ],
+      [
+        8,
+        16,
+        1
+      ],
+      [
+        8,
+        25,
+        2
+      ],
+      [
+        9,
+        17,
+        1
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        14,
+        1
+      ],
+      [
+        12,
+        15,
+        2
+      ],
+      [
+        13,
+        14,
+        2
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        17,
+        20,
+        2
+      ],
+      [
+        17,
+        22,
+        1
+      ],
+      [
+        18,
+        24,
+        1
+      ],
+      [
+        19,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        2
+      ],
+      [
+        19,
+        27,
+        1
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        22,
+        23,
+        2
+      ],
+      [
+        24,
+        26,
+        2
+      ],
+      [
+        25,
+        26,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Less than 15% of an oral dose is absorbed as parent drug, and it is over 99.3% bound to albumin. Intestinal bacteria break it down, and its products are mainly eliminated in the urine.",
+    "substance": "The parent compound has a molecular weight of 398.4 and is an azo compound of salicylic acid.",
+    "product": "Approved under an NDA as 500 mg tablets, with a delayed-release form also listed.",
+    "safety": "No boxed warning. Contraindicated in intestinal or urinary obstruction, porphyria, and hypersensitivity to sulfonamides or salicylates; nausea and headache are among the most common reactions.",
+    "indication": "Mild to moderate ulcerative colitis, adjunctive therapy in severe cases, and prolonging remission between acute attacks.",
+    "mechanism": "Classed as an anti-inflammatory agent, it is split by intestinal bacteria, and most of its 5-aminosalicylic acid part stays in the colon."
+  },
+  "tell": "Gut bacteria split this 1950 anti-inflammatory into two products, one of which is much less well absorbed.",
+  "source": {
+    "setId": "ddbe69f3-bd55-45f3-a64f-f60226c744c4",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ddbe69f3-bd55-45f3-a64f-f60226c744c4",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Maximum concentrations of SSZ occur between 3 and 12 hours post-ingestion, with the mean peak concentration (6 µg/mL) occurring at 6 hours",
+    "pk.halfLifeH": "The observed plasma half-life for intravenous sulfasalazine is 7.6 ± 3.4 hours",
+    "pk.cmax": "mean peak concentration (6 µg/mL) occurring at 6 hours",
+    "pill": "round, gold-colored, scored tablets",
+    "clues.kinetics": [
+      "less than 15% of a dose of SSZ is absorbed as parent drug",
+      "SSZ is highly bound to albumin (>99.3%)",
+      "SSZ is metabolized by intestinal bacteria",
+      "Absorbed SP and 5-ASA and their metabolites are primarily eliminated in the urine"
+    ],
+    "clues.substance": [
+      "molecular weight 398.4",
+      "5-([p-(2-pyridylsulfamoyl)phenyl]azo) salicylic acid"
+    ],
+    "clues.product": [
+      "Application: NDA 007073",
+      "delayed release tablets, USP, 500 mg"
+    ],
+    "clues.safety": [
+      "Patients with intestinal or urinary obstruction",
+      "Patients with porphyria",
+      "Patients hypersensitive to sulfasalazine, its metabolites, sulfonamides, or salicylates",
+      "anorexia, headache, nausea, vomiting, gastric distress"
+    ],
+    "clues.indication": [
+      "in the treatment of mild to moderate ulcerative colitis, and as adjunctive therapy in severe ulcerative colitis",
+      "for the prolongation of the remission period between acute attacks"
+    ],
+    "clues.mechanism": [
+      "Therapeutic Classification: Anti-inflammatory agent",
+      "In the intestine, SSZ is metabolized by intestinal bacteria to SP and 5-ASA",
+      "The majority of 5-ASA stays within the colonic lumen"
+    ]
+  }
+}

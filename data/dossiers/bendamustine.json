@@ -1,0 +1,314 @@
+{
+  "id": "bendamustine",
+  "generic": "Bendamustine",
+  "brand": "Treanda",
+  "aliases": [
+    "Bendamustine hydrochloride",
+    "Bendeka",
+    "Belrapzo"
+  ],
+  "salt": "Bendamustine hydrochloride",
+  "application": "NDA 022249",
+  "approved": 2008,
+  "sponsor": "Teva",
+  "area": "Oncology",
+  "class": "Alkylating agent",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "120 mg/m2 intravenous, single dose, patients",
+    "model": "infusion",
+    "tmaxH": 1,
+    "halfLifeH": 0.67
+  },
+  "structure": {
+    "cid": 65628,
+    "formula": "C16H21Cl2N3O2",
+    "atoms": [
+      [
+        -5.37,
+        0.37,
+        "Cl"
+      ],
+      [
+        -3.63,
+        -2.63,
+        "Cl"
+      ],
+      [
+        5.37,
+        -0.86,
+        "O"
+      ],
+      [
+        3.87,
+        -1.73,
+        "O"
+      ],
+      [
+        0.78,
+        1.68,
+        "N"
+      ],
+      [
+        -2.77,
+        -0.13,
+        "N"
+      ],
+      [
+        0.78,
+        0.07,
+        "N"
+      ],
+      [
+        -0.17,
+        1.37,
+        "C"
+      ],
+      [
+        1.36,
+        0.87,
+        "C"
+      ],
+      [
+        -0.17,
+        0.37,
+        "C"
+      ],
+      [
+        2.37,
+        0.87,
+        "C"
+      ],
+      [
+        -1.9,
+        0.37,
+        "C"
+      ],
+      [
+        -1.03,
+        -0.13,
+        "C"
+      ],
+      [
+        2.87,
+        0.01,
+        "C"
+      ],
+      [
+        -1.03,
+        1.87,
+        "C"
+      ],
+      [
+        -1.9,
+        1.37,
+        "C"
+      ],
+      [
+        -3.63,
+        0.37,
+        "C"
+      ],
+      [
+        -2.77,
+        -1.13,
+        "C"
+      ],
+      [
+        1.09,
+        2.63,
+        "C"
+      ],
+      [
+        3.87,
+        0.01,
+        "C"
+      ],
+      [
+        -4.5,
+        -0.13,
+        "C"
+      ],
+      [
+        -3.63,
+        -1.63,
+        "C"
+      ],
+      [
+        4.37,
+        -0.86,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        20,
+        1
+      ],
+      [
+        1,
+        21,
+        1
+      ],
+      [
+        2,
+        22,
+        1
+      ],
+      [
+        3,
+        22,
+        2
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        4,
+        18,
+        1
+      ],
+      [
+        5,
+        11,
+        1
+      ],
+      [
+        5,
+        16,
+        1
+      ],
+      [
+        5,
+        17,
+        1
+      ],
+      [
+        6,
+        8,
+        2
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        9,
+        2
+      ],
+      [
+        7,
+        14,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        11,
+        12,
+        2
+      ],
+      [
+        11,
+        15,
+        1
+      ],
+      [
+        13,
+        19,
+        1
+      ],
+      [
+        14,
+        15,
+        2
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        17,
+        21,
+        1
+      ],
+      [
+        19,
+        22,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Protein binding is 94 to 96%, and the drug is mainly cleared by hydrolysis, with about 50% of an intravenous dose recovered in urine.",
+    "substance": "A hydrochloride salt of molecular weight 394.7, with an active moiety of 358.3; its lyophilized powder form is sterile and non-pyrogenic.",
+    "product": "Approved under an NDA as an injection solution and as a lyophilized powder for injection, given on days 1 and 2 of each cycle.",
+    "safety": "No boxed warning. Contraindicated in hypersensitivity to the drug, and nausea and fatigue are the most frequent reactions around infusion.",
+    "indication": "Chronic lymphocytic leukemia, and indolent B-cell non-Hodgkin lymphoma that progressed soon after rituximab.",
+    "mechanism": "Forms covalent bonds that create interstrand DNA crosslinks, and is active against both quiescent and dividing cells."
+  },
+  "tell": "A mechlorethamine derivative whose two active metabolites circulate at one-tenth and one-hundredth of the parent's plasma levels.",
+  "source": {
+    "setId": "39d53698-57fa-7c99-fc5b-f52a55684826",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=39d53698-57fa-7c99-fc5b-f52a55684826",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "After a single intravenous dose of 120 mg/m 2 of bendamustine over 1 hour",
+    "pk.halfLifeH": "the intermediate half-life (t ½ ) of the parent compound is approximately 40 minutes",
+    "clues.kinetics": [
+      "The protein binding of bendamustine ranged from 94 to 96%",
+      "Bendamustine is primarily metabolized via hydrolysis",
+      "Approximately 50% of the dose was recovered in the urine"
+    ],
+    "clues.substance": [
+      "the molecular weight is 394.7",
+      "molecular weight 358.3",
+      "sterile non-pyrogenic white to off-white lyophilized powder",
+      "The chemical name of bendamustine hydrochloride is"
+    ],
+    "clues.product": [
+      "NDA 022249",
+      "Injection: 45 mg/0.5 mL or 180 mg/2 mL",
+      "For Injection: 25 mg or 100 mg lyophilized powder",
+      "on Days 1 and 2 of a 28-day cycle"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with a known hypersensitivity",
+      "Adverse reactions (frequency >5%) during infusion and within 24 hours post-infusion are nausea and fatigue"
+    ],
+    "clues.indication": [
+      "Chronic lymphocytic leukemia (CLL)",
+      "indolent B-cell non-Hodgkin lymphoma that has progressed during or within six months of treatment with rituximab"
+    ],
+    "clues.mechanism": [
+      "These groups form covalent bonds with electron-rich nucleophilic moieties, resulting in interstrand DNA crosslinks",
+      "Bendamustine is active against both quiescent and dividing cells"
+    ]
+  }
+}

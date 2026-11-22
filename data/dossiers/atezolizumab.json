@@ -1,0 +1,79 @@
+{
+  "id": "atezolizumab",
+  "generic": "Atezolizumab",
+  "brand": "Tecentriq",
+  "aliases": [],
+  "application": "BLA 761034",
+  "approved": 2016,
+  "sponsor": "Genentech",
+  "area": "Oncology",
+  "class": "PD-L1 blocking antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "1200 mg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 1,
+    "halfLifeH": 648
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F4EDC1",
+    "desc": "colorless to slightly yellow solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1 κ",
+    "massKDa": 145
+  },
+  "clues": {
+    "kinetics": "Clearance decreases over time, by a mean maximal 17% from baseline, which is not considered clinically relevant. Exposure rises in proportion to dose from 1 mg/kg to 20 mg/kg.",
+    "substance": "A sterile, preservative-free solution in single-dose vials at a pH of 5.8, with a calculated molecular mass of 145 kDa.",
+    "product": "Approved under a BLA, with 60 mg/mL vials in two sizes. Dosed every 2, 3 or 4 weeks.",
+    "safety": "No boxed warning, and no contraindications. Fatigue or asthenia and nausea are among the most common reactions, at 20% or more.",
+    "indication": "Non-small cell lung cancer, as adjuvant treatment after resection of stage II to IIIA disease and as first-line treatment of selected metastatic disease, plus other uses.",
+    "mechanism": "Binds PD-L1 and blocks its interaction with PD-1 and B7.1 on T cells and antigen-presenting cells, releasing T-cell activity. It does not induce antibody-dependent cellular cytotoxicity."
+  },
+  "tell": "An Fc-engineered IgG1 PD-L1 antibody that does not induce antibody-dependent cellular cytotoxicity.",
+  "source": {
+    "setId": "6fa682c9-a312-4932-9831-f286908660ee",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6fa682c9-a312-4932-9831-f286908660ee",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer TECENTRIQ as an intravenous infusion over 60 minutes",
+    "pk.halfLifeH": "the terminal half-life is 27 days",
+    "pill": "colorless to slightly yellow solution in a single-dose vial",
+    "biologic": [
+      "Atezolizumab is an Fc-engineered, humanized, non-glycosylated IgG1 kappa immunoglobulin that has a calculated molecular mass of 145 kDa"
+    ],
+    "clues.kinetics": [
+      "with a mean maximal reduction (CV%) from baseline value of 17%",
+      "the decrease in clearance was not considered clinically relevant",
+      "Atezolizumab exposure increased dose proportionally over the dose range of 1 mg/kg to 20 mg/kg"
+    ],
+    "clues.substance": [
+      "is a sterile, preservative-free, colorless to slightly yellow solution in single-dose vials",
+      "with a pH of 5.8",
+      "has a calculated molecular mass of 145 kDa"
+    ],
+    "clues.product": [
+      "Application: BLA 761034",
+      "Injection: 840 mg/14 mL (60 mg/mL) and 1200 mg/20 mL (60 mg/mL)",
+      "840 mg every 2 weeks, 1200 mg every 3 weeks or 1680 mg every 4 weeks"
+    ],
+    "clues.safety": [
+      "None. None. ( 4 )",
+      "Most common adverse reactions (≥ 20%) in patients with NSCLC and SCLC are fatigue/asthenia, nausea"
+    ],
+    "clues.indication": [
+      "as adjuvant treatment following resection and platinum-based chemotherapy for adult patients with Stage II to IIIA NSCLC",
+      "for the first-line treatment of adult patients with metastatic NSCLC whose tumors have high PD-L1 expression"
+    ],
+    "clues.mechanism": [
+      "Atezolizumab is a monoclonal antibody that binds to PD L1 and blocks its interactions with both PD 1 and B7.1 receptors",
+      "Binding of PD L1 to the PD 1 and B7.1 receptors found on T cells and antigen presenting cells suppresses cytotoxic T-cell activity",
+      "without inducing antibody-dependent cellular cytotoxicity"
+    ]
+  }
+}

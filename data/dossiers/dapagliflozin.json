@@ -1,0 +1,372 @@
+{
+  "id": "dapagliflozin",
+  "generic": "Dapagliflozin",
+  "brand": "Farxiga",
+  "aliases": [
+    "Dapagliflozin propanediol"
+  ],
+  "application": "NDA 202293",
+  "approved": 2014,
+  "sponsor": "Bristol Myers Squibb",
+  "area": "Endocrinology",
+  "class": "SGLT2 inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 12.9
+  },
+  "pill": {
+    "shape": "diamond",
+    "color": "#F2D54E",
+    "desc": "yellow, film-coated, diamond-shaped tablet"
+  },
+  "structure": {
+    "cid": 9887712,
+    "formula": "C21H25ClO6",
+    "atoms": [
+      [
+        0,
+        -1.25,
+        "Cl"
+      ],
+      [
+        0.87,
+        3.25,
+        "O"
+      ],
+      [
+        -1.73,
+        4.75,
+        "O"
+      ],
+      [
+        -1.73,
+        2.75,
+        "O"
+      ],
+      [
+        0,
+        5.75,
+        "O"
+      ],
+      [
+        2.6,
+        4.25,
+        "O"
+      ],
+      [
+        -1.73,
+        -4.25,
+        "O"
+      ],
+      [
+        -0.87,
+        4.25,
+        "C"
+      ],
+      [
+        -0.87,
+        3.25,
+        "C"
+      ],
+      [
+        0,
+        4.75,
+        "C"
+      ],
+      [
+        0,
+        2.75,
+        "C"
+      ],
+      [
+        0.87,
+        4.25,
+        "C"
+      ],
+      [
+        0,
+        1.75,
+        "C"
+      ],
+      [
+        1.73,
+        4.75,
+        "C"
+      ],
+      [
+        -0.87,
+        1.25,
+        "C"
+      ],
+      [
+        0.87,
+        1.25,
+        "C"
+      ],
+      [
+        -0.87,
+        0.25,
+        "C"
+      ],
+      [
+        0.87,
+        0.25,
+        "C"
+      ],
+      [
+        -1.73,
+        -0.25,
+        "C"
+      ],
+      [
+        0,
+        -0.25,
+        "C"
+      ],
+      [
+        -1.73,
+        -1.25,
+        "C"
+      ],
+      [
+        -2.6,
+        -1.75,
+        "C"
+      ],
+      [
+        -0.87,
+        -1.75,
+        "C"
+      ],
+      [
+        -2.6,
+        -2.75,
+        "C"
+      ],
+      [
+        -0.87,
+        -2.75,
+        "C"
+      ],
+      [
+        -1.73,
+        -3.25,
+        "C"
+      ],
+      [
+        -2.6,
+        -4.75,
+        "C"
+      ],
+      [
+        -2.6,
+        -5.75,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        19,
+        1
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        1,
+        11,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        5,
+        13,
+        1
+      ],
+      [
+        6,
+        25,
+        1
+      ],
+      [
+        6,
+        26,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        10,
+        1
+      ],
+      [
+        9,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        2
+      ],
+      [
+        12,
+        15,
+        1
+      ],
+      [
+        14,
+        16,
+        1
+      ],
+      [
+        15,
+        17,
+        2
+      ],
+      [
+        16,
+        18,
+        1
+      ],
+      [
+        16,
+        19,
+        2
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ],
+      [
+        20,
+        22,
+        1
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        22,
+        24,
+        2
+      ],
+      [
+        23,
+        25,
+        2
+      ],
+      [
+        24,
+        25,
+        1
+      ],
+      [
+        26,
+        27,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute oral bioavailability is 78%, and a high-fat meal does not alter total exposure. About 91% is protein bound, and the drug and its related metabolites are mainly eliminated by the kidneys.",
+    "substance": "Supplied as a hydrated 1:1:1 complex; the active moiety has molecular weight 408.9.",
+    "product": "Marketed under an NDA in 5 mg and 10 mg strengths.",
+    "safety": "No boxed warning. Contraindicated after serious hypersensitivity to it or its excipients; anaphylaxis and angioedema have been reported.",
+    "indication": "Chronic kidney disease at risk of progression, heart failure, and type 2 diabetes with cardiovascular disease, plus glycemic control in type 2 diabetes.",
+    "mechanism": "Inhibits SGLT2 in the proximal renal tubules, reducing glucose reabsorption and promoting urinary glucose excretion."
+  },
+  "tell": "Cleared mainly by UGT1A9 to an inactive 3-O-glucuronide that accounts for 61% of a dose.",
+  "source": {
+    "setId": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=72ad22ae-efe6-4cd6-a302-98aaee423d69",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the maximum plasma concentration (C max ) is usually attained within 2 hours under fasting state",
+    "pk.halfLifeH": "The mean plasma terminal half-life (t ½ ) for dapagliflozin is approximately 12.9 hours following a single oral dose of FARXIGA 10 mg",
+    "pill": "10 mg, yellow, biconvex, diamond-shaped, film-coated tablets",
+    "clues.kinetics": [
+      "The absolute oral bioavailability of dapagliflozin following the administration of a 10 mg dose is 78%",
+      "does not alter AUC as compared with the fasted state",
+      "Dapagliflozin is approximately 91% protein bound",
+      "Dapagliflozin and related metabolites are primarily eliminated via the renal pathway"
+    ],
+    "clues.substance": [
+      "compounded with (2 S )-1,2-propanediol, hydrate (1:1:1)",
+      "molecular weight 408.9"
+    ],
+    "clues.product": [
+      "Application: NDA 202293",
+      "TABLET (oral): 10MG; 5MG"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with a history of a serious hypersensitivity reaction to dapagliflozin or any of the excipients in FARXIGA",
+      "Serious hypersensitivity reactions, including anaphylaxis and angioedema have been reported with FARXIGA"
+    ],
+    "clues.indication": [
+      "in adults with chronic kidney disease at risk of progression",
+      "in adults with heart failure",
+      "in adults with type 2 diabetes mellitus and either established CV disease or multiple CV risk factors",
+      "to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus"
+    ],
+    "clues.mechanism": [
+      "Dapagliflozin is an inhibitor of SGLT2",
+      "expressed in the proximal renal tubules",
+      "By inhibiting SGLT2, dapagliflozin reduces reabsorption of filtered glucose and thereby promotes urinary glucose excretion"
+    ]
+  }
+}

@@ -1,0 +1,471 @@
+/* Dose Dossier. Ink on paper: four colour tokens, one size scale, no boxes.
+   What is current (a focused control, the highlighted suggestion) takes a 2px underline;
+   what matches takes the semibold. Nothing else is emphasised. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --pad: 1rem;
+  --option: 2.25rem; /* one suggestion */
+  --target: 44px;    /* the least height of a control under a finger */
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--size-m);
+  line-height: 1.5;
+}
+
+h1, h2, h3, p, ol, ul, dl, dt, dd, figure { margin: 0; padding: 0; font: inherit; }
+ol, ul { list-style: none; }
+table { border-collapse: collapse; }
+th, td { padding: 0; font-weight: 400; text-align: left; }
+
+button, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  appearance: none;
+}
+
+button { cursor: pointer; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+::selection { background: var(--ink); color: var(--paper); }
+
+/* A statement of the profile, or a short hyphenated term, keeps to one line. */
+.nb { white-space: nowrap; }
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The display cut is selected by family, at 25px and above only; it has one weight. */
+.masthead h1, .answer, .sheet h2, .figures dd { font-family: var(--font-display); }
+/* At twice the text size a long word in a display line is hyphenated before it runs off the page. */
+.masthead h1, .answer, .sheet h2 { overflow-wrap: anywhere; hyphens: auto; }
+
+.masthead-nav, .day, .caption, .status, .facts, .answer-facts, .gloss, .revision, .suggestions .via, .colophon,
+.figures dt, .distribution li, .profile-table {
+  font-family: var(--font-data);
+  font-size: var(--size-s);
+  line-height: 1.45;
+}
+
+/* Controls. A text control, button or link, is ink among muted text and carries no underline at rest. */
+
+.text-button, .day a, .actions a, .status a {
+  padding: var(--space-1) 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.status a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+
+.text-button:hover, .day a:hover, .actions a:hover, .status a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+/* Focus is a heavy underline on the control's own text, never a ring round its box. */
+button:focus-visible, a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+.button {
+  padding: var(--space-1) var(--space-3);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.button:disabled { background: var(--mute); cursor: default; }
+
+/* Page */
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: var(--pad) max(var(--pad), env(safe-area-inset-right)) var(--space-4) max(var(--pad), env(safe-area-inset-left));
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: var(--space-2);
+}
+
+.masthead h1 { font-size: var(--size-xl); line-height: 1.2; }
+.masthead-nav { display: flex; gap: var(--space-2); }
+
+.day {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-height: calc(1.45em + 2 * var(--space-1)); /* a line with a link in it, there before the day is known */
+  color: var(--mute);
+}
+
+/* Until the day has loaded, what depends on it is out of sight and in its place. */
+.page[data-loading] :is(.caption, .play, .colophon) { visibility: hidden; }
+
+/* Figure */
+
+.figure { margin-top: var(--space-3); }
+/* In one column the figure never takes more than about three fifths of the screen height. */
+.dial { width: 100%; max-width: 62vh; max-width: 62svh; margin: 0 auto; aspect-ratio: 1; }
+
+.caption { margin-top: var(--space-2); color: var(--mute); text-align: center; text-wrap: balance; }
+.glyph { display: inline-block; width: 1.5em; height: 1.5em; margin-right: 0.5em; vertical-align: -0.4em; }
+.glyph > * { display: block; width: 100%; height: 100%; }
+.caption .text-button { margin-left: 0.5em; padding: 0; }
+/* The readout keeps its line whether or not it has anything to say, so nothing moves. */
+.probe { min-height: 1.45em; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* Guess */
+
+.play { margin-top: var(--space-3); }
+
+.guess-form {
+  display: grid;
+  scroll-margin-top: var(--space-3);
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--space-2);
+}
+
+.field {
+  display: block;
+  width: 100%;
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--mute);
+  font-size: var(--size-l);
+  text-overflow: ellipsis;
+}
+
+.field::placeholder { color: var(--mute); opacity: 1; }
+.field:focus { outline: none; padding-bottom: calc(var(--space-1) - 1px); border-bottom-color: var(--ink); border-bottom-width: 2px; }
+.field:disabled { border-bottom-color: var(--mute); }
+
+/* Suggestions are part of the page, under the field: they move the text below, they do not cover it.
+   Ten show at a time; a longer list scrolls. */
+.suggestions {
+  grid-column: 1 / -1;
+  max-height: calc(var(--rows, 10) * var(--option) + var(--space-1));
+  padding-top: var(--space-1);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--mute) var(--paper);
+}
+
+.suggestions li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--option);
+  cursor: pointer;
+}
+
+.suggestions .via { color: var(--mute); }
+
+.suggestions [aria-selected='true'] > :first-child {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+.status { min-height: 1.45em; margin-top: var(--space-1); color: var(--mute); text-wrap: balance; }
+
+/* Result */
+
+.answer { font-size: var(--size-2xl); line-height: 1.15; }
+.answer:focus { outline: none; }
+.answer-brand { color: var(--mute); }
+/* The answer's own attributes, set as a guess's are: two to a line in a narrow column, four from 30rem. */
+.result { container-type: inline-size; }
+.answer-facts { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; column-gap: var(--space-3); margin-top: var(--space-1); }
+@container (min-width: 30rem) { .answer-facts { grid-template-columns: repeat(4, auto); } }
+@container (max-width: 15rem) { .answer-facts { grid-template-columns: minmax(0, 1fr); } }
+.tell, .outcome, .revision { margin-top: var(--space-2); }
+.revision { color: var(--mute); }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* A term explained, when the reader has asked for that: one muted line after the text that uses it. */
+.gloss { margin-top: var(--space-1); color: var(--mute); }
+
+/* Dossier: after the game, the written clues under the module names */
+
+.dossier { margin-top: var(--space-4); }
+.module + .module { margin-top: var(--space-3); }
+.clue { margin-top: var(--space-1); }
+/* Running text does not end on a word alone. */
+.clue, .tell, .gloss, .sheet-body > p { text-wrap: pretty; }
+.clue-module { margin-right: 0.15em; color: var(--mute); }
+
+/* Turns: one list, newest first. The comparison is a table without rules: its columns are as wide
+   as their longest entry, on two lines in a narrow column and on one from 30rem. A last, empty
+   track takes the rest of the line, so a clue runs the full width without stretching the columns;
+   the space between columns is padding, so that track costs nothing. */
+
+.turns { container-type: inline-size; }
+
+.turns ol {
+  display: grid;
+  grid-template-columns: repeat(2, auto) minmax(0, 1fr);
+  row-gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.turns ol:empty { display: none; }
+.dossier:not([hidden]) + .turns ol { margin-top: var(--space-4); }
+.turn, .facts { display: grid; grid-template-columns: subgrid; }
+.turn, .turn > * { grid-column: 1 / -1; }
+.turn .facts { grid-column: 1 / span 2; }
+.fact:nth-child(odd) { padding-right: var(--space-3); }
+/* A name or a fact longer than the line, which is a phone at twice the text size, breaks where it must. */
+.turn-name, .fact, .answer-facts li, .answer-brand { overflow-wrap: break-word; }
+.turn-name .aka { margin-left: 0.15em; color: var(--mute); }
+.facts { color: var(--mute); }
+.fact:last-child { white-space: nowrap; }
+.fact[data-state] { color: var(--ink); }
+.fact[data-state='match'] { font-weight: 600; }
+
+@container (min-width: 30rem) {
+  .turns ol { grid-template-columns: repeat(4, auto) minmax(0, 1fr); }
+  .turn .facts { grid-column: 1 / span 4; }
+  .fact:not(:last-child) { padding-right: var(--space-3); }
+}
+
+@container (max-width: 15rem) {
+  .turns ol { grid-template-columns: minmax(0, 1fr); }
+  .turn .facts { grid-column: 1; }
+  .fact:nth-child(odd) { padding-right: 0; }
+}
+
+@supports not (grid-template-columns: subgrid) {
+  .turns ol, .turn { display: block; }
+  .turn + .turn { margin-top: var(--space-3); }
+  .facts { display: flex; flex-wrap: wrap; }
+  .fact:not(:last-child) { padding-right: var(--space-3); }
+}
+
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+  margin-top: var(--space-5);
+  color: var(--mute);
+}
+
+.colophon > :first-child { flex: 1 1 11rem; text-wrap: balance; }
+.colophon-controls { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); }
+
+/* Sheets: how to play, statistics, the profile as a table */
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: var(--pad);
+  border: 0;
+  outline: none;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.sheet::backdrop { background: none; }
+.sheet-body { max-width: 34rem; margin: 0 auto; }
+
+.sheet-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.sheet h2 { min-width: 0; font-size: var(--size-2xl); line-height: 1.15; }
+.sheet h3 { margin: var(--space-4) 0 var(--space-2); }
+
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--space-2); }
+.figures div { display: flex; flex-direction: column-reverse; }
+.figures dd { font-size: var(--size-2xl); line-height: 1.2; font-variant-numeric: lining-nums; }
+.figures dt { color: var(--mute); }
+
+.distribution li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-2);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.distribution .n { color: var(--mute); text-align: right; }
+.distribution .bar { display: flex; align-items: center; gap: var(--space-1); }
+
+.distribution .bar::before {
+  content: '';
+  width: calc(var(--share, 0) * (100% - 2rem));
+  height: 0.5rem;
+  background: var(--ink);
+}
+
+.profile-table { margin-top: var(--space-3); }
+.profile-table th { padding-bottom: var(--space-1); color: var(--mute); vertical-align: bottom; }
+.profile-table :is(th, td) + :is(th, td) { padding-left: var(--space-2); text-align: right; }
+
+/* Under a finger every control is at least 44px high. Text controls gain the height without
+   taking more of the page: the extra reaches into the space around them. */
+
+@media (pointer: coarse) {
+  :root { --option: max(2.25rem, var(--target)); }
+  .field, .button { min-height: var(--target); }
+
+  .text-button, .day a, .actions a, .status a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target);
+    margin-block: min(0px, (1lh + 2 * var(--space-1) - var(--target)) / 2);
+  }
+
+  .caption .text-button { margin-block: min(0px, (1lh - var(--target)) / 2); }
+}
+
+/* The narrowest phones, and any phone at twice the text size: the wordmark keeps a line to itself,
+   and the dateline and the links share the next, or take one each. */
+
+@media (max-width: 22.5rem) {
+  .masthead { display: flex; flex-wrap: wrap; justify-content: space-between; }
+  .masthead h1 { flex: 1 0 100%; }
+  .day, .masthead-nav { flex-wrap: wrap; row-gap: 0; }
+  .masthead-nav { order: 1; }
+  .button { padding-inline: var(--space-2); }
+  /* The longest names are one word of nineteen letters: a step down the scale keeps it whole. */
+  .answer { font-size: var(--size-xl); line-height: 1.2; }
+}
+
+/* Narrower still, which is a phone at twice the text size: the button goes under the field,
+   below the suggestions, and the statistics set two to a line. */
+
+@media (max-width: 19.99rem) {
+  .guess-form { grid-template-columns: minmax(0, 1fr); }
+  .guess-form .button { grid-row: 3; justify-self: start; margin-top: var(--space-2); }
+  .nb { white-space: normal; }
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-2); }
+}
+
+/* Desktop: the figure is the plate, sticky on the left; the text column runs beside it. */
+
+@media (min-width: 60rem) {
+  html { font-size: 106.25%; }
+
+  :root {
+    --pad: 3rem;
+    --gap: 4.5rem;
+    --col: 34rem;
+    --col-min: 23rem;
+    --caption: 5rem;
+    --dial: max(20rem, min(100vh - 2 * var(--pad) - var(--caption), 100vw - 2 * var(--pad) - var(--gap) - var(--col-min), 56rem));
+    --edge: max(var(--pad), (100vw - var(--dial) - var(--gap) - var(--col)) / 2);
+  }
+
+  .page {
+    grid-template-columns: var(--dial) minmax(0, var(--col));
+    grid-template-rows: repeat(4, auto) 1fr;
+    column-gap: var(--gap);
+    justify-content: center;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: var(--pad);
+  }
+
+  .figure {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: start;
+    position: sticky;
+    top: var(--pad);
+    margin-top: 0;
+  }
+
+  .dial { max-width: none; }
+  .masthead, .play, .dossier, .turns, .colophon { grid-column: 2; }
+  .masthead { grid-row: 1; column-gap: var(--space-3); }
+  .play { grid-row: 2; }
+  .dossier { grid-row: 3; }
+  .turns { grid-row: 4; }
+  .colophon { grid-row: 5; align-self: end; }
+  .masthead h1 { font-size: var(--size-2xl); }
+  .masthead-nav { gap: var(--space-3); }
+
+  /* A sheet replaces the text column and leaves the figure in view. */
+  .sheet {
+    inset: 0 0 0 auto;
+    width: calc(100vw - var(--edge) - var(--dial) - var(--gap) / 2);
+    padding: var(--pad) var(--pad) var(--pad) calc(var(--gap) / 2);
+  }
+
+  .sheet-body { margin: 0; }
+}
+
+/* The readout under the figure is the keyboard's current place on it, so it takes the focus underline. */
+.figure:has(.dial-root:focus-visible) .probe {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+/* Windows high contrast: system colours replace the tokens, and a button without its fill needs an edge. */
+@media (forced-colors: active) {
+  .button { border: 1px solid ButtonText; }
+  .field { border-bottom-color: CanvasText; }
+}
+
+/* Motion: a new line is written in from the left. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .is-new { animation: write 0.6s cubic-bezier(0.2, 0.6, 0.2, 1) backwards; }
+
+  @keyframes write {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "nusinersen",
+  "generic": "Nusinersen",
+  "brand": "Spinraza",
+  "aliases": [
+    "Nusinersen sodium"
+  ],
+  "application": "NDA 209531",
+  "approved": 2016,
+  "sponsor": "Biogen",
+  "area": "Neurology",
+  "class": "SMN2-directed antisense",
+  "route": "intrathecal",
+  "form": "injection",
+  "pk": {
+    "context": "12 mg intrathecal, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 3.85,
+    "halfLifeH": 1800
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colorless solution in a single-dose glass vial"
+  },
+  "biologic": {
+    "format": "oligonucleotide",
+    "isotype": null,
+    "massKDa": null
+  },
+  "clues": {
+    "kinetics": "Metabolized by exonuclease hydrolysis rather than CYP450 enzymes, and not an inhibitor or inducer of them. Urinary excretion is the likely route, but only 0.5% of the dose is recovered in urine at 24 hours.",
+    "substance": "Supplied as the sodium salt, with 2.4 mg of active moiety per mL equivalent to 2.53 mg of the salt.",
+    "product": "Approved under an NDA in 12, 28 and 50 mg single-dose vials, given every 14 days at first and then every 4 months.",
+    "safety": "No boxed warning and no contraindications. Lower respiratory infection and constipation are the most common adverse reactions.",
+    "indication": "Spinal muscular atrophy in pediatric and adult patients.",
+    "mechanism": "Directed at SMN2, it increases exon 7 inclusion in SMN2 transcripts, raising production of full-length SMN protein."
+  },
+  "tell": "An intrathecal antisense oligonucleotide with a plasma half-life of 63 to 87 days and maintenance doses every 4 months.",
+  "source": {
+    "setId": "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Median plasma Tmax values ranged from 1.7 to 6.0 hours",
+    "pk.halfLifeH": "63 to 87 days in plasma",
+    "pill": [
+      "clear and colorless solution",
+      "single-dose glass vial"
+    ],
+    "biologic": "antisense oligonucleotide (ASO)",
+    "clues.kinetics": [
+      "Nusinersen is metabolized via exonuclease (3'- and 5')-mediated hydrolysis and is not a substrate for, or inhibitor or inducer of CYP450 enzymes",
+      "The primary route of elimination is likely by urinary excretion",
+      "At 24 hours, only 0.5% of the administered dose was recovered in the urine"
+    ],
+    "clues.substance": [
+      "Each 1 mL solution of the 12 mg/5 mL strength contains 2.4 mg of nusinersen (equivalent to 2.53 mg of nusinersen sodium salt)"
+    ],
+    "clues.product": [
+      "NDA 209531",
+      "Injection: 12 mg/5 mL (2.4 mg/mL) in a single-dose vial",
+      "Injection: 28 mg/5 mL (5.6 mg/mL) in a single-dose vial",
+      "Injection: 50 mg/5 mL (10 mg/mL) in a single-dose vial",
+      "every 14 days for three doses",
+      "a 12 mg maintenance dose once every 4 months thereafter"
+    ],
+    "clues.safety": [
+      "None. None.",
+      "The most common adverse reactions that occurred in at least 20% of SPINRAZA-treated patients and occurred at least 5% more frequently than in control patients were lower respiratory infection and constipation"
+    ],
+    "clues.indication": [
+      "for the treatment of spinal muscular atrophy (SMA) in pediatric and adult patients"
+    ],
+    "clues.mechanism": [
+      "survival motor neuron-2 (SMN2)-directed antisense oligonucleotide",
+      "increase exon 7 inclusion in SMN2 messenger ribonucleic acid (mRNA) transcripts and production of full-length SMN protein"
+    ]
+  }
+}

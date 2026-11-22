@@ -1,0 +1,243 @@
+{
+  "id": "esketamine",
+  "generic": "Esketamine",
+  "brand": "Spravato",
+  "aliases": [
+    "Esketamine hydrochloride"
+  ],
+  "salt": "Esketamine hydrochloride",
+  "application": "NDA 211243",
+  "approved": 2019,
+  "sponsor": "Johnson & Johnson",
+  "area": "Psychiatry",
+  "class": "NMDA receptor antagonist",
+  "route": "nasal",
+  "form": "spray",
+  "pk": {
+    "context": "56 mg nasal, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 0.5,
+    "halfLifeH": 9.5
+  },
+  "structure": {
+    "cid": 182137,
+    "formula": "C13H16ClNO",
+    "atoms": [
+      [
+        1.51,
+        -0.82,
+        "Cl"
+      ],
+      [
+        -2.1,
+        -0.14,
+        "O"
+      ],
+      [
+        -0.87,
+        0.73,
+        "N"
+      ],
+      [
+        -0.37,
+        -0.14,
+        "C"
+      ],
+      [
+        0.5,
+        -0.64,
+        "C"
+      ],
+      [
+        0.5,
+        -1.64,
+        "C"
+      ],
+      [
+        -0.37,
+        -2.14,
+        "C"
+      ],
+      [
+        -1.24,
+        -0.64,
+        "C"
+      ],
+      [
+        -1.24,
+        -1.64,
+        "C"
+      ],
+      [
+        0.4,
+        0.51,
+        "C"
+      ],
+      [
+        1.34,
+        0.17,
+        "C"
+      ],
+      [
+        0.22,
+        1.49,
+        "C"
+      ],
+      [
+        -1.87,
+        0.73,
+        "C"
+      ],
+      [
+        2.1,
+        0.81,
+        "C"
+      ],
+      [
+        0.99,
+        2.14,
+        "C"
+      ],
+      [
+        1.93,
+        1.79,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        10,
+        1
+      ],
+      [
+        1,
+        7,
+        2
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        12,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        9,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        9,
+        11,
+        2
+      ],
+      [
+        10,
+        13,
+        2
+      ],
+      [
+        11,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        14,
+        15,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Mean absolute bioavailability is about 48% after nasal spray, and it is 43% to 45% protein bound. It is cleared mainly by cytochrome P450 metabolism, with metabolites recovered mostly in urine.",
+    "substance": "A hydrochloride salt whose active moiety has a molecular weight of 237.72. It is freely soluble in water.",
+    "product": "An NDA product of 28 mg per device, sold in 56 mg and 84 mg dose kits.",
+    "safety": "Boxed warning for sedation, dissociation, respiratory depression and abuse. Contraindicated with intracerebral hemorrhage or aneurysmal vascular disease; dissociation and dizziness are common.",
+    "indication": "Treatment-resistant depression in adults, alone or with an oral antidepressant, and depressive symptoms with acute suicidal ideation in major depressive disorder.",
+    "mechanism": "It is a non-selective, non-competitive antagonist of the NMDA receptor, an ionotropic glutamate receptor. The mechanism of its antidepressant effect is unknown."
+  },
+  "tell": "The S-enantiomer of ketamine, given as a nasal spray with at least two hours of monitoring after each dose.",
+  "source": {
+    "setId": "d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The time to reach maximum esketamine plasma concentration is 20 to 40 minutes",
+    "pk.halfLifeH": "mean terminal half-life (t 1/2 ) that ranged from 7 to 12 hours",
+    "clues.kinetics": [
+      "The mean absolute bioavailability is approximately 48% following nasal spray administration",
+      "Protein binding of esketamine was approximately 43% to 45%",
+      "Esketamine is primarily metabolized to noresketamine metabolite via cytochrome P450 (CYP) enzymes",
+      "esketamine-derived metabolites were primarily recovered in urine"
+    ],
+    "clues.substance": [
+      "molecular weight 237.72",
+      "freely soluble in water and in methanol"
+    ],
+    "clues.product": [
+      "NDA 211243",
+      "Nasal Spray: 28 mg of esketamine per device",
+      "56 mg Dose Kit",
+      "84 mg Dose Kit"
+    ],
+    "clues.safety": [
+      "WARNING: SEDATION; DISSOCIATION; RESPIRATORY DEPRESSION; ABUSE AND MISUSE",
+      "SPRAVATO is contraindicated in patients with: Aneurysmal vascular disease",
+      "History of intracerebral hemorrhage",
+      "were dissociation, dizziness, nausea"
+    ],
+    "clues.indication": [
+      "Treatment-resistant depression (TRD) in adults as monotherapy or in conjunction with an oral antidepressant",
+      "Depressive symptoms in adults with major depressive disorder (MDD) with acute suicidal ideation or behavior"
+    ],
+    "clues.mechanism": [
+      "a non-selective, non-competitive antagonist of the N -methyl- D -aspartate (NMDA) receptor, an ionotropic glutamate receptor",
+      "The mechanism by which esketamine exerts its antidepressant effect is unknown"
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "id": "metronidazole",
+  "generic": "Metronidazole",
+  "brand": "Flagyl",
+  "aliases": [
+    "Likmez"
+  ],
+  "application": "NDA 020334",
+  "approved": 1963,
+  "sponsor": "Pfizer",
+  "area": "Infectious disease",
+  "class": "Nitroimidazole antimicrobial",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "750 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.6,
+    "halfLifeH": 8,
+    "cmax": 21.4,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#6E7173",
+    "color2": "#9CCB9A",
+    "desc": "iron gray body and light green cap, opaque capsule"
+  },
+  "structure": {
+    "cid": 4173,
+    "formula": "C6H9N3O3",
+    "atoms": [
+      [
+        1.24,
+        -2.02,
+        "O"
+      ],
+      [
+        -2.13,
+        1.43,
+        "O",
+        -1
+      ],
+      [
+        -1.6,
+        -0.22,
+        "O"
+      ],
+      [
+        0.37,
+        0.48,
+        "N"
+      ],
+      [
+        0.87,
+        2.02,
+        "N"
+      ],
+      [
+        -1.39,
+        0.76,
+        "N",
+        1
+      ],
+      [
+        0.37,
+        -0.52,
+        "C"
+      ],
+      [
+        1.18,
+        1.07,
+        "C"
+      ],
+      [
+        -0.44,
+        1.07,
+        "C"
+      ],
+      [
+        1.24,
+        -1.02,
+        "C"
+      ],
+      [
+        -0.13,
+        2.02,
+        "C"
+      ],
+      [
+        2.13,
+        0.76,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        2,
+        5,
+        2
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        4,
+        7,
+        2
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        8,
+        10,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food does not change how much is absorbed. Less than 20% is bound to plasma proteins, and urine carries 60% to 80% of the dose.",
+    "substance": "A synthetic compound with a molecular weight of 171.15 for the active moiety.",
+    "product": "Approved under an NDA as 375 mg oral capsules, supplied in cartons of 100 unit doses.",
+    "safety": "Boxed warning that it is carcinogenic in mice and rats, so use is limited to the labeled conditions. Not to be given to anyone who took disulfiram in the last two weeks; nausea and headache are the most common reactions.",
+    "indication": "Trichomoniasis caused by T. vaginalis, symptomatic or asymptomatic, in females and males, plus treatment of asymptomatic sexual partners.",
+    "mechanism": "A synthetic nitroimidazole; the label gives no mechanism, only in vitro activity against most anaerobic bacteria and against trichomonads."
+  },
+  "tell": "A boxed rodent carcinogenicity warning and a 1963 first approval set this nitroimidazole antimicrobial apart.",
+  "source": {
+    "setId": "a2883ca1-5a9a-4259-9d80-46ab67274384",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2883ca1-5a9a-4259-9d80-46ab67274384",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "with a mean T max of 1.6 (± 0.7) hours",
+    "pk.halfLifeH": "The average elimination half-life of metronidazole in healthy subjects is eight hours",
+    "pk.cmax": "peak plasma concentration (C max ) of 21.4 (±2.8) mcg/mL",
+    "pill": "iron gray opaque body imprinted with 375 mg and a light green opaque cap",
+    "clues.kinetics": [
+      "Administration of FLAGYL 375 capsules with food does not affect the extent of absorption",
+      "Less than 20% of the circulating metronidazole is bound to plasma proteins",
+      "the urine (60% to 80% of the dose)"
+    ],
+    "clues.substance": [
+      "synthetic",
+      "formula C6H9N3O3, molecular weight 171.15"
+    ],
+    "clues.product": [
+      "Application: NDA 020334",
+      "FLAGYL 375 capsules have an iron gray opaque body imprinted with 375 mg",
+      "Carton of 100 unit dose"
+    ],
+    "clues.safety": [
+      "WARNING Metronidazole has been shown to be carcinogenic in mice and rats",
+      "Do not administer metronidazole to patients who have taken disulfiram within the last two weeks",
+      "particularly nausea, sometimes accompanied by headache"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of T. vaginalis infection in females and males",
+      "Symptomatic Trichomoniasis",
+      "in the treatment of asymptomatic T. vaginalis infection in females",
+      "Treatment of Asymptomatic Sexual Partners"
+    ],
+    "clues.mechanism": [
+      "Both the parent compound and the hydroxyl metabolite possess in vitro antimicrobial activity against most strains of anaerobic bacteria and in vitro trichomonacidal activity",
+      "synthetic nitroimidazole antimicrobial agent"
+    ]
+  }
+}

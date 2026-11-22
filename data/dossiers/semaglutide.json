@@ -1,0 +1,85 @@
+{
+  "id": "semaglutide",
+  "generic": "Semaglutide",
+  "brand": "Ozempic",
+  "aliases": [
+    "Rybelsus",
+    "Wegovy"
+  ],
+  "application": "NDA 213051",
+  "approved": 2017,
+  "sponsor": "Novo Nordisk",
+  "area": "Endocrinology",
+  "class": "GLP-1 receptor agonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "7 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 168
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F5F0CC",
+    "desc": "white to light yellow, oval tablet"
+  },
+  "biologic": {
+    "format": "peptide",
+    "isotype": null,
+    "massKDa": 4.11
+  },
+  "clues": {
+    "kinetics": "Oral bioavailability is only about 0.4% to 1% at 3 to 14 mg, and higher with 50 mL of water than with 240 mL. It is over 99% bound to albumin and is mainly eliminated by metabolism of the peptide backbone.",
+    "substance": "Its backbone is made by yeast fermentation; it is a hygroscopic powder with a molecular weight of 4113.58.",
+    "product": "Approved under an NDA as tablets from 1.5 mg to 14 mg, taken once daily.",
+    "safety": "Boxed warning for thyroid C-cell tumors in rodents. Contraindicated with a personal or family history of medullary thyroid carcinoma, and after serious hypersensitivity such as anaphylaxis or angioedema.",
+    "indication": "Adjunct to diet and exercise for glycemic control in adults with type 2 diabetes, and reducing major cardiovascular events in those at high risk.",
+    "mechanism": "Selectively activates the GLP-1 receptor, stimulating insulin secretion and lowering glucagon in a glucose-dependent way. It also causes a minor delay in gastric emptying."
+  },
+  "tell": "A co-formulated SNAC absorption enhancer and a roughly one-week half-life set this oral GLP-1 receptor agonist apart.",
+  "source": {
+    "setId": "27f15fac-7d98-4114-a2ec-92494a91da98",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=27f15fac-7d98-4114-a2ec-92494a91da98",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Semaglutide maximum concentration was reached approximately 1-hour after oral administration",
+    "pk.halfLifeH": "Semaglutide elimination half-life is approximately one week",
+    "pill": "7 mg: white to light yellow, oval shaped",
+    "biologic": "the molecular weight is 4113.58 g/mol",
+    "clues.kinetics": [
+      "0.4% to 1% after oral administration of 3 mg, 7 mg and 14 mg of RYBELSUS",
+      "were higher following dosing with 50 mL water compared to that of 240 mL water",
+      "Semaglutide is >99% bound to plasma albumin",
+      "The primary route of elimination for semaglutide is metabolism following proteolytic cleavage of the peptide backbone"
+    ],
+    "clues.substance": [
+      "The peptide backbone is produced by yeast fermentation",
+      "is a white to almost white hygroscopic powder",
+      "the molecular weight is 4113.58 g/mol"
+    ],
+    "clues.product": [
+      "Application: NDA 213051",
+      "RYBELSUS tablets contain 3 mg, 7 mg or 14 mg of semaglutide",
+      "OZEMPIC tablets contain 1.5 mg, 4 mg or 9 mg of semaglutide",
+      "following once daily oral administration of 7 mg and 14 mg of RYBELSUS"
+    ],
+    "clues.safety": [
+      "RISK OF THYROID C-CELL TUMORS",
+      "In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors",
+      "are contraindicated in patients with a personal or family history of MTC",
+      "Serious hypersensitivity reactions including anaphylaxis and angioedema have been reported with semaglutide tablets"
+    ],
+    "clues.indication": [
+      "as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus",
+      "to reduce the risk of major adverse cardiovascular (CV) events",
+      "who are at high risk for these events"
+    ],
+    "clues.mechanism": [
+      "acts as a GLP-1 receptor agonist that selectively binds to and activates the GLP-1 receptor",
+      "it stimulates insulin secretion and lowers glucagon secretion, both in a glucose-dependent manner",
+      "a minor delay in gastric emptying in the early postprandial phase"
+    ]
+  }
+}

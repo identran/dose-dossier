@@ -1,0 +1,246 @@
+{
+  "id": "bupropion",
+  "generic": "Bupropion",
+  "brand": "Wellbutrin",
+  "aliases": [
+    "Bupropion hydrochloride",
+    "Zyban",
+    "Wellbutrin SR",
+    "Wellbutrin XL"
+  ],
+  "salt": "Bupropion hydrochloride",
+  "application": "NDA 021515",
+  "approved": 1985,
+  "sponsor": "GSK",
+  "area": "Psychiatry",
+  "class": "NDRI",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "300 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 5,
+    "halfLifeH": 21
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F5EBC8",
+    "desc": "creamy-white to pale yellow, round extended-release tablet"
+  },
+  "structure": {
+    "cid": 444,
+    "formula": "C13H18ClNO",
+    "atoms": [
+      [
+        -2.17,
+        -2.93,
+        "Cl"
+      ],
+      [
+        -1.3,
+        0.57,
+        "O"
+      ],
+      [
+        0.43,
+        1.57,
+        "N"
+      ],
+      [
+        1.3,
+        2.07,
+        "C"
+      ],
+      [
+        0.43,
+        0.57,
+        "C"
+      ],
+      [
+        2.17,
+        2.57,
+        "C"
+      ],
+      [
+        0.8,
+        2.93,
+        "C"
+      ],
+      [
+        1.8,
+        1.2,
+        "C"
+      ],
+      [
+        1.3,
+        0.07,
+        "C"
+      ],
+      [
+        -0.43,
+        0.07,
+        "C"
+      ],
+      [
+        -0.43,
+        -0.93,
+        "C"
+      ],
+      [
+        -1.3,
+        -1.43,
+        "C"
+      ],
+      [
+        0.43,
+        -1.43,
+        "C"
+      ],
+      [
+        -1.3,
+        -2.43,
+        "C"
+      ],
+      [
+        0.43,
+        -2.43,
+        "C"
+      ],
+      [
+        -0.43,
+        -2.93,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        1,
+        9,
+        2
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        10,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        2
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        14,
+        15,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food does not affect its peak or AUC. It is 84% bound to plasma proteins and is extensively metabolized, with 87% of a dose recovered in urine.",
+    "substance": "The hydrochloride salt is a white, crystalline powder that is highly soluble in water. The active moiety has a molecular weight of 239.74.",
+    "product": "Under an NDA, extended-release tablets of 150 and 300 mg, given once daily.",
+    "safety": "Boxed warning for suicidal thoughts and behavior in children, adolescents and young adults. Contraindicated in seizure disorder, bulimia or anorexia, and with MAOIs or abrupt withdrawal of alcohol or benzodiazepines.",
+    "indication": "Treatment of major depressive disorder, and prevention of seasonal affective disorder.",
+    "mechanism": "A relatively weak inhibitor of norepinephrine and dopamine reuptake that does not inhibit monoamine oxidase or serotonin reuptake."
+  },
+  "tell": "At steady state its hydroxybupropion metabolite peaks at about seven times the parent drug's level.",
+  "source": {
+    "setId": "a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a435da9d-f6e8-4ddc-897d-8cd2bf777b21",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the median time to peak plasma concentrations for bupropion was approximately 5 hours",
+    "pk.halfLifeH": "The mean elimination half-life (±SD) of bupropion is 21 (±9) hours",
+    "pill": "creamy-white to pale yellow, round tablets imprinted",
+    "clues.kinetics": [
+      "The presence of food did not affect the peak concentration or area under the curve of bupropion",
+      "bupropion is 84% bound to human plasma proteins",
+      "Bupropion is extensively metabolized in humans",
+      "87% and 10% of the radioactive dose were recovered in the urine and feces"
+    ],
+    "clues.substance": [
+      "Bupropion hydrochloride powder is white, crystalline, and highly soluble in water",
+      "molecular weight 239.74"
+    ],
+    "clues.product": [
+      "Application: NDA 021515",
+      "Extended-release tablets: 150 mg, 300 mg",
+      "Wellbutrin XL, 300 mg once-daily"
+    ],
+    "clues.safety": [
+      "Antidepressants increased the risk of suicidal thoughts and behavior in children, adolescents, and young adults",
+      "contraindicated in patients with seizure disorder",
+      "current or prior diagnosis of bulimia or anorexia nervosa",
+      "The use of MAOIs (intended to treat psychiatric disorders) concomitantly with Wellbutrin XL or within 14 days of discontinuing treatment with Wellbutrin XL is contraindicated",
+      "patients undergoing abrupt discontinuation of alcohol, benzodiazepines, barbiturates, and antiepileptic drugs"
+    ],
+    "clues.indication": [
+      "treatment of major depressive disorder (MDD)",
+      "prevention of seasonal affective disorder (SAD)"
+    ],
+    "clues.mechanism": [
+      "Bupropion is a relatively weak inhibitor of the neuronal uptake of norepinephrine and dopamine and does not inhibit monoamine oxidase or the reuptake of serotonin"
+    ]
+  }
+}

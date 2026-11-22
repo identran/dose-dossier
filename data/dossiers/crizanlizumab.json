@@ -1,0 +1,81 @@
+{
+  "id": "crizanlizumab",
+  "generic": "Crizanlizumab",
+  "brand": "Adakveo",
+  "aliases": [
+    "Crizanlizumab-tmca"
+  ],
+  "application": "BLA 761128",
+  "approved": 2019,
+  "sponsor": "Novartis",
+  "area": "Hematology",
+  "class": "P-selectin blocking antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "5 mg/kg intravenous, single dose, healthy adults",
+    "model": "infusion",
+    "tmaxH": 0.5,
+    "halfLifeH": 254.4,
+    "cmax": 160,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear to opalescent solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG2 κ",
+    "massKDa": 146
+  },
+  "clues": {
+    "kinetics": "It is expected to be metabolized into small peptides by catabolic pathways, and hydroxyurea had no clinically meaningful effect on its pharmacokinetics.",
+    "substance": "Made by recombinant DNA technology in Chinese hamster ovary cells, with a theoretical molecular weight of about 146 kDa. Supplied as a sterile, preservative-free solution.",
+    "product": "Approved under a BLA as a single-dose vial of 100 mg per 10 mL, given at weeks 0 and 2 and then every 4 weeks.",
+    "safety": "No boxed warning and no contraindications. Arthralgia and nausea are among the most common reactions.",
+    "indication": "Reducing the frequency of vaso-occlusive crises in patients aged 16 years and older with sickle cell disease.",
+    "mechanism": "Binds P-selectin and blocks its interactions with ligands such as PSGL-1, and can break apart preformed P-selectin/PSGL-1 complexes."
+  },
+  "tell": "A humanized IgG2 kappa antibody that can also break apart preformed P-selectin/PSGL-1 complexes.",
+  "source": {
+    "setId": "b2b7f8b4-fe9a-4a86-8129-9e43f99a20c6",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b2b7f8b4-fe9a-4a86-8129-9e43f99a20c6",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer 5 mg/kg by intravenous infusion over a period of 30 minutes on Week 0",
+    "pk.halfLifeH": "terminal elimination half-life (t 1/2 ) of crizanlizumab-tmca was 10.6 (20.5%) days",
+    "pk.cmax": "were 0.16 (15.3%) mg/mL",
+    "pill": "colorless to slightly brownish-yellow solution in a single-dose vial",
+    "biologic": [
+      "humanized IgG2 kappa monoclonal antibody",
+      "theoretical molecular weight of approximately 146 kDa"
+    ],
+    "clues.kinetics": [
+      "is expected to be metabolized into small peptides by catabolic pathways",
+      "Hydroxyurea had no clinically meaningful effect on crizanlizumab-tmca pharmacokinetics"
+    ],
+    "clues.substance": [
+      "produced using recombinant DNA technology in Chinese hamster ovary (CHO) cells",
+      "with a theoretical molecular weight of approximately 146 kDa",
+      "sterile, preservative-free"
+    ],
+    "clues.product": [
+      "Application: BLA 761128",
+      "100 mg/10 mL (10 mg/mL) single-dose vial",
+      "Week 0, Week 2, and every 4 weeks thereafter"
+    ],
+    "clues.safety": [
+      "None. None.",
+      "The most common adverse reactions (≥ 10%) were arthralgia, nausea, back pain"
+    ],
+    "clues.indication": [
+      "reduce the frequency of vaso-occlusive crises (VOCs) in adults and pediatric patients aged 16 years and older with sickle cell disease"
+    ],
+    "clues.mechanism": [
+      "binds to P-selectin and blocks interactions with its ligands, including P-selectin glycoprotein ligand 1 (PSGL-1)",
+      "Crizanlizumab can also dissociate preformed P-selectin/PSGL-1 complex"
+    ]
+  }
+}

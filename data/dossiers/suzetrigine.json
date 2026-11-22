@@ -1,0 +1,421 @@
+{
+  "id": "suzetrigine",
+  "generic": "Suzetrigine",
+  "brand": "Journavx",
+  "aliases": [],
+  "application": "NDA 219209",
+  "approved": 2025,
+  "sponsor": "Vertex",
+  "area": "Pain",
+  "class": "NaV1.8 blocker",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "50 mg oral, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 3,
+    "halfLifeH": 23.6,
+    "cmax": 620,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "oblong",
+    "color": "#2F6DB5",
+    "desc": "blue, film-coated, oblong tablet"
+  },
+  "structure": {
+    "cid": 156445116,
+    "formula": "C21H20F5N3O4",
+    "atoms": [
+      [
+        -2.09,
+        3.77,
+        "F"
+      ],
+      [
+        -1.09,
+        2.77,
+        "F"
+      ],
+      [
+        -3.09,
+        2.77,
+        "F"
+      ],
+      [
+        -3.32,
+        -2.77,
+        "F"
+      ],
+      [
+        -1.59,
+        -3.77,
+        "F"
+      ],
+      [
+        -1.09,
+        1.77,
+        "O"
+      ],
+      [
+        0.38,
+        -0.47,
+        "O"
+      ],
+      [
+        -3.32,
+        -0.77,
+        "O"
+      ],
+      [
+        2.49,
+        -2.06,
+        "O"
+      ],
+      [
+        0.92,
+        1.18,
+        "N"
+      ],
+      [
+        3.77,
+        0.25,
+        "N"
+      ],
+      [
+        4.19,
+        -1.7,
+        "N"
+      ],
+      [
+        -2.4,
+        0.82,
+        "C"
+      ],
+      [
+        -2.09,
+        1.77,
+        "C"
+      ],
+      [
+        -1.59,
+        0.23,
+        "C"
+      ],
+      [
+        -0.78,
+        0.82,
+        "C"
+      ],
+      [
+        -3.35,
+        0.51,
+        "C"
+      ],
+      [
+        -1.59,
+        -0.77,
+        "C"
+      ],
+      [
+        -2.09,
+        2.77,
+        "C"
+      ],
+      [
+        -3.04,
+        2.08,
+        "C"
+      ],
+      [
+        0.17,
+        0.51,
+        "C"
+      ],
+      [
+        -2.45,
+        -1.27,
+        "C"
+      ],
+      [
+        -0.72,
+        -1.27,
+        "C"
+      ],
+      [
+        -2.45,
+        -2.27,
+        "C"
+      ],
+      [
+        -0.72,
+        -2.27,
+        "C"
+      ],
+      [
+        -1.59,
+        -2.77,
+        "C"
+      ],
+      [
+        1.87,
+        0.87,
+        "C"
+      ],
+      [
+        -4.19,
+        -1.27,
+        "C"
+      ],
+      [
+        2.08,
+        -0.11,
+        "C"
+      ],
+      [
+        2.61,
+        1.54,
+        "C"
+      ],
+      [
+        3.03,
+        -0.42,
+        "C"
+      ],
+      [
+        3.56,
+        1.23,
+        "C"
+      ],
+      [
+        3.23,
+        -1.4,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        18,
+        1
+      ],
+      [
+        1,
+        18,
+        1
+      ],
+      [
+        2,
+        18,
+        1
+      ],
+      [
+        3,
+        23,
+        1
+      ],
+      [
+        4,
+        25,
+        1
+      ],
+      [
+        5,
+        13,
+        1
+      ],
+      [
+        5,
+        15,
+        1
+      ],
+      [
+        6,
+        20,
+        2
+      ],
+      [
+        7,
+        21,
+        1
+      ],
+      [
+        7,
+        27,
+        1
+      ],
+      [
+        8,
+        32,
+        2
+      ],
+      [
+        9,
+        20,
+        1
+      ],
+      [
+        9,
+        26,
+        1
+      ],
+      [
+        10,
+        30,
+        2
+      ],
+      [
+        10,
+        31,
+        1
+      ],
+      [
+        11,
+        32,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        12,
+        16,
+        1
+      ],
+      [
+        13,
+        18,
+        1
+      ],
+      [
+        13,
+        19,
+        1
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        15,
+        20,
+        1
+      ],
+      [
+        17,
+        21,
+        2
+      ],
+      [
+        17,
+        22,
+        1
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        22,
+        24,
+        2
+      ],
+      [
+        23,
+        25,
+        2
+      ],
+      [
+        24,
+        25,
+        1
+      ],
+      [
+        26,
+        28,
+        2
+      ],
+      [
+        26,
+        29,
+        1
+      ],
+      [
+        28,
+        30,
+        1
+      ],
+      [
+        29,
+        31,
+        2
+      ],
+      [
+        30,
+        32,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food lowers early concentrations without changing overall exposure. It is 99% protein bound and cleared mainly through CYP3A metabolism.",
+    "substance": "A white to off-white solid, practically insoluble in water, with a molecular weight of 473.39 g/mol.",
+    "product": "Approved under an NDA in a single 50 mg tablet strength. The first dose is 100 mg, and the second dose is 50 mg.",
+    "safety": "No boxed warning; contraindicated with strong CYP3A inhibitors. Pruritus and muscle spasms are the most common adverse reactions compared with placebo.",
+    "indication": "Moderate to severe acute pain, including postoperative pain, in adults.",
+    "mechanism": "A selective blocker of the NaV1.8 voltage-gated sodium channel in peripheral sensory neurons, which stops pain signals reaching the spinal cord and brain."
+  },
+  "tell": "A selective NaV1.8 blocker whose major active metabolite, M6-SUZ, is 3.7-fold less potent than the parent.",
+  "source": {
+    "setId": "f0976da4-1d20-4517-945c-b60ed2f41c12",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0976da4-1d20-4517-945c-b60ed2f41c12",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Median T max (range), hours | 3.0 hours (1.50, 5.03)",
+    "pk.halfLifeH": "Mean (CV%) Effective Half-Life, hours 23.6 (36.2%)",
+    "pk.cmax": "Steady State C max (CV%), µg/mL | 0.62 (27.7%)",
+    "pill": "Tablets: 50 mg, blue, film-coated, oblong tablets",
+    "clues.kinetics": [
+      "resulted in decreased initial concentrations of suzetrigine and M6-SUZ in comparison to a fasted state",
+      "The C max and AUC of suzetrigine and M6-SUZ were not affected by any of the meal conditions",
+      "Protein Binding | 99% | 96%",
+      "Metabolism Primary Pathway CYP3A CYP3A"
+    ],
+    "clues.substance": [
+      "Suzetrigine is a white to off-white solid and is practically insoluble in water",
+      "Suzetrigine's molecular weight is 473.39 g/mol"
+    ],
+    "clues.product": [
+      "Application: NDA 219209",
+      "Tablets: 50 mg",
+      "Administration of 100 mg of JOURNAVX (the first dose)",
+      "Administration of the second JOURNAVX dose of 50 mg"
+    ],
+    "clues.safety": [
+      "Concomitant use of JOURNAVX with strong CYP3A inhibitors is contraindicated",
+      "were pruritus, muscle spasms, increased creatine phosphokinase, and rash"
+    ],
+    "clues.indication": [
+      "treatment of moderate to severe acute pain, including postoperative pain, in adults"
+    ],
+    "clues.mechanism": [
+      "Suzetrigine is a selective blocker of the Na V 1.8 voltage-gated sodium channel",
+      "By selectively inhibiting Na V 1.8 channels, suzetrigine inhibits transmission of pain signals to the spinal cord and brain"
+    ]
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "id": "zolpidem",
+  "generic": "Zolpidem",
+  "brand": "Ambien",
+  "aliases": [
+    "Zolpidem tartrate",
+    "Ambien CR",
+    "Edluar"
+  ],
+  "salt": "Zolpidem tartrate",
+  "application": "NDA 019908",
+  "approved": 1992,
+  "sponsor": "Sanofi",
+  "area": "Neurology",
+  "class": "Nonbenzodiazepine hypnotic",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.6,
+    "halfLifeH": 2.5,
+    "cmax": 121,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#F7F7F5",
+    "desc": "white, capsule-shaped, film-coated tablet"
+  },
+  "structure": {
+    "cid": 5732,
+    "formula": "C19H21N3O",
+    "atoms": [
+      [
+        -1.86,
+        0.7,
+        "O"
+      ],
+      [
+        -1.47,
+        -1.1,
+        "N"
+      ],
+      [
+        -0.52,
+        -2.4,
+        "N"
+      ],
+      [
+        -0.57,
+        1.85,
+        "N"
+      ],
+      [
+        -0.52,
+        -0.79,
+        "C"
+      ],
+      [
+        0.06,
+        -1.6,
+        "C"
+      ],
+      [
+        -1.47,
+        -2.1,
+        "C"
+      ],
+      [
+        -0.21,
+        0.16,
+        "C"
+      ],
+      [
+        1.06,
+        -1.6,
+        "C"
+      ],
+      [
+        -2.33,
+        -0.6,
+        "C"
+      ],
+      [
+        -3.2,
+        -1.1,
+        "C"
+      ],
+      [
+        -2.33,
+        -2.6,
+        "C"
+      ],
+      [
+        -0.88,
+        0.9,
+        "C"
+      ],
+      [
+        -3.2,
+        -2.1,
+        "C"
+      ],
+      [
+        1.57,
+        -2.47,
+        "C"
+      ],
+      [
+        1.57,
+        -0.73,
+        "C"
+      ],
+      [
+        -4.07,
+        -0.6,
+        "C"
+      ],
+      [
+        3.07,
+        -1.6,
+        "C"
+      ],
+      [
+        2.57,
+        -2.47,
+        "C"
+      ],
+      [
+        2.57,
+        -0.73,
+        "C"
+      ],
+      [
+        -1.24,
+        2.6,
+        "C"
+      ],
+      [
+        0.41,
+        2.06,
+        "C"
+      ],
+      [
+        4.07,
+        -1.6,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        12,
+        2
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        9,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        6,
+        2
+      ],
+      [
+        3,
+        12,
+        1
+      ],
+      [
+        3,
+        20,
+        1
+      ],
+      [
+        3,
+        21,
+        1
+      ],
+      [
+        4,
+        5,
+        2
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        6,
+        11,
+        1
+      ],
+      [
+        7,
+        12,
+        1
+      ],
+      [
+        8,
+        14,
+        2
+      ],
+      [
+        8,
+        15,
+        1
+      ],
+      [
+        9,
+        10,
+        2
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        10,
+        16,
+        1
+      ],
+      [
+        11,
+        13,
+        2
+      ],
+      [
+        14,
+        18,
+        1
+      ],
+      [
+        15,
+        19,
+        2
+      ],
+      [
+        17,
+        18,
+        2
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        17,
+        22,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Food reduces exposure, so it should not be taken with or right after a meal for faster sleep onset. About 92.5% is bound to protein, and it is converted to inactive metabolites eliminated mainly by the kidneys.",
+    "substance": "A tartrate salt whose active moiety has a molecular weight of 307.4. It is sparingly soluble in water.",
+    "product": "An NDA tablet in 5 and 10 mg strengths, taken nightly.",
+    "safety": "Boxed warning for complex sleep behaviors such as sleep-walking and sleep-driving. Contraindicated after complex sleep behaviors or known hypersensitivity; daytime drowsiness and dizziness are most commonly reported.",
+    "indication": "Short-term treatment of insomnia characterized by difficulty initiating sleep.",
+    "mechanism": "It is a GABA-A receptor positive modulator, binding the benzodiazepine site of α1 subunit receptors and increasing chloride channel opening."
+  },
+  "tell": "A short-lived hypnotic (half-life about 2.5 hours) with a boxed warning for sleep-driving and other complex sleep behaviors.",
+  "source": {
+    "setId": "747949c5-2c91-4909-8a07-71b6826f8e97",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=747949c5-2c91-4909-8a07-71b6826f8e97",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "occurring at a mean time (T ma x ) of 1.6 hours for both",
+    "pk.halfLifeH": "2.5 (range: 1.4 to 3.8) hours, for the 5 and 10 mg tablets, respectively",
+    "pk.cmax": "121 (range: 58 to 272) ng/mL",
+    "pill": "AMBIEN 10 mg tablets are capsule-shaped, white, film coated",
+    "clues.kinetics": [
+      "with food, mean AUC and C max were decreased by 15% and 25%",
+      "for faster sleep onset, AMBIEN should not be administered with or immediately after a meal",
+      "Total protein binding was found to be 92.5 ± 0.1%",
+      "AMBIEN is converted to inactive metabolites that are eliminated primarily by renal excretion"
+    ],
+    "clues.substance": [
+      "molecular weight 307.4",
+      "Zolpidem tartrate is a white to off-white crystalline powder that is sparingly soluble in water"
+    ],
+    "clues.product": [
+      "NDA 019908",
+      "TABLET (oral): 10MG; 5MG",
+      "Zolpidem did not accumulate in young adults following nightly dosing"
+    ],
+    "clues.safety": [
+      "WARNING: COMPLEX SLEEP BEHAVIORS Complex sleep behaviors including sleep-walking, sleep-driving",
+      "AMBIEN is contraindicated in patients who have experienced complex sleep behaviors after taking AMBIEN",
+      "Known hypersensitivity to zolpidem",
+      "Reactions most commonly associated with discontinuation from U.S. trials were daytime drowsiness (0.5%), dizziness (0.4%)"
+    ],
+    "clues.indication": [
+      "is indicated for the short-term treatment of insomnia characterized by difficulties with sleep initiation"
+    ],
+    "clues.mechanism": [
+      "binding to the benzodiazepine site of α1 subunit containing GABA A receptors, increasing the frequency of chloride channel opening"
+    ]
+  }
+}

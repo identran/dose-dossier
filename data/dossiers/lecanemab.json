@@ -1,0 +1,88 @@
+{
+  "id": "lecanemab",
+  "generic": "Lecanemab",
+  "brand": "Leqembi",
+  "aliases": [
+    "Lecanemab-irmb"
+  ],
+  "application": "BLA 761269",
+  "approved": 2023,
+  "sponsor": "Eisai",
+  "area": "Neurology",
+  "class": "Amyloid beta antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "10 mg/kg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 1,
+    "halfLifeH": 144
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F4E7A1",
+    "desc": "clear to very opalescent, colorless to pale yellow solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1",
+    "massKDa": 150
+  },
+  "clues": {
+    "kinetics": "Degraded by proteolytic enzymes, and not expected to undergo renal elimination or hepatic metabolism. Absolute bioavailability is about 77.5% after 500 mg and 53% after 360 mg subcutaneously.",
+    "substance": "A recombinant humanized protein expressed in a Chinese hamster ovary cell line, with an approximate molecular weight of 150 kDa.",
+    "product": "Approved under a BLA in 200 mg/2 mL and 500 mg/5 mL single-dose vials, and in autoinjectors. Dosing is once every 2 weeks by infusion or once a week by injection.",
+    "safety": "Boxed warning for ARIA, brain-imaging abnormalities with swelling or microbleeds, which can be fatal. Contraindicated in serious hypersensitivity; infusion reactions and microhemorrhages most often stop treatment.",
+    "indication": "Alzheimer's disease, started in patients with mild cognitive impairment or mild dementia.",
+    "mechanism": "Directed against aggregated soluble and insoluble forms of amyloid beta, and reduces amyloid beta plaques."
+  },
+  "tell": "A humanized antibody with a terminal half-life of 5 to 7 days, also available as a weekly subcutaneous autoinjector.",
+  "source": {
+    "setId": "9d1ff786-e577-410a-a273-c4d7d0e4e975",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Over approximately one hour",
+    "pk.halfLifeH": "The terminal half-life is 5 to 7 days",
+    "pill": "clear to very opalescent, colorless to pale yellow solution",
+    "biologic": [
+      "recombinant humanized immunoglobulin gamma 1 (IgG1) monoclonal antibody",
+      "approximate molecular weight of 150 kDa"
+    ],
+    "clues.kinetics": [
+      "is degraded by proteolytic enzymes",
+      "is not expected to undergo renal elimination or metabolism by hepatic enzymes",
+      "absolute bioavailability of lecanemab-irmb was approximately 77.5% and 53%",
+      "following subcutaneous administration of 500 mg and 360 mg by autoinjector"
+    ],
+    "clues.substance": [
+      "recombinant humanized",
+      "expressed in a Chinese hamster ovary cell line",
+      "approximate molecular weight of 150 kDa"
+    ],
+    "clues.product": [
+      "Application: BLA 761269",
+      "Injection: 200 mg/2 mL (100 mg/mL) in a single-dose vial",
+      "Injection: 500 mg/5 mL (100 mg/mL) in a single-dose vial",
+      "10 mg/kg once every 2 weeks",
+      "360 mg administered once a week"
+    ],
+    "clues.safety": [
+      "WARNING: AMYLOID RELATED IMAGING ABNORMALITIES",
+      "ARIA with edema (ARIA-E) and ARIA with hemosiderin deposition (ARIA-H)",
+      "ARIA can be fatal",
+      "Reactions have included angioedema and anaphylaxis",
+      "infusion-related reactions that led to discontinuation",
+      "ARIA-H microhemorrhages that led to discontinuation"
+    ],
+    "clues.indication": [
+      "treatment of Alzheimer’s disease",
+      "mild cognitive impairment or mild dementia stage of disease"
+    ],
+    "clues.mechanism": [
+      "directed against aggregated soluble and insoluble forms of amyloid beta",
+      "reduces amyloid beta plaques"
+    ]
+  }
+}

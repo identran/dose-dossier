@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dial test</title>
+<link rel="stylesheet" href="../site/css/tokens.css">
+<link rel="stylesheet" href="../site/assets/fonts/fonts.css">
+<style>
+  html { background: var(--paper, #ECEAE5); color: var(--ink, #111); }
+  body { margin: 0; padding: 16px; font-family: var(--font-text, Georgia, serif); font-size: 1rem; line-height: 1.5; }
+  body.bare { padding: 0; }
+  body.bare .controls, body.bare #probe { display: none; }
+  .controls { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: baseline; margin-bottom: 1.5rem; }
+  select, button { font: inherit; color: inherit; background: none; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; padding: 0 0 2px; cursor: pointer; }
+  #stage { width: 100%; max-width: 900px; aspect-ratio: 1; }
+  #probe { min-height: 1.5em; margin-top: 1.5rem; font-family: var(--font-data, Georgia, serif); color: var(--mute, #5E5D59); font-variant-numeric: tabular-nums; }
+  .show-center .dial-center { outline: 1px solid var(--mute, #5E5D59); }
+</style>
+</head>
+<body>
+<div class="controls">
+  <label>Profile <select id="profile"></select></label>
+  <button id="back" type="button">Step back</button>
+  <button id="forward" type="button">Step forward</button>
+  <button id="solve" type="button">Toggle solved</button>
+  <button id="theme" type="button">Toggle theme</button>
+  <span id="state"></span>
+</div>
+<div id="stage"></div>
+<p id="probe"></p>
+
+<script type="module">
+import { makeCurve, sampleTimes, formatHours } from '../site/js/pk.js';
+import { createDial } from '../site/js/dial/index.js';
+
+// Query string: profile, progress, solved=1, theme=light|dark, w=<px>, n=<nodes>, renderer=svg,
+// accent=<rrggbb>, bare=1 (figure only), center=1 (outline the reserved square).
+const PROFILES = {
+  sildenafil: { label: 'Sildenafil, oral', accent: '#4F7CC4', pk: { tmaxH: 1, halfLifeH: 4, cmax: 450, unit: 'ng/mL' } },
+  esomeprazole: { label: 'Esomeprazole, oral', accent: '#8C5A9E', pk: { tmaxH: 1.6, halfLifeH: 1.5, cmax: 4.7, unit: 'µmol/L' } },
+  fluoxetine: { label: 'Fluoxetine, oral', accent: '#5E9C76', pk: { tmaxH: 7, halfLifeH: 48, cmax: 30, unit: 'ng/mL' } },
+  antibody: { label: 'Monthly antibody, subcutaneous', accent: '#C9973A', pk: { tmaxH: 72, halfLifeH: 480, cmax: 12, unit: 'µg/mL' } },
+  infusion: { label: 'Intravenous infusion', accent: '#B5533C', pk: { model: 'infusion', tmaxH: 1, halfLifeH: 500, cmax: 180, unit: 'µg/mL' } },
+  bolus: { label: 'Intravenous bolus', accent: '#2F8189', pk: { model: 'bolus', tmaxH: 0, halfLifeH: 2, cmax: 60, unit: 'µg/mL' } },
+  relative: { label: 'No label Cmax, oral', accent: '#D2B48C', pk: { tmaxH: 3, halfLifeH: 11 } },
+  shortInfusion: { label: 'Short infusion, short half-life', accent: '#B8782B', pk: { model: 'infusion', tmaxH: 0.5, halfLifeH: 1.1, cmax: 90, unit: 'µg/mL' } },
+  twoLaps: { label: 'Two laps (forced period)', accent: '#2E8B57', pk: { tmaxH: 7, halfLifeH: 48, cmax: 30, unit: 'ng/mL', periodH: 168 } },
+};
+
+const q = new URLSearchParams(location.search);
+const $ = id => document.getElementById(id);
+const html = document.documentElement;
+if (q.get('theme')) html.dataset.theme = q.get('theme');
+if (q.get('bare')) document.body.classList.add('bare');
+if (q.get('center')) document.body.classList.add('show-center');
+if (q.get('w')) $('stage').style.width = `${+q.get('w')}px`;
+
+const select = $('profile');
+for (const id in PROFILES) select.add(new Option(PROFILES[id].label, id));
+select.value = PROFILES[q.get('profile')] ? q.get('profile') : 'sildenafil';
+
+const dial = createDial($('stage'), {
+  renderer: q.get('renderer') || undefined,
+  onProbe: p => {
+    const { pk } = PROFILES[select.value];
+    const amount = p && (p.c == null ? `${Math.round(p.frac * 100)}% of Cmax` : `${+p.c.toPrecision(3)} ${pk.unit}`);
+    $('probe').textContent = p ? `${formatHours(p.t)} · ${amount}${p.index >= 0 ? ` · sample ${p.index + 1}` : ''}` : '';
+  },
+});
+
+let progress = Math.max(1, +q.get('progress') || 1);
+let solved = q.get('solved') === '1';
+let times = [];
+
+function load() {
+  const profile = PROFILES[select.value];
+  const curve = makeCurve(profile.pk);
+  times = sampleTimes(curve, +q.get('n') || 8);
+  const accent = q.get('accent') ? `#${q.get('accent')}` : profile.accent;
+  html.style.setProperty('--accent', accent);
+  dial.setChallenge({ curve, times, accent, seed: 1 });
+  dial.setLabel(`Concentration over ${formatHours(curve.period)}, ${profile.label.toLowerCase()}`);
+  dial.setDetails('probe');
+  progress = Math.min(progress, times.length);
+  dial.setProgress(progress, { animate: false });
+  dial.setSolved(solved);
+  show();
+}
+function show() {
+  $('state').textContent = `Sample ${progress} of ${times.length}${solved ? ', solved' : ''}, ${dial.debug().renderer}`;
+}
+
+select.onchange = () => { progress = 1; solved = false; dial.setSolved(false); load(); };
+$('back').onclick = () => { progress = Math.max(1, progress - 1); dial.setProgress(progress, { animate: true }); show(); };
+$('forward').onclick = () => { progress = Math.min(times.length, progress + 1); dial.setProgress(progress, { animate: true }); show(); };
+$('solve').onclick = () => { solved = !solved; dial.setSolved(solved); show(); };
+$('theme').onclick = () => {
+  const dark = html.dataset.theme ? html.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  html.dataset.theme = dark ? 'light' : 'dark';
+  dial.setTheme(html.dataset.theme);
+};
+
+load();
+window.dial = dial;
+window.dialTest = { PROFILES, times: () => times };
+</script>
+</body>
+</html>

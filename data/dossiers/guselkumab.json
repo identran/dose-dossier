@@ -1,0 +1,85 @@
+{
+  "id": "guselkumab",
+  "generic": "Guselkumab",
+  "brand": "Tremfya",
+  "aliases": [],
+  "application": "BLA 761061",
+  "approved": 2017,
+  "sponsor": "Johnson & Johnson",
+  "area": "Dermatology",
+  "class": "IL-23 blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "100 mg subcutaneous, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 132,
+    "halfLifeH": 396,
+    "cmax": 8.09,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "pen",
+    "color": "#F3E3A1",
+    "desc": "clear, colorless to light yellow solution in a single-dose prefilled pen"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1 λ",
+    "massKDa": 147
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability after a single subcutaneous injection is about 49%. It is expected to be broken down into small peptides and amino acids by ordinary catabolic pathways.",
+    "substance": "Made in a mammalian cell line by recombinant DNA technology, with a molecular weight of about 147 kilodaltons.",
+    "product": "A BLA product in 100 mg/mL and 200 mg/2 mL single-dose pens and syringes, given at weeks 0 and 4 and then every 8 weeks.",
+    "safety": "No boxed warning. Contraindicated after serious hypersensitivity to the drug or its excipients; upper respiratory infections are among the reported reactions.",
+    "indication": "Plaque psoriasis and psoriatic arthritis in adults and in children from 6 years of age weighing at least 40 kg, plus ulcerative colitis and Crohn's disease in adults.",
+    "mechanism": "Selectively binds the p19 subunit of interleukin-23, inhibiting its interaction with the IL-23 receptor and the release of proinflammatory cytokines."
+  },
+  "tell": "An IL-23 p19 antibody with only about 49% absolute bioavailability after a 100 mg subcutaneous injection.",
+  "source": {
+    "setId": "1e6dc9ae-1c4c-42d9-87aa-c315ecc51b56",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1e6dc9ae-1c4c-42d9-87aa-c315ecc51b56",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "by approximately 5.5 days post dose",
+    "pk.halfLifeH": "Mean half-life of guselkumab was approximately 15 to 18 days in subjects with plaque psoriasis",
+    "pk.cmax": "maximum serum concentration of 8.09 ± 3.68 mcg/mL",
+    "pill": "TREMFYA is a clear and colorless to light yellow solution",
+    "biologic": [
+      "human monoclonal IgG1λ antibody",
+      "produced in a mammalian cell line using recombinant DNA technology",
+      "approximate molecular weight of approximately 147 kDa"
+    ],
+    "clues.kinetics": [
+      "The absolute bioavailability of guselkumab following a single 100 mg subcutaneous injection was estimated to be approximately 49%",
+      "is expected to be degraded into small peptides and amino acids via catabolic pathways"
+    ],
+    "clues.substance": [
+      "produced in a mammalian cell line using recombinant DNA technology",
+      "approximate molecular weight of approximately 147 kDa"
+    ],
+    "clues.product": [
+      "Application: BLA 761061",
+      "Injection: 100 mg/mL in a single-dose prefilled pen",
+      "Injection: 200 mg/2 mL in a single-dose prefilled pen",
+      "100 mg administered by subcutaneous injection at Week 0, Week 4, and every 8 weeks thereafter"
+    ],
+    "clues.safety": [
+      "TREMFYA is contraindicated in patients with a history of serious hypersensitivity reaction to guselkumab or to any of the excipients",
+      "Upper respiratory infections include nasopharyngitis",
+      "Adverse Reactions Occurring in ≥1% of Adult Subjects with Moderate-to-Severe Plaque Psoriasis"
+    ],
+    "clues.indication": [
+      "adults and pediatric patients 6 years of age and older who also weigh at least 40 kg with moderate-to-severe plaque psoriasis",
+      "with active psoriatic arthritis",
+      "moderately to severely active ulcerative colitis",
+      "moderately to severely active Crohn's disease"
+    ],
+    "clues.mechanism": [
+      "selectively binds to the p19 subunit of interleukin 23 (IL-23) and inhibits its interaction with the IL-23 receptor",
+      "Guselkumab inhibits the release of proinflammatory cytokines and chemokines"
+    ]
+  }
+}

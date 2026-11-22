@@ -1,0 +1,256 @@
+{
+  "id": "varenicline",
+  "generic": "Varenicline",
+  "brand": "Chantix",
+  "aliases": [
+    "Varenicline tartrate"
+  ],
+  "salt": "Varenicline tartrate",
+  "application": "NDA 021928",
+  "approved": 2006,
+  "sponsor": "Pfizer",
+  "area": "Psychiatry",
+  "class": "Nicotinic partial agonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1 mg oral, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 3.5,
+    "halfLifeH": 24
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#A9CFE8",
+    "desc": "light blue, capsule-shaped, biconvex, film-coated tablet"
+  },
+  "structure": {
+    "cid": 5310966,
+    "formula": "C13H13N3",
+    "atoms": [
+      [
+        2.94,
+        -0.09,
+        "N"
+      ],
+      [
+        -1.77,
+        -1.63,
+        "N"
+      ],
+      [
+        -2.37,
+        0.01,
+        "N"
+      ],
+      [
+        1.27,
+        0.05,
+        "C"
+      ],
+      [
+        1.48,
+        0.83,
+        "C"
+      ],
+      [
+        0.89,
+        1.63,
+        "C"
+      ],
+      [
+        0.16,
+        -0.43,
+        "C"
+      ],
+      [
+        -0.12,
+        0.33,
+        "C"
+      ],
+      [
+        2.31,
+        -0.6,
+        "C"
+      ],
+      [
+        2.65,
+        0.67,
+        "C"
+      ],
+      [
+        -0.38,
+        -1.09,
+        "C"
+      ],
+      [
+        -0.95,
+        0.49,
+        "C"
+      ],
+      [
+        -1.21,
+        -0.95,
+        "C"
+      ],
+      [
+        -1.5,
+        -0.15,
+        "C"
+      ],
+      [
+        -2.64,
+        -1.49,
+        "C"
+      ],
+      [
+        -2.94,
+        -0.66,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        8,
+        1
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        12,
+        2
+      ],
+      [
+        1,
+        14,
+        1
+      ],
+      [
+        2,
+        13,
+        2
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        10,
+        2
+      ],
+      [
+        7,
+        11,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        14,
+        15,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Systemic availability is about 90%, and food does not affect oral bioavailability. Protein binding is low, at 20% or less, and about 92% of a dose is excreted unchanged in urine.",
+    "substance": "A tartrate salt whose active moiety has a molecular weight of 211.26. It is highly soluble in water.",
+    "product": "An NDA tablet in 0.5 mg and 1 mg strengths, supplied in 4-week starting and continuing cards.",
+    "safety": "No boxed warning. Contraindicated after serious hypersensitivity or skin reactions; nausea and abnormal dreams are most common.",
+    "indication": "An aid to smoking-cessation treatment.",
+    "mechanism": "It binds with high affinity and selectivity to α4β2 nicotinic receptors, acting as a partial agonist that blocks nicotine's effects."
+  },
+  "tell": "A nicotinic partial agonist that is barely metabolized, with 92% of a dose excreted unchanged in urine.",
+  "source": {
+    "setId": "f0ff4f27-5185-4881-a749-c6b7a0ca5696",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f0ff4f27-5185-4881-a749-c6b7a0ca5696",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Maximum plasma concentrations of varenicline occur typically within 3–4 hours after oral administration",
+    "pk.halfLifeH": "The elimination half-life of varenicline is approximately 24 hours",
+    "pill": "a 1 mg capsular biconvex, light blue film-coated tablet",
+    "clues.kinetics": [
+      "systemic availability was ~90%",
+      "Oral bioavailability of varenicline is unaffected by food or time-of-day dosing",
+      "Plasma protein binding of varenicline is low (≤20%)",
+      "Varenicline undergoes minimal metabolism, with 92% excreted unchanged in the urine"
+    ],
+    "clues.substance": [
+      "molecular weight 211.26",
+      "It is highly soluble in water"
+    ],
+    "clues.product": [
+      "NDA 021928",
+      "TABLET (oral): EQ 0.5MG BASE; EQ 1MG BASE",
+      "Starting 4-week card",
+      "Continuing 4-week card"
+    ],
+    "clues.safety": [
+      "History of serious hypersensitivity or skin reactions to CHANTIX",
+      "were nausea, abnormal (e.g., vivid, unusual, or strange) dreams"
+    ],
+    "clues.indication": [
+      "CHANTIX is indicated for use as an aid to smoking-cessation treatment"
+    ],
+    "clues.mechanism": [
+      "Varenicline binds with high affinity and selectivity at α4β2 neuronal nicotinic acetylcholine receptors",
+      "Varenicline blocks the ability of nicotine to activate α4β2 receptors"
+    ]
+  }
+}

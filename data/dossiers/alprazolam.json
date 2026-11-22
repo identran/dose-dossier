@@ -1,0 +1,313 @@
+{
+  "id": "alprazolam",
+  "generic": "Alprazolam",
+  "brand": "Xanax",
+  "aliases": [],
+  "application": "NDA 018276",
+  "approved": 1981,
+  "sponsor": "Pfizer",
+  "area": "Psychiatry",
+  "class": "Benzodiazepine",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 11.2
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#4A7BC8",
+    "desc": "blue, oval, scored tablet"
+  },
+  "structure": {
+    "cid": 2118,
+    "formula": "C17H13ClN4",
+    "atoms": [
+      [
+        -2.69,
+        -0.28,
+        "Cl"
+      ],
+      [
+        1.12,
+        -1.6,
+        "N"
+      ],
+      [
+        1.61,
+        0.58,
+        "N"
+      ],
+      [
+        2.69,
+        -1.88,
+        "N"
+      ],
+      [
+        2.22,
+        -2.75,
+        "N"
+      ],
+      [
+        0.22,
+        -1.17,
+        "C"
+      ],
+      [
+        0,
+        -0.2,
+        "C"
+      ],
+      [
+        2.01,
+        -1.17,
+        "C"
+      ],
+      [
+        0.62,
+        0.58,
+        "C"
+      ],
+      [
+        2.23,
+        -0.2,
+        "C"
+      ],
+      [
+        1.25,
+        -2.57,
+        "C"
+      ],
+      [
+        -0.52,
+        -1.88,
+        "C"
+      ],
+      [
+        -0.98,
+        0.12,
+        "C"
+      ],
+      [
+        0.19,
+        1.47,
+        "C"
+      ],
+      [
+        -1.51,
+        -1.58,
+        "C"
+      ],
+      [
+        -1.74,
+        -0.58,
+        "C"
+      ],
+      [
+        0.54,
+        -3.26,
+        "C"
+      ],
+      [
+        -0.8,
+        1.55,
+        "C"
+      ],
+      [
+        0.75,
+        2.29,
+        "C"
+      ],
+      [
+        -1.23,
+        2.44,
+        "C"
+      ],
+      [
+        0.32,
+        3.19,
+        "C"
+      ],
+      [
+        -0.67,
+        3.26,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        15,
+        1
+      ],
+      [
+        1,
+        5,
+        1
+      ],
+      [
+        1,
+        7,
+        1
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        2,
+        8,
+        2
+      ],
+      [
+        2,
+        9,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        7,
+        2
+      ],
+      [
+        4,
+        10,
+        2
+      ],
+      [
+        5,
+        6,
+        2
+      ],
+      [
+        5,
+        11,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        12,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        13,
+        1
+      ],
+      [
+        10,
+        16,
+        1
+      ],
+      [
+        11,
+        14,
+        2
+      ],
+      [
+        12,
+        15,
+        2
+      ],
+      [
+        13,
+        17,
+        2
+      ],
+      [
+        13,
+        18,
+        1
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        2
+      ],
+      [
+        19,
+        21,
+        2
+      ],
+      [
+        20,
+        21,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "It is 80% bound to serum protein, mainly albumin. It is extensively metabolized, primarily by CYP3A4, and excreted mainly in urine.",
+    "substance": "A white crystalline powder with a molecular weight of 308.8 and no appreciable solubility in water at physiological pH.",
+    "product": "Under an NDA, tablets come in 0.25, 0.5, 1 and 2 mg strengths.",
+    "safety": "The boxed warning covers opioid co-use, abuse, misuse and addiction, and dependence. Contraindicated with strong CYP3A inhibitors except ritonavir; drowsiness (41%) and dry mouth (15%) are most common.",
+    "indication": "In adults, acute treatment of generalized anxiety disorder, and treatment of panic disorder with or without agoraphobia.",
+    "mechanism": "It binds the benzodiazepine site of GABA-A receptors in the brain, enhancing GABA-mediated synaptic inhibition."
+  },
+  "tell": "Its two active metabolites, 4-hydroxyalprazolam and alpha-hydroxyalprazolam, circulate at under 4% of the parent's levels.",
+  "source": {
+    "setId": "bb5cf72e-3a41-41a8-9a38-80f974eca33f",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb5cf72e-3a41-41a8-9a38-80f974eca33f",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak plasma concentration of alprazolam (C max ) occurs in 1 to 2 hours post dose",
+    "pk.halfLifeH": "The mean plasma elimination half-life (T 1/2 ) of alprazolam is approximately 11.2 hours",
+    "pill": "blue, oval, scored",
+    "clues.kinetics": [
+      "Alprazolam is 80% bound to human serum protein, and albumin accounts for the majority of the binding",
+      "Alprazolam is extensively metabolized in humans, primarily by cytochrome P450 3A4 (CYP3A4)",
+      "Alprazolam and its metabolites are excreted primarily in the urine"
+    ],
+    "clues.substance": [
+      "Alprazolam is a white crystalline powder",
+      "has no appreciable solubility in water at physiological pH",
+      "molecular weight 308.8"
+    ],
+    "clues.product": [
+      "Application: NDA 018276",
+      "Tablets: 0.25 mg, 0.5 mg, 1 mg, and 2 mg"
+    ],
+    "clues.safety": [
+      "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS",
+      "Concomitant use with strong cytochrome P450 3A (CYP3A) inhibitors, except ritonavir",
+      "Drowsiness Light-headedness Dizziness Akathisia 41% 21%",
+      "Dry mouth Increased salivation 15% 4%"
+    ],
+    "clues.indication": [
+      "acute treatment of generalized anxiety disorder (GAD) in adults",
+      "treatment of panic disorder (PD), with or without agoraphobia in adults"
+    ],
+    "clues.mechanism": [
+      "through binding to the benzodiazepine site of gamma-aminobutyric acid-A (GABA A ) receptors in the brain and enhances GABA-mediated synaptic inhibition"
+    ]
+  }
+}

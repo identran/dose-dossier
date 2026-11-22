@@ -1,0 +1,83 @@
+{
+  "id": "ado-trastuzumab-emtansine",
+  "generic": "Trastuzumab emtansine",
+  "brand": "Kadcyla",
+  "aliases": [
+    "T-DM1",
+    "Ado-trastuzumab emtansine"
+  ],
+  "application": "BLA 125427",
+  "approved": 2013,
+  "sponsor": "Genentech",
+  "area": "Oncology",
+  "class": "HER2 antibody-drug conjugate",
+  "route": "intravenous",
+  "form": "powder",
+  "pk": {
+    "context": "3.6 mg/kg intravenous, single dose, patients",
+    "model": "infusion",
+    "tmaxH": 1.5,
+    "halfLifeH": 96,
+    "cmax": 83.4,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F4F0E4",
+    "desc": "white to off-white lyophilized powder in a single-dose vial"
+  },
+  "biologic": {
+    "format": "conjugate",
+    "isotype": "IgG1",
+    "massKDa": null
+  },
+  "clues": {
+    "kinetics": "Its DM1 component is 93% bound to human plasma proteins in vitro, and the liver is the primary organ for eliminating it.",
+    "substance": "A recombinant protein made in Chinese hamster ovary cells, carrying an average of 3.5 DM1 molecules, supplied as a sterile, preservative-free lyophilized powder.",
+    "product": "Approved under a BLA as single-dose vials of 100 mg or 160 mg, given as an infusion every 3 weeks.",
+    "safety": "Boxed warning for hepatotoxicity, cardiac toxicity and embryo-fetal toxicity; no contraindications. Fatigue and nausea are among the most common adverse reactions.",
+    "indication": "Biomarker-selected metastatic breast cancer after a prior antibody and a taxane, and adjuvant treatment of early breast cancer with residual invasive disease.",
+    "mechanism": "Targets HER2, and after internalization releases DM1, which binds tubulin and disrupts microtubule networks, arresting the cell cycle."
+  },
+  "tell": "A HER2-directed conjugate delivering DM1, a maytansine derivative, under a boxed warning for liver and heart toxicity.",
+  "source": {
+    "setId": "23f3c1f4-0fc8-4804-a9e3-04cf25dd302e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f3c1f4-0fc8-4804-a9e3-04cf25dd302e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer infusion over 90 minutes",
+    "pk.halfLifeH": "the elimination half-life (t 1/2 ) was approximately 4 days",
+    "pk.cmax": "Cycle 1 C max following KADCYLA administration was 83.4 (16.5) µg/mL",
+    "pill": "white to off-white preservative free lyophilized powder in single-dose vials",
+    "biologic": "the humanized anti-HER2 IgG1",
+    "clues.kinetics": [
+      "the mean binding of DM1 to human plasma proteins was 93%",
+      "The liver is a primary organ for eliminating DM1"
+    ],
+    "clues.substance": [
+      "produced by mammalian (Chinese hamster ovary) cells",
+      "contains an average of 3.5 DM1 molecules per antibody",
+      "sterile, white to off-white preservative free lyophilized powder"
+    ],
+    "clues.product": [
+      "Lyophilized powder in single-dose vials: 100 mg per vial or 160 mg per vial",
+      "BLA 125427",
+      "given as an intravenous infusion every 3 weeks"
+    ],
+    "clues.safety": [
+      "WARNING: HEPATOTOXICITY, CARDIAC TOXICITY, EMBRYO-FETAL TOXICITY",
+      "None. None.",
+      "The most common adverse reactions (≥ 25%) with KADCYLA were fatigue, nausea"
+    ],
+    "clues.indication": [
+      "the treatment of patients with HER2-positive, metastatic breast cancer who previously received trastuzumab and a taxane",
+      "the adjuvant treatment of patients with HER2-positive early breast cancer who have residual invasive disease"
+    ],
+    "clues.mechanism": [
+      "Upon binding to sub-domain IV of the HER2 receptor",
+      "undergoes receptor-mediated internalization and subsequent lysosomal degradation",
+      "Binding of DM1 to tubulin disrupts microtubule networks in the cell"
+    ]
+  }
+}

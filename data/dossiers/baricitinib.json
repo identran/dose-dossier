@@ -1,0 +1,358 @@
+{
+  "id": "baricitinib",
+  "generic": "Baricitinib",
+  "brand": "Olumiant",
+  "aliases": [],
+  "application": "NDA 207924",
+  "approved": 2018,
+  "sponsor": "Eli Lilly",
+  "area": "Immunology",
+  "class": "JAK inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "4 mg oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 14
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#E8A2B4",
+    "desc": "medium pink, film-coated, round tablet"
+  },
+  "structure": {
+    "cid": 44205240,
+    "formula": "C16H17N7O2S",
+    "atoms": [
+      [
+        -2.26,
+        1.76,
+        "S"
+      ],
+      [
+        -2.11,
+        2.75,
+        "O"
+      ],
+      [
+        -2.42,
+        0.78,
+        "O"
+      ],
+      [
+        -1.27,
+        1.61,
+        "N"
+      ],
+      [
+        0.71,
+        0.58,
+        "N"
+      ],
+      [
+        1.71,
+        0.58,
+        "N"
+      ],
+      [
+        0.72,
+        3.97,
+        "N"
+      ],
+      [
+        0.35,
+        -2.46,
+        "N"
+      ],
+      [
+        3.03,
+        -3.77,
+        "N"
+      ],
+      [
+        1.21,
+        -3.97,
+        "N"
+      ],
+      [
+        0.12,
+        1.39,
+        "C"
+      ],
+      [
+        -0.69,
+        0.8,
+        "C"
+      ],
+      [
+        -0.46,
+        2.2,
+        "C"
+      ],
+      [
+        0.93,
+        1.97,
+        "C"
+      ],
+      [
+        -3.25,
+        1.92,
+        "C"
+      ],
+      [
+        0.4,
+        -0.37,
+        "C"
+      ],
+      [
+        1.21,
+        -0.96,
+        "C"
+      ],
+      [
+        0.83,
+        2.97,
+        "C"
+      ],
+      [
+        2.02,
+        -0.37,
+        "C"
+      ],
+      [
+        -3.61,
+        2.86,
+        "C"
+      ],
+      [
+        1.21,
+        -1.96,
+        "C"
+      ],
+      [
+        2.08,
+        -2.46,
+        "C"
+      ],
+      [
+        2.08,
+        -3.47,
+        "C"
+      ],
+      [
+        3.03,
+        -2.16,
+        "C"
+      ],
+      [
+        0.35,
+        -3.47,
+        "C"
+      ],
+      [
+        3.61,
+        -2.96,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        3,
+        11,
+        1
+      ],
+      [
+        3,
+        12,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        10,
+        1
+      ],
+      [
+        4,
+        15,
+        1
+      ],
+      [
+        5,
+        18,
+        2
+      ],
+      [
+        6,
+        17,
+        3
+      ],
+      [
+        7,
+        20,
+        1
+      ],
+      [
+        7,
+        24,
+        2
+      ],
+      [
+        8,
+        22,
+        1
+      ],
+      [
+        8,
+        25,
+        1
+      ],
+      [
+        9,
+        22,
+        2
+      ],
+      [
+        9,
+        24,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        1
+      ],
+      [
+        13,
+        17,
+        1
+      ],
+      [
+        14,
+        19,
+        1
+      ],
+      [
+        15,
+        16,
+        2
+      ],
+      [
+        16,
+        18,
+        1
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ],
+      [
+        21,
+        22,
+        1
+      ],
+      [
+        21,
+        23,
+        1
+      ],
+      [
+        23,
+        25,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is approximately 80%, and about 50% is bound to plasma proteins. Renal elimination is the principal clearance route, and meals have no clinically relevant effect on exposure.",
+    "substance": "The active moiety has a molecular weight of 371.42, and the description names no salt form.",
+    "product": "Approved under an NDA as 1, 2 and 4 mg tablets, dosed once daily with minimal accumulation.",
+    "safety": "Boxed warning for serious infections, mortality, malignancy, major adverse cardiovascular events and thrombosis; no contraindications. Upper respiratory and urinary tract infections are the most common.",
+    "indication": "Moderately to severely active rheumatoid arthritis in adults with an inadequate response to one or more TNF blockers. Also COVID-19 in hospitalized adults, and severe alopecia areata.",
+    "mechanism": "It inhibits Janus kinase enzymes, blocking the phosphorylation and activation of STATs that transmit cytokine signals. Which JAK enzymes matter therapeutically is not known."
+  },
+  "tell": "A JAK inhibitor excreted mostly unchanged, 69% in urine, and a substrate of the OAT3 transporter.",
+  "source": {
+    "setId": "866e9f35-9035-4581-a4b1-75a621ab55cf",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=866e9f35-9035-4581-a4b1-75a621ab55cf",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak plasma concentrations are reached approximately at 1 hour",
+    "pk.halfLifeH": "Elimination half-life in subjects with moderately to severely active rheumatoid arthritis and severe alopecia areata is approximately 12 to 16 hours",
+    "pill": [
+      "available as debossed, film-coated tablets",
+      "The 4 mg tablet is medium pink, round"
+    ],
+    "clues.kinetics": [
+      "The absolute bioavailability of baricitinib is approximately 80%",
+      "Baricitinib is approximately 50% bound to plasma proteins",
+      "Renal elimination is the principal clearance mechanism for baricitinib",
+      "Administration with meals is not associated with a clinically relevant effect on exposure"
+    ],
+    "clues.substance": [
+      "a molecular weight of 371.42"
+    ],
+    "clues.product": [
+      "Application: NDA 207924",
+      "Tablets: 1 mg, 2 mg, 4 mg",
+      "with minimal accumulation after once-daily administration"
+    ],
+    "clues.safety": [
+      "WARNING: SERIOUS INFECTIONS, MORTALITY, MALIGNANCY, MAJOR ADVERSE CARDIOVASCULAR EVENTS (MACE), and THROMBOSIS",
+      "the most commonly reported infections with OLUMIANT were viral upper respiratory tract infection, upper respiratory tract infection, urinary tract infection, and bronchitis",
+      "None. None."
+    ],
+    "clues.indication": [
+      "Moderately to severely active rheumatoid arthritis (RA) in adults who have had an inadequate response to one or more TNF blockers",
+      "COVID-19 in hospitalized adults requiring supplemental oxygen",
+      "Severe alopecia areata (AA) in adults and pediatric patients 12 years of age and older"
+    ],
+    "clues.mechanism": [
+      "JAKs are intracellular enzymes which transmit signals arising from cytokine or growth factor-receptor interactions",
+      "Baricitinib modulates the signaling pathway at the point of JAKs, preventing the phosphorylation and activation of STATs",
+      "the relevance of inhibition of specific JAK enzymes to therapeutic effectiveness is not currently known"
+    ]
+  }
+}

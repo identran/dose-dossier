@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Share image</title>
+<link rel="stylesheet" href="../site/css/tokens.css">
+<link rel="stylesheet" href="../site/assets/fonts/fonts.css">
+<style>
+  /* site/assets/share.png is a 1200 × 630 screenshot of this page at a device scale factor of 1. */
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: var(--paper); color: var(--ink); }
+  body { display: grid; grid-template-columns: 630px 1fr; align-items: center; }
+  #dial { width: 600px; height: 600px; margin-left: 30px; }
+  h1 { margin: 0 0 0 20px; font: 300 92px/1.1 var(--font-display); }
+</style>
+</head>
+<body>
+<div id="dial"></div>
+<h1>Dose Dossier</h1>
+
+<script type="module">
+import { makeCurve, sampleTimes } from '../site/js/pk.js';
+import { createDial } from '../site/js/dial/index.js';
+import { renderMolecule } from '../site/js/molecule.js';
+
+// Query string: day=<n> (default 1).
+const n = String(Math.max(1, +new URLSearchParams(location.search).get('day') || 1)).padStart(3, '0');
+const day = await (await fetch(`../site/data/day/${n}.json`)).json();
+if (day.accent) document.documentElement.style.setProperty('--accent', day.accent.light);
+const curve = makeCurve(day.pk);
+const times = sampleTimes(curve, 8);
+const dial = createDial(document.getElementById('dial'));
+dial.setTheme('light');
+dial.setChallenge({ curve, times });
+dial.setProgress(times.length, { animate: false });
+dial.setSolved(true);
+// The structure stays at its first level, atom positions only, so the image gives no answer away.
+if (day.structure) renderMolecule(dial.center, day.structure, { reveal: 0 });
+document.documentElement.dataset.ready = '';
+</script>
+</body>
+</html>

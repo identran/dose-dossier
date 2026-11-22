@@ -1,0 +1,78 @@
+{
+  "id": "ipilimumab",
+  "generic": "Ipilimumab",
+  "brand": "Yervoy",
+  "aliases": [],
+  "application": "BLA 125377",
+  "approved": 2011,
+  "sponsor": "Bristol Myers Squibb",
+  "area": "Oncology",
+  "class": "CTLA-4 blocking antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "3 mg/kg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 0.5,
+    "halfLifeH": 369.6
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#FBF5D0",
+    "desc": "clear, colorless to pale-yellow solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1 κ",
+    "massKDa": 148
+  },
+  "clues": {
+    "kinetics": "Given only by intravenous infusion after dilution. Clearance rises with body weight, which is why dosing is weight-based, and is not changed by renal or mild hepatic impairment.",
+    "substance": "Produced in Chinese hamster ovary cell culture. A sterile, preservative-free solution supplied in single-dose vials of 50 mg/10 mL or 200 mg/40 mL.",
+    "product": "Approved under a BLA in 50 mg/10 mL and 200 mg/40 mL single-dose vials, given every 3 weeks for up to 4 doses.",
+    "safety": "No boxed warning. Fatigue, diarrhea, pruritus and rash are the most common reactions with single-agent use.",
+    "indication": "Unresectable or metastatic melanoma, adjuvant treatment of cutaneous melanoma after complete resection, and intermediate or poor-risk advanced renal cell carcinoma.",
+    "mechanism": "Binds CTLA-4 and blocks its interaction with CD80/CD86, which augments T-cell activation and proliferation."
+  },
+  "tell": "A human IgG1 kappa antibody to CTLA-4 whose concentrations reach steady state by the third dose given every 3 weeks.",
+  "source": {
+    "setId": "2265ef30-253e-11df-8a39-0800200c9a66",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2265ef30-253e-11df-8a39-0800200c9a66",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Administer YERVOY as a 30-minute intravenous infusion",
+    "pk.halfLifeH": "terminal half-life (t 1/2 ) was 15.4 days",
+    "pill": "colorless to pale-yellow solution in a single-dose vial",
+    "biologic": "a recombinant IgG1 kappa immunoglobulin with an approximate molecular weight of 148 kDa",
+    "clues.kinetics": [
+      "Administer by intravenous infusion after dilution",
+      "The CL of ipilimumab increased with increasing body weight",
+      "had no clinically important effect on the CL of ipilimumab",
+      "renal impairment",
+      "mild hepatic impairment"
+    ],
+    "clues.substance": [
+      "Ipilimumab is produced in mammalian (Chinese hamster ovary) cell culture",
+      "sterile, preservative-free",
+      "single-dose vials of 50 mg/10 mL or 200 mg/40 mL"
+    ],
+    "clues.product": [
+      "BLA 125377",
+      "Injection: 50 mg/10 mL (5 mg/mL) and 200 mg/40 mL (5 mg/mL)",
+      "YERVOY 3 mg/kg every 3 weeks for a maximum of 4 doses"
+    ],
+    "clues.safety": [
+      "Most common adverse reactions (≥20%) with YERVOY as a single agent are fatigue, diarrhea, pruritus, rash"
+    ],
+    "clues.indication": [
+      "Treatment of unresectable or metastatic melanoma",
+      "Adjuvant treatment of adult patients with cutaneous melanoma",
+      "intermediate or poor risk advanced renal cell carcinoma"
+    ],
+    "clues.mechanism": [
+      "binds to CTLA-4 and blocks the interaction of CTLA-4 with its ligands, CD80/CD86",
+      "Blockade of CTLA-4 has been shown to augment T-cell activation and proliferation"
+    ]
+  }
+}

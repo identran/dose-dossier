@@ -1,0 +1,297 @@
+{
+  "id": "lorazepam",
+  "generic": "Lorazepam",
+  "brand": "Ativan",
+  "aliases": [],
+  "application": "NDA 018140",
+  "approved": 1977,
+  "sponsor": "Pfizer",
+  "area": "Neurology",
+  "class": "Benzodiazepine",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "4 mg intravenous, single dose, patients",
+    "model": "bolus",
+    "tmaxH": 0,
+    "halfLifeH": 14
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "sterile injection in single-dose and multiple-dose vials"
+  },
+  "structure": {
+    "cid": 3958,
+    "formula": "C15H10Cl2N2O2",
+    "atoms": [
+      [
+        2.9,
+        -0.16,
+        "Cl"
+      ],
+      [
+        1.38,
+        0.53,
+        "Cl"
+      ],
+      [
+        -2.9,
+        -1.17,
+        "O"
+      ],
+      [
+        -2.1,
+        -2.84,
+        "O"
+      ],
+      [
+        -0.51,
+        -2.29,
+        "N"
+      ],
+      [
+        -1.48,
+        -0.28,
+        "N"
+      ],
+      [
+        0.26,
+        -0.68,
+        "C"
+      ],
+      [
+        -0.51,
+        -0.06,
+        "C"
+      ],
+      [
+        0.26,
+        -1.67,
+        "C"
+      ],
+      [
+        -0.29,
+        0.91,
+        "C"
+      ],
+      [
+        -1.91,
+        -1.17,
+        "C"
+      ],
+      [
+        1.15,
+        -0.15,
+        "C"
+      ],
+      [
+        -1.48,
+        -2.06,
+        "C"
+      ],
+      [
+        1.15,
+        -2.2,
+        "C"
+      ],
+      [
+        2.04,
+        -0.66,
+        "C"
+      ],
+      [
+        2.04,
+        -1.69,
+        "C"
+      ],
+      [
+        0.65,
+        1.2,
+        "C"
+      ],
+      [
+        -1.02,
+        1.58,
+        "C"
+      ],
+      [
+        0.87,
+        2.17,
+        "C"
+      ],
+      [
+        -0.8,
+        2.55,
+        "C"
+      ],
+      [
+        0.15,
+        2.84,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        1,
+        16,
+        1
+      ],
+      [
+        2,
+        10,
+        1
+      ],
+      [
+        3,
+        12,
+        2
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        5,
+        7,
+        2
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        2
+      ],
+      [
+        6,
+        11,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        13,
+        1
+      ],
+      [
+        9,
+        16,
+        1
+      ],
+      [
+        9,
+        17,
+        2
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        14,
+        2
+      ],
+      [
+        13,
+        15,
+        2
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        16,
+        18,
+        2
+      ],
+      [
+        17,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        19,
+        20,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Completely and rapidly absorbed after intramuscular injection, and about 91% bound to plasma proteins. It is conjugated in the liver, and its inactive conjugate is eliminated mainly by the kidneys.",
+    "substance": "Molecular weight 321.16. It is a powder that is almost insoluble in water.",
+    "product": "An NDA product as injection in 2 mg/mL and 4 mg/mL strengths, in single-dose and multiple-dose vials.",
+    "safety": "Boxed warning on concomitant opioid use, abuse and dependence. Contraindicated in acute narrow-angle glaucoma and sleep apnea syndrome; somnolence and hypotension are common.",
+    "indication": "Treatment of status epilepticus, and preanesthetic use in adults for sedation, relief of anxiety and reduced recall of the day of surgery.",
+    "mechanism": "It has antianxiety, sedative and anticonvulsant effects; the label gives no molecular mechanism."
+  },
+  "tell": "Only 0.3% of a dose is excreted unchanged; it is glucuronidated rather than oxidized, so liver disease barely alters clearance.",
+  "source": {
+    "setId": "5fc0e987-61c9-40c4-b0d5-fcea07c8733e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fc0e987-61c9-40c4-b0d5-fcea07c8733e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "INTRAVENOUS INJECTION For the treatment of status epilepticus, the usual recommended dose of ATIVAN Injection is 4 mg given slowly (2 mg/min)",
+    "pk.halfLifeH": "the terminal half-life and total clearance averaged 14±5 hours",
+    "pill": "available in the following dosage strengths in single-dose and multiple-dose vials",
+    "clues.kinetics": [
+      "lorazepam is completely and rapidly absorbed",
+      "lorazepam is 91±2% bound to plasma proteins",
+      "Lorazepam is extensively conjugated to the 3-O-phenolic glucuronide in the liver",
+      "is an inactive metabolite and is eliminated mainly by the kidneys"
+    ],
+    "clues.substance": [
+      "The molecular weight is 321.16",
+      "Lorazepam is a nearly white powder almost insoluble in water"
+    ],
+    "clues.product": [
+      "NDA 018140",
+      "INJECTABLE (injection): 4MG/ML; 2MG/ML",
+      "in single-dose and multiple-dose vials"
+    ],
+    "clues.safety": [
+      "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS",
+      "in patients with acute narrow-angle glaucoma, or in patients with sleep apnea syndrome",
+      "were hypotension, somnolence, and respiratory failure"
+    ],
+    "clues.indication": [
+      "Status Epilepticus ATIVAN Injection is indicated for the treatment of status epilepticus",
+      "Preanesthetic ATIVAN Injection is indicated in adult patients for preanesthetic medication, producing sedation (sleepiness or drowsiness), relief of anxiety, and a decreased ability to recall events related to the day of surgery"
+    ],
+    "clues.mechanism": [
+      "a benzodiazepine with antianxiety, sedative, and anticonvulsant effects"
+    ]
+  }
+}

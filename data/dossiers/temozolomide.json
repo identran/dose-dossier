@@ -1,0 +1,231 @@
+{
+  "id": "temozolomide",
+  "generic": "Temozolomide",
+  "brand": "Temodar",
+  "aliases": [],
+  "application": "NDA 021029",
+  "approved": 1999,
+  "sponsor": "Merck",
+  "area": "Oncology",
+  "class": "Alkylating agent",
+  "route": "oral",
+  "form": "capsule",
+  "pk": {
+    "context": "150 mg/m2 oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 1.8,
+    "cmax": 7.5,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#2E8B57",
+    "color2": "#FFFFFF",
+    "desc": "opaque white and green capsule"
+  },
+  "structure": {
+    "cid": 5394,
+    "formula": "C6H6N6O2",
+    "atoms": [
+      [
+        -0.69,
+        2.25,
+        "O"
+      ],
+      [
+        0.77,
+        -2.25,
+        "O"
+      ],
+      [
+        0.18,
+        0.75,
+        "N"
+      ],
+      [
+        -1.55,
+        0.75,
+        "N"
+      ],
+      [
+        1.71,
+        0.25,
+        "N"
+      ],
+      [
+        -0.69,
+        -0.75,
+        "N"
+      ],
+      [
+        -1.55,
+        -0.25,
+        "N"
+      ],
+      [
+        2.42,
+        -1.71,
+        "N"
+      ],
+      [
+        0.18,
+        -0.25,
+        "C"
+      ],
+      [
+        1.13,
+        -0.56,
+        "C"
+      ],
+      [
+        -0.69,
+        1.25,
+        "C"
+      ],
+      [
+        1.13,
+        1.06,
+        "C"
+      ],
+      [
+        -2.42,
+        1.25,
+        "C"
+      ],
+      [
+        1.44,
+        -1.51,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        10,
+        2
+      ],
+      [
+        1,
+        13,
+        2
+      ],
+      [
+        2,
+        8,
+        1
+      ],
+      [
+        2,
+        10,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        10,
+        1
+      ],
+      [
+        3,
+        12,
+        1
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        4,
+        11,
+        2
+      ],
+      [
+        5,
+        6,
+        2
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        7,
+        13,
+        1
+      ],
+      [
+        8,
+        9,
+        2
+      ],
+      [
+        9,
+        13,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "A high-fat breakfast lowers Cmax by 32% and AUC by 9%. Only 15% of drug-related radioactivity is protein bound, and spontaneous hydrolysis at physiologic pH is the main conversion, with P450 enzymes playing a minor role.",
+    "substance": "A powder with a molecular weight of 194.15 for the parent compound.",
+    "product": "Approved under an NDA as capsules from 5 to 250 mg, dosed once daily for 5 days in each 28-day cycle.",
+    "safety": "Contraindicated after serious hypersensitivity to it or to dacarbazine. Fatigue, convulsions and headache are the most common severe reactions.",
+    "indication": "Newly diagnosed glioblastoma with radiotherapy and maintenance, and adjuvant or refractory anaplastic astrocytoma.",
+    "mechanism": "Converts without enzymes at physiologic pH to a reactive compound that alkylates DNA, mainly at the O6 and N7 positions of guanine, causing double-strand breaks."
+  },
+  "tell": "A 1.8-hour elimination half-life, with activation by spontaneous hydrolysis rather than liver enzymes, sets this alkylating agent apart.",
+  "source": {
+    "setId": "046a9011-3911-4d3f-a15f-fbb56d5aad56",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=046a9011-3911-4d3f-a15f-fbb56d5aad56",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The median T max is 1 hour",
+    "pk.halfLifeH": "the mean elimination half-life is 1.8 hours",
+    "pk.cmax": "the mean C max is 7.5 mcg/mL for temozolomide",
+    "pill": "opaque white bodies with green caps",
+    "clues.kinetics": [
+      "after a modified high-fat breakfast",
+      "The mean temozolomide C max and AUC decreased by 32% and 9%, respectively",
+      "The mean percent bound of drug-related total radioactivity is 15%",
+      "Temozolomide is spontaneously hydrolyzed at physiologic pH",
+      "Cytochrome P450 enzymes play a minor role in the metabolism of temozolomide"
+    ],
+    "clues.substance": [
+      "molecular weight 194.15",
+      "The material is a white to light tan or light pink powder"
+    ],
+    "clues.product": [
+      "NDA 021029",
+      "TEMODAR (temozolomide) capsules for oral use contains either 5 mg, 20 mg, 100 mg, 140 mg, 180 mg, or 250 mg of temozolomide",
+      "Initial dose of 150 mg/m 2 once daily on Days 1 to 5 of each 28-day cycle"
+    ],
+    "clues.safety": [
+      "History of serious hypersensitivity",
+      "dacarbazine",
+      "the most common were fatigue (13%), convulsions (6%), headache (5%), and thrombocytopenia (5%)"
+    ],
+    "clues.indication": [
+      "Newly diagnosed glioblastoma concomitantly with radiotherapy and then as maintenance treatment",
+      "adjuvant treatment of adults with newly diagnosed anaplastic astrocytoma",
+      "treatment of adults with refractory anaplastic astrocytoma"
+    ],
+    "clues.mechanism": [
+      "undergoes rapid nonenzymatic conversion at physiologic pH to the reactive compound",
+      "DNA alkylation, mainly at the O 6 and N 7 positions of guanine",
+      "causes DNA double strand breaks"
+    ]
+  }
+}

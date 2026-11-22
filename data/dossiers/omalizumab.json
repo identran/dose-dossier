@@ -1,0 +1,86 @@
+{
+  "id": "omalizumab",
+  "generic": "Omalizumab",
+  "brand": "Xolair",
+  "aliases": [],
+  "application": "BLA 103976",
+  "approved": 2003,
+  "sponsor": "Genentech",
+  "area": "Pulmonology",
+  "class": "IgE blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "150 mg subcutaneous, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 180,
+    "halfLifeH": 624
+  },
+  "pill": {
+    "shape": "syringe",
+    "color": "#EBD9A6",
+    "desc": "clear, colorless to pale brownish-yellow solution in a single-dose prefilled syringe"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": null,
+    "massKDa": 149
+  },
+  "clues": {
+    "kinetics": "Average absolute bioavailability after subcutaneous injection is 62%. Clearance combines general protein-degradation routes, including the liver reticuloendothelial system, with target-mediated clearance.",
+    "substance": "Has a molecular weight of about 149 kilodaltons. Sterile and preservative-free, and the vial form is a lyophilized powder.",
+    "product": "A BLA product in 75, 150 and 300 mg prefilled syringes and autoinjectors, and 150 mg vials, dosed every 2 or 4 weeks.",
+    "safety": "Boxed warning for anaphylaxis, which can occur after the first dose or beyond 1 year. Contraindicated after severe hypersensitivity to it or its ingredients; nasopharyngitis and headache are common in children.",
+    "indication": "Moderate to severe persistent asthma with allergen sensitivity, chronic rhinosinusitis with nasal polyps, food allergy, and chronic spontaneous urticaria.",
+    "mechanism": "Binds IgE and inhibits its binding to the high-affinity IgE receptor on mast cells, basophils and dendritic cells, causing receptor down-regulation."
+  },
+  "tell": "An anti-IgE antibody with a boxed warning for anaphylaxis and an elimination half-life of 26 days in asthma.",
+  "source": {
+    "setId": "7f6a2191-adfb-48b9-9bfa-0d9920479f0d",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f6a2191-adfb-48b9-9bfa-0d9920479f0d",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "reaching peak serum concentrations after an average of 7–8 days",
+    "pk.halfLifeH": "omalizumab serum elimination half-life averaged 26 days",
+    "pill": "clear to slightly opalescent and colorless to pale brownish-yellow solution for subcutaneous injection",
+    "biologic": [
+      "The antibody has a molecular weight of approximately 149 kiloDaltons",
+      "XOLAIR is an anti-IgE antibody"
+    ],
+    "clues.kinetics": [
+      "omalizumab was absorbed with an average absolute bioavailability of 62%",
+      "Clearance of omalizumab involved IgG clearance processes as well as clearance via specific binding and complex formation with its target ligand",
+      "Liver elimination of IgG included degradation in the liver reticuloendothelial system (RES)"
+    ],
+    "clues.substance": [
+      "The antibody has a molecular weight of approximately 149 kiloDaltons",
+      "is supplied as a sterile, preservative-free",
+      "lyophilized powder in a single-dose vial"
+    ],
+    "clues.product": [
+      "Application: BLA 103976",
+      "75 mg/0.5 mL single-dose prefilled syringe",
+      "150 mg/mL single-dose prefilled syringe",
+      "300 mg/2 mL (150 mg/mL) single-dose prefilled syringe",
+      "150 mg white lyophilized powder in a single-dose vial",
+      "every 2 or 4 weeks"
+    ],
+    "clues.safety": [
+      "WARNING: ANAPHYLAXIS",
+      "Anaphylaxis has occurred as early as after the first dose of XOLAIR, but also has occurred beyond 1 year",
+      "Severe hypersensitivity reaction to XOLAIR or any ingredient of XOLAIR",
+      "the most common adverse reactions (≥3% of patients) were nasopharyngitis, headache"
+    ],
+    "clues.indication": [
+      "Moderate to severe persistent asthma in adults and pediatric patients 6 years of age and older",
+      "positive skin test or in vitro reactivity to a perennial aeroallergen",
+      "chronic rhinosinusitis with nasal polyps (CRSwNP) in adult patients",
+      "IgE-mediated food allergy in adult and pediatric patients",
+      "Chronic Spontaneous Urticaria: XOLAIR 150 or 300 mg SC every 4 weeks"
+    ],
+    "clues.mechanism": [
+      "Omalizumab inhibits the binding of IgE to the high-affinity IgE receptor (FcεRI) on the surface of mast cells, basophils, and dendritic cells, resulting in FcεRI down-regulation on these cells"
+    ]
+  }
+}

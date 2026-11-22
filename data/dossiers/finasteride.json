@@ -1,0 +1,372 @@
+{
+  "id": "finasteride",
+  "generic": "Finasteride",
+  "brand": "Proscar",
+  "aliases": [
+    "Propecia"
+  ],
+  "application": "NDA 020180",
+  "approved": 1992,
+  "sponsor": "Merck",
+  "area": "Urology",
+  "class": "5-alpha reductase inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "5 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 6,
+    "cmax": 37,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#2F6DB5",
+    "desc": "blue, modified apple-shaped, film-coated tablet"
+  },
+  "structure": {
+    "cid": 57363,
+    "formula": "C23H36N2O2",
+    "atoms": [
+      [
+        1.51,
+        1.83,
+        "O"
+      ],
+      [
+        -4.36,
+        -3.12,
+        "O"
+      ],
+      [
+        -2.58,
+        -3.17,
+        "N"
+      ],
+      [
+        3.12,
+        1.3,
+        "N"
+      ],
+      [
+        0.93,
+        -1.11,
+        "C"
+      ],
+      [
+        0.93,
+        -0.13,
+        "C"
+      ],
+      [
+        0.08,
+        -1.6,
+        "C"
+      ],
+      [
+        -0.77,
+        -1.11,
+        "C"
+      ],
+      [
+        -1.66,
+        -1.61,
+        "C"
+      ],
+      [
+        1.86,
+        0.17,
+        "C"
+      ],
+      [
+        0.08,
+        0.36,
+        "C"
+      ],
+      [
+        -0.77,
+        -0.13,
+        "C"
+      ],
+      [
+        1.86,
+        -1.41,
+        "C"
+      ],
+      [
+        0.1,
+        -2.62,
+        "C"
+      ],
+      [
+        2.43,
+        -0.62,
+        "C"
+      ],
+      [
+        -1.67,
+        -2.63,
+        "C"
+      ],
+      [
+        -0.78,
+        -3.14,
+        "C"
+      ],
+      [
+        0.93,
+        0.85,
+        "C"
+      ],
+      [
+        -1.65,
+        -0.63,
+        "C"
+      ],
+      [
+        -2.57,
+        -1.05,
+        "C"
+      ],
+      [
+        2.16,
+        1.1,
+        "C"
+      ],
+      [
+        -3.5,
+        -1.57,
+        "C"
+      ],
+      [
+        -3.51,
+        -2.63,
+        "C"
+      ],
+      [
+        3.42,
+        2.23,
+        "C"
+      ],
+      [
+        3.73,
+        3.17,
+        "C"
+      ],
+      [
+        4.36,
+        1.93,
+        "C"
+      ],
+      [
+        2.49,
+        2.54,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        20,
+        2
+      ],
+      [
+        1,
+        22,
+        2
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        2,
+        22,
+        1
+      ],
+      [
+        3,
+        20,
+        1
+      ],
+      [
+        3,
+        23,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        6,
+        1
+      ],
+      [
+        4,
+        12,
+        1
+      ],
+      [
+        5,
+        9,
+        1
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        5,
+        17,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        13,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        11,
+        1
+      ],
+      [
+        8,
+        15,
+        1
+      ],
+      [
+        8,
+        18,
+        1
+      ],
+      [
+        8,
+        19,
+        1
+      ],
+      [
+        9,
+        14,
+        1
+      ],
+      [
+        9,
+        20,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        15,
+        16,
+        1
+      ],
+      [
+        19,
+        21,
+        2
+      ],
+      [
+        21,
+        22,
+        1
+      ],
+      [
+        23,
+        24,
+        1
+      ],
+      [
+        23,
+        25,
+        1
+      ],
+      [
+        23,
+        26,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Bioavailability averages 63% and is not affected by food. About 90% is bound to plasma proteins, and it is extensively metabolized in the liver, mainly by CYP3A4, with 57% of the dose excreted in feces.",
+    "substance": "Molecular weight 372.5. A white crystalline powder with a melting point near 250°C, practically insoluble in water.",
+    "product": "Approved under an NDA as 5 mg tablets, with a recommended dose of 5 mg a day.",
+    "safety": "No boxed warning. Contraindicated in pregnancy and hypersensitivity to any component; it may cause abnormal external genitalia in a male fetus, and the most common reactions relate to sexual function.",
+    "indication": "Symptomatic benign prostatic hyperplasia in men with an enlarged prostate, to improve symptoms and reduce acute urinary retention.",
+    "mechanism": "A competitive, specific inhibitor of type II 5α-reductase, the enzyme that converts testosterone to DHT, with no affinity for androgen receptors."
+  },
+  "tell": "Turnover of its enzyme complex takes about 30 days, setting this 5-alpha reductase inhibitor apart from others.",
+  "source": {
+    "setId": "6f988153-fc74-4ca4-b29a-111f750c4a4b",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f988153-fc74-4ca4-b29a-111f750c4a4b",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "was reached 1-2 hours postdose",
+    "pk.halfLifeH": "mean elimination half-life in plasma was 6 hours",
+    "pk.cmax": "Maximum finasteride plasma concentration averaged 37 ng/mL",
+    "pill": "5-mg blue, modified apple-shaped, film-coated tablets",
+    "clues.kinetics": [
+      "the mean bioavailability of finasteride 5-mg tablets was 63%",
+      "Bioavailability of finasteride was not affected by food",
+      "Approximately 90% of circulating finasteride is bound to plasma proteins",
+      "Finasteride is extensively metabolized in the liver, primarily via the cytochrome P450 3A4 enzyme subfamily",
+      "57% (range, 51-64%) was excreted in the feces"
+    ],
+    "clues.substance": [
+      "molecular weight 372.5",
+      "Finasteride is a white crystalline powder with a melting point near 250°C",
+      "is practically insoluble in water"
+    ],
+    "clues.product": [
+      "Application: NDA 020180",
+      "5-mg film-coated tablets ( 3 )",
+      "the recommended human dose of 5 mg/day"
+    ],
+    "clues.safety": [
+      "PROSCAR is contraindicated in the following: Hypersensitivity to any component of this medication. Pregnancy.",
+      "may cause abnormalities of the external genitalia of a male fetus",
+      "The most frequently reported adverse reactions were related to sexual function"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of symptomatic benign prostatic hyperplasia (BPH) in men with an enlarged prostate",
+      "Reduce the risk of acute urinary retention"
+    ],
+    "clues.mechanism": [
+      "Finasteride is a competitive and specific inhibitor of Type II 5α-reductase",
+      "Type II 5α-reductase metabolizes testosterone to DHT",
+      "Finasteride has no affinity for the androgen receptor"
+    ]
+  }
+}

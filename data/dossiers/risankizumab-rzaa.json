@@ -1,0 +1,89 @@
+{
+  "id": "risankizumab-rzaa",
+  "generic": "Risankizumab",
+  "brand": "Skyrizi",
+  "aliases": [
+    "Risankizumab-rzaa"
+  ],
+  "application": "BLA 761105",
+  "approved": 2019,
+  "sponsor": "AbbVie",
+  "area": "Dermatology",
+  "class": "IL-23 blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "150 mg subcutaneous, steady state, patients",
+    "model": "absorption",
+    "tmaxH": 204,
+    "halfLifeH": 672,
+    "cmax": 12,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "pen",
+    "color": "#F5EBB0",
+    "desc": "clear, colorless to yellow solution in a single-dose prefilled pen"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1",
+    "massKDa": 149
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability after subcutaneous injection is 74 to 89%. It is expected to be degraded into small peptides and amino acids by catabolic pathways.",
+    "substance": "Made by recombinant DNA technology in Chinese hamster ovary cells, with a molecular weight of about 149 kilodaltons. A sterile, preservative-free solution.",
+    "product": "A BLA product in 150 mg/mL pens and syringes, plus 55 mg and 180 mg syringes or cartridges; dosed at weeks 0 and 4, then every 12 weeks.",
+    "safety": "No boxed warning. Contraindicated after serious hypersensitivity to it or its excipients; upper respiratory infections and headache are among the most frequent adverse reactions.",
+    "indication": "Moderate-to-severe plaque psoriasis and active psoriatic arthritis in adults and children, plus Crohn's disease and ulcerative colitis in adults.",
+    "mechanism": "Selectively binds the p19 subunit of IL-23 and inhibits its interaction with the IL-23 receptor, reducing release of pro-inflammatory cytokines and chemokines."
+  },
+  "tell": "An IL-23 p19 antibody that is 74 to 89% bioavailable subcutaneously and dosed every 12 weeks after two starter doses.",
+  "source": {
+    "setId": "7148c8eb-b39e-e20a-6494-a6df82392858",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7148c8eb-b39e-e20a-6494-a6df82392858",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "C max was reached by 3 to 14 days",
+    "pk.halfLifeH": "terminal elimination half-life was approximately 28 days and 21 days",
+    "pill": "colorless to yellow, and clear to slightly opalescent solution",
+    "biologic": [
+      "is a humanized IgG1 monoclonal antibody",
+      "has an approximate molecular weight of 149 kDa"
+    ],
+    "clues.kinetics": [
+      "The absolute bioavailability of risankizumab-rzaa was estimated to be 74 to 89% following subcutaneous injection",
+      "is expected to be degraded into small peptides and amino acids via catabolic pathways"
+    ],
+    "clues.substance": [
+      "Risankizumab-rzaa is produced by recombinant DNA technology in Chinese hamster ovary cells",
+      "has an approximate molecular weight of 149 kDa",
+      "is a sterile, preservative-free solution supplied"
+    ],
+    "clues.product": [
+      "Application: BLA 761105",
+      "SKYRIZI Pen Injection: 150 mg/mL in a single-dose prefilled pen",
+      "Injection: 150 mg/mL in a single-dose prefilled syringe",
+      "SKYRIZI Prefilled Syringe Injection: 55 mg/0.37 mL",
+      "Injection: 180 mg/1.2 mL (150 mg/mL) in a single-dose prefilled cartridge",
+      "150 mg administered by subcutaneous injection at Week 0, Week 4, and every 12 weeks thereafter"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with a history of serious hypersensitivity reaction to risankizumab-rzaa or any of the excipients",
+      "Upper respiratory infections a 170 (13)",
+      "Headache b 46 (3.5)"
+    ],
+    "clues.indication": [
+      "moderate-to-severe plaque psoriasis in adults and pediatric patients 6 years of age and older",
+      "active psoriatic arthritis in adults and pediatric patients",
+      "moderately to severely active Crohn's disease in adults",
+      "moderately to severely active ulcerative colitis in adults"
+    ],
+    "clues.mechanism": [
+      "selectively binds to the p19 subunit of human IL-23 cytokine and inhibits its interaction with the IL-23 receptor",
+      "inhibits the release of pro-inflammatory cytokines and chemokines"
+    ],
+    "pk.cmax": "steady-state peak concentration (C max ) and trough concentration (C trough ) are estimated to be 12 mcg/mL and 2 mcg/mL"
+  }
+}

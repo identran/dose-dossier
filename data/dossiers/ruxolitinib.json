@@ -1,0 +1,331 @@
+{
+  "id": "ruxolitinib",
+  "generic": "Ruxolitinib",
+  "brand": "Jakafi",
+  "aliases": [
+    "Ruxolitinib phosphate"
+  ],
+  "salt": "Ruxolitinib phosphate",
+  "application": "NDA 202192",
+  "approved": 2011,
+  "sponsor": "Incyte",
+  "area": "Oncology",
+  "class": "JAK inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "25 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1.5,
+    "halfLifeH": 3
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#FFFFFF",
+    "desc": "white, oval tablet"
+  },
+  "structure": {
+    "cid": 25126798,
+    "formula": "C17H18N6",
+    "atoms": [
+      [
+        -0.7,
+        0.6,
+        "N"
+      ],
+      [
+        -1.7,
+        0.6,
+        "N"
+      ],
+      [
+        -2.06,
+        -2.44,
+        "N"
+      ],
+      [
+        2.06,
+        2.93,
+        "N"
+      ],
+      [
+        0.62,
+        -3.74,
+        "N"
+      ],
+      [
+        -1.2,
+        -3.94,
+        "N"
+      ],
+      [
+        -0.52,
+        2.33,
+        "C"
+      ],
+      [
+        -0.01,
+        3.2,
+        "C"
+      ],
+      [
+        -1.49,
+        2.54,
+        "C"
+      ],
+      [
+        -0.11,
+        1.41,
+        "C"
+      ],
+      [
+        -0.68,
+        3.94,
+        "C"
+      ],
+      [
+        -1.6,
+        3.53,
+        "C"
+      ],
+      [
+        0.89,
+        1.31,
+        "C"
+      ],
+      [
+        -0.39,
+        -0.35,
+        "C"
+      ],
+      [
+        -1.2,
+        -0.94,
+        "C"
+      ],
+      [
+        1.48,
+        2.12,
+        "C"
+      ],
+      [
+        -2.01,
+        -0.35,
+        "C"
+      ],
+      [
+        -1.2,
+        -1.94,
+        "C"
+      ],
+      [
+        -0.33,
+        -2.44,
+        "C"
+      ],
+      [
+        -0.33,
+        -3.44,
+        "C"
+      ],
+      [
+        0.62,
+        -2.13,
+        "C"
+      ],
+      [
+        1.2,
+        -2.94,
+        "C"
+      ],
+      [
+        -2.06,
+        -3.44,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        1,
+        16,
+        2
+      ],
+      [
+        2,
+        17,
+        1
+      ],
+      [
+        2,
+        22,
+        2
+      ],
+      [
+        3,
+        15,
+        3
+      ],
+      [
+        4,
+        19,
+        1
+      ],
+      [
+        4,
+        21,
+        1
+      ],
+      [
+        5,
+        19,
+        2
+      ],
+      [
+        5,
+        22,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        12,
+        15,
+        1
+      ],
+      [
+        13,
+        14,
+        2
+      ],
+      [
+        14,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        1
+      ],
+      [
+        17,
+        18,
+        2
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        20,
+        21,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "A high-fat meal has no clinically relevant effect, and about 97% is bound to protein, mostly albumin. It is metabolized mainly by CYP3A4 and to a lesser extent by CYP2C9.",
+    "substance": "A phosphate salt with a molecular weight of 306.4 for the active moiety, soluble in aqueous buffers across a pH range of 1 to 8.",
+    "product": "Approved under an NDA as 5, 10, 15, 20 and 25 mg tablets, dosed twice daily.",
+    "safety": "No boxed warning. Bruising, dizziness, headache and diarrhea are the most common nonhematologic reactions.",
+    "indication": "Intermediate or high-risk myelofibrosis, polycythemia vera with inadequate response to hydroxyurea, and steroid-refractory acute or chronic graft-versus-host disease.",
+    "mechanism": "Inhibits JAK1 and JAK2, which mediate cytokine and growth factor signaling important for hematopoiesis and immune function."
+  },
+  "tell": "A JAK inhibitor with active metabolites; their combined exposure rises up to 1.9-fold in renal impairment.",
+  "source": {
+    "setId": "f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "achieves C max within 1 hour to 2 hours post-dose",
+    "pk.halfLifeH": "The mean elimination half-life of ruxolitinib is approximately 3 hours",
+    "pill": "25 mg tablets - oval and white",
+    "clues.kinetics": [
+      "No clinically relevant changes in the pharmacokinetics of ruxolitinib were observed upon administration of JAKAFI with a high-fat, high-calorie meal",
+      "Protein binding of ruxolitinib is approximately 97%, mostly to albumin",
+      "metabolized by CYP3A4 and to a lesser extent by CYP2C9"
+    ],
+    "clues.substance": [
+      "Ruxolitinib phosphate is a kinase inhibitor",
+      "molecular weight 306.4",
+      "soluble in aqueous buffers across a pH range of 1 to 8"
+    ],
+    "clues.product": [
+      "NDA 202192",
+      "5 mg tablets - round and white",
+      "10 mg tablets - round and white",
+      "15 mg tablets - oval and white",
+      "20 mg tablets - capsule-shaped and white",
+      "25 mg tablets - oval and white",
+      "25 mg twice daily"
+    ],
+    "clues.safety": [
+      "The most common nonhematologic adverse reactions (incidence ≥ 15%) are bruising, dizziness, headache, and diarrhea"
+    ],
+    "clues.indication": [
+      "intermediate or high-risk myelofibrosis, including primary myelofibrosis",
+      "polycythemia vera in adults who have had an inadequate response to or are intolerant of hydroxyurea",
+      "steroid-refractory acute graft-versus-host disease",
+      "chronic graft-versus-host disease after failure of one or two lines of systemic therapy"
+    ],
+    "clues.mechanism": [
+      "inhibits Janus Associated Kinases (JAKs), JAK1 and JAK2",
+      "which mediate the signaling of a number of cytokines and growth factors that are important for hematopoiesis and immune function"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+/* Dose Dossier type: Source Serif 4 (Adobe, OFL 1.1), subset and renamed; see README.md.
+   Dossier Display: light (300) cut for the wordmark, the answer and sheet titles, 25px and up, Latin only.
+   Dossier Text: text and data at 400; semibold (600) only for matched facts; italic only for species names.
+   Link this file after tokens.css so the --font-* variables below win. */
+
+@font-face {
+  font-family: 'Dossier Display';
+  src: url('dossier-display.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0, U+00B7, U+00E9, U+00F6, U+2009, U+2013-2014, U+2018-2019, U+201C-201D;
+}
+
+@font-face {
+  font-family: 'Dossier Text';
+  src: url('dossier-text.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+0391-03A9, U+03B1-03C9, U+2009-200A,
+    U+2013-2014, U+2018-201E, U+2022, U+2026, U+2032-2033, U+2070-208E, U+2122, U+2190-2195,
+    U+2212, U+2215, U+2248, U+2260, U+2264-2265;
+}
+
+/* One static semibold; it also answers font-weight 700 so nothing is ever synthesized. */
+@font-face {
+  font-family: 'Dossier Text';
+  src: url('dossier-text-semibold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-00FF, U+2009, U+2013-2014, U+2018-201D, U+2191, U+2193, U+2212;
+}
+
+/* Downloaded only on days whose text contains an <i>. */
+@font-face {
+  font-family: 'Dossier Text';
+  src: url('dossier-text-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0, U+00E0-00FF, U+2009, U+2013, U+2019;
+}
+
+:root {
+  /* Display falls back to Dossier Text for any glyph outside its Latin set. */
+  --font-display: 'Dossier Display', 'Dossier Text', Georgia, 'Times New Roman', serif;
+  --font-text: 'Dossier Text', Georgia, 'Times New Roman', serif;
+  --font-data: 'Dossier Text', Georgia, 'Times New Roman', serif;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  font-synthesis: none; /* no fake bold, no fake oblique */
+  letter-spacing: 0;
+}
+
+/* Data: lining, tabular figures (already the face's default; explicit so a fallback face aligns too). */
+.data, table {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Formula indices and charges written as markup: C<sub>22</sub>, H<sup>+</sup>, AUC<sub>0–t</sub>.
+   The font also carries real ₀–₉, ⁰–⁹, ⁺ and ⁻, which need no markup. Line height is not disturbed. */
+sub, sup {
+  position: relative;
+  font-size: 0.62em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup { top: -0.55em; }
+sub { bottom: -0.2em; }

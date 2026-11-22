@@ -1,0 +1,292 @@
+{
+  "id": "sertraline",
+  "generic": "Sertraline",
+  "brand": "Zoloft",
+  "aliases": [
+    "Sertraline hydrochloride"
+  ],
+  "salt": "Sertraline hydrochloride",
+  "application": "NDA 019839",
+  "approved": 1991,
+  "sponsor": "Pfizer",
+  "area": "Psychiatry",
+  "class": "SSRI",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "50 mg oral, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 6.45,
+    "halfLifeH": 26
+  },
+  "pill": {
+    "shape": "capsule",
+    "color": "#A8D5A2",
+    "desc": "capsule-shaped, film-coated tablet, color varies by strength"
+  },
+  "structure": {
+    "cid": 68617,
+    "formula": "C17H17Cl2N",
+    "atoms": [
+      [
+        -2.18,
+        -2.72,
+        "Cl"
+      ],
+      [
+        -0.46,
+        -3.71,
+        "Cl"
+      ],
+      [
+        -0.46,
+        3.22,
+        "N"
+      ],
+      [
+        -0.46,
+        0.25,
+        "C"
+      ],
+      [
+        -1.32,
+        0.74,
+        "C"
+      ],
+      [
+        -0.46,
+        2.23,
+        "C"
+      ],
+      [
+        -1.32,
+        1.73,
+        "C"
+      ],
+      [
+        0.4,
+        0.74,
+        "C"
+      ],
+      [
+        0.4,
+        1.73,
+        "C"
+      ],
+      [
+        -0.46,
+        -0.74,
+        "C"
+      ],
+      [
+        1.28,
+        0.21,
+        "C"
+      ],
+      [
+        1.28,
+        2.26,
+        "C"
+      ],
+      [
+        -1.32,
+        -1.24,
+        "C"
+      ],
+      [
+        0.4,
+        -1.24,
+        "C"
+      ],
+      [
+        2.18,
+        0.72,
+        "C"
+      ],
+      [
+        2.18,
+        1.75,
+        "C"
+      ],
+      [
+        -1.32,
+        3.71,
+        "C"
+      ],
+      [
+        -1.32,
+        -2.23,
+        "C"
+      ],
+      [
+        0.4,
+        -2.23,
+        "C"
+      ],
+      [
+        -0.46,
+        -2.72,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        17,
+        1
+      ],
+      [
+        1,
+        19,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        16,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        9,
+        1
+      ],
+      [
+        4,
+        6,
+        1
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        10,
+        2
+      ],
+      [
+        8,
+        11,
+        2
+      ],
+      [
+        9,
+        12,
+        2
+      ],
+      [
+        9,
+        13,
+        1
+      ],
+      [
+        10,
+        14,
+        1
+      ],
+      [
+        11,
+        15,
+        1
+      ],
+      [
+        12,
+        17,
+        1
+      ],
+      [
+        13,
+        18,
+        2
+      ],
+      [
+        14,
+        15,
+        2
+      ],
+      [
+        17,
+        19,
+        2
+      ],
+      [
+        18,
+        19,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Tablet bioavailability for a single dose is about equal to the oral solution, and food causes only a small rise in exposure. It is 98% bound to serum proteins and extensively metabolized before excretion.",
+    "substance": "A hydrochloride salt whose active moiety has a molecular weight of 306.2. It is slightly soluble in water.",
+    "product": "An NDA tablet in strengths from 25 to 200 mg, dosed once daily.",
+    "safety": "Boxed warning for suicidal thoughts and behaviors in pediatric and young adult patients. Contraindicated with MAOIs, including linezolid, and with pimozide; nausea and diarrhea are most common.",
+    "indication": "Major depressive disorder, obsessive-compulsive disorder, panic disorder, PTSD, social anxiety disorder and premenstrual dysphoric disorder.",
+    "mechanism": "It potentiates serotonergic activity in the central nervous system by inhibiting neuronal reuptake of serotonin."
+  },
+  "tell": "Its menthol-scented oral solution contains 12% alcohol and is contraindicated with disulfiram.",
+  "source": {
+    "setId": "fda754f6-d0f3-4dce-a17a-927d64f912f7",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "mean peak plasma concentrations (C max ) of sertraline occurred between 4.5 to 8.4 hours post-dosing",
+    "pk.halfLifeH": "The average terminal elimination half-life of plasma sertraline is about 26 hours",
+    "pill": "25 mg tablets: light green film-coated",
+    "clues.kinetics": [
+      "The single dose bioavailability of ZOLOFT tablets is approximately equal to an equivalent dose of ZOLOFT oral solution",
+      "Administration with food causes a small increase in C max and AUC",
+      "sertraline is highly bound to serum proteins (98%)",
+      "Sertraline undergoes extensive first pass metabolism"
+    ],
+    "clues.substance": [
+      "molecular weight 306.2",
+      "Sertraline hydrochloride is a white crystalline powder that is slightly soluble in water"
+    ],
+    "clues.product": [
+      "NDA 019839",
+      "TABLET (oral): EQ 200MG BASE; EQ 100MG BASE; EQ 25MG BASE; EQ 150MG BASE; EQ 50MG BASE",
+      "Following oral once-daily ZOLOFT dosing"
+    ],
+    "clues.safety": [
+      "WARNING: SUICIDAL THOUGHTS AND BEHAVIORS Antidepressants increased the risk of suicidal thoughts and behavior in pediatric and young adult patients",
+      "Taking, or within 14 days of stopping, MAOIs, (including the MAOIs linezolid and intravenous methylene blue)",
+      "Taking pimozide",
+      "were nausea, diarrhea/loose stool, tremor, dyspepsia"
+    ],
+    "clues.indication": [
+      "ZOLOFT is indicated for the treatment of the following: • Major depressive disorder (MDD) • Obsessive-compulsive disorder (OCD) • Panic disorder (PD) • Posttraumatic stress disorder (PTSD) • Social anxiety disorder (SAD)",
+      "Premenstrual dysphoric disorder (PMDD)"
+    ],
+    "clues.mechanism": [
+      "Sertraline potentiates serotonergic activity in the central nervous system through inhibition of neuronal reuptake of serotonin"
+    ]
+  }
+}

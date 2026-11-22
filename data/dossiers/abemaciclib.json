@@ -1,0 +1,469 @@
+{
+  "id": "abemaciclib",
+  "generic": "Abemaciclib",
+  "brand": "Verzenio",
+  "aliases": [],
+  "application": "NDA 208716",
+  "approved": 2017,
+  "sponsor": "Eli Lilly",
+  "area": "Oncology",
+  "class": "CDK4/6 inhibitor",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "200 mg oral, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 8,
+    "halfLifeH": 18.3
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#E9DCC0",
+    "desc": "beige oval tablet"
+  },
+  "structure": {
+    "cid": 46220502,
+    "formula": "C27H32F2N8",
+    "atoms": [
+      [
+        4.37,
+        -2.25,
+        "F"
+      ],
+      [
+        3.5,
+        2.25,
+        "F"
+      ],
+      [
+        -4.3,
+        1.75,
+        "N"
+      ],
+      [
+        -6.03,
+        0.75,
+        "N"
+      ],
+      [
+        6.18,
+        0.56,
+        "N"
+      ],
+      [
+        6.18,
+        -1.06,
+        "N"
+      ],
+      [
+        -1.7,
+        0.25,
+        "N"
+      ],
+      [
+        0.03,
+        0.25,
+        "N"
+      ],
+      [
+        1.77,
+        0.25,
+        "N"
+      ],
+      [
+        0.9,
+        1.75,
+        "N"
+      ],
+      [
+        -5.16,
+        2.25,
+        "C"
+      ],
+      [
+        -4.3,
+        0.75,
+        "C"
+      ],
+      [
+        -6.03,
+        1.75,
+        "C"
+      ],
+      [
+        -5.16,
+        0.25,
+        "C"
+      ],
+      [
+        -3.43,
+        2.25,
+        "C"
+      ],
+      [
+        -6.9,
+        0.25,
+        "C"
+      ],
+      [
+        -2.57,
+        1.75,
+        "C"
+      ],
+      [
+        -7.76,
+        0.75,
+        "C"
+      ],
+      [
+        6.49,
+        1.51,
+        "C"
+      ],
+      [
+        5.23,
+        0.25,
+        "C"
+      ],
+      [
+        -1.7,
+        2.25,
+        "C"
+      ],
+      [
+        -2.57,
+        0.75,
+        "C"
+      ],
+      [
+        6.76,
+        -0.25,
+        "C"
+      ],
+      [
+        5.23,
+        -0.75,
+        "C"
+      ],
+      [
+        7.47,
+        1.71,
+        "C"
+      ],
+      [
+        5.82,
+        2.25,
+        "C"
+      ],
+      [
+        4.37,
+        0.75,
+        "C"
+      ],
+      [
+        3.5,
+        0.25,
+        "C"
+      ],
+      [
+        -0.83,
+        1.75,
+        "C"
+      ],
+      [
+        4.37,
+        -1.25,
+        "C"
+      ],
+      [
+        -0.83,
+        0.75,
+        "C"
+      ],
+      [
+        7.76,
+        -0.25,
+        "C"
+      ],
+      [
+        3.5,
+        -0.75,
+        "C"
+      ],
+      [
+        2.63,
+        0.75,
+        "C"
+      ],
+      [
+        0.9,
+        0.75,
+        "C"
+      ],
+      [
+        2.63,
+        1.75,
+        "C"
+      ],
+      [
+        1.77,
+        2.25,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        29,
+        1
+      ],
+      [
+        1,
+        35,
+        1
+      ],
+      [
+        2,
+        10,
+        1
+      ],
+      [
+        2,
+        11,
+        1
+      ],
+      [
+        2,
+        14,
+        1
+      ],
+      [
+        3,
+        12,
+        1
+      ],
+      [
+        3,
+        13,
+        1
+      ],
+      [
+        3,
+        15,
+        1
+      ],
+      [
+        4,
+        18,
+        1
+      ],
+      [
+        4,
+        19,
+        1
+      ],
+      [
+        4,
+        22,
+        1
+      ],
+      [
+        5,
+        22,
+        2
+      ],
+      [
+        5,
+        23,
+        1
+      ],
+      [
+        6,
+        21,
+        1
+      ],
+      [
+        6,
+        30,
+        2
+      ],
+      [
+        7,
+        30,
+        1
+      ],
+      [
+        7,
+        34,
+        1
+      ],
+      [
+        8,
+        33,
+        2
+      ],
+      [
+        8,
+        34,
+        1
+      ],
+      [
+        9,
+        34,
+        2
+      ],
+      [
+        9,
+        36,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        14,
+        16,
+        1
+      ],
+      [
+        15,
+        17,
+        1
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        16,
+        21,
+        2
+      ],
+      [
+        18,
+        24,
+        1
+      ],
+      [
+        18,
+        25,
+        1
+      ],
+      [
+        19,
+        23,
+        2
+      ],
+      [
+        19,
+        26,
+        1
+      ],
+      [
+        20,
+        28,
+        2
+      ],
+      [
+        22,
+        31,
+        1
+      ],
+      [
+        23,
+        29,
+        1
+      ],
+      [
+        26,
+        27,
+        2
+      ],
+      [
+        27,
+        32,
+        1
+      ],
+      [
+        27,
+        33,
+        1
+      ],
+      [
+        28,
+        30,
+        1
+      ],
+      [
+        29,
+        32,
+        2
+      ],
+      [
+        33,
+        35,
+        1
+      ],
+      [
+        35,
+        36,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is 45% after a single 200 mg oral dose, and a high-fat meal changes exposure only slightly. Bound to plasma proteins at 96.3%, it is cleared mainly by hepatic metabolism.",
+    "substance": "The active moiety has a molecular weight of 506.59 and is a white to yellow powder.",
+    "product": "Approved under an NDA as tablets of 50, 100, 150 and 200 mg, taken twice daily.",
+    "safety": "No boxed warning and no contraindications. Diarrhea and infections are among the most common adverse reactions.",
+    "indication": "Adjuvant treatment of early breast cancer at high risk of recurrence, and advanced breast cancer, in hormone receptor-positive, HER2-negative disease.",
+    "mechanism": "Inhibits cyclin-dependent kinases 4 and 6, which blocks retinoblastoma protein phosphorylation and halts cell-cycle progression from G1 into S phase."
+  },
+  "tell": "A CDK4/6 inhibitor largely recovered in feces, about 81% of a dose, and dosed twice daily.",
+  "source": {
+    "setId": "be4bc0de-0fdc-4d46-8d25-be43c79e6a06",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be4bc0de-0fdc-4d46-8d25-be43c79e6a06",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The median T max of abemaciclib is 8.0 hours",
+    "pk.halfLifeH": "the mean plasma elimination half-life for abemaciclib in patients was 18.3 hours",
+    "pill": "oval beige tablet",
+    "clues.kinetics": [
+      "The absolute bioavailability of abemaciclib after a single oral dose of 200 mg is 45%",
+      "A high-fat, high-calorie meal",
+      "increased the AUC of abemaciclib plus its active metabolites by 9%",
+      "bound fraction was 96.3%",
+      "Hepatic metabolism is the main route of clearance"
+    ],
+    "clues.substance": [
+      "It is a white to yellow powder",
+      "a molecular weight 506.59"
+    ],
+    "clues.product": [
+      "Tablets: 50 mg, 100 mg, 150 mg, and 200 mg.",
+      "NDA 208716",
+      "repeated twice daily dosing"
+    ],
+    "clues.safety": [
+      "None. None.",
+      "Most common adverse reactions (incidence ≥20%) were diarrhea, infections, neutropenia"
+    ],
+    "clues.indication": [
+      "for the adjuvant treatment of adults with hormone receptor (HR)-positive",
+      "in combination with fulvestrant for the treatment of adults with HR-positive, HER2-negative advanced or metastatic breast cancer"
+    ],
+    "clues.mechanism": [
+      "Abemaciclib is an inhibitor of cyclin-dependent kinases 4 and 6 (CDK4 and CDK6)",
+      "inhibited Rb phosphorylation and blocked progression from G1 into S phase"
+    ]
+  }
+}

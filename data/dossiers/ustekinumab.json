@@ -1,0 +1,84 @@
+{
+  "id": "ustekinumab",
+  "generic": "Ustekinumab",
+  "brand": "Stelara",
+  "aliases": [],
+  "application": "BLA 761044",
+  "approved": 2009,
+  "sponsor": "Johnson & Johnson",
+  "area": "Dermatology",
+  "class": "IL-12/23 blocking antibody",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "90 mg subcutaneous, single dose, patients",
+    "model": "absorption",
+    "tmaxH": 168,
+    "halfLifeH": 456
+  },
+  "pill": {
+    "shape": "syringe",
+    "desc": "colorless to light yellow solution in a single-dose prefilled syringe"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1 κ",
+    "massKDa": 148.9
+  },
+  "clues": {
+    "kinetics": "Its metabolic pathway has not been characterized. It is expected to be degraded into small peptides and amino acids through ordinary catabolic pathways.",
+    "substance": "A sterile, preservative-free solution of 1326 amino acids, supplied in single-dose prefilled syringes or vials.",
+    "product": "Approved under a BLA as 45 mg/0.5 mL and 90 mg/mL prefilled syringes, plus 130 mg/26 mL intravenous vials; maintenance is every 8 to 12 weeks.",
+    "safety": "No boxed warning. Contraindicated with clinically significant hypersensitivity to it or its excipients; arthralgia and nausea were more frequent than with placebo.",
+    "indication": "Moderate to severe plaque psoriasis, active psoriatic arthritis, and moderately to severely active Crohn's disease and ulcerative colitis.",
+    "mechanism": "It binds the p40 subunit shared by the cytokines interleukin-12 and interleukin-23, disrupting their signaling through a shared receptor chain."
+  },
+  "tell": "Its p40 target is shared by two cytokines, IL-12 and IL-23, setting this antibody apart.",
+  "source": {
+    "setId": "c77a9664-e3bb-4023-b400-127aa53bca2b",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c77a9664-e3bb-4023-b400-127aa53bca2b",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "13.5 days and 7 days, respectively, after a single subcutaneous administration of 45 mg (N=22) and 90 mg (N=24)",
+    "pk.halfLifeH": "an estimated median terminal half-life of approximately 19 days",
+    "pill": [
+      "colorless to light yellow solution",
+      "90 mg/mL solution in a single-dose prefilled syringe"
+    ],
+    "biologic": [
+      "As a human IgG1κ monoclonal antibody",
+      "estimated molecular mass that ranges from 148,079 to 149,690 Daltons"
+    ],
+    "clues.kinetics": [
+      "The metabolic pathway of ustekinumab has not been characterized",
+      "is expected to be degraded into small peptides and amino acids via catabolic pathways"
+    ],
+    "clues.substance": [
+      "is a sterile, preservative-free",
+      "is comprised of 1326 amino acids",
+      "single-dose prefilled syringes or single-dose vials"
+    ],
+    "clues.product": [
+      "Application: BLA 761044",
+      "Injection: 45 mg/0.5 mL or 90 mg/mL solution in a single-dose prefilled syringe",
+      "Injection: 130 mg/26 mL (5 mg/mL) solution in a single-dose vial",
+      "45 mg administered subcutaneously every 12 weeks",
+      "administered every 8 weeks"
+    ],
+    "clues.safety": [
+      "contraindicated in patients with clinically significant hypersensitivity to any ustekinumab product or to any of the excipients",
+      "A higher incidence of arthralgia, nausea, and dental infections was observed"
+    ],
+    "clues.indication": [
+      "Moderate to severe plaque psoriasis in adults and pediatric patients 6 years of age and older",
+      "Active psoriatic arthritis in adults and pediatric patients 6 years of age and older",
+      "Moderately to severely active Crohn's disease",
+      "Moderately to severely active ulcerative colitis"
+    ],
+    "clues.mechanism": [
+      "binds with specificity to the p40 protein subunit used by both the IL-12 and IL-23 cytokines",
+      "disrupting the interaction of these cytokines with a shared cell-surface receptor chain"
+    ]
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "id": "entecavir",
+  "generic": "Entecavir",
+  "brand": "Baraclude",
+  "aliases": [],
+  "application": "NDA 021797",
+  "approved": 2005,
+  "sponsor": "Bristol Myers Squibb",
+  "area": "Infectious disease",
+  "class": "HBV nucleoside analog",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1 mg oral, steady state, healthy adults",
+    "model": "absorption",
+    "tmaxH": 1,
+    "halfLifeH": 138.5,
+    "cmax": 8.2,
+    "unit": "ng/mL"
+  },
+  "pill": {
+    "shape": "triangle",
+    "color": "#E88BA5",
+    "desc": "pink, film-coated, triangular tablet"
+  },
+  "structure": {
+    "cid": 135398508,
+    "formula": "C12H15N5O3",
+    "atoms": [
+      [
+        0.74,
+        3.01,
+        "O"
+      ],
+      [
+        2.71,
+        3.33,
+        "O"
+      ],
+      [
+        -1.08,
+        -3.33,
+        "O"
+      ],
+      [
+        0.74,
+        -0.52,
+        "N"
+      ],
+      [
+        0.74,
+        -2.13,
+        "N"
+      ],
+      [
+        -1.08,
+        -0.32,
+        "N"
+      ],
+      [
+        -1.95,
+        -1.82,
+        "N"
+      ],
+      [
+        -2.81,
+        -0.32,
+        "N"
+      ],
+      [
+        1.05,
+        0.43,
+        "C"
+      ],
+      [
+        2,
+        1.74,
+        "C"
+      ],
+      [
+        1.05,
+        2.05,
+        "C"
+      ],
+      [
+        0.46,
+        1.24,
+        "C"
+      ],
+      [
+        2,
+        0.74,
+        "C"
+      ],
+      [
+        2.81,
+        2.33,
+        "C"
+      ],
+      [
+        -0.21,
+        -0.82,
+        "C"
+      ],
+      [
+        2.81,
+        0.15,
+        "C"
+      ],
+      [
+        1.32,
+        -1.32,
+        "C"
+      ],
+      [
+        -0.21,
+        -1.82,
+        "C"
+      ],
+      [
+        -1.08,
+        -2.32,
+        "C"
+      ],
+      [
+        -1.95,
+        -0.82,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        10,
+        1
+      ],
+      [
+        1,
+        13,
+        1
+      ],
+      [
+        2,
+        18,
+        2
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        3,
+        14,
+        1
+      ],
+      [
+        3,
+        16,
+        1
+      ],
+      [
+        4,
+        16,
+        2
+      ],
+      [
+        4,
+        17,
+        1
+      ],
+      [
+        5,
+        14,
+        1
+      ],
+      [
+        5,
+        19,
+        2
+      ],
+      [
+        6,
+        18,
+        1
+      ],
+      [
+        6,
+        19,
+        1
+      ],
+      [
+        7,
+        19,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        8,
+        12,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        9,
+        12,
+        1
+      ],
+      [
+        9,
+        13,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        12,
+        15,
+        2
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        17,
+        18,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Tablet bioavailability is 100% relative to solution; a high-fat meal reduces exposure by 18-20%. Only about 13% binds serum proteins, and the kidney eliminates 62-73% unchanged.",
+    "substance": "The active moiety has a molecular weight of 277.28. It is a powder that is slightly soluble in water, at 2.4 mg/mL.",
+    "product": "Approved under an NDA as 0.5 mg and 1 mg tablets and a 0.05 mg/mL oral solution, dosed once daily.",
+    "safety": "A boxed warning covers severe acute exacerbations after stopping therapy and lactic acidosis. No contraindications; headache, fatigue, dizziness and nausea are the common reactions.",
+    "indication": "Chronic hepatitis B virus infection with evidence of active viral replication, in adults and in children 2 years and older.",
+    "mechanism": "Its triphosphate form competes with deoxyguanosine triphosphate to block all three activities of the HBV reverse transcriptase, and weakly inhibits cellular DNA polymerases."
+  },
+  "tell": "A deoxyguanosine analogue whose 1 mg tablet is pink and triangular, and is mostly cleared unchanged by the kidney.",
+  "source": {
+    "setId": "046e61c9-9298-4b2e-b76e-b26b81fecd20",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=046e61c9-9298-4b2e-b76e-b26b81fecd20",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "entecavir peak plasma concentrations occurred between 0.5 and 1.5 hours",
+    "pk.halfLifeH": "terminal elimination half-life of approximately 128–149 hours",
+    "pk.cmax": "For a 1 mg oral dose, C max was 8.2 ng/mL",
+    "pill": "Pink, triangular-shaped tablet",
+    "clues.kinetics": [
+      "the bioavailability of the tablet was 100% relative to the oral solution",
+      "with a standard high-fat meal (945 kcal, 54.6 g fat)",
+      "a decrease in AUC of 18%–20%",
+      "Binding of entecavir to human serum proteins in vitro was approximately 13%",
+      "predominantly eliminated by the kidney with urinary recovery of unchanged drug at steady state ranging from 62% to 73%"
+    ],
+    "clues.substance": [
+      "Entecavir is a white to off-white powder",
+      "molecular weight 277.28",
+      "It is slightly soluble in water (2.4 mg/mL)"
+    ],
+    "clues.product": [
+      "NDA 021797",
+      "TABLET (oral): 1MG; 0.5MG",
+      "oral solution, 0.05 mg/mL",
+      "Steady state was achieved after 6 to 10 days of once-daily administration"
+    ],
+    "clues.safety": [
+      "WARNING: SEVERE ACUTE EXACERBATIONS OF HEPATITIS B, PATIENTS CO-INFECTED WITH HIV AND HBV, and LACTIC ACIDOSIS AND HEPATOMEGALY",
+      "patients who have discontinued anti-hepatitis B therapy",
+      "None. • None. (4)",
+      "the most common adverse reactions (≥3%, all severity grades) are headache, fatigue, dizziness, and nausea"
+    ],
+    "clues.indication": [
+      "treatment of chronic hepatitis B virus infection in adults and pediatric patients 2 years of age and older with evidence of active viral replication"
+    ],
+    "clues.mechanism": [
+      "a deoxyguanosine nucleoside analogue with activity against HBV reverse transcriptase (rt)",
+      "By competing with the natural substrate deoxyguanosine triphosphate",
+      "entecavir triphosphate functionally inhibits all three activities of the HBV reverse transcriptase",
+      "weak inhibitor of cellular DNA polymerases α, β, and δ"
+    ]
+  }
+}

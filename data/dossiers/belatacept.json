@@ -1,0 +1,77 @@
+{
+  "id": "belatacept",
+  "generic": "Belatacept",
+  "brand": "Nulojix",
+  "aliases": [],
+  "application": "BLA 125288",
+  "approved": 2011,
+  "sponsor": "Bristol Myers Squibb",
+  "area": "Immunology",
+  "class": "T-cell costimulation blocker",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "10 mg/kg intravenous, single dose, healthy adults",
+    "model": "infusion",
+    "tmaxH": 0.5,
+    "halfLifeH": 235.2,
+    "cmax": 300,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#F3EFE2",
+    "desc": "white or off-white lyophilized powder in a single-use vial"
+  },
+  "biologic": {
+    "format": "fc-fusion",
+    "isotype": "IgG1",
+    "massKDa": 90
+  },
+  "clues": {
+    "kinetics": "Clearance tends to rise with body weight, while age, sex, race and renal function have no effect.",
+    "substance": "Produced by recombinant DNA technology in mammalian cells and supplied as a sterile lyophilized powder.",
+    "product": "Approved under a BLA as 250 mg single-use vials, given by infusion once monthly.",
+    "safety": "Boxed warning for post-transplant lymphoproliferative disorder, other malignancies and serious infections; contraindicated in EBV seronegative patients. Anemia and diarrhea are the most common reactions.",
+    "indication": "Prophylaxis of organ rejection in adult patients receiving kidney transplants, used with basiliximab, mycophenolate mofetil and corticosteroids.",
+    "mechanism": "Binds CD80 and CD86 on antigen-presenting cells, blocking CD28-mediated costimulation of T lymphocytes."
+  },
+  "tell": "A CTLA-4 fusion protein whose boxed warning covers post-transplant lymphoproliferative disorder, mainly in the CNS.",
+  "source": {
+    "setId": "c16ac648-d5d2-9f7d-8637-e2328572754e",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c16ac648-d5d2-9f7d-8637-e2328572754e",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "The entire NULOJIX infusion should be administered over a period of 30 minutes",
+    "pk.halfLifeH": "Terminal half-life (t 1/2 ) [days] | 9.8±2.8 (6.4-15.6)",
+    "pk.cmax": "Peak concentration (C max ) [µg/mL] | 300±77 (190-492)",
+    "pill": "NULOJIX is supplied as a sterile, white or off-white lyophilized powder for intravenous administration",
+    "biologic": "a soluble fusion protein consisting of the modified extracellular domain of CTLA-4",
+    "clues.kinetics": [
+      "there was a trend toward higher clearance of belatacept with increasing body weight",
+      "Age, gender, race, renal function (measured by calculated glomerular filtration rate [GFR]), hepatic function (measured by albumin), diabetes, and concomitant dialysis did not affect the clearance of belatacept"
+    ],
+    "clues.substance": [
+      "Belatacept is produced by recombinant DNA technology in a mammalian cell expression system",
+      "NULOJIX is supplied as a sterile, white or off-white lyophilized powder"
+    ],
+    "clues.product": [
+      "Application: BLA 125288",
+      "Lyophilized powder for injection: 250 mg per vial",
+      "once monthly intravenous infusion of 10 mg per kg and 5 mg per kg"
+    ],
+    "clues.safety": [
+      "WARNING: POST-TRANSPLANT LYMPHOPROLIFERATIVE DISORDER, OTHER MALIGNANCIES, AND SERIOUS INFECTIONS",
+      "NULOJIX is contraindicated in transplant recipients who are Epstein-Barr virus (EBV) seronegative",
+      "Most common adverse reactions (≥20% on NULOJIX treatment) are anemia, diarrhea, urinary tract infection"
+    ],
+    "clues.indication": [
+      "prophylaxis of organ rejection in adult patients receiving a kidney transplant",
+      "Use in combination with basiliximab induction, mycophenolate mofetil, and corticosteroids"
+    ],
+    "clues.mechanism": [
+      "binds to CD80 and CD86 on antigen-presenting cells thereby blocking CD28 mediated costimulation of T lymphocytes"
+    ]
+  }
+}

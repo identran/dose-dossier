@@ -1,0 +1,82 @@
+{
+  "id": "ocrelizumab",
+  "generic": "Ocrelizumab",
+  "brand": "Ocrevus",
+  "aliases": [],
+  "application": "BLA 761053",
+  "approved": 2017,
+  "sponsor": "Genentech",
+  "area": "Neurology",
+  "class": "CD20-directed antibody",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "600 mg intravenous, steady state, patients",
+    "model": "infusion",
+    "tmaxH": 3.5,
+    "halfLifeH": 624,
+    "cmax": 212,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "vial",
+    "color": "#E9D5B0",
+    "desc": "clear to slightly opalescent, colorless to pale brown solution in a single-dose vial"
+  },
+  "biologic": {
+    "format": "antibody",
+    "isotype": "IgG1",
+    "massKDa": 145
+  },
+  "clues": {
+    "kinetics": "Cleared principally by catabolism, and its metabolism has not been directly studied. Mild renal or hepatic impairment does not change its pharmacokinetics.",
+    "substance": "A recombinant humanized protein with a glycosylated structure and a molecular mass of approximately 145 kDa.",
+    "product": "Approved under a BLA as 300 mg/10 mL single-dose vials, dosed as 600 mg every 6 months.",
+    "safety": "No boxed warning. Contraindicated with active hepatitis B infection and after a life-threatening infusion reaction; upper respiratory tract infections and infusion reactions are most common.",
+    "indication": "Relapsing forms of MS and primary progressive MS in adults, and relapsing-remitting MS in children 10 years and older weighing 25 kg or more.",
+    "mechanism": "Binds CD20, a surface antigen on pre-B and mature B lymphocytes, causing antibody-dependent cytolysis and complement-mediated lysis."
+  },
+  "tell": "A CD20-directed antibody given every 6 months, with no boxed warning.",
+  "source": {
+    "setId": "9da42362-3bb5-4b83-b4bb-b59fd4e55f0d",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9da42362-3bb5-4b83-b4bb-b59fd4e55f0d",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "600 mg infusion over 3.5 hours",
+    "pk.halfLifeH": "The terminal elimination half-life was 26 days",
+    "pk.cmax": "The mean maximum concentration was 212 mcg/mL in patients with RMS (600 mg infusion over 3.5 hours)",
+    "pill": "clear or slightly opalescent, and colorless to pale brown solution supplied in single-dose vials",
+    "biologic": [
+      "recombinant humanized monoclonal antibody",
+      "Ocrelizumab is a glycosylated immunoglobulin G1 (IgG1) with a molecular mass of approximately 145 kDa"
+    ],
+    "clues.kinetics": [
+      "cleared principally by catabolism",
+      "The metabolism of OCREVUS has not been directly studied",
+      "No significant change in the pharmacokinetics of OCREVUS was observed in those patients"
+    ],
+    "clues.substance": [
+      "recombinant humanized",
+      "glycosylated immunoglobulin G1 (IgG1) with a molecular mass of approximately 145 kDa"
+    ],
+    "clues.product": [
+      "BLA 761053",
+      "Injection: 300 mg/10 mL (30 mg/mL) in a single-dose vial",
+      "maintenance doses of ocrelizumab were either 600 mg every 6 months"
+    ],
+    "clues.safety": [
+      "OCREVUS is contraindicated in patients with: Active HBV infection A history of life-threatening infusion reaction to OCREVUS",
+      "The most common adverse reactions in RMS trials (incidence ≥ 10%) were upper respiratory tract infections and infusion reactions"
+    ],
+    "clues.indication": [
+      "Relapsing forms of multiple sclerosis (MS)",
+      "Primary progressive MS, in adults",
+      "Relapsing-remitting MS, in pediatric patients 10 years of age and older who weigh 25 kg or more"
+    ],
+    "clues.mechanism": [
+      "binding to CD20, a cell surface antigen present on pre-B and mature B lymphocytes",
+      "results in antibody-dependent cellular cytolysis and complement-mediated lysis"
+    ]
+  }
+}

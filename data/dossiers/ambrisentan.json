@@ -1,0 +1,372 @@
+{
+  "id": "ambrisentan",
+  "generic": "Ambrisentan",
+  "brand": "Letairis",
+  "aliases": [],
+  "application": "NDA 022081",
+  "approved": 2007,
+  "sponsor": "Gilead",
+  "area": "Pulmonology",
+  "class": "Endothelin antagonist",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 15
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#D9608A",
+    "desc": "deep pink, film-coated, oval convex tablet"
+  },
+  "structure": {
+    "cid": 6918493,
+    "formula": "C22H22N2O4",
+    "atoms": [
+      [
+        1.8,
+        0.67,
+        "O"
+      ],
+      [
+        -0.43,
+        -0.2,
+        "O"
+      ],
+      [
+        -0.43,
+        1.8,
+        "O"
+      ],
+      [
+        1.3,
+        1.8,
+        "O"
+      ],
+      [
+        -2.17,
+        -0.2,
+        "N"
+      ],
+      [
+        -1.3,
+        1.3,
+        "N"
+      ],
+      [
+        1.3,
+        -0.2,
+        "C"
+      ],
+      [
+        0.43,
+        0.3,
+        "C"
+      ],
+      [
+        2.17,
+        -0.7,
+        "C"
+      ],
+      [
+        0.8,
+        -1.07,
+        "C"
+      ],
+      [
+        3.03,
+        -0.2,
+        "C"
+      ],
+      [
+        -0.2,
+        -1.07,
+        "C"
+      ],
+      [
+        2.17,
+        -1.7,
+        "C"
+      ],
+      [
+        1.3,
+        -1.93,
+        "C"
+      ],
+      [
+        0.43,
+        1.3,
+        "C"
+      ],
+      [
+        2.8,
+        0.67,
+        "C"
+      ],
+      [
+        3.9,
+        -0.7,
+        "C"
+      ],
+      [
+        -0.7,
+        -1.93,
+        "C"
+      ],
+      [
+        3.03,
+        -2.2,
+        "C"
+      ],
+      [
+        0.8,
+        -2.8,
+        "C"
+      ],
+      [
+        3.9,
+        -1.7,
+        "C"
+      ],
+      [
+        -0.2,
+        -2.8,
+        "C"
+      ],
+      [
+        -1.3,
+        0.3,
+        "C"
+      ],
+      [
+        -3.03,
+        0.3,
+        "C"
+      ],
+      [
+        -2.17,
+        1.8,
+        "C"
+      ],
+      [
+        -3.03,
+        1.3,
+        "C"
+      ],
+      [
+        -3.9,
+        -0.2,
+        "C"
+      ],
+      [
+        -2.17,
+        2.8,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        0,
+        15,
+        1
+      ],
+      [
+        1,
+        7,
+        1
+      ],
+      [
+        1,
+        22,
+        1
+      ],
+      [
+        2,
+        14,
+        1
+      ],
+      [
+        3,
+        14,
+        2
+      ],
+      [
+        4,
+        22,
+        1
+      ],
+      [
+        4,
+        23,
+        2
+      ],
+      [
+        5,
+        22,
+        2
+      ],
+      [
+        5,
+        24,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        14,
+        1
+      ],
+      [
+        8,
+        10,
+        2
+      ],
+      [
+        8,
+        12,
+        1
+      ],
+      [
+        9,
+        11,
+        2
+      ],
+      [
+        9,
+        13,
+        1
+      ],
+      [
+        10,
+        16,
+        1
+      ],
+      [
+        11,
+        17,
+        1
+      ],
+      [
+        12,
+        18,
+        2
+      ],
+      [
+        13,
+        19,
+        2
+      ],
+      [
+        16,
+        20,
+        2
+      ],
+      [
+        17,
+        21,
+        2
+      ],
+      [
+        18,
+        20,
+        1
+      ],
+      [
+        19,
+        21,
+        1
+      ],
+      [
+        23,
+        25,
+        1
+      ],
+      [
+        23,
+        26,
+        1
+      ],
+      [
+        24,
+        25,
+        2
+      ],
+      [
+        24,
+        27,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is not known, and food does not affect it. It is 99% bound to plasma proteins, and elimination is predominantly by non-renal pathways.",
+    "substance": "A free carboxylic acid with a molecular weight of 378.42. It is practically insoluble in water and in solutions at low pH.",
+    "product": "Approved under an NDA as 5 mg and 10 mg tablets, taken once daily.",
+    "safety": "Boxed warning for embryo-fetal toxicity. Contraindicated in pregnancy and in idiopathic pulmonary fibrosis; peripheral edema and nasal congestion are common.",
+    "indication": "Pulmonary arterial hypertension (WHO Group 1) in adults, to improve exercise ability and delay clinical worsening, and with tadalafil to reduce progression and hospitalization.",
+    "mechanism": "A high-affinity antagonist of the ETA receptor, more than 4000-fold selective over ETB, blocking the vasoconstriction that ETA drives."
+  },
+  "tell": "A boxed warning for embryo-fetal toxicity and over 4000-fold selectivity for ETA over ETB set this endothelin antagonist apart.",
+  "source": {
+    "setId": "725d4e73-6c83-477a-adc6-0ae4a133a844",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=725d4e73-6c83-477a-adc6-0ae4a133a844",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak concentrations occurring approximately 2 hours after oral administration",
+    "pk.halfLifeH": "Although ambrisentan has a 15-hour terminal half-life",
+    "clues.kinetics": [
+      "The absolute bioavailability of ambrisentan is not known",
+      "Food does not affect its bioavailability",
+      "Ambrisentan is highly bound to plasma proteins (99%)",
+      "The elimination of ambrisentan is predominantly by non-renal pathways"
+    ],
+    "clues.substance": [
+      "It is a carboxylic acid with a pKa of 4.0",
+      "molecular weight of 378.42",
+      "Ambrisentan is practically insoluble in water and in aqueous solutions at low pH"
+    ],
+    "clues.product": [
+      "NDA 022081",
+      "5 mg and 10 mg film - coated tablets",
+      "for once daily oral administration"
+    ],
+    "clues.safety": [
+      "WARNING: EMBRYO-FETAL TOXICITY",
+      "Letairis is contraindicated in females who are pregnant",
+      "Idiopathic Pulmonary Fibrosis",
+      "peripheral edema, nasal congestion, sinusitis, and flushing"
+    ],
+    "clues.indication": [
+      "pulmonary arterial hypertension (PAH) (WHO Group 1) in adult patients",
+      "To improve exercise ability and delay clinical worsening",
+      "In combination with tadalafil to reduce the risks of disease progression and hospitalization"
+    ],
+    "clues.mechanism": [
+      "Ambrisentan is a high-affinity (K i =0.011 nM) ET A receptor antagonist with a high selectivity for the ET A versus ET B receptor (>4000-fold)",
+      "The primary actions of ET A are vasoconstriction and cell proliferation"
+    ],
+    "pill": "Each 10 mg tablet is oval convex, deep pink"
+  }
+}

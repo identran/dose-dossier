@@ -1,0 +1,80 @@
+{
+  "id": "epoetin-alfa",
+  "generic": "Epoetin alfa",
+  "brand": "Epogen",
+  "aliases": [
+    "Procrit",
+    "Retacrit"
+  ],
+  "application": "BLA 103234",
+  "approved": 1989,
+  "sponsor": "Amgen",
+  "area": "Hematology",
+  "class": "Erythropoiesis stimulator",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "100 units/kg intravenous, single dose, patients",
+    "model": "bolus",
+    "tmaxH": 0,
+    "halfLifeH": 8.5
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colorless liquid in a single-dose vial"
+  },
+  "biologic": {
+    "format": "protein",
+    "isotype": null,
+    "massKDa": 30.4
+  },
+  "clues": {
+    "kinetics": "Pharmacokinetics in pediatric patients resemble those in adults, with no apparent difference in patients above or below 65 years of age.",
+    "substance": "A 165-amino acid recombinant molecule made in mammalian cells, with a molecular weight of about 30,400 daltons.",
+    "product": "Approved under a BLA as single-dose vials of 2,000 to 10,000 units/mL and multiple-dose vials of 20,000 units/2 mL.",
+    "safety": "Boxed warning for death, heart attack, stroke, clots and tumor progression. Contraindicated in uncontrolled hypertension, pure red cell aplasia and serious allergic reactions.",
+    "indication": "Anemia from chronic kidney disease in patients on or off dialysis, from zidovudine in HIV, and from chemotherapy; also reducing transfusions in some surgery.",
+    "mechanism": "Stimulates red cell production by the same mechanism as the body's own erythropoietin."
+  },
+  "tell": "A recombinant erythropoietin that also carries an indication to reduce red cell transfusions in elective, noncardiac surgery.",
+  "source": {
+    "setId": "1f2d0b28-9cc5-4523-80b8-637fdaf3f7a5",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f2d0b28-9cc5-4523-80b8-637fdaf3f7a5",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "after intravenous administration of Epogen",
+    "pk.halfLifeH": "the elimination half-life (t 1/2 ) of plasma erythropoietin after intravenous administration of Epogen ranged from 4 to 13 hours",
+    "pill": "as a clear and colorless liquid in single-dose vials",
+    "biologic": "Epoetin alfa is a 165-amino acid erythropoiesis-stimulating glycoprotein manufactured by recombinant DNA technology. It has a molecular weight of approximately 30,400 daltons",
+    "clues.kinetics": [
+      "The pharmacokinetic profile of Epogen in pediatric patients appeared similar to that of adults",
+      "The pharmacokinetic data indicate no apparent difference in Epogen t 1/2 among adult patients above or below 65 years of age"
+    ],
+    "clues.substance": [
+      "165-amino acid erythropoiesis-stimulating glycoprotein manufactured by recombinant DNA technology",
+      "It has a molecular weight of approximately 30,400 daltons",
+      "produced by mammalian cells"
+    ],
+    "clues.product": [
+      "Application: BLA 103234",
+      "2,000 Units/mL, 3,000 Units/mL, 4,000 Units/mL, and 10,000 Units/mL of Epogen as a clear and colorless liquid in single-dose vials",
+      "20,000 Units/2 mL (10,000 Units/mL)"
+    ],
+    "clues.safety": [
+      "WARNING: ESAs INCREASE THE RISK OF DEATH, MYOCARDIAL INFARCTION, STROKE, VENOUS THROMBOEMBOLISM, THROMBOSIS OF VASCULAR ACCESS AND TUMOR PROGRESSION OR RECURRENCE",
+      "Uncontrolled hypertension",
+      "Pure red cell aplasia (PRCA)",
+      "Serious allergic reactions to Epogen"
+    ],
+    "clues.indication": [
+      "Chronic Kidney Disease (CKD) in patients on dialysis and not on dialysis",
+      "Zidovudine in patients with Human Immunodeficiency Virus (HIV) infection",
+      "The effects of concomitant myelosuppressive chemotherapy",
+      "Reduction of allogeneic red blood cell (RBC) transfusions in patients undergoing elective, noncardiac, nonvascular surgery"
+    ],
+    "clues.mechanism": [
+      "Epogen stimulates erythropoiesis by the same mechanism as endogenous erythropoietin"
+    ]
+  }
+}

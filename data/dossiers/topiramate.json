@@ -1,0 +1,313 @@
+{
+  "id": "topiramate",
+  "generic": "Topiramate",
+  "brand": "Topamax",
+  "aliases": [
+    "Trokendi XR",
+    "Qudexy XR"
+  ],
+  "application": "NDA 020505",
+  "approved": 1996,
+  "sponsor": "Johnson & Johnson",
+  "area": "Neurology",
+  "class": "Sulfamate anticonvulsant",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "400 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2,
+    "halfLifeH": 21
+  },
+  "pill": {
+    "shape": "round",
+    "desc": "coated, round tablet"
+  },
+  "structure": {
+    "cid": 5284627,
+    "formula": "C12H21NO8S",
+    "atoms": [
+      [
+        2.91,
+        1.04,
+        "S"
+      ],
+      [
+        -0.35,
+        -0.94,
+        "O"
+      ],
+      [
+        0.3,
+        1.54,
+        "O"
+      ],
+      [
+        1.04,
+        -0.13,
+        "O"
+      ],
+      [
+        -2.38,
+        0.23,
+        "O"
+      ],
+      [
+        -2.38,
+        1.84,
+        "O"
+      ],
+      [
+        2.04,
+        0.54,
+        "O"
+      ],
+      [
+        3.41,
+        0.17,
+        "O"
+      ],
+      [
+        2.41,
+        1.9,
+        "O"
+      ],
+      [
+        3.77,
+        1.54,
+        "N"
+      ],
+      [
+        -0.56,
+        0.03,
+        "C"
+      ],
+      [
+        -1.43,
+        0.54,
+        "C"
+      ],
+      [
+        0.3,
+        0.54,
+        "C"
+      ],
+      [
+        -1.43,
+        1.54,
+        "C"
+      ],
+      [
+        -0.56,
+        2.04,
+        "C"
+      ],
+      [
+        0.64,
+        -1.04,
+        "C"
+      ],
+      [
+        -2.96,
+        1.04,
+        "C"
+      ],
+      [
+        1.17,
+        1.04,
+        "C"
+      ],
+      [
+        0.53,
+        -2.04,
+        "C"
+      ],
+      [
+        1.55,
+        -1.45,
+        "C"
+      ],
+      [
+        -3.77,
+        1.63,
+        "C"
+      ],
+      [
+        -3.77,
+        0.45,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        0,
+        7,
+        2
+      ],
+      [
+        0,
+        8,
+        2
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        10,
+        1
+      ],
+      [
+        1,
+        15,
+        1
+      ],
+      [
+        2,
+        12,
+        1
+      ],
+      [
+        2,
+        14,
+        1
+      ],
+      [
+        3,
+        12,
+        1
+      ],
+      [
+        3,
+        15,
+        1
+      ],
+      [
+        4,
+        11,
+        1
+      ],
+      [
+        4,
+        16,
+        1
+      ],
+      [
+        5,
+        13,
+        1
+      ],
+      [
+        5,
+        16,
+        1
+      ],
+      [
+        6,
+        17,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        12,
+        1
+      ],
+      [
+        11,
+        13,
+        1
+      ],
+      [
+        12,
+        17,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        15,
+        18,
+        1
+      ],
+      [
+        15,
+        19,
+        1
+      ],
+      [
+        16,
+        20,
+        1
+      ],
+      [
+        16,
+        21,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Relative bioavailability of the tablet is about 80% against a solution, and food does not affect it. Plasma protein binding is 15% to 41%, and about 70% of a dose is eliminated unchanged in urine.",
+    "substance": "A crystalline powder with a bitter taste and a molecular weight of 339.36.",
+    "product": "Approved under an NDA as tablets of 25, 50, 100, 200, 300 and 400 mg, and as sprinkle capsules.",
+    "safety": "No boxed warning. Contraindicated with a history of hypersensitivity to the drug or its inactive ingredients; paresthesia and anorexia are among the most frequent reactions.",
+    "indication": "Epilepsy, including Lennox-Gastaut seizures, and preventive treatment of migraine in patients 12 years and older.",
+    "mechanism": "Blocks voltage-dependent sodium channels, augments GABA-A receptor activity, antagonizes AMPA/kainate glutamate receptors, and inhibits carbonic anhydrase II and IV."
+  },
+  "tell": "An anticonvulsant with four proposed mechanisms, also approved for migraine prevention, and cleared mostly unchanged in urine.",
+  "source": {
+    "setId": "21628112-0c47-11df-95b3-498d55d89593",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21628112-0c47-11df-95b3-498d55d89593",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak plasma concentrations occurring at approximately 2 hours following a 400 mg oral dose",
+    "pk.halfLifeH": "The mean plasma elimination half-life is 21 hours",
+    "clues.kinetics": [
+      "The relative bioavailability of topiramate from the tablet formulation is about 80% compared to a solution",
+      "The bioavailability of topiramate is not affected by food",
+      "Topiramate is 15% to 41% bound to human plasma proteins",
+      "primarily eliminated unchanged in the urine (approximately 70% of an administered dose)"
+    ],
+    "clues.substance": [
+      "crystalline powder with a bitter taste",
+      "a molecular weight of 339.36"
+    ],
+    "clues.product": [
+      "NDA 020505",
+      "TABLET (oral): 50MG; 300MG; 100MG; 400MG; 25MG; 200MG",
+      "TOPAMAX Sprinkle Capsules"
+    ],
+    "clues.safety": [
+      "a history of hypersensitivity reaction to topiramate, TOPAMAX, or any of the inactive ingredients of TOPAMAX",
+      "adverse reactions in adult and pediatric patients were: paresthesia, anorexia"
+    ],
+    "clues.indication": [
+      "Epilepsy: initial monotherapy for the treatment of partial-onset",
+      "seizures associated with Lennox-Gastaut syndrome",
+      "Preventive treatment of migraine in patients 12 years of age and older"
+    ],
+    "clues.mechanism": [
+      "blocks voltage-dependent sodium channels",
+      "augments the activity of the neurotransmitter gamma-aminobutyrate at some subtypes of the GABA-A receptor",
+      "antagonizes the AMPA/kainate subtype of the glutamate receptor",
+      "inhibits the carbonic anhydrase enzyme, particularly isozymes II and IV"
+    ],
+    "pill": "debossed, coated, round tablets"
+  }
+}

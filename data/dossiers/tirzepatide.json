@@ -1,0 +1,82 @@
+{
+  "id": "tirzepatide",
+  "generic": "Tirzepatide",
+  "brand": "Mounjaro",
+  "aliases": [
+    "Zepbound"
+  ],
+  "application": "NDA 215866",
+  "approved": 2022,
+  "sponsor": "Eli Lilly",
+  "area": "Endocrinology",
+  "class": "GIP/GLP-1 receptor agonist",
+  "route": "subcutaneous",
+  "form": "injection",
+  "pk": {
+    "context": "5 mg subcutaneous, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 40,
+    "halfLifeH": 120
+  },
+  "pill": {
+    "shape": "pen",
+    "color": "#F6EFC4",
+    "desc": "clear, colorless to slightly yellow solution in a prefilled single-dose pen"
+  },
+  "biologic": {
+    "format": "peptide",
+    "isotype": null,
+    "massKDa": 4.81353
+  },
+  "clues": {
+    "kinetics": "Mean absolute bioavailability after subcutaneous injection is 80%. It is 99% bound to plasma albumin, and the drug is cleared mainly as metabolites in urine and feces.",
+    "substance": "Carries aminoisobutyric acid at positions 2 and 13 and a C-terminal amide, with a molecular weight of 4813.53 Da. It is supplied as a sterile solution.",
+    "product": "Approved under an NDA in single-dose pens and vials and multi-dose pens and vials, in strengths from 2.5 mg to 15 mg. Dosed once weekly.",
+    "safety": "Boxed warning for thyroid C-cell tumors. Contraindicated with a personal or family history of medullary thyroid carcinoma or MEN 2, and with serious hypersensitivity; decreased appetite and constipation are common.",
+    "indication": "Adjunct to diet and exercise for glycemic control in adults and children aged 10 and over with type 2 diabetes, and to lower major cardiovascular events in adults at high risk.",
+    "mechanism": "Selectively binds and activates both GIP and GLP-1 receptors, the targets of the native hormones. It enhances first- and second-phase insulin secretion and lowers glucagon, all in a glucose-dependent manner."
+  },
+  "tell": "A dual GIP and GLP-1 receptor agonist whose C20 fatty diacid binds albumin to prolong its action.",
+  "source": {
+    "setId": "d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "the time to maximum plasma concentration of tirzepatide ranges from 8 to 72 hours",
+    "pk.halfLifeH": "an elimination half-life of approximately 5 days",
+    "pill": "a clear, colorless to slightly yellow solution available in cartons containing 4 pre-filled single-dose pens",
+    "biologic": "The molecular weight is 4813.53 Da",
+    "clues.kinetics": [
+      "The mean absolute bioavailability of tirzepatide following subcutaneous administration is 80%",
+      "Tirzepatide is highly bound to plasma albumin (99%)",
+      "The primary excretion routes of tirzepatide metabolites are via urine and feces"
+    ],
+    "clues.substance": [
+      "contains aminoisobutyric acid (Aib) in positions 2 and 13, a C-terminal amide",
+      "The molecular weight is 4813.53 Da",
+      "sterile solution for subcutaneous use"
+    ],
+    "clues.product": [
+      "NDA 215866",
+      "Clear, colorless to slightly yellow solution in pre-filled single-dose pens, single-dose vials, multi-dose vials, or single-patient-use KwikPens",
+      "Single-dose Pen or Vial 2.5 mg/0.5 mL 5 mg/0.5 mL 7.5 mg/0.5 mL 10 mg/0.5 mL 12.5 mg/0.5 mL 15 mg/0.5 mL",
+      "Administer once weekly at any time of day"
+    ],
+    "clues.safety": [
+      "WARNING: RISK OF THYROID C-CELL TUMORS",
+      "Personal or family history of medullary thyroid carcinoma or in patients with Multiple Endocrine Neoplasia syndrome type 2",
+      "Known serious hypersensitivity to tirzepatide or any of the excipients in MOUNJARO",
+      "decreased appetite (17%), constipation (13%)"
+    ],
+    "clues.indication": [
+      "to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus",
+      "to reduce the risk of major adverse cardiovascular (CV) events",
+      "in adults with type 2 diabetes mellitus who are at high risk for these events"
+    ],
+    "clues.mechanism": [
+      "Tirzepatide selectively binds to and activates both the GIP and GLP-1 receptors, the targets for native GIP and GLP-1",
+      "Tirzepatide enhances first- and second-phase insulin secretion, and reduces glucagon levels, both in a glucose-dependent manner"
+    ]
+  }
+}

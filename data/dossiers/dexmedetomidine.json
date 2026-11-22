@@ -1,0 +1,237 @@
+{
+  "id": "dexmedetomidine",
+  "generic": "Dexmedetomidine",
+  "brand": "Precedex",
+  "aliases": [
+    "Dexmedetomidine hydrochloride",
+    "Igalmi"
+  ],
+  "salt": "Dexmedetomidine hydrochloride",
+  "application": "NDA 021038",
+  "approved": 1999,
+  "sponsor": "Pfizer",
+  "area": "Pain",
+  "class": "Alpha-2 agonist",
+  "route": "intravenous",
+  "form": "injection",
+  "pk": {
+    "context": "1 mcg/kg intravenous, single dose, healthy adults",
+    "model": "infusion",
+    "tmaxH": 0.17,
+    "halfLifeH": 2
+  },
+  "pill": {
+    "shape": "vial",
+    "desc": "clear, colorless solution in a single-dose glass bottle"
+  },
+  "structure": {
+    "cid": 5311068,
+    "formula": "C13H16N2",
+    "atoms": [
+      [
+        0.61,
+        2.14,
+        "N"
+      ],
+      [
+        2.09,
+        1.49,
+        "N"
+      ],
+      [
+        -0.36,
+        0.65,
+        "C"
+      ],
+      [
+        -0.36,
+        -0.35,
+        "C"
+      ],
+      [
+        -1.22,
+        -0.85,
+        "C"
+      ],
+      [
+        0.51,
+        1.15,
+        "C"
+      ],
+      [
+        -1.22,
+        1.15,
+        "C"
+      ],
+      [
+        -1.22,
+        -1.85,
+        "C"
+      ],
+      [
+        0.51,
+        -0.85,
+        "C"
+      ],
+      [
+        -2.09,
+        -0.35,
+        "C"
+      ],
+      [
+        -0.36,
+        -2.35,
+        "C"
+      ],
+      [
+        0.51,
+        -1.85,
+        "C"
+      ],
+      [
+        1.42,
+        0.74,
+        "C"
+      ],
+      [
+        -2.09,
+        -2.35,
+        "C"
+      ],
+      [
+        1.59,
+        2.35,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        0,
+        14,
+        1
+      ],
+      [
+        1,
+        12,
+        1
+      ],
+      [
+        1,
+        14,
+        2
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        2,
+        5,
+        1
+      ],
+      [
+        2,
+        6,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        8,
+        2
+      ],
+      [
+        4,
+        7,
+        2
+      ],
+      [
+        4,
+        9,
+        1
+      ],
+      [
+        5,
+        12,
+        2
+      ],
+      [
+        7,
+        10,
+        1
+      ],
+      [
+        7,
+        13,
+        1
+      ],
+      [
+        8,
+        11,
+        1
+      ],
+      [
+        10,
+        11,
+        2
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Given intravenously, it is about 94% bound to plasma protein. Almost all of it is biotransformed, through glucuronidation and cytochrome P450 metabolism.",
+    "substance": "A hydrochloride salt, with a molecular weight of 200.28 for the active base.",
+    "product": "Approved under an NDA in 200 mcg and 400 mcg sizes at 4 mcg per mL, infused for no more than 24 hours.",
+    "safety": "No boxed warning, and no contraindications are listed. Hypotension, bradycardia and dry mouth are the most common reactions in adults.",
+    "indication": "Sedation of intubated adults in intensive care, and of non-intubated adults and children before or during procedures.",
+    "mechanism": "A relatively selective, centrally acting alpha-2 agonist; at high doses, alpha-1 activity also appears."
+  },
+  "tell": "A 6-minute distribution half-life and a 2-hour terminal half-life set this alpha-2 agonist apart.",
+  "source": {
+    "setId": "92b7ddaa-e45a-4b64-a802-bb5df8771dd6",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92b7ddaa-e45a-4b64-a802-bb5df8771dd6",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "Initiate at one mcg/kg over 10 minutes",
+    "pk.halfLifeH": "is approximately 2 hours and clearance is estimated to be approximately 39 L/h",
+    "pill": "is a clear and colorless solution, ready to use",
+    "clues.kinetics": [
+      "The average protein binding was 94%",
+      "Dexmedetomidine undergoes almost complete biotransformation",
+      "Biotransformation involves both direct glucuronidation as well as cytochrome P450 mediated metabolism"
+    ],
+    "clues.substance": [
+      "molecular weight 200.28",
+      "PRECEDEX contains dexmedetomidine hydrochloride as the active pharmaceutical ingredient"
+    ],
+    "clues.product": [
+      "NDA 021038",
+      "PRECEDEX 200 mcg/50 mL (4 mcg/mL) single-dose glass bottle",
+      "PRECEDEX 400 mcg/100 mL (4 mcg/mL) single-dose glass bottle",
+      "Administer PRECEDEX by continuous infusion not to exceed 24 hours"
+    ],
+    "clues.safety": [
+      "None. None. ( 4 )",
+      "include hypotension, bradycardia and dry mouth"
+    ],
+    "clues.indication": [
+      "Sedation of initially intubated and mechanically ventilated adult patients during treatment in an intensive care setting",
+      "Sedation of non-intubated adult patients prior to and/or during surgical and other procedures",
+      "Sedation of non-intubated pediatric patients aged 1 month to less than 18 years"
+    ],
+    "clues.mechanism": [
+      "relatively selective centrally acting alpha 2 -adrenergic agonist",
+      "Both alpha 1 and alpha 2 activity is observed following slow intravenous infusion of high doses"
+    ]
+  }
+}

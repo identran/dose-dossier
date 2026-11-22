@@ -1,0 +1,421 @@
+{
+  "id": "rosuvastatin",
+  "generic": "Rosuvastatin",
+  "brand": "Crestor",
+  "aliases": [
+    "Rosuvastatin calcium"
+  ],
+  "salt": "Rosuvastatin calcium",
+  "application": "NDA 021366",
+  "approved": 2003,
+  "sponsor": "AstraZeneca",
+  "area": "Cardiology",
+  "class": "Statin",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "10 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 4,
+    "halfLifeH": 19
+  },
+  "pill": {
+    "shape": "round",
+    "color": "#F2A7C3",
+    "desc": "pink, coated, round biconvex tablet"
+  },
+  "structure": {
+    "cid": 446157,
+    "formula": "C22H28FN3O6S",
+    "atoms": [
+      [
+        1.3,
+        -4.32,
+        "S"
+      ],
+      [
+        -3.9,
+        0.68,
+        "F"
+      ],
+      [
+        0.43,
+        2.18,
+        "O"
+      ],
+      [
+        1.3,
+        3.68,
+        "O"
+      ],
+      [
+        0.8,
+        -5.18,
+        "O"
+      ],
+      [
+        1.8,
+        -3.45,
+        "O"
+      ],
+      [
+        3.9,
+        5.18,
+        "O"
+      ],
+      [
+        2.17,
+        5.18,
+        "O"
+      ],
+      [
+        1.3,
+        -2.32,
+        "N"
+      ],
+      [
+        0.43,
+        -3.82,
+        "N"
+      ],
+      [
+        -0.43,
+        -2.32,
+        "N"
+      ],
+      [
+        2.3,
+        -1.32,
+        "C"
+      ],
+      [
+        1.3,
+        -1.32,
+        "C"
+      ],
+      [
+        2.17,
+        2.18,
+        "C"
+      ],
+      [
+        0.43,
+        -0.82,
+        "C"
+      ],
+      [
+        1.3,
+        1.68,
+        "C"
+      ],
+      [
+        2.17,
+        3.18,
+        "C"
+      ],
+      [
+        -0.43,
+        -1.32,
+        "C"
+      ],
+      [
+        0.43,
+        0.18,
+        "C"
+      ],
+      [
+        1.3,
+        0.68,
+        "C"
+      ],
+      [
+        2.8,
+        -2.18,
+        "C"
+      ],
+      [
+        2.8,
+        -0.45,
+        "C"
+      ],
+      [
+        3.03,
+        3.68,
+        "C"
+      ],
+      [
+        0.43,
+        -2.82,
+        "C"
+      ],
+      [
+        -1.3,
+        -0.82,
+        "C"
+      ],
+      [
+        -0.43,
+        -4.32,
+        "C"
+      ],
+      [
+        -1.3,
+        0.18,
+        "C"
+      ],
+      [
+        -2.16,
+        -1.32,
+        "C"
+      ],
+      [
+        3.03,
+        4.68,
+        "C"
+      ],
+      [
+        2.17,
+        -4.82,
+        "C"
+      ],
+      [
+        -2.16,
+        0.68,
+        "C"
+      ],
+      [
+        -3.03,
+        -0.82,
+        "C"
+      ],
+      [
+        -3.03,
+        0.18,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        5,
+        2
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        0,
+        29,
+        1
+      ],
+      [
+        1,
+        32,
+        1
+      ],
+      [
+        2,
+        15,
+        1
+      ],
+      [
+        3,
+        16,
+        1
+      ],
+      [
+        6,
+        28,
+        1
+      ],
+      [
+        7,
+        28,
+        2
+      ],
+      [
+        8,
+        12,
+        2
+      ],
+      [
+        8,
+        23,
+        1
+      ],
+      [
+        9,
+        23,
+        1
+      ],
+      [
+        9,
+        25,
+        1
+      ],
+      [
+        10,
+        17,
+        1
+      ],
+      [
+        10,
+        23,
+        2
+      ],
+      [
+        11,
+        12,
+        1
+      ],
+      [
+        11,
+        20,
+        1
+      ],
+      [
+        11,
+        21,
+        1
+      ],
+      [
+        12,
+        14,
+        1
+      ],
+      [
+        13,
+        15,
+        1
+      ],
+      [
+        13,
+        16,
+        1
+      ],
+      [
+        14,
+        17,
+        2
+      ],
+      [
+        14,
+        18,
+        1
+      ],
+      [
+        15,
+        19,
+        1
+      ],
+      [
+        16,
+        22,
+        1
+      ],
+      [
+        17,
+        24,
+        1
+      ],
+      [
+        18,
+        19,
+        2
+      ],
+      [
+        22,
+        28,
+        1
+      ],
+      [
+        24,
+        26,
+        2
+      ],
+      [
+        24,
+        27,
+        1
+      ],
+      [
+        26,
+        30,
+        1
+      ],
+      [
+        27,
+        31,
+        2
+      ],
+      [
+        30,
+        32,
+        2
+      ],
+      [
+        31,
+        32,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is about 20%, and food does not change the AUC. It is 88% bound to plasma proteins, and about 72% of body clearance after an intravenous dose is hepatic.",
+    "substance": "A calcium salt, a white amorphous powder that is sparingly soluble in water. The parent molecular weight is 481.5.",
+    "product": "Tablets under an NDA, in 5, 10, 20 and 40 mg strengths.",
+    "safety": "Contraindicated in acute liver failure or decompensated cirrhosis, and in hypersensitivity to the drug or its excipients. Headache and myalgia are the adverse reactions reported most often in the table.",
+    "indication": "Reducing major adverse cardiovascular events in adults at increased risk, and as an adjunct to diet to lower LDL cholesterol in hypercholesterolemia, familial forms, dysbetalipoproteinemia and hypertriglyceridemia.",
+    "mechanism": "Inhibits HMG-CoA reductase, the rate-limiting enzyme that converts HMG-CoA to mevalonate, a precursor of cholesterol."
+  },
+  "tell": "Only about 20% bioavailable and barely metabolized, this statin is excreted mainly in the feces.",
+  "source": {
+    "setId": "325a5d0e-9a72-4015-9fcd-1655fb504cee",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=325a5d0e-9a72-4015-9fcd-1655fb504cee",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "peak plasma concentrations of rosuvastatin were reached 3 to 5 hours following oral dosing",
+    "pk.halfLifeH": "The elimination half-life of rosuvastatin is approximately 19 hours",
+    "pill": "10 mg of rosuvastatin: pink, round, biconvex, coated tablets",
+    "clues.kinetics": [
+      "The absolute bioavailability of rosuvastatin is approximately 20%",
+      "Administration of CRESTOR with food did not affect the AUC of rosuvastatin",
+      "Rosuvastatin is 88% bound to plasma proteins",
+      "After an intravenous dose, approximately 28% of total body clearance was via the renal route, and 72% by the hepatic route"
+    ],
+    "clues.substance": [
+      "Rosuvastatin calcium is a white amorphous powder that is sparingly soluble in water",
+      "calcium salt",
+      "molecular weight 481.5"
+    ],
+    "clues.product": [
+      "Tablets: 5 mg, 10 mg, 20 mg, and 40 mg of rosuvastatin",
+      "Application: NDA 021366"
+    ],
+    "clues.safety": [
+      "Acute liver failure or decompensated cirrhosis",
+      "Hypersensitivity to rosuvastatin or any excipients",
+      "Headache 5.0",
+      "Myalgia 1.3 3.1"
+    ],
+    "clues.indication": [
+      "To reduce the risk of major adverse cardiovascular (CV) events",
+      "As an adjunct to diet and exercise to reduce low-density lipoprotein cholesterol (LDL-C)",
+      "adults with hypercholesterolemia",
+      "heterozygous familial hypercholesterolemia (HeFH)",
+      "Primary dysbetalipoproteinemia",
+      "Hypertriglyceridemia"
+    ],
+    "clues.mechanism": [
+      "CRESTOR is an inhibitor of HMG-CoA reductase, the rate-limiting enzyme that converts 3-hydroxy-3-methylglutaryl coenzyme A to mevalonate, a precursor of cholesterol"
+    ]
+  }
+}

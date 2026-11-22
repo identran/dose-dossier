@@ -1,0 +1,195 @@
+{
+  "id": "tranexamic-acid",
+  "generic": "Tranexamic acid",
+  "brand": "Lysteda",
+  "aliases": [
+    "Cyklokapron"
+  ],
+  "application": "NDA 022430",
+  "approved": 1986,
+  "sponsor": "Pfizer",
+  "area": "Women's health",
+  "class": "Antifibrinolytic",
+  "route": "oral",
+  "form": "tablet",
+  "pk": {
+    "context": "1300 mg oral, single dose, healthy adults",
+    "model": "absorption",
+    "tmaxH": 2.5,
+    "halfLifeH": 11,
+    "cmax": 13.83,
+    "unit": "µg/mL"
+  },
+  "pill": {
+    "shape": "oval",
+    "color": "#F7F7F5",
+    "desc": "white oval tablet, not scored"
+  },
+  "structure": {
+    "cid": 5526,
+    "formula": "C8H15NO2",
+    "atoms": [
+      [
+        0.87,
+        2.5,
+        "O"
+      ],
+      [
+        -0.87,
+        2.5,
+        "O"
+      ],
+      [
+        -0.87,
+        -2.5,
+        "N"
+      ],
+      [
+        0,
+        -1,
+        "C"
+      ],
+      [
+        -0.87,
+        -0.5,
+        "C"
+      ],
+      [
+        0.87,
+        -0.5,
+        "C"
+      ],
+      [
+        0,
+        1,
+        "C"
+      ],
+      [
+        -0.87,
+        0.5,
+        "C"
+      ],
+      [
+        0.87,
+        0.5,
+        "C"
+      ],
+      [
+        0,
+        -2,
+        "C"
+      ],
+      [
+        0,
+        2,
+        "C"
+      ]
+    ],
+    "bonds": [
+      [
+        0,
+        10,
+        1
+      ],
+      [
+        1,
+        10,
+        2
+      ],
+      [
+        2,
+        9,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        9,
+        1
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        8,
+        1
+      ],
+      [
+        6,
+        10,
+        1
+      ]
+    ]
+  },
+  "clues": {
+    "kinetics": "Absolute bioavailability is approximately 45%, and it may be taken with or without food. It is only 3% bound to plasma proteins, and more than 95% is excreted unchanged in urine.",
+    "substance": "A synthetic crystalline powder, freely soluble in water, with a molecular weight of 157.2.",
+    "product": "Approved under an NDA as 650 mg tablets, taken as 1300 mg three times daily.",
+    "safety": "No boxed warning. Contraindicated with combined hormonal contraception, active thromboembolic disease and hypersensitivity to it; headache and back pain are common.",
+    "indication": "Cyclic heavy menstrual bleeding in females of reproductive potential.",
+    "mechanism": "Occupies the lysine binding sites of plasmin and plasminogen, preventing plasmin from binding and dissolving fibrin, which preserves the fibrin matrix."
+  },
+  "tell": "A lysine-derived antifibrinolytic that is not recommended alongside all-trans retinoic acid, given its thrombotic risk.",
+  "source": {
+    "setId": "a7e3180d-cf5b-4c2c-a31f-68bf6181f19a",
+    "label": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7e3180d-cf5b-4c2c-a31f-68bf6181f19a",
+    "retrieved": "2026-11-21"
+  },
+  "evidence": {
+    "pk.tmaxH": "T max (h) b | 2.5 (1 – 5) | 2.5 (2 – 3.5)",
+    "pk.halfLifeH": "The mean terminal half-life of tranexamic acid is approximately 11 hours",
+    "pk.cmax": "C max (mcg/mL) | 13.83 (32.14)",
+    "pill": "white oval-shaped 650 mg tablets",
+    "clues.kinetics": [
+      "The absolute bioavailability of LYSTEDA in women aged 18-49 is approximately 45%",
+      "LYSTEDA may be administered with or without food",
+      "Tranexamic acid is 3% bound to plasma proteins",
+      "more than 95% of the dose excreted unchanged"
+    ],
+    "clues.substance": [
+      "Tranexamic acid is a white crystalline powder. It is freely soluble in water",
+      "the molecular weight is 157.2",
+      "a synthetic lysine amino acid derivative"
+    ],
+    "clues.product": [
+      "Application: NDA 022430",
+      "Tablets: 650 mg",
+      "1300 mg tablets three times daily"
+    ],
+    "clues.safety": [
+      "Concomitant use of combined hormonal contraceptives",
+      "Active thromboembolic disease or a history or intrinsic risk of thrombosis or thromboembolism",
+      "Hypersensitivity to tranexamic acid",
+      "Most common adverse reactions in clinical trials (≥ 5%, and more frequent in LYSTEDA-treated subjects compared to placebo-treated subjects) are headache, sinus and nasal symptoms, back pain"
+    ],
+    "clues.indication": [
+      "indicated for the treatment of cyclic heavy menstrual bleeding in females of reproductive potential"
+    ],
+    "clues.mechanism": [
+      "the lysine receptor binding sites of plasmin for fibrin are occupied, preventing binding to fibrin monomers",
+      "preserving and stabilizing fibrin’s matrix structure"
+    ]
+  }
+}
